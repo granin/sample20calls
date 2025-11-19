@@ -1,0 +1,268 @@
+{
+  "call_metadata": {
+    "call_id": "call_01",
+    "duration_seconds": 455,
+    "call_start": "0:00.000",
+    "call_end": "7:35.658",
+    "operator_name": "Ирина",
+    "customer_name": "Алексей Калинин",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:14.94",
+      "timestamp_end": "0:15.66",
+      "evidence": "Customer name 'Алексей' collected but operator uses name without requesting confirmation ('Верно?' or 'Правильно?'). Surname 'Калинин' at 3:31.64s also collected without confirmation request. Phone number '912-778-1421' was properly confirmed, showing operator knows the method but inconsistently applied it.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "3:57.17",
+      "timestamp_end": "6:37.19",
+      "evidence": "Search announcement 'Минуту, пожалуйста' at 3:57.17, search completion 'Спасибо за ожидание' at 6:37.19. Total duration: 160 seconds. Threshold violation: >45 seconds. During search, operator speaks off-phone (with child: 'Играем! Ну иди сюда ускотов!') but does not check in with customer during 2-minute+ wait.",
+      "confidence": 1.0,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not consistently applied for contact data verification",
+      "recommendation": "When collecting customer name or surname, always repeat the data back and request explicit confirmation with 'Верно?', 'Правильно?', or 'Подтверждаете?' Phone collection was done correctly - use the same pattern for all contact data.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Extended search duration without customer check-ins",
+      "recommendation": "Keep information searches under 40 seconds. If search takes longer, provide status updates to customer every 30-40 seconds to maintain engagement and show service continuity. Current search took 160 seconds with no mid-search customer updates.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 160.0,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.94,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.31,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city",
+        "surname",
+        "phone"
+      ],
+      "echo_performed": {
+        "name": false,
+        "city": true,
+        "surname": false,
+        "phone": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "surname": false,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected from operator. Professional tone throughout call.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator completed call professionally. Service provided fully - order placed (963918).",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request to order winter tires with specific address resolved. Order placed and specialist team assigned to update city field.",
+      "note": "Customer's immediate need met. Follow-up action deferred to specialist team for city correction."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed without authorization. Delivery company information (Луч, песен, бокс 3) is customer-facing order information.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information sourced from system/database. Operator announces search before providing: tire sizes (205/55 R16), prices (7370/6633), delivery info.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator handles frustrated customer (address issue) professionally without showing frustration. Maintains patience and problem-solving approach.",
+      "note": "Customer somewhat frustrated but operator response indicates good customer handling."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All core information provided: tire details, pricing, delivery options, payment methods, order number (963918), phone contact.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Although search duration was 160 seconds (>45s threshold), customer remained on line and did not hang up. No customer hangup detected.",
+      "note": "Long silence but customer waited - does not meet criteria (requires customer hangup)."
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting: 'Здравствуйте, компания 74 колеса, меня зовут Ирина, как я могу к вам обращаться?' Proper closing: 'Спасибо за заказ. Всего вам доброго. До свидания.' Script sequence followed.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Алексей' and surname 'Калинин' collected without confirmation request. Phone '912-778-1421' properly confirmed - showing inconsistent application of echo method.",
+      "note": "See violations_detected for full details."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.94s from call start (<5s). Disconnect at 0.31s after last speech (<5s).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No unpologized customer interruptions detected. Operator speech does not overlap customer speech in disruptive manner.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Search period 237.17s to 397.19s = 160 seconds. Exceeds 45-second threshold. No mid-search customer check-ins during this duration.",
+      "note": "See violations_detected for full details."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanks customer 'Спасибо за ожидание' at 6:37.19, within 5 seconds of search completion.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script. Logical flow: greeting → data collection → product search → pricing → payment options → order → closing.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator uses customer name throughout (Алексей, Калинин). Builds rapport, maintains professional tone, proper opening/closing.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Comprehensive information delivered: tire specifications (R16 зимние 205/55), extended warranty, fuel gift (15L), delivery details, payment options, order number.",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name and operator name",
+    "Completed order successfully (Order #963918) despite system address limitations",
+    "Handled frustrated customer (address issue) with patience and problem-solving approach",
+    "Provided comprehensive information: tire specs, pricing with discount calculation, delivery details",
+    "Thanked customer for waiting during extended search",
+    "Used customer name consistently throughout call (Алексей, Калинин)",
+    "Proper professional closing with offer for additional help",
+    "Applied echo method correctly for phone number verification",
+    "Explained complex payment options clearly (website payment, discount structure)",
+    "Escalated unresolved city issue to specialist team with customer contact info"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json",
+      "timestamps_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level timestamps enable precise detection of echo method violations and search timing. Transcription confidence levels average 0.78+ across call."
+  }
+}
