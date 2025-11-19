@@ -1,0 +1,579 @@
+{
+  "meta": {
+    "title": "Phase 1 Grading Output Format v2",
+    "version": "2.0",
+    "date": "2025-11-19",
+    "description": "Standard JSON output format for Russian contact center call grading",
+    "based_on": "СО 2024 ВТМ evaluation system",
+    "enhancements": "Added violations_summary, coaching_priorities, risk_assessment, detected_patterns from production testing"
+  },
+  
+  "schema": {
+    "call_metadata": {
+      "type": "object",
+      "required": true,
+      "fields": {
+        "call_id": "string - Unique call identifier",
+        "duration_seconds": "number - Total call duration",
+        "call_start": "string - Timestamp MM:SS.sss",
+        "call_end": "string - Timestamp MM:SS.sss",
+        "operator_name": "string or null",
+        "customer_name": "string or null",
+        "evaluation_date": "string - ISO date YYYY-MM-DD",
+        "evaluation_system": "string - 'СО 2024 ВТМ v2024.09'"
+      }
+    },
+    
+    "final_scoring": {
+      "type": "object",
+      "required": true,
+      "fields": {
+        "final_grade": "number 1-10 or null",
+        "confidence": "string - VERY_HIGH|HIGH|MEDIUM|LOW",
+        "primary_violation": "string - Code of most severe violation (e.g. '7.2')",
+        "all_violation_grades": "array of numbers - All detected violation grades",
+        "lowest_code_rule_applied": "boolean - Was lowest code principle used?",
+        "requires_review": "boolean - Does this need manager review?",
+        "review_reason": "string or null - Why review is needed"
+      }
+    },
+    
+    "violations_detected": {
+      "type": "array",
+      "required": true,
+      "description": "All violations found, including flag-only",
+      "item_schema": {
+        "code": "string - Criterion code (e.g. '7.2')",
+        "grade": "number - Grade level 1-10",
+        "title": "string - Criterion title",
+        "severity": "string - yellow|none",
+        "sot_flag": "boolean - Is this a SOT violation?",
+        "timestamp_start": "string - MM:SS.sss",
+        "timestamp_end": "string - MM:SS.sss or null",
+        "evidence": "string - Specific quote/description from transcript",
+        "confidence": "number 0.0-1.0 - Detection confidence",
+        "flag_window": "boolean - Is this in 40-45s flag-only window?",
+        "score_reduction": "boolean - Does this affect final grade?"
+      }
+    },
+    
+    "violations_summary": {
+      "type": "object",
+      "required": true,
+      "description": "Statistical summary of violations",
+      "fields": {
+        "total_violations": "number - Count of all violations",
+        "violations_by_grade": "object - Count per grade level {\"10\": 2, \"7\": 1, ...}",
+        "sot_violations": "number - Count of SOT-flagged violations",
+        "flag_only_violations": "number - Count of flag-only (no score impact)",
+        "score_affecting_violations": "number - Count that reduce grade"
+      }
+    },
+    
+    "coaching_priorities": {
+      "type": "array",
+      "required": true,
+      "description": "Prioritized coaching recommendations",
+      "item_schema": {
+        "priority": "number 1-5 - Urgency level (1=critical)",
+        "issue": "string - Brief issue description",
+        "recommendation": "string - Specific actionable fix",
+        "related_criterion": "string - Criterion code (e.g. '7.2')"
+      }
+    },
+    
+    "risk_assessment": {
+      "type": "object",
+      "required": true,
+      "fields": {
+        "compliance_risk": "string - CRITICAL|HIGH|MEDIUM|LOW",
+        "customer_satisfaction_risk": "string - CRITICAL|HIGH|MEDIUM|LOW",
+        "data_security_risk": "string - CRITICAL|HIGH|MEDIUM|LOW",
+        "requires_supervisor_review": "boolean",
+        "requires_immediate_coaching": "boolean"
+      }
+    },
+    
+    "detected_patterns": {
+      "type": "object",
+      "required": true,
+      "description": "Structured detection results for key patterns",
+      "fields": {
+        "search_patterns": {
+          "search_announced": "boolean - Did operator announce search?",
+          "search_duration_sec": "number or null",
+          "customer_check_ins": "number - Count of check-ins during search",
+          "thank_you_after_search": "boolean"
+        },
+        "timing_compliance": {
+          "intro_time_sec": "number - Seconds from start to first operator speech",
+          "intro_within_5s": "boolean",
+          "disconnect_time_sec": "number or null - Seconds from last speech to end",
+          "disconnect_within_5s": "boolean or null"
+        },
+        "echo_method_patterns": {
+          "contact_data_captured": "boolean - Was any contact data collected?",
+          "entities_collected": "array - List of entity types ['name', 'phone', 'address']",
+          "echo_performed": "object - Per entity: {\"name\": true, \"phone\": false}",
+          "confirmation_received": "object - Per entity: {\"name\": true, \"phone\": false}"
+        },
+        "script_compliance": {
+          "greeting_present": "boolean",
+          "company_name_mentioned": "boolean",
+          "operator_name_mentioned": "boolean",
+          "closing_present": "boolean",
+          "customer_name_used": "boolean",
+          "customer_orientation_questions": "number - Count of 'Чем еще могу помочь?'"
+        }
+      }
+    },
+    
+    "criteria_assessment": {
+      "type": "object",
+      "required": true,
+      "description": "Status of each criterion assessment",
+      "note": "Only includes criteria assessable in current phase",
+      "item_schema": {
+        "code": "string - Criterion code",
+        "status": "string - PASS|VIOLATION|BORDERLINE|N/A",
+        "confidence": "string - VERY_HIGH|HIGH|MEDIUM|LOW",
+        "evidence": "string or null",
+        "note": "string or null"
+      }
+    },
+    
+    "positive_observations": {
+      "type": "array",
+      "required": true,
+      "description": "What operator did well",
+      "items": "array of strings"
+    },
+    
+    "data_quality": {
+      "type": "object",
+      "required": true,
+      "fields": {
+        "data_sources_used": "array - ['vtt', 'word_json', 'audio', 'database']",
+        "transcription_quality": "string - EXCELLENT|GOOD|FAIR|POOR or null",
+        "confidence_notes": "string or null - Any data quality concerns"
+      }
+    }
+  },
+  
+  "example_output_grade_7": {
+    "call_metadata": {
+      "call_id": "74_WHEELS_001",
+      "duration_seconds": 455,
+      "call_start": "0:00.000",
+      "call_end": "7:35.658",
+      "operator_name": "Irina",
+      "customer_name": "Alexey",
+      "evaluation_date": "2025-11-19",
+      "evaluation_system": "СО 2024 ВТМ v2024.09"
+    },
+    "final_scoring": {
+      "final_grade": 7,
+      "confidence": "HIGH",
+      "primary_violation": "7.2",
+      "all_violation_grades": [7],
+      "lowest_code_rule_applied": true,
+      "requires_review": false,
+      "review_reason": null
+    },
+    "violations_detected": [
+      {
+        "code": "7.2",
+        "grade": 7,
+        "title": "Echo method not used",
+        "severity": "yellow",
+        "sot_flag": true,
+        "timestamp_start": "0:14.94",
+        "timestamp_end": "0:24.94",
+        "evidence": "Name 'Алексей' collected at 14.94s, operator used name but never asked for confirmation ('Верно?')",
+        "confidence": 0.95,
+        "flag_window": false,
+        "score_reduction": true
+      }
+    ],
+    "violations_summary": {
+      "total_violations": 1,
+      "violations_by_grade": {
+        "7": 1
+      },
+      "sot_violations": 1,
+      "flag_only_violations": 0,
+      "score_affecting_violations": 1
+    },
+    "coaching_priorities": [
+      {
+        "priority": 1,
+        "issue": "Echo method not used for contact data",
+        "recommendation": "Must repeat customer's name/phone/address back and ask 'Верно?' for explicit confirmation",
+        "related_criterion": "7.2"
+      }
+    ],
+    "risk_assessment": {
+      "compliance_risk": "MEDIUM",
+      "customer_satisfaction_risk": "LOW",
+      "data_security_risk": "LOW",
+      "requires_supervisor_review": false,
+      "requires_immediate_coaching": true
+    },
+    "detected_patterns": {
+      "search_patterns": {
+        "search_announced": true,
+        "search_duration_sec": 7.0,
+        "customer_check_ins": 0,
+        "thank_you_after_search": false
+      },
+      "timing_compliance": {
+        "intro_time_sec": 3.94,
+        "intro_within_5s": true,
+        "disconnect_time_sec": 3.0,
+        "disconnect_within_5s": true
+      },
+      "echo_method_patterns": {
+        "contact_data_captured": true,
+        "entities_collected": ["name", "city", "phone"],
+        "echo_performed": {
+          "name": false,
+          "city": true,
+          "phone": false
+        },
+        "confirmation_received": {
+          "name": false,
+          "city": false,
+          "phone": true
+        }
+      },
+      "script_compliance": {
+        "greeting_present": true,
+        "company_name_mentioned": true,
+        "operator_name_mentioned": true,
+        "closing_present": true,
+        "customer_name_used": true,
+        "customer_orientation_questions": 3
+      }
+    },
+    "criteria_assessment": {
+      "7.1": {
+        "code": "7.1",
+        "status": "PASS",
+        "confidence": "HIGH",
+        "evidence": "Proper greeting with company name, operator name, offer to help",
+        "note": null
+      },
+      "7.2": {
+        "code": "7.2",
+        "status": "VIOLATION",
+        "confidence": "VERY_HIGH",
+        "evidence": "Name collected without echo confirmation",
+        "note": "See violations_detected for details"
+      },
+      "7.3": {
+        "code": "7.3",
+        "status": "PASS",
+        "confidence": "HIGH",
+        "evidence": "Intro at 3.94s (< 5s), disconnect at 3s (< 5s)",
+        "note": null
+      }
+    },
+    "positive_observations": [
+      "Professional greeting with company and operator name",
+      "Used customer name consistently throughout call",
+      "Handled customer frustration professionally",
+      "Proper closing with offer for additional help"
+    ],
+    "data_quality": {
+      "data_sources_used": ["vtt", "word_json"],
+      "transcription_quality": "EXCELLENT",
+      "confidence_notes": null
+    }
+  },
+  
+  "example_output_grade_3": {
+    "call_metadata": {
+      "call_id": "TEST_CALL_05",
+      "duration_seconds": 80,
+      "call_start": "0:00.000",
+      "call_end": "1:20.000",
+      "operator_name": null,
+      "customer_name": null,
+      "evaluation_date": "2025-11-19",
+      "evaluation_system": "СО 2024 ВТМ v2024.09"
+    },
+    "final_scoring": {
+      "final_grade": 3,
+      "confidence": "HIGH",
+      "primary_violation": "3.1",
+      "all_violation_grades": [10, 10, 7, 3, 3],
+      "lowest_code_rule_applied": true,
+      "requires_review": false,
+      "review_reason": null
+    },
+    "violations_detected": [
+      {
+        "code": "3.1",
+        "grade": 3,
+        "title": "Unresolved customer request",
+        "severity": "yellow",
+        "sot_flag": true,
+        "timestamp_start": "0:03.960",
+        "timestamp_end": "1:20.000",
+        "evidence": "Customer requested pizza delivery, operator discussed pharmacy products instead. Request never resolved.",
+        "confidence": 0.95,
+        "flag_window": false,
+        "score_reduction": true
+      },
+      {
+        "code": "3.3",
+        "grade": 3,
+        "title": "Confidential information disclosed",
+        "severity": "yellow",
+        "sot_flag": true,
+        "timestamp_start": "1:14.400",
+        "timestamp_end": "1:19.400",
+        "evidence": "Internal office number disclosed without customer ID verification",
+        "confidence": 0.98,
+        "flag_window": false,
+        "score_reduction": true
+      },
+      {
+        "code": "7.3",
+        "grade": 7,
+        "title": "5-second intro timing",
+        "severity": "yellow",
+        "sot_flag": true,
+        "timestamp_start": "0:00.000",
+        "timestamp_end": "0:08.280",
+        "evidence": "Operator intro at 8.28s exceeds 5-second threshold",
+        "confidence": 1.0,
+        "flag_window": false,
+        "score_reduction": true
+      },
+      {
+        "code": "9.1",
+        "grade": 9,
+        "title": "Long search - FLAG ONLY",
+        "severity": "flag_only",
+        "sot_flag": false,
+        "timestamp_start": "0:29.280",
+        "timestamp_end": "1:14.400",
+        "evidence": "Search duration 45.12s falls in 40-45s flag window",
+        "confidence": 1.0,
+        "flag_window": true,
+        "score_reduction": false
+      }
+    ],
+    "violations_summary": {
+      "total_violations": 6,
+      "violations_by_grade": {
+        "10": 2,
+        "9": 1,
+        "7": 1,
+        "3": 2
+      },
+      "sot_violations": 3,
+      "flag_only_violations": 1,
+      "score_affecting_violations": 5
+    },
+    "coaching_priorities": [
+      {
+        "priority": 1,
+        "issue": "Service identification failure",
+        "recommendation": "Verify correct department/service before responding to customer",
+        "related_criterion": "3.1"
+      },
+      {
+        "priority": 2,
+        "issue": "Confidential data disclosure",
+        "recommendation": "Never share internal numbers without proper authorization and customer ID verification",
+        "related_criterion": "3.3"
+      },
+      {
+        "priority": 3,
+        "issue": "5-second rule violation",
+        "recommendation": "Begin greeting within 5 seconds of call start",
+        "related_criterion": "7.3"
+      }
+    ],
+    "risk_assessment": {
+      "compliance_risk": "HIGH",
+      "customer_satisfaction_risk": "CRITICAL",
+      "data_security_risk": "HIGH",
+      "requires_supervisor_review": true,
+      "requires_immediate_coaching": true
+    },
+    "detected_patterns": {
+      "search_patterns": {
+        "search_announced": true,
+        "search_duration_sec": 45.12,
+        "customer_check_ins": 0,
+        "thank_you_after_search": false
+      },
+      "timing_compliance": {
+        "intro_time_sec": 8.28,
+        "intro_within_5s": false,
+        "disconnect_time_sec": null,
+        "disconnect_within_5s": null
+      },
+      "echo_method_patterns": {
+        "contact_data_captured": false,
+        "entities_collected": [],
+        "echo_performed": {},
+        "confirmation_received": {}
+      },
+      "script_compliance": {
+        "greeting_present": true,
+        "company_name_mentioned": false,
+        "operator_name_mentioned": false,
+        "closing_present": false,
+        "customer_name_used": false,
+        "customer_orientation_questions": 0
+      }
+    },
+    "criteria_assessment": {
+      "3.1": {
+        "code": "3.1",
+        "status": "VIOLATION",
+        "confidence": "HIGH",
+        "evidence": "Pizza request went unresolved, operator discussed pharmacy",
+        "note": "Possible routing error or wrong script used"
+      },
+      "7.3": {
+        "code": "7.3",
+        "status": "VIOLATION",
+        "confidence": "VERY_HIGH",
+        "evidence": "Intro at 8.28s exceeds 5s threshold",
+        "note": null
+      }
+    },
+    "positive_observations": [
+      "Polite greeting tone used initially",
+      "Announced search before performing it",
+      "No rudeness or harsh tone detected"
+    ],
+    "data_quality": {
+      "data_sources_used": ["vtt"],
+      "transcription_quality": "GOOD",
+      "confidence_notes": "Short call, limited data"
+    }
+  },
+  
+  "example_output_no_violations": {
+    "call_metadata": {
+      "call_id": "PERFECT_CALL_001",
+      "duration_seconds": 300,
+      "call_start": "0:00.000",
+      "call_end": "5:00.000",
+      "operator_name": "Maria",
+      "customer_name": "Vladimir",
+      "evaluation_date": "2025-11-19",
+      "evaluation_system": "СО 2024 ВТМ v2024.09"
+    },
+    "final_scoring": {
+      "final_grade": 10,
+      "confidence": "HIGH",
+      "primary_violation": null,
+      "all_violation_grades": [],
+      "lowest_code_rule_applied": false,
+      "requires_review": false,
+      "review_reason": null
+    },
+    "violations_detected": [],
+    "violations_summary": {
+      "total_violations": 0,
+      "violations_by_grade": {},
+      "sot_violations": 0,
+      "flag_only_violations": 0,
+      "score_affecting_violations": 0
+    },
+    "coaching_priorities": [],
+    "risk_assessment": {
+      "compliance_risk": "LOW",
+      "customer_satisfaction_risk": "LOW",
+      "data_security_risk": "LOW",
+      "requires_supervisor_review": false,
+      "requires_immediate_coaching": false
+    },
+    "detected_patterns": {
+      "search_patterns": {
+        "search_announced": true,
+        "search_duration_sec": 15.0,
+        "customer_check_ins": 1,
+        "thank_you_after_search": true
+      },
+      "timing_compliance": {
+        "intro_time_sec": 2.5,
+        "intro_within_5s": true,
+        "disconnect_time_sec": 2.0,
+        "disconnect_within_5s": true
+      },
+      "echo_method_patterns": {
+        "contact_data_captured": true,
+        "entities_collected": ["name", "phone"],
+        "echo_performed": {
+          "name": true,
+          "phone": true
+        },
+        "confirmation_received": {
+          "name": true,
+          "phone": true
+        }
+      },
+      "script_compliance": {
+        "greeting_present": true,
+        "company_name_mentioned": true,
+        "operator_name_mentioned": true,
+        "closing_present": true,
+        "customer_name_used": true,
+        "customer_orientation_questions": 2
+      }
+    },
+    "criteria_assessment": {
+      "7.1": {"code": "7.1", "status": "PASS", "confidence": "HIGH", "evidence": "Perfect script adherence", "note": null},
+      "7.2": {"code": "7.2", "status": "PASS", "confidence": "VERY_HIGH", "evidence": "Echo method used for name and phone", "note": null},
+      "7.3": {"code": "7.3", "status": "PASS", "confidence": "HIGH", "evidence": "Intro 2.5s, disconnect 2.0s", "note": null},
+      "9.1": {"code": "9.1", "status": "PASS", "confidence": "HIGH", "evidence": "Search 15s, well under 40s", "note": null}
+    },
+    "positive_observations": [
+      "Excellent script adherence throughout",
+      "Proper echo method used for all contact data",
+      "Professional greeting and closing",
+      "Efficient information search (15s)",
+      "Thanked customer for waiting",
+      "Used customer name consistently",
+      "Customer-oriented questions asked"
+    ],
+    "data_quality": {
+      "data_sources_used": ["vtt", "word_json"],
+      "transcription_quality": "EXCELLENT",
+      "confidence_notes": null
+    }
+  },
+  
+  "implementation_notes": {
+    "for_llm_agents": [
+      "Return JSON in this exact format",
+      "Always include all top-level fields even if empty",
+      "Use confidence levels: VERY_HIGH (>0.9), HIGH (>0.75), MEDIUM (>0.5), LOW (≤0.5)",
+      "Flag window violations have score_reduction=false",
+      "coaching_priorities array should be sorted by priority (1=most urgent)",
+      "detected_patterns helps debugging and calibration"
+    ],
+    "for_automated_detectors": [
+      "Generate this format from detector outputs",
+      "Aggregate individual detector results into violations_summary",
+      "Apply confidence thresholds from confidence_thresholds.json",
+      "Calculate risk levels based on violation severity and count",
+      "Populate detected_patterns from intermediate detection results"
+    ],
+    "for_api_consumers": [
+      "Parse violations_summary for dashboard stats",
+      "Use coaching_priorities for coaching workflow",
+      "Check requires_supervisor_review for routing",
+      "Use risk_assessment for alerting",
+      "Parse detected_patterns for analytics"
+    ]
+  }
+}

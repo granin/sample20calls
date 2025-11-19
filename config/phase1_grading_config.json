@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "title": "Phase 1: Transcript-Only Grading Configuration",
+    "version": "1.0",
+    "based_on": "СО 2024 ВТМ (26 criteria full system)",
+    "effective_date": "2025-11-19",
+    "coverage": "17/26 criteria (65%)",
+    "data_requirements": "VTT/SRT + word-level JSON transcript only",
+    "proven_accuracy": "Grade 7 violation detected in pilot test call",
+    "use_case": "MVP deployment without database/audio access"
+  },
+  
+  "included_criteria": [
+    {
+      "code": "7.1",
+      "grade": 7,
+      "title": "Script violations",
+      "confidence": "HIGH",
+      "detection_method": "Pattern matching + sequence analysis",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "notes": "Greeting/closing phrases, question sequence, customer orientation questions"
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "confidence": "VERY_HIGH",
+      "detection_method": "Word-level JSON entity tracking + echo pattern detection",
+      "signals": ["wordjson"],
+      "thresholds": {
+        "operator_echo_window_sec": 10,
+        "customer_confirm_window_sec": 5
+      },
+      "proven": true,
+      "test_result": "Successfully detected in 74 Wheels call - name, city, phone violations found",
+      "notes": "CRITICAL: Requires word-level timestamps for millisecond precision"
+    },
+    {
+      "code": "7.3",
+      "grade": 7,
+      "title": "5-second timing rules",
+      "confidence": "HIGH",
+      "detection_method": "Timestamp arithmetic",
+      "signals": ["vtt"],
+      "thresholds": {
+        "intro_max_sec": 5.0,
+        "outro_max_sec": 5.0
+      },
+      "proven": true,
+      "test_result": "74 Wheels intro: 3.94s (PASS)",
+      "notes": "VTT/SRT ±0.5s accuracy sufficient"
+    },
+    {
+      "code": "7.4",
+      "grade": 7,
+      "title": "Interruption without apology",
+      "confidence": "HIGH",
+      "detection_method": "Overlap detection + apology phrase search",
+      "signals": ["vtt"],
+      "thresholds": {
+        "overlap_min_sec": 0.5,
+        "apology_window_sec": 3
+      },
+      "proven": true,
+      "notes": "Check for '(извинит|простит).*(перебил|перебива)' within 3s"
+    },
+    {
+      "code": "6.1",
+      "grade": 6,
+      "title": "Critical silence / customer hangup",
+      "confidence": "HIGH",
+      "detection_method": "Silence duration + call termination pattern",
+      "signals": ["vtt"],
+      "thresholds": {
+        "silence_threshold_sec": 45,
+        "flag_window": [40, 45]
+      },
+      "proven": true,
+      "notes": "Check who ended call + silence >45s"
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "confidence": "HIGH",
+      "detection_method": "Silence gap timing between search announcement and answer delivery",
+      "signals": ["vtt"],
+      "thresholds": {
+        "standard_question_max_sec": 3,
+        "complex_question_max_sec": 40,
+        "flag_window_start": 40,
+        "flag_window_end": 45,
+        "violation_threshold_sec": 45
+      },
+      "proven": true,
+      "test_result": "74 Wheels search: ~7s (PASS)",
+      "notes": "40-45s = flag only, >45s = violation. Check-ins don't reset timer."
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "confidence": "HIGH",
+      "detection_method": "Pattern matching after search completion",
+      "signals": ["vtt"],
+      "thresholds": {
+        "window_after_search_sec": 5
+      },
+      "proven": true,
+      "patterns": ["(спасибо|благодарю).*(ожидани|подождал|ждал)"],
+      "notes": "Required even if operator checked in during search"
+    },
+    {
+      "code": "3.1",
+      "grade": 3,
+      "title": "Unresolved customer request",
+      "confidence": "MEDIUM",
+      "detection_method": "Question-answer pair matching + sentiment decline",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "test_result": "Borderline case detected in 74 Wheels - requires manager review",
+      "notes": "Flag borderline cases (workaround vs resolution) for human review"
+    },
+    {
+      "code": "3.3",
+      "grade": 3,
+      "title": "Confidential information disclosure",
+      "confidence": "HIGH",
+      "detection_method": "Regex keyword matching",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "patterns": {
+        "office_phone": "офис.*\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{4}",
+        "internal_code": "(код доступ|пароль|внутренн.*номер)",
+        "employee_data": "(личн.*данн.*сотрудник)"
+      },
+      "notes": "Check if customer ID was performed before disclosure"
+    },
+    {
+      "code": "3.6",
+      "grade": 3,
+      "title": "Unverified information (memory vs lookup)",
+      "confidence": "MEDIUM",
+      "detection_method": "Search announcement detection + strict_script flag",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "patterns": ["(сейчас.*посмотр|провер|уточн|найд.*информац)"],
+      "notes": "Only flag if strict_script=true project AND no search cues detected"
+    },
+    {
+      "code": "5.1",
+      "grade": 5,
+      "title": "Incomplete information",
+      "confidence": "MEDIUM",
+      "detection_method": "NER for mandatory fields",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "test_result": "74 Wheels: Core info present, minor gaps (delivery time)",
+      "notes": "Need project config for mandatory fields list. Partial assessment possible."
+    },
+    {
+      "code": "10.2",
+      "grade": 10,
+      "title": "Script work (baseline)",
+      "confidence": "HIGH",
+      "detection_method": "Script compliance check",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "notes": "Check greeting phrase, info delivery per script, logical presentation"
+    },
+    {
+      "code": "10.3",
+      "grade": 10,
+      "title": "Dialogue management (baseline)",
+      "confidence": "HIGH",
+      "detection_method": "Conversation flow analysis",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "test_result": "74 Wheels: Good rapport, customer name use, proper control",
+      "notes": "Check customer name usage, rapport building, conversation control"
+    },
+    {
+      "code": "2.1",
+      "grade": 2,
+      "title": "Call dropout / service refusal",
+      "confidence": "HIGH",
+      "detection_method": "Call termination analysis + refusal language",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "notes": "Check for abrupt ending, refusal phrases, who terminated call"
+    },
+    {
+      "code": "1.1",
+      "grade": 1,
+      "title": "Rudeness / profanity",
+      "confidence": "MEDIUM",
+      "detection_method": "Keyword detection (partial, full needs audio)",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "patterns": ["(блять|хрен|черт|ебан|пизд)", "(отвали|отстань|надоел)"],
+      "notes": "Can detect profanity in text, but harsh TONE requires audio. Partial assessment."
+    },
+    {
+      "code": "4.1",
+      "grade": 4,
+      "title": "Difficult customer handling",
+      "confidence": "LOW",
+      "detection_method": "Text-based frustration indicators (partial)",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "test_result": "74 Wheels: Professional text handling visible, full tone needs audio",
+      "notes": "PARTIAL ONLY. Text shows professional responses, but frustration/irritation tone needs audio."
+    },
+    {
+      "code": "10.6",
+      "grade": 10,
+      "title": "Information completeness (baseline)",
+      "confidence": "MEDIUM",
+      "detection_method": "Information delivery check",
+      "signals": ["vtt"],
+      "thresholds": null,
+      "proven": true,
+      "notes": "Need project config for complete validation. Can partially assess from transcript."
+    }
+  ],
+  
+  "excluded_criteria": [
+    {
+      "code": "9.2",
+      "grade": 9,
+      "title": "Speech defects (monotone, unclear, pace)",
+      "reason": "Requires audio analysis",
+      "phase": 3,
+      "signals_needed": ["audio"],
+      "detection_method": "Pitch variance, WPM, SNR, formant analysis"
+    },
+    {
+      "code": "10.1",
+      "grade": 10,
+      "title": "Emotional mood (smile in voice)",
+      "reason": "Requires audio analysis",
+      "phase": 3,
+      "signals_needed": ["audio"],
+      "detection_method": "Formant analysis, emotion detection"
+    },
+    {
+      "code": "10.4",
+      "grade": 10,
+      "title": "Speech quality & culture",
+      "reason": "Requires audio analysis",
+      "phase": 3,
+      "signals_needed": ["audio"],
+      "detection_method": "Pronunciation, filler words, pace, clarity"
+    },
+    {
+      "code": "10.5",
+      "grade": 10,
+      "title": "Report accuracy",
+      "reason": "Requires database access",
+      "phase": 2,
+      "signals_needed": ["db"],
+      "tables_needed": ["call_reports"]
+    },
+    {
+      "code": "8.1",
+      "grade": 8,
+      "title": "Report filling (perspective/grammar)",
+      "reason": "Requires database access",
+      "phase": 2,
+      "signals_needed": ["db"],
+      "tables_needed": ["call_reports"]
+    },
+    {
+      "code": "3.2",
+      "grade": 3,
+      "title": "Report/actions not saved",
+      "reason": "Requires database access",
+      "phase": 2,
+      "signals_needed": ["db"],
+      "tables_needed": ["call_reports", "action_logs"]
+    },
+    {
+      "code": "3.4",
+      "grade": 3,
+      "title": "Report format errors",
+      "reason": "Requires database access",
+      "phase": 2,
+      "signals_needed": ["db"],
+      "tables_needed": ["call_reports", "required_fields"]
+    },
+    {
+      "code": "3.5",
+      "grade": 3,
+      "title": "Statistics questions missing",
+      "reason": "Requires project configuration",
+      "phase": 2,
+      "signals_needed": ["project_config"],
+      "notes": "Need list of required questions per project"
+    },
+    {
+      "code": "5.2",
+      "grade": 5,
+      "title": "Transfer protocol violations",
+      "reason": "Requires database access (or N/A if no transfer)",
+      "phase": 2,
+      "signals_needed": ["db", "vtt"],
+      "tables_needed": ["transfer_events", "call_segments"],
+      "notes": "Can partially infer from transcript but DB needed for full validation"
+    }
+  ],
+  
+  "grading_rules": {
+    "lowest_code_principle": true,
+    "note": "If violations at [9, 7, 5] detected, final grade = 5 (lowest)",
+    "conservative_grading": "If uncertain between grades, use higher grade (less severe)",
+    "borderline_cases": "Flag for manager review with 'MEDIUM' confidence violations",
+    "partial_criteria": "Codes 1.1, 4.1, 10.6 provide partial assessment - note limitations"
+  },
+  
+  "scoring_engine_config": {
+    "step_1": "Run 17 detectors on transcript",
+    "step_2": "Collect violations with confidence scores",
+    "step_3": "Filter: Keep only HIGH/VERY_HIGH confidence violations for auto-grade",
+    "step_4": "Flag MEDIUM confidence violations for review",
+    "step_5": "Apply lowest code principle to confirmed violations",
+    "step_6": "Generate report with all findings + assessment gaps",
+    "output_format": {
+      "final_grade": "integer 1-10 or null if no violations",
+      "confidence": "HIGH | MEDIUM | LOW",
+      "violations": "array of detected violations with evidence",
+      "deferred_criteria": "list of criteria that need audio/DB",
+      "requires_review": "boolean - true if any MEDIUM confidence violations"
+    }
+  },
+  
+  "limitations": {
+    "cannot_detect": [
+      "Audio-based quality issues (monotone, unclear speech, harsh tone)",
+      "Report completeness and accuracy (database needed)",
+      "Some Grade 3 violations (database needed)",
+      "Project-specific requirement violations (config needed)"
+    ],
+    "partial_detection": [
+      "Rudeness (text profanity yes, harsh tone no)",
+      "Difficult customer handling (text indicators yes, voice tone no)",
+      "Information completeness (partial without project config)"
+    ],
+    "coverage_by_severity": {
+      "grades_1_2": "100% (can detect)",
+      "grades_3_6": "60% (some need DB)",
+      "grade_7": "100% (full coverage)",
+      "grades_8": "0% (need DB)",
+      "grades_9_10": "40% (some need audio)"
+    }
+  },
+  
+  "success_metrics": {
+    "pilot_test": {
+      "call_id": "74_Wheels",
+      "violations_detected": ["7.2", "3.1 borderline"],
+      "final_grade": 7,
+      "confidence": "HIGH",
+      "human_qa_comparison": "Pending",
+      "processing_time": "<30 seconds",
+      "cost_per_call": "~0.5 RUB/minute (transcription only)"
+    },
+    "target_accuracy": {
+      "agreement_with_human_qa": ">75%",
+      "false_positive_rate": "<10%",
+      "coverage": "65% of criteria (17/26)"
+    }
+  },
+  
+  "next_phase_triggers": {
+    "phase_2_ready": "When Oktell DB access obtained → adds 5 criteria",
+    "phase_3_ready": "When audio analysis built → adds 4 criteria",
+    "full_system": "Phase 2 + Phase 3 → 100% coverage (26/26 criteria)"
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "Confidence Thresholds for Grading Decisions",
+    "version": "1.0",
+    "purpose": "Define when to auto-grade, defer, or flag for human review",
+    "applies_to": "Phase 1 transcript-only grading (17 criteria)"
+  },
+  
+  "confidence_levels": {
+    "VERY_HIGH": {
+      "score": 0.9,
+      "description": "Objective, measurable, proven detection",
+      "action": "AUTO_GRADE",
+      "examples": ["7.2 echo method with word-level timestamps", "7.3 timing rules"],
+      "false_positive_risk": "Very Low (<2%)",
+      "human_review_needed": false
+    },
+    "HIGH": {
+      "score": 0.75,
+      "description": "Clear pattern detection with strong evidence",
+      "action": "AUTO_GRADE",
+      "examples": ["7.1 script violations", "9.1 search timing", "6.1 critical silence"],
+      "false_positive_risk": "Low (<5%)",
+      "human_review_needed": false
+    },
+    "MEDIUM": {
+      "score": 0.5,
+      "description": "Pattern detected but subjective interpretation needed",
+      "action": "FLAG_FOR_REVIEW",
+      "examples": ["3.1 unresolved request (borderline)", "5.1 incomplete info (without config)"],
+      "false_positive_risk": "Medium (10-20%)",
+      "human_review_needed": true,
+      "review_trigger": "Manager must confirm violation before applying grade"
+    },
+    "LOW": {
+      "score": 0.3,
+      "description": "Indicators present but full assessment impossible without more data",
+      "action": "FLAG_ONLY",
+      "examples": ["4.1 difficult customer (text only)", "1.1 rudeness tone (text only)"],
+      "false_positive_risk": "High (>20%)",
+      "human_review_needed": true,
+      "review_trigger": "Note indicators but don't reduce grade without audio"
+    },
+    "INDETERMINATE": {
+      "score": null,
+      "description": "Cannot assess without missing data",
+      "action": "DEFER",
+      "examples": ["9.2 speech defects (need audio)", "3.2 report saved (need DB)"],
+      "false_positive_risk": "N/A",
+      "human_review_needed": false,
+      "note": "Wait for Phase 2/3 data availability"
+    }
+  },
+  
+  "grading_decision_tree": {
+    "scenario_1_clear_violation": {
+      "condition": "Violation detected with VERY_HIGH or HIGH confidence",
+      "criteria_examples": ["7.2", "7.3", "7.1", "9.1", "6.1"],
+      "action": "AUTO_GRADE",
+      "final_grade": "Apply lowest code principle",
+      "report_output": {
+        "final_grade": "X",
+        "confidence": "HIGH",
+        "requires_review": false,
+        "evidence": "Timestamp + transcript excerpt + specific rule violated"
+      }
+    },
+    "scenario_2_borderline_violation": {
+      "condition": "Violation detected with MEDIUM confidence",
+      "criteria_examples": ["3.1", "5.1", "3.6"],
+      "action": "FLAG_FOR_REVIEW",
+      "final_grade": "Conservative grade (higher/less severe) OR null pending review",
+      "report_output": {
+        "final_grade": "X or null",
+        "confidence": "MEDIUM",
+        "requires_review": true,
+        "review_reason": "Borderline case: [specific ambiguity]",
+        "evidence": "Partial indicators detected, manager judgment needed"
+      }
+    },
+    "scenario_3_partial_assessment": {
+      "condition": "Some indicators present but full assessment needs audio",
+      "criteria_examples": ["1.1", "4.1", "10.6"],
+      "action": "NOTE_BUT_DONT_PENALIZE",
+      "final_grade": "Don't reduce grade based on partial data",
+      "report_output": {
+        "final_grade": "Not affected",
+        "confidence": "LOW",
+        "requires_review": false,
+        "note": "Text shows [positive/negative] indicators, full assessment deferred to Phase 3",
+        "evidence": "Transcript excerpts showing indicators"
+      }
+    },
+    "scenario_4_missing_data": {
+      "condition": "Criterion requires audio or database",
+      "criteria_examples": ["9.2", "10.1", "3.2", "8.1"],
+      "action": "DEFER",
+      "final_grade": "Not assessed",
+      "report_output": {
+        "final_grade": "Not affected",
+        "confidence": "INDETERMINATE",
+        "requires_review": false,
+        "note": "Criterion requires [audio/database/config], deferred to Phase [2/3]",
+        "missing_data": "Specific data source needed"
+      }
+    },
+    "scenario_5_no_violations": {
+      "condition": "All 17 assessable criteria pass",
+      "action": "REPORT_BASELINE_QUALITY",
+      "final_grade": "10 (or highest grade based on quality indicators)",
+      "report_output": {
+        "final_grade": "10",
+        "confidence": "HIGH",
+        "requires_review": false,
+        "note": "No violations detected in assessable criteria. [9 criteria deferred to Phase 2/3]",
+        "limitations": "Full Grade 10 certification requires audio + DB validation"
+      }
+    }
+  },
+  
+  "criteria_confidence_matrix": {
+    "grade_7": {
+      "7.1": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Clear script patterns"},
+      "7.2": {"confidence": "VERY_HIGH", "action": "AUTO_GRADE", "rationale": "Word-level timestamp precision, proven"},
+      "7.3": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Objective timestamp arithmetic"},
+      "7.4": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Overlap + apology pattern clear"}
+    },
+    "grade_6": {
+      "6.1": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Silence duration + termination pattern"}
+    },
+    "grade_9": {
+      "9.1": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Search timing measurable"},
+      "9.3": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Thank-you phrase detection simple"}
+    },
+    "grade_3": {
+      "3.1": {"confidence": "MEDIUM", "action": "FLAG_FOR_REVIEW", "rationale": "Subjective: resolved vs workaround"},
+      "3.3": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Keyword detection clear"},
+      "3.6": {"confidence": "MEDIUM", "action": "FLAG_FOR_REVIEW", "rationale": "Depends on strict_script flag"}
+    },
+    "grade_5": {
+      "5.1": {"confidence": "MEDIUM", "action": "FLAG_FOR_REVIEW", "rationale": "Need project config for mandatory fields"}
+    },
+    "grade_10": {
+      "10.2": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Script compliance clear"},
+      "10.3": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Dialogue flow indicators clear"},
+      "10.6": {"confidence": "MEDIUM", "action": "FLAG_ONLY", "rationale": "Partial assessment without config"}
+    },
+    "grade_2": {
+      "2.1": {"confidence": "HIGH", "action": "AUTO_GRADE", "rationale": "Call termination pattern clear"}
+    },
+    "grade_1": {
+      "1.1": {"confidence": "LOW", "action": "FLAG_ONLY", "rationale": "Text profanity yes, harsh tone needs audio"}
+    },
+    "grade_4": {
+      "4.1": {"confidence": "LOW", "action": "FLAG_ONLY", "rationale": "Text indicators partial, tone needs audio"}
+    }
+  },
+  
+  "multi_violation_handling": {
+    "rule": "Lowest code wins",
+    "scenario_example": {
+      "violations_detected": [
+        {"code": "9.1", "grade": 9, "confidence": "HIGH"},
+        {"code": "7.2", "grade": 7, "confidence": "VERY_HIGH"},
+        {"code": "3.1", "grade": 3, "confidence": "MEDIUM"}
+      ],
+      "decision_process": {
+        "step_1": "Filter by confidence: Keep HIGH/VERY_HIGH only",
+        "filtered": [
+          {"code": "9.1", "grade": 9},
+          {"code": "7.2", "grade": 7}
+        ],
+        "step_2": "Apply lowest code: min([9, 7]) = 7",
+        "final_grade": 7,
+        "step_3": "Flag MEDIUM confidence 3.1 for review",
+        "review_note": "If manager confirms 3.1, grade becomes 3"
+      }
+    },
+    "conservative_interpretation": {
+      "rule": "When in doubt, use higher grade (less severe)",
+      "rationale": "Avoid false accusations, protect operator morale",
+      "example": "If 3.1 is borderline, grade = 7 (confirmed violation) not 3 (unconfirmed)"
+    }
+  },
+  
+  "edge_case_handling": {
+    "exact_threshold_values": {
+      "case": "Search duration exactly 45 seconds",
+      "rule": "Threshold is >45s, so 45.0s = NO violation (flag only per 40-45s window)",
+      "confidence": "HIGH",
+      "action": "Flag for improvement, don't reduce grade"
+    },
+    "missing_project_config": {
+      "case": "Required statistics questions unknown",
+      "rule": "Cannot assess 3.5, mark as INDETERMINATE",
+      "confidence": "INDETERMINATE",
+      "action": "DEFER until config obtained"
+    },
+    "customer_profanity": {
+      "case": "Customer swears, operator stays professional",
+      "rule": "1.1 does NOT apply (only operator rudeness)",
+      "confidence": "HIGH",
+      "action": "No violation, note operator handled professionally"
+    },
+    "partial_echo": {
+      "case": "Operator repeats contact data but doesn't ask for confirmation",
+      "rule": "7.2 violation (must have explicit 'Верно?'/'Да' confirmation)",
+      "confidence": "VERY_HIGH",
+      "action": "AUTO_GRADE violation",
+      "example": "74 Wheels test: City repeated without confirmation = violation"
+    },
+    "technical_exception": {
+      "case": "Timing violation but IT incident logged",
+      "rule": "Check dependency_rules.json for exemption",
+      "confidence": "HIGH (if IT log exists), MEDIUM (if no IT log)",
+      "action": "AUTO_GRADE exempt if IT incident confirmed, else violation",
+      "note": "Phase 2 feature - need it_incident_logs table access"
+    }
+  },
+  
+  "output_formatting": {
+    "auto_grade_output": {
+      "final_grade": 7,
+      "confidence": "HIGH",
+      "primary_violation": "7.2",
+      "all_violations": [
+        {
+          "code": "7.2",
+          "grade": 7,
+          "confidence": "VERY_HIGH",
+          "evidence": "Timestamp + transcript + rule reference"
+        }
+      ],
+      "requires_review": false,
+      "deferred_criteria": ["9.2", "10.1", "3.2", "8.1", "..."],
+      "assessment_coverage": "17/26 (65%)"
+    },
+    "review_flag_output": {
+      "final_grade": "7 (conservative) or null (pending review)",
+      "confidence": "MEDIUM",
+      "primary_violation": "7.2 (confirmed)",
+      "all_violations": [
+        {
+          "code": "7.2",
+          "grade": 7,
+          "confidence": "VERY_HIGH",
+          "evidence": "..."
+        },
+        {
+          "code": "3.1",
+          "grade": 3,
+          "confidence": "MEDIUM",
+          "evidence": "...",
+          "status": "BORDERLINE - requires manager review"
+        }
+      ],
+      "requires_review": true,
+      "review_reason": "Criterion 3.1 borderline: workaround provided but systemic issue not resolved",
+      "recommendation": "Manager confirm if 3.1 applies. If yes, final grade = 3. If no, final grade = 7."
+    }
+  },
+  
+  "quality_control": {
+    "random_sample_review": {
+      "frequency": "5% of auto-graded calls",
+      "purpose": "Validate confidence thresholds, detect drift",
+      "action": "Human QA reviews random sample, compares to AI grade",
+      "calibration": "Adjust thresholds if disagreement >15%"
+    },
+    "high_confidence_monitoring": {
+      "metric": "Agreement rate with human QA on HIGH/VERY_HIGH confidence violations",
+      "target": ">90%",
+      "action_if_below": "Review detector logic, retrain patterns"
+    },
+    "medium_confidence_monitoring": {
+      "metric": "Manager review completion rate",
+      "target": "100% of flagged cases reviewed within 24 hours",
+      "action_if_below": "Increase auto-grading threshold to reduce queue"
+    }
+  },
+  
+  "recommendations": {
+    "for_developers": [
+      "Use VERY_HIGH/HIGH confidence for auto-grading (codes 7.x, 6.1, 9.1, 9.3)",
+      "Always flag MEDIUM confidence for review (codes 3.1, 5.1, 3.6)",
+      "Note but don't penalize LOW confidence (codes 1.1, 4.1 text-only)",
+      "Defer INDETERMINATE to Phase 2/3",
+      "Apply conservative interpretation when uncertain"
+    ],
+    "for_qa_managers": [
+      "Review all MEDIUM confidence flags within 24 hours",
+      "Focus on 3.1 borderline cases (resolved vs workaround)",
+      "Validate 5% random sample of auto-grades weekly",
+      "Track agreement rate, adjust thresholds if <85%",
+      "Provide feedback for false positives/negatives"
+    ],
+    "for_operators": [
+      "HIGH/VERY_HIGH violations = coaching priority (clear evidence)",
+      "MEDIUM flags = discussion with manager (subjective judgment)",
+      "LOW notes = informational only (not scored against you)",
+      "Deferred criteria = will be assessed in Phase 2/3 (not scored yet)"
+    ]
+  }
+}
