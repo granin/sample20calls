@@ -1,0 +1,287 @@
+{
+  "call_metadata": {
+    "call_id": "call_01",
+    "duration_seconds": 455.658,
+    "call_start": "0:00.000",
+    "call_end": "7:35.658",
+    "operator_name": "Irina",
+    "customer_name": "Alexey Kalinin",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used for customer name",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:14.940",
+      "timestamp_end": "0:17.900",
+      "evidence": "Customer provided name 'Алексей' at 14.940s. Operator responded 'Алексей, из какого города вы звоните?' at 16.200s without echo confirmation. No 'Верно?' or confirmation request made. Customer confirmation not obtained.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used for customer last name",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "3:31.638",
+      "timestamp_end": "3:33.798",
+      "evidence": "Customer provided last name 'Калинин' at 211.638s. Operator repeated 'Калинин' at 212.978s but did not ask for confirmation ('Верно?'). Echo method incomplete - repeat without confirmation.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting after first search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "2:13.483",
+      "timestamp_end": "2:26.523",
+      "evidence": "Operator announced search at 133.483s ('Минуту, пожалуйста') and returned with results at 146.523s. No gratitude expressed for waiting (no 'Спасибо за ожидание' or similar phrase).",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long search - FLAG ONLY (40-45s window)",
+      "severity": "flag_only",
+      "sot_flag": false,
+      "timestamp_start": "3:57.178",
+      "timestamp_end": "4:39.376",
+      "evidence": "Search duration 42 seconds (237.178s to 279.376s). Falls in 40-45s flag window. No score reduction applied, but flagged for improvement.",
+      "confidence": 1.0,
+      "flag_window": true,
+      "score_reduction": false
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 4,
+    "violations_by_grade": {
+      "7": 2,
+      "9": 2
+    },
+    "sot_violations": 3,
+    "flag_only_violations": 1,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not consistently applied",
+      "recommendation": "Must repeat ALL contact data back to customer with explicit confirmation request ('Верно?', 'Правильно?'). Applied correctly for phone (912-778-1421) but missed for name and last name. Ensure EVERY piece of contact information gets: 1) Repeat back, 2) Confirmation question, 3) Customer verbal confirmation.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing gratitude after search completion",
+      "recommendation": "After EVERY information search, thank the customer for waiting. Use phrases like 'Спасибо за ожидание'. This was done correctly for 2nd and 3rd searches but missed after the first search.",
+      "related_criterion": "9.3"
+    },
+    {
+      "priority": 3,
+      "issue": "Search duration approaching threshold",
+      "recommendation": "One search took 42 seconds (40-45s flag window). While not a violation, aim to keep all searches under 40 seconds. Consider providing interim updates to customer during longer searches.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 42.0,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.94,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 1.32,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "last_name", "phone", "city"],
+      "echo_performed": {
+        "name": false,
+        "last_name": true,
+        "phone": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "last_name": false,
+        "phone": true,
+        "city": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Ирина', and offer to help. Proper closing with thanks and polite farewell. Customer orientation questions asked twice.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Two instances of incomplete echo method: 1) Name 'Алексей' not confirmed with 'Верно?', 2) Last name 'Калинин' repeated but confirmation not requested. Phone number correctly confirmed.",
+      "note": "Inconsistent application - correct for phone, incorrect for names"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.94s (< 5s), disconnect 1.32s after last speech (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected in conversation flow",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call completed normally, no customer hangup",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Three searches conducted: 13s, 42s, and 24s. The 42s search falls in 40-45s flag window (improvement recommended but no violation).",
+      "note": "One search at 42s flagged for improvement"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "First search (13s) completed without thank you. Second and third searches properly acknowledged with 'Спасибо за ожидание'.",
+      "note": "Inconsistent application"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer's issue (website not showing city) resolved by manual order processing with note to specialists",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator searched system before providing product information",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Order details, delivery info, payment method all provided",
+      "note": "Partial assessment without full project configuration"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical script flow, proper information delivery",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name used consistently, good rapport building, conversation control maintained",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Complete product and order information delivered",
+      "note": "Partial assessment without project configuration"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Profanity detected in transcript at 42.167s ('херня'), but speaker diarization may be incorrect - contextually appears to be customer frustration, not operator. Requires audio verification.",
+      "note": "Possible speaker labeling error - flagged for review but not penalized"
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Text shows patient handling of frustrated customer. Operator remained professional throughout technical difficulties.",
+      "note": "Text-based assessment only; full tone analysis requires audio"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with all required elements (company name, operator name, offer to help)",
+    "Patient handling of customer's website technical issues",
+    "Proactive problem-solving - offered manual order processing when website failed",
+    "Good communication about payment options and delivery details",
+    "Proper closing with thanks and polite farewell",
+    "Consistent use of customer name throughout call",
+    "Explained complex fuel bonus program clearly and thoroughly",
+    "Thanked customer for waiting during longer searches (2nd and 3rd searches)",
+    "Correctly applied echo method for phone number verification"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Some speaker diarization inconsistencies noted around 42s mark. Word-level timestamps available for precise echo method detection."
+  }
+}
