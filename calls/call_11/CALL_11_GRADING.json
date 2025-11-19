@@ -1,0 +1,249 @@
+{
+  "call_metadata": {
+    "call_id": "call_11",
+    "duration_seconds": 202.7,
+    "call_start": "0:00.000",
+    "call_end": "3:22.706",
+    "operator_name": "Ирина",
+    "customer_name": "Евгений",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:10.402",
+      "timestamp_end": "0:10.922",
+      "evidence": "Customer name 'Евгений' was repeated by operator ('Евгений') but NO explicit confirmation request ('Верно?', 'Правильно?', 'Подтвердить?') was made. Echo method requires both repeat AND confirmation.",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:36.377",
+      "timestamp_end": "0:55.757",
+      "evidence": "After information search (19.4s duration), operator provided closing 'Спасибо за звонок, всем добра, до свидания' but no 'спасибо за ожидание' (thank you for waiting) was expressed.",
+      "confidence": 0.78,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data collection",
+      "recommendation": "When customer provides name or other contact information, MUST repeat it back AND ask explicit confirmation: 'Ваше имя Евгений, верно?' - wait for customer 'Да' or 'Верно' confirmation",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing gratitude for customer patience during search",
+      "recommendation": "After completing information search, thank customer for waiting: 'Спасибо за ожидание!' before providing the information. This improves customer satisfaction.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 19.4,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.502,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 2.5,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting: 'Здравствуйте. Компания 74 колеса. Меня зовут Ирина. Как я могу к вам обращаться?' Professional closing: 'Спасибо за звонок, всем добра, до свидания'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name 'Евгений' repeated but no explicit confirmation request ('Верно?')",
+      "note": "Critical: Echo method requires BOTH repeat and confirmation request"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.5s (< 5s), disconnect within 2.5s (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No operator interruptions detected in transcript",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Longest search 19.4s, well below 40s threshold",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 19.4s (first search), 8.4s (second search), both under 40s",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "No 'спасибо за ожидание' detected after 19.4s search completion",
+      "note": "Only general 'Спасибо за звонок' in closing, not specific to waiting"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request addressed: found specific disk (10k), explained unavailability of alternatives, offered selection service",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator announced search ('сейчас посмотрю') before providing product information (code, price, availability)",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Provided: product code (32-67-26), price (10,000), availability (one in stock), size (R-19)",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information delivered per script structure with logical flow and proper opening/closing",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Used customer name 'Евгений' multiple times, maintained conversation control, professional tone",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Product information (code, price, availability, specifications) delivered confidently and accurately",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Normal call ending, no abrupt disconnect or refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional, polite tone throughout. No profanity or harsh language detected",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer was cooperative, operator maintained professional engagement",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name and operator identification",
+    "Used customer name consistently throughout conversation",
+    "Efficiently located product information (19.4s search time)",
+    "Provided detailed product specifications (code, price, availability, size)",
+    "Offered alternative solutions and follow-up service",
+    "Proper call closing with professional farewell",
+    "Maintained calm, helpful demeanor throughout"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "High confidence assessment enabled by word-level timestamps and clear VTT transcript"
+  }
+}
