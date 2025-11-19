@@ -1,0 +1,254 @@
+{
+  "call_metadata": {
+    "call_id": "call_13",
+    "duration_seconds": 273,
+    "call_start": "0:00.008",
+    "call_end": "4:32.866",
+    "operator_name": "Ирина",
+    "customer_name": "Алексей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": true,
+    "review_reason": "Criterion 3.1 borderline: Customer request addressed but customer explicitly rejected due to quality concerns. Requires manager confirmation if this counts as unresolved."
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:07.048",
+      "timestamp_end": "0:07.608",
+      "evidence": "Customer provides name 'Алексей' at 0:07.6. Operator does not repeat name back or ask for confirmation ('Верно?'). Operator proceeds directly to next question about location.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long search - FLAG ONLY (40-45s window)",
+      "severity": "none",
+      "sot_flag": false,
+      "timestamp_start": "1:11.300",
+      "timestamp_end": "1:56.193",
+      "evidence": "Search announced at 1:11.3 ('Сейчас посмотрю'). Information delivery begins at 1:56.193 ('Спасибо за ожидание'). Duration: 44.893 seconds (within 40-45s flag window).",
+      "confidence": 1.0,
+      "flag_window": true,
+      "score_reduction": false
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 1,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "When collecting customer name, repeat it back and ask for confirmation: 'Ваше имя - Алексей, верно?' and wait for 'Да' confirmation before proceeding.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Search duration in flag window",
+      "recommendation": "Aim to complete complex information searches within 40 seconds. Current search took 44.9 seconds (acceptable but room for improvement). Consider optimizing system lookups.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "Customer request resolution",
+      "recommendation": "Document when customer explicitly rejects solutions. Consider escalation options or alternative products for customers with specific quality concerns.",
+      "related_criterion": "3.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": true,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 44.893,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.008,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 2.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name"],
+      "echo_performed": {
+        "name": false
+      },
+      "confirmation_received": {
+        "name": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting: 'Здравствуйте, компания 74 колеса, меня зовут Ирина. Как я могу к вам обращаться?' Closing: 'Всё, спасибо. Чем-то ещё могу помочь?'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Алексей' collected without echo confirmation. Operator never asks 'Верно?' or gets explicit 'Да' response.",
+      "note": "See violations_detected for full details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 0:00.008 (<5s), disconnect at 2.0s (<5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected without apology in transcript",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 44.9s (within 40-45s window), customer does not hang up, conversation continues",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "FLAG_ONLY",
+      "confidence": "HIGH",
+      "evidence": "Search 44.893s falls in 40-45s improvement window",
+      "note": "No grade reduction - flag for process improvement"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator says 'Спасибо за ожидание' immediately after search completion",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "BORDERLINE",
+      "confidence": "MEDIUM",
+      "evidence": "Customer request for specific tire product addressed. Operator found similar product but customer explicitly rejected due to quality concerns about imbalance. Customer choice to not proceed vs operator failure to help.",
+      "note": "FLAG FOR MANAGER REVIEW: Did operator adequately attempt to resolve customer need? Customer explicitly said 'Нет' and 'Я не хочу дисбаланс'"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information or internal codes disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator announces search ('Сейчас посмотрю') before providing information",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Core information provided: product name, pricing (9000+490), delivery date (November 1st). Customer declined order before requesting additional details.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per logical script structure. Greeting, needs assessment, product search, pricing details, offer to help more.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Uses customer name 'Алексей', maintains professional tone, proper opening and closing, conversation flows logically",
+      "note": "Note: Name not verified per 7.2 requirement"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Information provided: tire specifications (225x55 R19), product name, price, delivery details",
+      "note": "Partial assessment without full project config"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator does not disconnect abruptly or refuse service. Customer chooses not to proceed due to personal decision.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected in operator speech",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer becomes somewhat argumentative about quality concerns. Operator responds professionally, explains options, maintains composed tone.",
+      "note": "Text-based assessment only; audio would provide fuller tone analysis"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name identification",
+    "Announced search before performing system lookup",
+    "Thanked customer for waiting after completing search",
+    "Provided detailed product information (specifications, pricing, delivery timeline)",
+    "Attempted to offer alternative solutions when customer expressed concerns",
+    "Maintained professional composure during customer objections",
+    "Proper closing with offer to help further",
+    "Quick greeting and disconnect (within timing rules)"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level JSON timestamps enable precise echo method detection. VTT transcript clear and complete. Transcription confidence scores generally good (avg 0.76+)."
+  }
+}
