@@ -1,0 +1,250 @@
+{
+  "call_metadata": {
+    "call_id": "CALL_14",
+    "duration_seconds": 336,
+    "call_start": "0:00.000",
+    "call_end": "5:39.237",
+    "operator_name": "Ирина",
+    "customer_name": "Евгений",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:08.349",
+      "timestamp_end": "0:15.429",
+      "evidence": "Customer name 'Евгений' collected at 0:08.349. Agent used name at 0:10.009 without repeating back and asking for confirmation. Customer stated city 'Пермь' at 0:12.949. Agent repeated city at 0:13.969 ('Город Пермь') but did not ask for verification ('Верно?'). No explicit customer confirmation ('Да'/'Верно') received for either data point.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:31.727",
+      "timestamp_end": "5:36.077",
+      "evidence": "Multiple information searches conducted (search duration ~15-20 seconds each). Agent never thanked customer for waiting during searches. Only says 'Спасибо за звонок' at call end (thanks for calling), but no 'спасибо за ожидание' or 'спасибо за то, что подождали' expression after search completions.",
+      "confidence": 0.80,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data collection",
+      "recommendation": "When recording customer name, city, or other contact information, MUST repeat the data back to customer and ask for explicit confirmation: 'Итак, ваше имя Евгений, город Пермь, верно?' Wait for customer to confirm 'Да' or similar before proceeding.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing thank you after information search",
+      "recommendation": "After completing database searches and providing information, always thank customer for waiting: 'Спасибо за ожидание' or 'Спасибо за то, что подождали'. This should be done even if you checked in with customer during search.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 15.0,
+      "customer_check_ins": 2,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.029,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": false,
+        "city": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected. Professional tone maintained throughout call.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call ends normally with proper farewell. No service refusal or unjustified disconnection.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer's request for tire specifications (215/65/17 winter tires with SUV marking) was addressed. Multiple tire options with specifications provided. Customer informed of availability and pricing.",
+      "note": "Customer elected not to purchase but information request was resolved"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No office numbers, internal codes, passwords, or personal data shared without authorization.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent announced database searches ('Давайте посмотрим сейчас', 'Сейчас посмотрю') before providing information about tire availability and pricing.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer cooperative throughout. No difficult customer behavior detected. Agent maintains professional approach.",
+      "note": "Text-based assessment only, full tone evaluation requires audio"
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Core product information provided (tire sizes, prices, brands, availability). Call was informational; no formal booking/reservation required.",
+      "note": "Limited application as call was informational and no booking made"
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence periods detected. Customer maintains engagement throughout. Call duration 336 seconds with no extended search periods >45 seconds.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company name '74 колеса', operator name 'Ирина', and offer to help. Closing includes thanks 'Спасибо за звонок' and farewell 'до свидания'.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Contact data (name 'Евгений' and city 'Пермь') collected at 0:08.349 and 0:12.949 respectively. Agent used name and repeated city but never requested explicit confirmation.",
+      "note": "See violations_detected for full details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.029 seconds (< 5s). Call ends immediately after agent's final speech with no disconnect delay.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected. Agent maintains proper turn-taking throughout conversation.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Multiple searches conducted. First search ~15 seconds (0:31.727-0:47.087). Second search ~11 seconds. Third search ~20 seconds. All well under 40-second threshold.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After information searches (approximately 0:31.727 onward), no explicit gratitude for waiting expressed. Agent says 'Спасибо за звонок' at end but no 'спасибо за ожидание' after search completions.",
+      "note": "See violations_detected for full details"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script format. Logical presentation of tire options organized by price range, brand, and specifications.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name 'Евгений' used consistently (lines 3, 5, questions). Rapport building evident. Proper opening with greeting and closing with farewell. Conversation control maintained.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Comprehensive tire information provided including sizes (16,510 / 17,680 / 18,740), brands (Goodyear, Bridgestone, Hokkapelit), SUV markings, and pricing details.",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name and operator name clearly stated",
+    "Customer name 'Евгений' used consistently throughout the call demonstrating rapport",
+    "Comprehensive product knowledge displayed - provided multiple tire options with detailed specifications, pricing, and features",
+    "Efficient information searches (15-20 seconds) well within timing requirements",
+    "Addressed customer's specific requirements (SUV tires, winter/spiked, specific size)",
+    "Proper call closing with thanks and farewell",
+    "Professional tone maintained despite complex product details and multiple search iterations",
+    "Customer orientation questions asked ('Чем могу вам помочь?')"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "srt"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "VTT and SRT transcripts available. Word-level JSON available but not needed for identified violations. All timing measurements based on transcript lines with ±0.5 second accuracy."
+  }
+}
