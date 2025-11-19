@@ -1,0 +1,270 @@
+{
+  "call_metadata": {
+    "call_id": "call_16",
+    "duration_seconds": 144,
+    "call_start": "0:00.000",
+    "call_end": "2:24.581",
+    "operator_name": "Ирина",
+    "customer_name": "Дмитрий",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": true,
+    "review_reason": "Criterion 3.1 borderline: Workaround provided but database lookup not performed; customer satisfied"
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:07.777",
+      "timestamp_end": "0:15.537",
+      "evidence": "Customer name 'Дмитрий' collected at 0:07.777. Operator used name immediately at 0:09.657 ('Дмитрий, с какого города вы звоните?') WITHOUT repeating back with confirmation ('Верно?'). City 'Екатеринбург' collected at 0:11.937, operator repeated 'Город Екатеринбург' at 0:13.697 but did NOT request explicit confirmation.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:33.278",
+      "timestamp_end": "0:56.778",
+      "evidence": "Search announced 'я посмотрю' at 0:33.278. Information delivered 'Шина Тойо' at 0:52.678 (19.4s search duration - PASS on timing). However, NO gratitude expressed for customer's patience. Customer confirmed 'Да, всё верно' but operator never said 'спасибо за ожидание' or equivalent.",
+      "confidence": 0.88,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "3.1",
+      "grade": 3,
+      "title": "Unresolved customer request",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:16.377",
+      "timestamp_end": "1:56.512",
+      "evidence": "Customer requested: 'можем по коду товара посмотреть, какой год выпуска?' Operator offered workaround (pre-order with callback) rather than direct database lookup. Operator stated 'так посмотреть невозможно, шин много' - indicating system limitation. Customer accepted with 'Ну, 24-25 нормально, спасибо' - SATISFIED with outcome, but root cause (exact manufacture date lookup) not technically resolved.",
+      "confidence": 0.65,
+      "flag_window": false,
+      "score_reduction": false
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "9": 1,
+      "7": 1,
+      "3": 1
+    },
+    "sot_violations": 3,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "When collecting customer name or city, ALWAYS repeat it back and request explicit confirmation ('Верно?', 'Правильно?', 'Подтверждаете?'). Wait for customer to confirm ('Да', 'Верно', 'Угу'). This applies to name, phone, address, email - any contact data.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing gratitude for customer patience during search",
+      "recommendation": "After completing an information search, always express appreciation to the customer for waiting. Use phrases like 'Спасибо за ожидание' or 'Спасибо, что подождали' within 5 seconds of delivering the information.",
+      "related_criterion": "9.3"
+    },
+    {
+      "priority": 3,
+      "issue": "Offer alternative solutions proactively",
+      "recommendation": "When direct resolution isn't available, offer workarounds earlier in conversation. This call handled it well by explaining the limitation and providing pre-order option, but could mention this as the best available option more explicitly.",
+      "related_criterion": "3.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": true,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 19.4,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.097,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 1.32,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": false,
+        "city": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Ирина', and offer to help. Question sequence logical. Closing with thanks 'Спасибо за звонок' and farewell.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name and city collected without echo method confirmation",
+      "note": "See violations_detected for details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.097s (< 5s), disconnect at 1.32s (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected. Natural turn-taking throughout conversation",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No extended silence periods. Customer does not hang up. Call ends normally.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search announced 'я посмотрю' at 0:33.278. Information delivered at 0:52.678. Total search time: 19.4 seconds (well under 40s threshold)",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "No gratitude expressed after search completion",
+      "note": "See violations_detected for details"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "BORDERLINE",
+      "confidence": "MEDIUM",
+      "evidence": "Customer request partially resolved with workaround. Exact lookup unavailable but customer satisfied.",
+      "note": "Manager review recommended - workaround vs full resolution"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information, internal codes, or unauthorized data disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided from website/system ('прям на сайте у нас указано'), not from memory",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided adequate for call type. Customer received year of manufacture (24-25) as requested.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Script adherence strong. Greeting format correct. Information delivery logical and structured.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name used consistently. Professional tone throughout. Conversation control maintained. Proper opening and closing.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer question answered with manufacture year. Website reference provided. Process explained for obtaining exact date.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator provides service throughout. Call ends properly with customer agreeing to next steps.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity, no harsh language. Professional and courteous tone.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is not difficult. Operator remains patient and professional.",
+      "note": "Positive indicators from text only"
+    }
+  },
+  "positive_observations": [
+    "Professional and complete greeting with all required elements (company, name, offer to help)",
+    "Efficient information search (19.4 seconds - well under 40s threshold)",
+    "Customer name used consistently throughout call",
+    "Proper closing with thanks and farewell",
+    "Clear explanation of system limitations and offered reasonable workaround (pre-order option)",
+    "Customer satisfied with outcome despite workaround nature",
+    "Perfect timing compliance on intro (3.097s) and outro (1.32s)",
+    "No interruptions or impolite behavior detected"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level timestamps available for precise echo method assessment. Transcription confidence generally high (0.7+)"
+  }
+}
