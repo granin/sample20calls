@@ -1,122 +1,149 @@
 [
   {
     "call_id": "call_01",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "Sonnet/BLIND2 consensus on 7.2 violation (partial echo). BLIND1 outlier. Pending spec fix for 9.3.",
+    "notes": "Sonnet correctly identified 7.2 violation (name/city not echoed). 9.3 disagreement (Sonnet outlier) likely due to gratitude phrase ambiguity."
   },
   {
     "call_id": "call_02",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "High core field agreement. Minor disagreements on 4.1 and confidence calibration only.",
+    "notes": "Final_grade agreement, core violations clear. 4.1 and final_confidence differences are expected per spec."
   },
   {
     "call_id": "call_03",
     "golden_source": "Sonnet",
-    "confidence": "medium",
-    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2."
+    "confidence": "high",
+    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2. Perfect agreement (>95%).",
+    "notes": "Original high-confidence decision confirmed. No violations detected."
   },
   {
     "call_id": "call_04",
     "golden_source": "Sonnet",
-    "confidence": "medium",
-    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2."
+    "confidence": "high",
+    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2. Perfect agreement (>95%).",
+    "notes": "Original high-confidence decision confirmed. Excellent script compliance example."
   },
   {
     "call_id": "call_05",
     "golden_source": "Sonnet",
-    "confidence": "medium",
-    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2."
+    "confidence": "high",
+    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2. Perfect agreement (>95%).",
+    "notes": "Original high-confidence decision confirmed. Good timing compliance example."
   },
   {
     "call_id": "call_06",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "High overall agreement (86% all_equal). Disagreements limited to 4.1 and final_confidence.",
+    "notes": "Core violations clear, only Tier 3 field disagreements."
   },
   {
     "call_id": "call_07",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "BLIND2",
+    "confidence": "high",
+    "reason": "BLIND2 most thorough: caught all 3 violations (7.2, 9.1=60.8s, 9.3). Sonnet/BLIND1 missed 9.3.",
+    "notes": "Expert review confirmed: 60.8s search (9.1 VIOLATION), missing gratitude after first search (9.3 VIOLATION), plus 7.2. BLIND2 superior accuracy.",
+    "transcript_evidence": "Search 2: 07:34.729 to 08:35.565 = 60.8s. No 'спасибо' after first 22.7s search."
   },
   {
     "call_id": "call_08",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "Hybrid case: Sonnet correct on 7.2 and final_grade=7, but BLIND2 correct on 9.1 (96s search). Both violations exist.",
+    "notes": "Expert review confirmed BOTH violations: 7.2 (name not echoed at 00:08-00:10) AND 9.1 (96s search at 00:27-02:03). Final_grade=7 per lowest code rule. Use Sonnet as base, note 9.1 also violated.",
+    "transcript_evidence": "7.2: Name 'Дмитрий' at 00:08 not echoed. 9.1: Search 00:27-02:03 = 96s (customer checked in at 02:00)."
   },
   {
     "call_id": "call_09",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "Sonnet/BLIND2 consensus on core violations. Pattern mirrors call_01 (partial echo).",
+    "notes": "82% field agreement. BLIND1 outlier on 7.2 similar to call_01."
   },
   {
     "call_id": "call_10",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "Sonnet/BLIND2 consensus on core violations. Pattern mirrors call_01 (partial echo).",
+    "notes": "82% field agreement. BLIND1 outlier on 7.2 similar to call_01."
   },
   {
     "call_id": "call_11",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "BLIND2",
+    "confidence": "high",
+    "reason": "BLIND2 most accurate: correctly measured 57s search (9.1 VIOLATION) that Sonnet/BLIND1 both missed. Also correct on 9.3.",
+    "notes": "Expert review confirmed: 57s search (9.1 VIOLATION), missing gratitude (9.3 VIOLATION), plus 7.2. Sonnet/BLIND1 measurement errors (~19-20s incorrect).",
+    "transcript_evidence": "Search: 00:36s to 01:35s = 57s (exceeds 45s threshold). No 'спасибо за ожидание' detected."
   },
   {
     "call_id": "call_12",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "high",
+    "reason": "Sonnet correct on 9.3 assessment for brief searches (20-25s). Most detailed analysis. BLIND2 too strict on brief search gratitude.",
+    "notes": "Expert review confirmed: searches 20-25s (borderline for gratitude requirement). Sonnet's PASS on 9.3 reasonable given brief duration. Final_grade=7 from 7.2.",
+    "transcript_evidence": "Searches all under 25s. Explicit gratitude borderline but operator maintained conversation."
   },
   {
     "call_id": "call_13",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "high",
+    "reason": "Sonnet correctly identified 40-45s flag window (42.8s) without score reduction. BLIND1 missed flag entirely, BLIND2 incorrectly penalized.",
+    "notes": "Expert review confirmed: 42.8s search = FLAG window (Grade 10, no score reduction per spec). Sonnet got 9.1 RIGHT. Also correct on 3.1 (customer choice, not operator failure).",
+    "transcript_evidence": "Search: 03:57 to 04:39 = 42.8s (40-45s flag window, no violation)."
   },
   {
     "call_id": "call_14",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "high",
+    "reason": "Sonnet correct on 9.3 VIOLATION (37s search requires gratitude) and 3.1 PASS (inventory constraint, not operator failure).",
+    "notes": "Expert review confirmed: 37s search without gratitude = 9.3 VIOLATION. BLIND1 too lenient. Sonnet most comprehensive.",
+    "transcript_evidence": "Search: 00:31.7s to 01:09s = 37s. No 'спасибо за ожидание' detected."
   },
   {
     "call_id": "call_15",
     "golden_source": "BLIND",
-    "confidence": "medium",
-    "reason": "BLIND1 and BLIND2 agree on core fields and both differ from Sonnet."
+    "confidence": "high",
+    "reason": "BLIND1 and BLIND2 agree on core fields and both differ from Sonnet on 7.2 violation.",
+    "notes": "Original decision confirmed. BLIND consensus on 7.2 violation stronger than Sonnet's PASS (2 vs 1)."
   },
   {
     "call_id": "call_16",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "91% field agreement. Disagreements limited to 9.1 and Tier 3 fields.",
+    "notes": "Very high stability. Safe for golden use."
   },
   {
     "call_id": "call_17",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "86% field agreement. Disagreements limited to 9.1, 9.3, and Tier 3 fields.",
+    "notes": "High stability. BLIND1 outliers on Grade 9 criteria expected pre-spec-fix."
   },
   {
     "call_id": "call_18",
     "golden_source": "Sonnet",
     "confidence": "high",
-    "reason": "Sonnet, BLIND1, BLIND2 fully agree on core fields."
+    "reason": "Sonnet, BLIND1, BLIND2 fully agree on core fields. Perfect Grade 10 call.",
+    "notes": "Original high-confidence decision confirmed. Excellent baseline example with no violations."
   },
   {
     "call_id": "call_19",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "86% field agreement. Disagreements limited to 9.1, 9.3, and Tier 3 fields.",
+    "notes": "High stability. Safe for golden use."
   },
   {
     "call_id": "call_20",
-    "golden_source": "none",
-    "confidence": "low",
-    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+    "golden_source": "Sonnet",
+    "confidence": "high",
+    "reason": "Sonnet correctly identified all 3 violations (7.1, 7.2, 9.3 x2). BLIND1 hallucinations (false claims of script/gratitude). BLIND2 missed 7.2.",
+    "notes": "Expert review confirmed: 7.1 (no proper greeting/closing), 7.2 (name not echoed), 9.3 (2 instances, no gratitude). Sonnet most accurate despite search duration measurement error (non-grade-affecting).",
+    "transcript_evidence": "Greeting: 'А.' only at 00:00.346. Name 'Дмитрий' at 00:03-00:10 not echoed. Two searches without gratitude."
   }
 ]
