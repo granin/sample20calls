@@ -1,0 +1,252 @@
+{
+  "call_metadata": {
+    "call_id": "call_07",
+    "duration_seconds": 588,
+    "call_start": "0:00.000",
+    "call_end": "9:48.523",
+    "operator_name": "Евгений",
+    "customer_name": "Родион Геннадьевич",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:00.112",
+      "timestamp_end": "0:06.208",
+      "evidence": "Contact data collected without proper echo confirmation. (1) Customer name 'Родион Геннадьевич' collected at 0:11-0:13, operator repeated name at 0:15 but never asked for confirmation ('Верно?'). (2) Phone number '904.54.33.46.7' at 0:06:21 never echoed back with confirmation. (3) Email 'профанерго...яндекс.ру' at 0:07:23 not echoed with verification.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "7:34.729",
+      "timestamp_end": "8:35.565",
+      "evidence": "Operator announced 'Минута, пожалуйста' at 7:34 and processed/searched for 60+ seconds until delivering information at 8:35. Search duration: 60.8 seconds exceeds 45-second threshold.",
+      "confidence": 0.90,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "When collecting customer contact information (name, phone, email, address), you must repeat the data back to the customer and ask for explicit confirmation: 'Ваш номер 912-778-1421, верно?' and wait for 'Да' or 'Верно' response. This prevents errors and builds customer confidence in data accuracy.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Long search time without communication",
+      "recommendation": "When system search or order processing exceeds 45 seconds, proactively update the customer every 20-30 seconds ('Я еще проверяю', 'Один момент') and then provide a brief apology/thanks ('Спасибо за ожидание' or 'Приношу извинения за ожидание') when delivering results. Your 60-second wait was felt by the customer.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 60.8,
+      "customer_check_ins": 1,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 2.472,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "phone", "email"],
+      "echo_performed": {
+        "name": true,
+        "phone": false,
+        "email": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone": false,
+        "email": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected. Professional tone maintained throughout call despite customer's lengthy questions.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call completed with proper service delivery. Order successfully placed, no refusal or dropout.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request for winter tires (185/65/15 lipuchka) resolved through order placement. Product selected (ICON 185/65/15) and order confirmed.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential office numbers, internal codes, or unauthorized personal data disclosed.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator verified customer information in system before providing details. Responses supported by database lookup references.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer is talkative and repetitive in questions; operator responds patiently and professionally without showing frustration. Maintains professional tone and helpfulness throughout.",
+      "note": "Text-based assessment only; full tone analysis would require audio"
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Order information complete: product type (ICON), size (185/65/15), price (25,400 rubles), delivery address (Serafima Derebina, Ekaterinburg), contact info (phone and email confirmed).",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Despite 60-second silence during processing, customer did not hang up. Customer acknowledged wait with 'Спасибо' and operator thanked for waiting. No critical hangup occurred.",
+      "note": "Long silence flagged separately under 9.1"
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company name ('74 колеса'), operator name ('Евгений'), and offer to help. Closing includes thanks and farewell. Script structure followed.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Multiple contact data items collected without echo method: name repeated but no confirmation requested; phone number not echoed; email not verified with customer. See violations_detected for timeline.",
+      "note": "Critical protocol violation - repeated in coaching priorities"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro begins at 0:02.472 (within 5s threshold). Disconnect occurs immediately after final speech at 0:09:48.523 (within 5s).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected. Operator maintains smooth dialogue flow.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Search announced at 7:34.729 ('Минута, пожалуйста'), information delivered at 8:35.565. Total duration 60.8 seconds exceeds 45-second threshold.",
+      "note": "See violations_detected for full timeline"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "After long wait/search, operator says 'За ожидание' (thanks for waiting) at 8:35.565 before delivering information.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Product information delivered per script: tire specifications, availability status, pricing, and order details clearly communicated. Logical flow maintained.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name 'Родион Геннадьевич' used consistently. Operator shows patience with customer's detailed questions. Professional dialogue with proper opening and closing.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All required information delivered: product details (ICON 185/65/15), pricing (25,400 RUB), availability (по заказу/by order), delivery location, and contact confirmation.",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name clearly stated",
+    "Proper closing with thanks and farewell",
+    "Customer name used consistently throughout conversation (Родион Геннадьевич)",
+    "Handled complex product questions patiently and comprehensively",
+    "Checked system/database before providing information",
+    "Successfully completed customer request (order placed for tires)",
+    "Thanked customer for waiting after search",
+    "Confirmed order details including delivery address and contact info"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "timestamps"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Call duration 588 seconds. Contact data handling clearly visible in transcript. Long silence during processing clearly marked by timestamps. Transcript quality is good with clear speaker attribution."
+  }
+}
