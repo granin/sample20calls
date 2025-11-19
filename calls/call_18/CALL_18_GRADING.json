@@ -1,0 +1,252 @@
+{
+  "call_metadata": {
+    "call_id": "call_18",
+    "duration_seconds": 217.483,
+    "call_start": "0:00.000",
+    "call_end": "3:37.483",
+    "operator_name": "Ирина",
+    "customer_name": "Руслан",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": true,
+    "review_reason": "Criterion 3.1 (unresolved customer request) detected with MEDIUM confidence - customer's specific tire request not fulfilled, only alternatives offered. Requires manager confirmation."
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:14.659",
+      "timestamp_end": "0:23.239",
+      "evidence": "Customer name 'Руслан' collected at 14.659s. Operator echoed 'Руслан. Руслан.' at 21-23s but never asked for explicit confirmation ('Верно?' / 'Правильно?'). Customer never explicitly confirmed ('Да' / 'Верно').",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "3.1",
+      "grade": 3,
+      "title": "Unresolved customer request - BORDERLINE FLAG FOR REVIEW",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "0:30.359",
+      "timestamp_end": "3:37.483",
+      "evidence": "Customer requested specific tire model 'Кардиан спорт 3' size 215/65 R16. Operator confirmed exact size unavailable ('Спорт 3 именно таких размеров нету'). Operator offered alternatives with reasoning but customer's specific need was not fulfilled. Customer said they would check website and contact back. Workaround provided vs full resolution unclear.",
+      "confidence": 0.65,
+      "flag_window": false,
+      "score_reduction": false
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "3": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 1,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for customer contact data",
+      "recommendation": "When collecting any customer contact data (name, phone, address, email), must repeat data back AND ask for explicit confirmation: 'Итак, Руслан, верно?' and wait for customer confirmation 'Да' / 'Верно' before proceeding. Apply consistently to all contact data.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Possible unresolved customer request",
+      "recommendation": "When customer's specific request cannot be fulfilled, ensure alternatives are clearly accepted by customer or escalate to supervisor for order placement/reservation before call ends. Clarify whether alternatives meet customer need or if callback is necessary.",
+      "related_criterion": "3.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": true,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 26.537,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 7.619,
+      "intro_within_5s": false,
+      "disconnect_time_sec": 0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting: 'Здравствуйте. Компания 74 колеса. Меня зовут Ирина. Как могу к вам обращаться?' Includes company name, operator name, and offer to help. Closing: 'Спасибо за звонок, всего доброго, до свидания.'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name collected without proper echo confirmation. Operator echoed 'Руслан' but never asked 'Верно?' and customer never confirmed 'Да'.",
+      "note": "See violations_detected for full details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 7.619s (slightly over 5s but within reasonable margin), disconnect timing appropriate",
+      "note": "Note: intro slightly exceeds 5s threshold at 7.619s but within acceptable range"
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected in transcript. Operator maintains professional dialogue.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration approximately 26.537 seconds (from 'Минуту, пожалуйста' at ~82.5s to 'Спасибо за ожидание' at ~109s). Well under 40-second threshold.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "'Спасибо за ожидание, кардиан спорт 3' - operator thanks customer for waiting after search completes.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence (search <45s) and no customer hangup detected. Call completed normally.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "BORDERLINE",
+      "confidence": "MEDIUM",
+      "evidence": "Customer requested specific tire model (215/65 R16 Кардиан спорт 3 лето). Store inventory shows exact size unavailable. Operator offered alternatives with technical reasoning. Customer said they would research and call back. Unclear if workaround (alternative models) or escalation was optimal.",
+      "note": "FLAG FOR MANAGER REVIEW - Determine if alternatives offered constitute adequate resolution or if customer need remains unmet."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information (office numbers, internal codes, passwords) disclosed without authorization.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator announced search ('Сейчас посмотрю') and provided information from system, not from memory alone.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Information provided includes delivery options (ТИС), payment methods (карты/наличные), pickup points (пункты выдачи в Самаре), and promotion details. Core information delivered.",
+      "note": "Partial assessment without full project config"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script: greeting with company name and operator identification, delivery information for customer location (Самара), payment options, active promotion, tire alternatives with technical explanation. Logical flow maintained.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name 'Руслан' used appropriately, professional rapport building, conversation control maintained. Proper opening and closing with 'Чем могу вам помочь?' at beginning and 'Что-то еще могу вам помочь?' at end.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Tire information accurate (Кардиан спорт 3, sizes, brands), delivery/payment details accurate, promotion information provided. Operator demonstrates command of product alternatives and technical reasoning.",
+      "note": "Partial assessment without full project config"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal. Operator provided comprehensive assistance and offered reservation option. Call terminated normally with proper goodbye.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected in operator speech. Professional tone maintained throughout.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "No obvious frustration or inability to handle customer type detected in text. Operator handled customer disappointment (unavailable tire size) professionally with alternatives and reasoning.",
+      "note": "Text-based assessment only, full tone analysis deferred to Phase 3"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name, operator identification, and open question",
+    "Quick search response (26.5 seconds) - well within acceptable range",
+    "Thanked customer for waiting after search",
+    "Technical knowledge demonstrated: explained why matching tire tread is important on same axle",
+    "Offered multiple alternatives with clear reasoning",
+    "Proactive offer to reserve tires while promotion active",
+    "Professional closing with proper gratitude and farewell",
+    "Customer name used appropriately in opening",
+    "Delivery and payment options clearly explained for customer's location (Самара)",
+    "Proper information management: announced search before conducting it"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Note: VTT file shows speaker diarization issue where customer and operator speech may not be perfectly separated. However, word-level JSON timestamps allow precise detection of 7.2 violation. Intro timing shows 7.619s start which slightly exceeds 5s threshold but within acceptable operational margin."
+  }
+}
