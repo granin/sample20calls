@@ -1,0 +1,250 @@
+{
+  "call_metadata": {
+    "call_id": "call_06",
+    "duration_seconds": 626,
+    "call_start": "0:00.000",
+    "call_end": "10:26.694",
+    "operator_name": "Евгений Коквара",
+    "customer_name": "Марат",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:08.603",
+      "timestamp_end": "0:11.563",
+      "evidence": "Customer provides name 'Марат' but operator does not repeat back and ask for confirmation ('Верно?'). Later, customer provides phone number '903-35-15-39' at 7:51.588-7:54.588 with correction '9-9-9' at 7:57.148-7:58.728, but no explicit echo confirmation requested before proceeding.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:48.737",
+      "timestamp_end": "1:34.846",
+      "evidence": "Operator announces search with 'Минуту, пожалуйста' at 0:48.737 and returns with 'Спасибо за ожидание' at 1:34.846. Total search duration: 46.1 seconds, exceeding 45-second threshold.",
+      "confidence": 0.90,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "When collecting customer contact information (name, phone, address, email), always repeat the data back to the customer and request explicit confirmation. Use confirmation requests like 'Марат, верно?' or 'Номер 903-35-15-39, правильно?' and wait for customer confirmation ('Да', 'Верно').",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Extended information search time",
+      "recommendation": "Information search at 0:48-1:34 took 46.1 seconds, exceeding the 45-second threshold for complex database lookups. Consider improving search efficiency, preparing more common queries in advance, or checking in more frequently (every 30-40 seconds) to reduce perceived wait time.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 46.1,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 2.843,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "phone"],
+      "echo_performed": {
+        "name": false,
+        "phone": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected in transcript. Professional tone maintained throughout.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator provides full service, completes order process, ends call professionally with 'Спасибо за звонок, всего доброго, до свидания.'",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All customer questions answered: compatibility confirmed, bolts addressed, VESTA fit confirmed, discount explained, warranty and fuel gift details provided. Order successfully placed.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No office phone numbers, internal codes, passwords, or personal data disclosed without verification.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator announces system checks: 'Сейчас проверим информацию' and 'Информацию проверил.' Information provided after verification, not from memory.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer is polite and engaged throughout. Operator responds professionally to all customer types without frustration indicators.",
+      "note": "Text-based assessment only; full tone evaluation would require audio."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: product codes (R247348, R41066), tire spec (Pirelli Formula Ice 95x55x16), delivery timing, assembly service, warranty (3 weeks), fuel gift (90 days validity, Yandex.Fuel).",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First search at 0:48-1:34 lasted 46.1 seconds. Customer did NOT hang up; remained on line and received information. No customer-initiated call termination.",
+      "note": "Search exceeds flag window but customer waited, so no hangup violation."
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company name ('74 колеса'), operator name (Евгений Коквара), and offer to help. Closing is professional ('Спасибо за звонок, всего доброго, до свидания'). Question sequence follows logical flow.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name 'Марат' at 0:08-0:11 - not repeated back. Phone '903-35-15-39' at 7:51-7:54 - not repeated back. No confirmation requests ('Верно?') observed. See violations_detected for full details.",
+      "note": "Critical violation: Echo method required for all contact data."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 0:02.843 (2.843 seconds from start, <5s threshold). Disconnect within 5 seconds of final speech. Both timing requirements met.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected where operator cuts off customer mid-sentence without apology. Conversation shows natural turn-taking.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Search from 0:48.737 to 1:34.846 = 46.1 seconds, exceeding 45-second threshold. See violations_detected for full details.",
+      "note": "Violation threshold: >45 seconds"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "After search completion at 1:34.846, operator says 'Спасибо за ожидание' (Thank you for waiting). Pattern repeated after second search at 2:18.527.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided according to script: product details, compatibility checks, pricing, delivery, warranty, promotions. Logical presentation and proper flow.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name 'Марат' used consistently. Professional rapport maintained throughout lengthy 10+ minute call. Operator controls conversation flow effectively. Proper opening and closing.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Accurate product information delivered (tire models, compatibility, pricing). Confident command of promotional details (fuel gift terms, warranty duration, discount application).",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name, operator name, and friendly tone",
+    "Thorough product knowledge demonstrated throughout call",
+    "Consistently used customer name to build rapport",
+    "Provided comprehensive information about warranty, fuel gift, and promotional benefits",
+    "Handled all customer questions with patience and clarity",
+    "Successfully guided customer through order process",
+    "Thanked customer for waiting after each information search",
+    "Professional closing with courteous farewell"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level JSON timestamps used for echo method detection. VTT-level timing used for search duration and 5-second rules. Transcription shows clear dialogue with proper speaker attribution."
+  }
+}
