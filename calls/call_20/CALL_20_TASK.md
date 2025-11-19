@@ -1,10 +1,10 @@
-## TASK: Grade `call_20` (JSON response only)
+## TASK: Grade `call_20` and write JSON output
 
 You are a grading agent working **inside this repository**.
 
 Your job in this task is to:
 - Grade **`call_20`** using the **Phase 1, 17‑criteria transcript-only system**.
-- Return your grading result as a **single JSON object** in chat.
+- **Write** your grading result to a JSON file in this repo.
 
 Follow the same Phase 1 rules as in `TASK.md`:
 - 17 criteria only (no Phase 2/3, no 26‑criteria context).
@@ -34,5 +34,8 @@ Call data:
 1. Load the instructions and schema from `config/` and `docs/`.
 2. Evaluate all 17 Phase 1 criteria for `call_20` using the data in `calls/call_20/`.
 3. Produce one JSON object that strictly follows `config/phase1_output_format_v2.json`.
-4. In your chat reply, output **only** that JSON object (no extra text).
+4. **Write** that JSON object to:
+   - `calls/call_20/CALL_20_GRADING.json`
+   Overwrite the file if it already exists.
+5. In your chat reply, output **only** that JSON object (no extra text).
 
