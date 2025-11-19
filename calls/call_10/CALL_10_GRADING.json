@@ -1,0 +1,248 @@
+{
+  "call_metadata": {
+    "call_id": "call_10",
+    "duration_seconds": 1090,
+    "call_start": "0:00.316",
+    "call_end": "18:10.033",
+    "operator_name": "Алина",
+    "customer_name": "Сергей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 9,
+    "confidence": "HIGH",
+    "primary_violation": "9.3",
+    "all_violation_grades": [9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting after search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:00.945",
+      "timestamp_end": "0:00.990",
+      "evidence": "Search announced at 0:00:45.517 ('Сейчас проверю информацию'), completed at ~0:00:59, but agent proceeded directly to question 'Пожалуйста, вам необходимы летние шины или зимние?' without thanking customer for waiting",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting after search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:01.213",
+      "timestamp_end": "0:01.320",
+      "evidence": "Search announced at 0:01:13.234 ('Сейчас посмотрю, минуту, пожалуйста'), completed at ~0:01:20, then agent asked 'Вам необходима комплекшн, верно я вас поймаю?' without prior thank you",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "9": 2
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Missing thank you after information search",
+      "recommendation": "Always thank customer for waiting after completing any information search, even quick ones. Use phrases like 'Спасибо за ожидание' within 5 seconds of search completion",
+      "related_criterion": "9.3"
+    },
+    {
+      "priority": 2,
+      "issue": "Two searches in flag-only window (40-45s)",
+      "recommendation": "Optimize search speed. Two instances (at 5:41 and 10:35) had searches lasting 40-45 seconds. While not violations, consider ways to expedite database lookups",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 22.5,
+      "customer_check_ins": 2,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.316,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 2.66,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["phone"],
+      "echo_performed": {
+        "phone": true
+      },
+      "confirmation_received": {
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name (74-х колесами), operator name (Алина), and offer to help (Как к вас можно обращаться?). Closing with gratitude (спасибо за звонок) and farewell",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Phone number 912-615-69-64 was repeated back at 11:56.515 with confirmation request ('верно?') and customer confirmed ('Верно, верно')",
+      "note": null
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.316 seconds (< 5s), disconnect at 2.66 seconds (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected. Agent maintains polite, professional tone throughout",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Multiple searches conducted (longest ~54s). At 4:34-5:04 approx 30s silence with one search on boundary. Customer remains engaged, does not hang up despite wait times. No critical silence with customer hangup",
+      "note": "Two searches in 40-45s flag window (5:41 and 10:35), but customer did not disconnect"
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Most searches under 40s. Two searches at boundary: 44.81s (5:41-6:26) and 43.18s (10:35-11:18) fall in 40-45s flag window only. All other searches 0-30s",
+      "note": "Two searches in flag window - improvement needed but no score reduction per rule"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Search at 0:45-0:59: No thank you before proceeding to tire type question. Search at 1:13-1:20: No thank you before proceeding to completion question",
+      "note": "Later searches included thank you, but these early searches violated requirement"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer's tire purchase request fully addressed with specific product, pricing, options. Trade-in questions escalated to manager appropriately. Installation location provided (partner at Волгоградская 208). Order confirmed with order number 96-97-64",
+      "note": "Minor unclear point about tire size compatibility (205 vs 215) properly escalated for manager callback"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Phone number for partner location (7-904-174-4111) provided, which is public business information. No internal codes, passwords, or confidential data disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent consistently uses verification phrases ('Сейчас посмотрю', 'проверю информацию') before providing factual information about products and services",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name (Сергей), phone (912-615-69-64), tire specifications (215-60-R-16 Yokohama), pricing (9670 and 10590 rubles), order number (96-97-64), and mount location all provided",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided in logical flow: tire options → specifications → pricing → delivery/mounting details → order confirmation. Script structure maintained throughout",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional dialogue maintained. Agent addresses customer concerns methodically, clarifies uncertainty about tire compatibility, manages escalation to manager properly. Professional opening and closing",
+      "note": "Customer name usage unclear from transcript, but overall dialogue quality high"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete and accurate product information delivered: tire models (Yokohama ASGORE IG65, ASGOS IG55), prices, warranty details, benefits (free mounting, trade-in, fuel discount). Confident presentation",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call completed successfully with order placed. No refusal of service. Professional closing: 'спасибо за звонок. Всего доброго, до свидания'",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected in transcript. Operator maintains professional, polite tone throughout entire call",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is engaged but somewhat talkative with detailed questions. Agent adapts calmly, addresses each concern. Text shows no frustration indicators",
+      "note": "Full assessment limited to text-based indicators; audio tone assessment deferred to Phase 3"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with all required elements (company, operator name, offer to help)",
+    "Echo method correctly applied to phone number with explicit confirmation",
+    "Excellent product knowledge with detailed tire specifications and pricing",
+    "Properly managed customer uncertainty by escalating compatibility question to manager",
+    "Provided alternative solutions when customer's needs couldn't be immediately met (partner location)",
+    "Polite, patient handling of customer's detailed questions and concerns",
+    "Proper call timing (intro and disconnect within 5-second rule)",
+    "Successfully completed order with confirmation number and proper closing",
+    "Multiple safety measures: manager callback scheduled, SMS confirmation sent"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Transcript quality sufficient for criteria assessment. Word-level JSON timestamps available for echo method detection. Some transcription variations in technical terms (tire models) but context clear"
+  }
+}
