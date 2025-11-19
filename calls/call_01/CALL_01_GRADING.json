@@ -1,0 +1,248 @@
+{
+  "call_metadata": {
+    "call_id": "call_01",
+    "duration_seconds": 452,
+    "call_start": "0:00.000",
+    "call_end": "7:32.000",
+    "operator_name": "Ирина",
+    "customer_name": "Алексей Калинин",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:14.94",
+      "timestamp_end": "0:16.20",
+      "evidence": "Customer provides name 'Алексей' at 14.94s. Operator uses name immediately at 16.20s ('Алексей, из какого города вы звоните?') without repeating back or requesting explicit confirmation ('Верно?')",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used - last name",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "3:31.64",
+      "timestamp_end": "3:33.80",
+      "evidence": "Customer provides last name 'Калинин' at 3:31.64. Operator repeats 'Калинин.' at 3:32.98 but does not ask for confirmation ('Верно?' or similar)",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 2
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data verification",
+      "recommendation": "When collecting customer name, phone, address, or email, you MUST repeat the information back to the customer and ask for explicit confirmation using 'Верно?' or 'Правильно?' Then wait for customer confirmation ('Да', 'Верно', or similar) before proceeding. Example: Customer says 'Алексей' → You should say 'Итак, ваше имя Алексей, верно?' and wait for 'Да' or 'Верно'",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 24.0,
+      "customer_check_ins": 2,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.94,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.5,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "last_name", "phone", "city"],
+      "echo_performed": {
+        "name": false,
+        "last_name": false,
+        "phone": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "last_name": false,
+        "phone": true,
+        "city": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Ирина', and offer to help. Professional closing with thanks and farewell.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Names collected without echo method confirmation. First name 'Алексей' used immediately without repeat+confirmation. Last name 'Калинин' repeated but not confirmed.",
+      "note": "See violations_detected for detailed evidence"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.94s (< 5s), disconnect at 0.5s (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No evidence of operator interrupting customer without apology",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Maximum silence periods within acceptable limits; customer did not hang up due to silence",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration approximately 24 seconds, well within 40-second threshold",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator says 'Спасибо за ожидание' (Thank you for waiting) at 6:37.1 after search completes",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request to order tires with delivery to Усть-Котав addressed. Operator processed order and committed to notify managers about address issue. Customer accepted resolution.",
+      "note": "Borderline case: workaround provided (manager follow-up) rather than systemic fix, but customer need met"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No disclosure of office numbers, internal codes, passwords, or unauthorized personal data",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Information provided appears to be from system/script, not from memory without verification",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Booking number 963918 provided; phone 912-778-1421 provided; delivery company and location provided. Complete address verification pending manager follow-up.",
+      "note": "Without project config for mandatory fields, full assessment not possible"
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Text shows no frustration indicators; operator maintains professional calm tone throughout difficult address lookup process",
+      "note": "Text-based assessment only; full tone evaluation would require audio"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script with logical flow. Greeting format correct. Information delivery structured.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name 'Алексей' used consistently. Professional rapport maintained. Proper opening and closing. Operator maintains conversation control throughout.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Tire specifications (205/55 R16, winter, 4 packages) provided. Warranty option mentioned. Fuel reward details and redemption instructions (Yandex.Заправки app) explained. Pricing provided (7370 or 6633 with online payment).",
+      "note": "Without project config, partial assessment"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call completed normally. No refusal of service despite address lookup challenges.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No operator profanity or rudeness detected. Operator maintains professional tone even during children's interruptions.",
+      "note": "Customer mild expletive ('та же самая херня') does not constitute operator violation"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator identification",
+    "Customer name used consistently throughout conversation",
+    "Handled complex order with multiple products (summer and winter tires, warranty, fuel reward)",
+    "Managed system limitations professionally - when address not in system, provided clear workaround",
+    "Explained complex information clearly (tire sizes, warranty details, fuel reward redemption process with Yandex app)",
+    "Proper closing with thanks and farewell",
+    "Maintained calm professional demeanor even during interruptions",
+    "Thanked customer for waiting after search",
+    "Provided contact method for future communication (managers will call)"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json", "timestamps"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Call data includes word-level timestamps enabling precise detection of 7.2 violations. VTT transcript clear with proper diarization."
+  }
+}
