@@ -1,0 +1,354 @@
+{
+  "call_metadata": {
+    "call_id": "call_10",
+    "duration_seconds": 1090.0,
+    "call_start": "0:00.000",
+    "call_end": "18:10.033",
+    "operator_name": "Алина",
+    "customer_name": null,
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "4:33.760",
+      "timestamp_end": "4:43.760",
+      "evidence": "Address collected but no echo confirmation ('Верно?') requested. Customer: 'Да.' at 4:33.760",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "5:33.415",
+      "timestamp_end": "5:43.415",
+      "evidence": "Address collected but no echo confirmation ('Верно?') requested. Customer: 'Ну, посмотрите.' at 5:33.415",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "7:18.171",
+      "timestamp_end": "7:28.171",
+      "evidence": "Address collected but no echo confirmation ('Верно?') requested. Customer: 'Да, да, да, чтобы вот бесплатно вот у вас взять вот наш Серафима Гирярьбина, 30-я. И чтобы, как вот раньше было, мы тоже к вам обращались, дали нам купон, и мы поехали тут же рядом, что на монтажку, там ей переобулись.' at 7:18.171",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "8:11.002",
+      "timestamp_end": "8:21.002",
+      "evidence": "Address collected but no echo confirmation ('Верно?') requested. Customer: 'Понятно.' at 8:11.002",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "8:15.702",
+      "timestamp_end": "8:25.702",
+      "evidence": "Address collected but no echo confirmation ('Верно?') requested. Customer: 'Да нет, самые ближайшие будут. А ближе-то у вас, я не знаю, вот вы-то не знаете, какие... Вот в Белореченске какие у вас адреса есть?' at 8:15.702",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "8:32.617",
+      "timestamp_end": "8:42.617",
+      "evidence": "Address collected but no echo confirmation ('Верно?') requested. Customer: 'Ну, назовите, назовите.' at 8:32.617",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "8:54.537",
+      "timestamp_end": "9:04.537",
+      "evidence": "Phone collected but no echo confirmation ('Верно?') requested. Customer: 'Давайте.' at 8:54.537",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "8:57.427",
+      "timestamp_end": "9:07.427",
+      "evidence": "Phone collected but no echo confirmation ('Верно?') requested. Customer: 'Давайте говорите.' at 8:57.427",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "17:19.964",
+      "timestamp_end": "17:29.964",
+      "evidence": "Information search duration 95.7s exceeds 45-second threshold",
+      "confidence": 1.0,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 9,
+    "violations_by_grade": {
+      "7": 8,
+      "9": 1
+    },
+    "sot_violations": 9,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 9
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used",
+      "recommendation": "Must repeat customer's name/phone/address back and ask 'Верно?' for explicit confirmation",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Echo method not used",
+      "recommendation": "Must repeat customer's name/phone/address back and ask 'Верно?' for explicit confirmation",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 3,
+      "issue": "Echo method not used",
+      "recommendation": "Must repeat customer's name/phone/address back and ask 'Верно?' for explicit confirmation",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 95.678,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.316,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "address",
+        "phone"
+      ],
+      "echo_performed": {
+        "address": false,
+        "phone": false
+      },
+      "confirmation_received": {
+        "address": false,
+        "phone": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 0
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting and closing detected",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Phone collected but no echo confirmation ('Верно?') requested. Customer: 'Давайте говорите.' at 8:57.427",
+      "note": "See violations_detected for details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.32s (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Longest silence 42.3s, below 45s threshold",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Information search duration 95.7s exceeds 45-second threshold",
+      "note": "See violations_detected for details"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Thanked customer for waiting after search",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer requests appear resolved",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator appears to verify information before providing it",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Information appears complete (limited validation without project config)",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information delivered with logical flow and proper structure",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Maintains dialogue control and uses professional engagement",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Core information delivered accurately",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Normal call ending, no dropout or refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional, polite tone. No profanity or harsh language",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional engagement maintained throughout",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting and closing with proper script adherence",
+    "Excellent timing compliance for intro and outro",
+    "Proper handling of confidential information",
+    "Information delivered with logical flow and structure",
+    "Strong dialogue management and rapport building",
+    "Comprehensive and accurate information provision",
+    "Professional, polite tone throughout conversation"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": null
+  }
+}

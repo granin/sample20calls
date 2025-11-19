@@ -1,0 +1,227 @@
+{
+  "call_metadata": {
+    "call_id": "call_17",
+    "duration_seconds": 357.7,
+    "call_start": "0:00.000",
+    "call_end": "5:57.676",
+    "operator_name": "Александра",
+    "customer_name": null,
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 9,
+    "confidence": "HIGH",
+    "primary_violation": "9.1",
+    "all_violation_grades": [
+      9
+    ],
+    "lowest_code_rule_applied": false,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "3:11.792",
+      "timestamp_end": "3:21.792",
+      "evidence": "Information search duration 51.1s exceeds 45-second threshold",
+      "confidence": 1.0,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Long information search",
+      "recommendation": "Review criterion requirements and adjust behavior",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 51.126000000000005,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 1.662,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": false,
+      "entities_collected": [],
+      "echo_performed": {},
+      "confirmation_received": {}
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 0
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting and closing detected",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No contact data collected (criterion not applicable)",
+      "note": null
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 1.66s (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Longest silence 17.9s, below 45s threshold",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Information search duration 51.1s exceeds 45-second threshold",
+      "note": "See violations_detected for details"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Thanked customer for waiting after search",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer requests appear resolved",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator appears to verify information before providing it",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Information appears complete (limited validation without project config)",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information delivered with logical flow and proper structure",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Maintains dialogue control and uses professional engagement",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Core information delivered accurately",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Normal call ending, no dropout or refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional, polite tone. No profanity or harsh language",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional engagement maintained throughout",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting and closing with proper script adherence",
+    "Excellent timing compliance for intro and outro",
+    "Proper handling of confidential information",
+    "Information delivered with logical flow and structure",
+    "Strong dialogue management and rapport building",
+    "Comprehensive and accurate information provision",
+    "Professional, polite tone throughout conversation"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": null
+  }
+}
