@@ -1,0 +1,264 @@
+{
+  "call_metadata": {
+    "call_id": "call_03",
+    "duration_seconds": 451,
+    "call_start": "0:00.835",
+    "call_end": "7:51.984",
+    "operator_name": "Ирина",
+    "customer_name": "Сергей Постнов",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:04.248",
+      "timestamp_end": "0:04.276",
+      "evidence": "Customer provided last name 'Постнов' at 0:04.238. Operator repeated incorrectly as 'Портнов' without asking for confirmation ('Верно?'). Customer had to correct operator at 0:04.276 saying 'Постнов'. Echo method requires explicit confirmation request.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:03.489",
+      "timestamp_end": "0:03.502",
+      "evidence": "After operator completed information search and provided full product specifications (wheels/disk specs from 0:03.174 to 0:03.489), customer responded at 0:03.502 with no thank you expressed for waiting. Rule requires gratitude after search completion.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not applied for contact data verification",
+      "recommendation": "When customer provides name, phone, or address, always repeat it back and ask for explicit confirmation ('Верно?', 'Правильно?', 'Подтверждаете?'). Do not assume understanding - get explicit 'Да' confirmation. This prevents errors like the 'Портнов/Постнов' mix-up.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing courtesy thank you after information search",
+      "recommendation": "After completing a system search and providing information to customer, always thank them for waiting (example: 'Спасибо, что ждали' or 'Спасибо за терпение'). This should happen even if you checked in with customer during search.",
+      "related_criterion": "9.3"
+    }
+  ],
+
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 15.0,
+      "customer_check_ins": 1,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.835,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.5,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["first_name", "region", "last_name", "phone"],
+      "echo_performed": {
+        "first_name": true,
+        "region": true,
+        "last_name": false,
+        "phone": true
+      },
+      "confirmation_received": {
+        "first_name": true,
+        "region": true,
+        "last_name": true,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected from operator throughout call",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator completed service and properly closed call. No dropout or refusal.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request to place order was fully resolved. Order was successfully placed and confirmation received.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information (office numbers, codes, passwords) disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator searched system for product specifications before providing information",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer remained engaged throughout. No signs of frustration or tone decline detected in text. Operator adapted to customer's need to search their own system.",
+      "note": "Text-based assessment only - full tone analysis requires audio"
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "All necessary information for order placement provided: location (Камешкова), product code (Р47240), auto details (Ховал 2025 1.5М6), phone confirmation. Follow-up contact info provided (manager callback tomorrow after 9am Chelyabinsk time).",
+      "note": "Partial assessment without project config for mandatory fields"
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence. Operator maintained communication throughout. Customer did not hang up.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name (74 колеса) and operator name (Ирина). Professional closing with thanks and farewell. Script sequence followed logically.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Last name 'Постнов' repeated incorrectly as 'Портнов' without confirmation request. Customer had to correct. See violations_detected for details.",
+      "note": "Critical violation - echo method is proven high-value safety check"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro greeting starts at 0:00.835 (< 5s). Disconnect at 0:07.51.984 with last customer speech at 0:07.51.484 (< 5s gap).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No abrupt customer interruptions detected without apology",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Product specification search from 0:03.174 to 0:03.489 (15 seconds from code receipt to specs delivery). Well under 40-second threshold.",
+      "note": "Customer provided product code from their system; operator search for specs was efficient"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After completing product information search and delivery of full specifications, no thank you expressed to customer for waiting",
+      "note": "See violations_detected for details"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per call center script for order placement. Logical flow: greet, identify issue, find product, collect details, place order, confirm.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name used consistently throughout call (Сергей, Сергей Постнов). Professional rapport maintained. Operator managed conversation to successful order completion.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Product information delivered accurately (wheels R47240 specs including bolt pattern, width, offset, hub size). Delivery policy explained (free over 30k rubles). Order successfully processed.",
+      "note": "Partial assessment without full project configuration"
+    }
+  },
+
+  "positive_observations": [
+    "Professional greeting with company name and operator name",
+    "Excellent problem-solving: helped customer complete order when website failed",
+    "Efficient product specification search and delivery (15 seconds)",
+    "Used customer name consistently throughout conversation",
+    "Successfully navigated customer through order placement process",
+    "Provided clear follow-up information (callback timing and Chelyabinsk timezone reference)",
+    "Confirmed order number with customer (96-65-76) and SMS receipt",
+    "Maintained professional tone throughout",
+    "Clarified payment method options when customer expressed preference"
+  ],
+
+  "data_quality": {
+    "data_sources_used": ["vtt"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level JSON not yet reviewed for 7.2 detection - assessment based on VTT timing analysis"
+  }
+}
