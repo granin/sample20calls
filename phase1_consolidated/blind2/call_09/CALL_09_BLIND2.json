@@ -1,0 +1,253 @@
+{
+  "call_metadata": {
+    "call_id": "call_09",
+    "duration_seconds": 887.4,
+    "call_start": "0:00.000",
+    "call_end": "14:47.416",
+    "operator_name": "Алина",
+    "customer_name": "Александр",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used for all contact data",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:07.672",
+      "timestamp_end": "0:13.572",
+      "evidence": "Customer provides name ('Здравствуйте. Александр.' at 0:07.672) and city ('С Кушевой.' at 0:11.952), but the operator never repeats these contact details with an explicit confirmation question; only the phone number and pickup address are echoed and confirmed later.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search (>45s)",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "2:46.120",
+      "timestamp_end": "3:47.062",
+      "evidence": "At 2:46.120 the operator says 'Минуту, пожалуйста.' and goes to search about payment options. The customer waits and speaks again at 2:58.782, but the informative answer only starts at 3:47.062 ('Спасибо за ожидание. Да, предусмотрено наличным при получении...'), so the total search period is about 61 seconds, exceeding the 45s threshold.",
+      "confidence": 0.88,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method inconsistently applied to contact data",
+      "recommendation": "Whenever recording any contact data (name, city, phone, address), always repeat the data back and ask an explicit confirmation question like '... верно?' and wait for a clear confirmation from the customer.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Information search for payment options exceeded 45 seconds",
+      "recommendation": "When searches may take longer, split the task or prepare information in advance so that the time from 'Минуту, пожалуйста' to the start of the answer stays under 45 seconds; keep the customer informed during long searches.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 60.9,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.6,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "phone", "address"],
+      "echo_performed": {
+        "name": false,
+        "city": false,
+        "phone": true,
+        "address": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "phone": true,
+        "address": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper script-like greeting with company and operator name at 0:03 ('Здравствуйте. Компания 74 колеса. Меня зовут Алина...'), clarification questions, and a standard closing ('Спасибо за звонок. Всего доброго. До свидания.' at 14:45).",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name and city are collected at 0:07.672 ('Здравствуйте. Александр.') and 0:11.952 ('С Кушевой.'), but only the phone number and pickup address are later echoed with 'верно?' and confirmed; no echo + confirmation for name/city.",
+      "note": "Per echo method rules, partial confirmation (phone/address) with unconfirmed name/city still counts as a 7.2 violation."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First operator phrase at ~3.6s from call start (<5s). Call ends immediately after the closing phrase at 14:47 with no evidence of extended silence before disconnect.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Transcript shows no cases where the operator clearly talks over the customer without an apology.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Despite one long search (~61s) the customer does not hang up; conversation continues and ends normally.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Payment-method search from 2:46.120 ('Минуту, пожалуйста.') to 3:47.062 ('Спасибо за ожидание. Да, предусмотрено...') lasts ~61 seconds, exceeding the >45s violation threshold.",
+      "note": "This is a score-affecting violation, not just a 40–45s flag."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "After major search segments the operator thanks the customer explicitly (e.g., 'Спасибо за ожидание.' at 1:28 and 3:47, and again around 11:10 before asking for phone).",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Initial request ('завтра... резину у вас забрать') is fully resolved: specific tires are chosen, order is created, pickup address and order number are provided.",
+      "note": "Borderline unresolved-request patterns not observed; no clear signs of unmet need."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Only public store addresses and order number are shared; no internal office phone numbers, passwords, or confidential employee data appear in the transcript.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "For key details (assortment, prices, discounts, addresses) the operator repeatedly announces searches ('Минуту, пожалуйста', 'сейчас вам подскажу'), indicating system checks rather than offhand memory answers.",
+      "note": "Without project configuration it is difficult to fully exclude unverified info, but no explicit 'по памяти' patterns are visible."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator provides tire parameters, several brand/price options, discount conditions, pickup location, and order number; no obvious missing mandatory information is visible in transcript alone.",
+      "note": "Project-specific mandatory info list is unavailable, so assessment is partial."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting and closing follow expected script structure; questions about parameters, budget, and pickup are logically sequenced and aligned with sales script.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator leads the conversation, clarifies needs, offers options, and closes the call with 'Чем-то ещё могу вам помочь?' before goodbye; no loss of dialogue control is observed.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives several suitable tire options with pricing and discount details, as well as clear instructions for payment and pickup.",
+      "note": "Full information completeness relative to project requirements cannot be fully confirmed without external config."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No abrupt disconnects or explicit service refusal; the call ends after a standard polite closing.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "No profanity or explicit rudeness from the operator in text; tone cannot be fully assessed without audio.",
+      "note": "Partial assessment only; 1.1 ultimately depends on audio tone."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is talkative and asks clarifying questions, but operator remains polite and structured; no clear failure to handle a difficult customer.",
+      "note": "Assessment based on text only; emotional tone may differ in audio."
+    }
+  },
+  "positive_observations": [
+    "Strong script adherence: clear greeting with company and operator name, and polite closing with thanks for the call.",
+    "Thorough needs analysis: operator clarifies tire parameters, season, presence of studs, and budget before recommending options.",
+    "Provides multiple tire options with prices, discounts, and brief value explanation to help the customer choose.",
+    "Repeatedly informs the customer and thanks for waiting during information searches, reducing perceived waiting time.",
+    "Clearly communicates pickup address options and repeats the chosen address and phone number for confirmation.",
+    "Summarizes the order (product, quantity, total amount, pickup address, order number) before closing the call."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Minor ASR errors and typos are present, but timestamps and content are sufficient for confident assessment of the 17 criteria."
+  }
+}
+

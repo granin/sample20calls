@@ -1,0 +1,272 @@
+{
+  "call_metadata": {
+    "call_id": "call_07",
+    "duration_seconds": 588.5,
+    "call_start": "0:00.000",
+    "call_end": "9:48.523",
+    "operator_name": "Евгений",
+    "customer_name": "Родион Геннадьевич",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [9, 9, 7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:11.012",
+      "timestamp_end": "0:18.572",
+      "evidence": "Customer provides name and city (\"Родион Геннадьевич, Екатеринбург\"), operator repeats only the name without explicit confirmation question and never echoes or confirms the city, INN, email; phone is only partially confirmed.",
+      "confidence": 0.97,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "7:34.729",
+      "timestamp_end": "8:35.565",
+      "evidence": "After \"Минута, пожалуйста\" the operator is silent while preparing the order; informative answer resumes only at \"За ожидание. Пишите...\", giving a search duration of about 60.8 seconds (>45s threshold).",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "0:57.873",
+      "timestamp_end": "1:20.573",
+      "evidence": "After the first search (\"Сейчас проверю наличие в этом размере\") the operator returns with \"Да, есть шины по заказу в этом размере\" but does not say \"Спасибо за ожидание\" or similar thanks for waiting; later phrase \"За ожидание\" is incomplete and not clearly tied to an explicit thank-you formula.",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "9": 2,
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not consistently used for all contact data (name, city, INN, phone, email).",
+      "recommendation": "After recording any contact data, repeat the exact value (name, city, INN, phone, email) and ask an explicit confirmation question like \"Верно?\" or \"Правильно?\", wait for a clear \"Да\" from the customer.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Long silent search during order processing.",
+      "recommendation": "Keep search periods under 45 seconds when possible and regularly check in with the customer; if search will take longer, break it into shorter steps with brief updates so the customer does not wait in silence.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "No clear \"thank you for waiting\" after searches.",
+      "recommendation": "After each information search, explicitly thank the customer for waiting using phrases like \"Спасибо за ожидание\" or \"Благодарю за ожидание\" before giving the result.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "HIGH",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 60.8,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 2.47,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 1.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "INN", "phone", "email"],
+      "echo_performed": {
+        "name": true,
+        "city": false,
+        "INN": false,
+        "phone": true,
+        "email": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "INN": false,
+        "phone": true,
+        "email": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 3
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company and operator name, asks how to address the customer and from which city; closing is polite and structured.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name, city, INN and email are recorded without full echo method; phone is echoed but only this entity is fully confirmed while others are not.",
+      "note": "Echo method must be applied consistently to all contact data (name, city, INN, phone, email)."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First operator phrase at ~2.47s (<5s) and call disconnect occurs within ~1s after final goodbye.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No clear cases where the operator cuts off the customer without an apology; turns change naturally.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "There is a long search segment, but the customer waits and does not terminate the call; operator closes the call.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Search from 7:34.729 to 8:35.565 lasts about 60.8s (>45s), exceeding the allowed search duration.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After at least one search the operator resumes conversation without explicitly saying \"Спасибо за ожидание\" or similar; phrase \"За ожидание\" is incomplete per text-based rules.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Core information about tyres, price, and order details is provided; no obvious missing mandatory information in the transcript.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is talkative but operator remains polite, patient and structured; no signs of poor handling.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Initial questions about tyre size and choice are resolved and an order is placed for a suitable set; customer agrees.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator does not disclose third-party confidential data; only discusses the caller's own order details and contacts.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Some manufacturing information is given with softeners (\"по-моему\"), and there is no clear sign of knowingly unverified or incorrect data.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No service refusal or unjustified call drop; call ends only after customer confirms there are no further questions.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or rude language from the operator is present in the transcript.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Script-based greeting and closing, logical presentation of tyre options and order process.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator controls the dialogue, asks clarifying questions, makes recommendations and properly closes the conversation.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives key information on tyre size, profile constraints, brand/origin and price; an order and invoice process are set up.",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name, plus polite closing.",
+    "Operator provides detailed explanations about tyre sizes, profiles and brands in accessible language.",
+    "Dialogue is well structured; the operator guides a talkative customer without losing control.",
+    "The call ends with a concrete result: an order is created and invoice details are agreed."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Evaluation is based on transcript (VTT) and word-level timestamps; audio and external databases were not used."
+  }
+}
+

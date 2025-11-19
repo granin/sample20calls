@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Phase 1 – 3-way Comparison Charts</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; }
+    .chart-container { width: 100%; max-width: 1200px; margin: 20px auto; }
+    h2 { font-size: 16px; margin-top: 30px; }
+    canvas { background: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Phase 1 – Sonnet vs BLIND1 vs BLIND2 (Charts)</h1>
+  <p>Data source: <code>/Users/m/git/clients/sample20calls/phase1_consolidated/summary_3way_field_stats.json</code></p>
+
+  <div class="chart-container">
+    <h2>Per-field: % All Equal (agreement across all three)</h2>
+    <canvas id="allEqualChart"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <h2>Per-field: % Outliers and All-different</h2>
+    <canvas id="outliersChart"></canvas>
+  </div>
+
+  <script>
+    const fieldStats = {"final_grade": {"total_calls_used": 17, "all_equal_count": 13, "all_equal_pct": 76.47058823529412, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 3, "blind1_outlier_pct": 17.647058823529413, "blind2_outlier_count": 1, "blind2_outlier_pct": 5.88235294117647, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "final_confidence": {"total_calls_used": 17, "all_equal_count": 9, "all_equal_pct": 52.94117647058824, "sonnet_outlier_count": 4, "sonnet_outlier_pct": 23.52941176470588, "blind1_outlier_count": 3, "blind1_outlier_pct": 17.647058823529413, "blind2_outlier_count": 1, "blind2_outlier_pct": 5.88235294117647, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "1.1": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "10.2": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "10.3": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "10.6": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "2.1": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "3.1": {"total_calls_used": 17, "all_equal_count": 9, "all_equal_pct": 52.94117647058824, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 8, "blind1_outlier_pct": 47.05882352941176, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "3.3": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "3.6": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "4.1": {"total_calls_used": 17, "all_equal_count": 9, "all_equal_pct": 52.94117647058824, "sonnet_outlier_count": 8, "sonnet_outlier_pct": 47.05882352941176, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "5.1": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "6.1": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "7.1": {"total_calls_used": 17, "all_equal_count": 16, "all_equal_pct": 94.11764705882352, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 1, "blind1_outlier_pct": 5.88235294117647, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "7.2": {"total_calls_used": 17, "all_equal_count": 12, "all_equal_pct": 70.58823529411765, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 3, "blind1_outlier_pct": 17.647058823529413, "blind2_outlier_count": 2, "blind2_outlier_pct": 11.76470588235294, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "7.3": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "7.4": {"total_calls_used": 17, "all_equal_count": 17, "all_equal_pct": 100.0, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "9.1": {"total_calls_used": 17, "all_equal_count": 7, "all_equal_pct": 41.17647058823529, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 6, "blind1_outlier_pct": 35.294117647058826, "blind2_outlier_count": 3, "blind2_outlier_pct": 17.647058823529413, "all_different_count": 1, "all_different_pct": 5.88235294117647, "missing_data_count": 3, "missing_data_pct": null}, "9.3": {"total_calls_used": 17, "all_equal_count": 8, "all_equal_pct": 47.05882352941176, "sonnet_outlier_count": 1, "sonnet_outlier_pct": 5.88235294117647, "blind1_outlier_count": 6, "blind1_outlier_pct": 35.294117647058826, "blind2_outlier_count": 2, "blind2_outlier_pct": 11.76470588235294, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "risk_compliance": {"total_calls_used": 17, "all_equal_count": 9, "all_equal_pct": 52.94117647058824, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 3, "blind1_outlier_pct": 17.647058823529413, "blind2_outlier_count": 5, "blind2_outlier_pct": 29.411764705882355, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "risk_customer_satisfaction": {"total_calls_used": 17, "all_equal_count": 13, "all_equal_pct": 76.47058823529412, "sonnet_outlier_count": 0, "sonnet_outlier_pct": 0.0, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 4, "blind2_outlier_pct": 23.52941176470588, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}, "risk_data_security": {"total_calls_used": 17, "all_equal_count": 12, "all_equal_pct": 70.58823529411765, "sonnet_outlier_count": 5, "sonnet_outlier_pct": 29.411764705882355, "blind1_outlier_count": 0, "blind1_outlier_pct": 0.0, "blind2_outlier_count": 0, "blind2_outlier_pct": 0.0, "all_different_count": 0, "all_different_pct": 0.0, "missing_data_count": 3, "missing_data_pct": null}};
+    const fields = Object.keys(fieldStats);
+
+    const labels = fields;
+    const allEqual = fields.map(f => fieldStats[f].all_equal_pct || 0);
+    const sonnetOut = fields.map(f => fieldStats[f].sonnet_outlier_pct || 0);
+    const blind1Out = fields.map(f => fieldStats[f].blind1_outlier_pct || 0);
+    const blind2Out = fields.map(f => fieldStats[f].blind2_outlier_pct || 0);
+    const allDiff = fields.map(f => fieldStats[f].all_different_pct || 0);
+
+    const ctx1 = document.getElementById('allEqualChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: '% all_equal',
+          data: allEqual,
+          backgroundColor: 'rgba(76, 175, 80, 0.7)',
+          borderColor: 'rgba(56, 142, 60, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: { ticks: { autoSkip: false, maxRotation: 60, minRotation: 30 } },
+          y: { beginAtZero: true, max: 100, title: { display: true, text: 'Percent of calls' } }
+        },
+        plugins: {
+          legend: { position: 'top' },
+          tooltip: { callbacks: { label: ctx => ctx.parsed.y.toFixed(1) + '%' } }
+        }
+      }
+    });
+
+    const ctx2 = document.getElementById('outliersChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: '% sonnet_outlier',
+            data: sonnetOut,
+            backgroundColor: 'rgba(255, 235, 59, 0.8)',
+            borderColor: 'rgba(253, 216, 53, 1)',
+            borderWidth: 1
+          },
+          {
+            label: '% blind1_outlier',
+            data: blind1Out,
+            backgroundColor: 'rgba(255, 171, 64, 0.8)',
+            borderColor: 'rgba(251, 140, 0, 1)',
+            borderWidth: 1
+          },
+          {
+            label: '% blind2_outlier',
+            data: blind2Out,
+            backgroundColor: 'rgba(100, 181, 246, 0.8)',
+            borderColor: 'rgba(25, 118, 210, 1)',
+            borderWidth: 1
+          },
+          {
+            label: '% all_different',
+            data: allDiff,
+            backgroundColor: 'rgba(239, 83, 80, 0.8)',
+            borderColor: 'rgba(211, 47, 47, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: { stacked: true, ticks: { autoSkip: false, maxRotation: 60, minRotation: 30 } },
+          y: { stacked: true, beginAtZero: true, max: 100, title: { display: true, text: 'Percent of calls' } }
+        },
+        plugins: {
+          legend: { position: 'top' },
+          tooltip: { callbacks: { label: ctx => ctx.parsed.y.toFixed(1) + '%' } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

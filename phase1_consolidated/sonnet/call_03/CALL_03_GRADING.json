@@ -1,0 +1,283 @@
+{
+  "call_metadata": {
+    "call_id": "call_03",
+    "duration_seconds": 472,
+    "call_start": "0:00.000",
+    "call_end": "7:51.984",
+    "operator_name": "Irina",
+    "customer_name": "Sergey",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:07.795",
+      "timestamp_end": "0:24.615",
+      "evidence": "Customer name 'Сергей' collected at 7.795s. Operator used name at 24.375s ('Чем могу вам помочь, Сергей?') but never repeated it back with confirmation request ('Верно?'). Echo method violation for first name.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "3:02.475",
+      "timestamp_end": "3:48.947",
+      "evidence": "Product search from code input (3:02.475) to information delivery (3:48.947). Duration: 46.5 seconds, exceeds 45-second threshold.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "3:48.947",
+      "timestamp_end": "3:54.320",
+      "evidence": "After 46.5-second search completed at 3:48.947, operator did not thank customer for waiting. No '(спасибо|благодарю).*(ожидани|подождал|ждал)' pattern detected within 5 seconds.",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 2
+    },
+    "sot_violations": 3,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for customer name",
+      "recommendation": "When customer provides their name, always repeat it back and ask for confirmation: 'Сергей, верно?' Wait for customer to confirm before proceeding.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Search duration exceeded 45 seconds",
+      "recommendation": "Product search took 46.5 seconds. Keep searches under 40 seconds, or check in with customer every 20-30 seconds during longer searches.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "Did not thank customer for waiting after search",
+      "recommendation": "After completing information search, always thank customer: 'Спасибо за ожидание' or 'Благодарю, что подождали'.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": false,
+      "search_duration_sec": 46.5,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.835,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.5,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "phone",
+        "last_name"
+      ],
+      "echo_performed": {
+        "name": false,
+        "phone": true,
+        "last_name": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone": true,
+        "last_name": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name (74 колеса), operator name (Ирина), and offer to help. Proper closing with thanks and farewell. Customer orientation questions asked.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "First name 'Сергей' collected without echo confirmation. Phone number and last name properly confirmed.",
+      "note": "Phone: operator asked '906-563-4807?' and received 'Да'. Last name: corrected from 'Портнов' to 'Постнов' with confirmation. First name: used immediately without confirmation."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Intro at 0.835s (< 5s requirement). Disconnect at 0.5s after last speech (< 5s requirement).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected without apology.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45s causing customer hangup. Call completed normally.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Product search duration 46.5 seconds exceeds 45-second threshold.",
+      "note": "Search from 3:02.475 (code input) to 3:48.947 (information delivery start)."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "No gratitude expressed after search completion. Required phrases not detected within 5 seconds of search end.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request fully resolved. Order placed successfully (number 96-65-76), delivery information provided, website issue resolved through manual order placement.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed. No office numbers, internal codes, or unauthorized personal data shared.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Delivery cost information provided appears to be standard script knowledge. Product search performed in system.",
+      "note": "Unable to verify if all information required database lookup without project-specific strict_script configuration."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: order number (96-65-76), price (16,520), delivery details, follow-up process (managers call after 9am Chelyabinsk time).",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided logically and systematically. Proper script adherence for greeting, order processing, and closing.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Used customer name 'Сергей' consistently. Built rapport, maintained conversation control. Professional opening and closing. Good dialogue management throughout.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete and accurate information delivered: product details, pricing, order confirmation, delivery information, next steps.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal. Call completed successfully with order placed.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness, profanity, or harsh language detected. Professional and polite throughout.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer remained patient despite website issues. Operator handled situation professionally. No text indicators of operator frustration or inability to adapt.",
+      "note": "Text-based assessment only. Full tone analysis would require audio."
+    }
+  },
+  "positive_observations": [
+    "Excellent greeting with all required elements (company name, operator name, offer to help)",
+    "Professional handling of website technical issue - offered to help customer place order manually",
+    "Proper echo method used for phone number with confirmation",
+    "Corrected last name mishearing and confirmed properly (Портнов → Постнов)",
+    "Used customer name consistently throughout call",
+    "Provided complete order information including order number, price, and follow-up process",
+    "Professional closing with thanks for the order",
+    "Timing compliance: intro within 0.835s, disconnect within 0.5s",
+    "Successful order completion despite initial website difficulties"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level timestamps available for precise echo method detection. Clear speaker diarization. High-quality transcription with minimal ambiguity."
+  }
+}

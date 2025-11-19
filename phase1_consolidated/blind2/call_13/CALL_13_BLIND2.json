@@ -1,0 +1,247 @@
+{
+  "call_metadata": {
+    "call_id": "call_13",
+    "duration_seconds": 272.9,
+    "call_start": "0:00.000",
+    "call_end": "4:32.866",
+    "operator_name": "Ирина",
+    "customer_name": "Алексей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:21.988",
+      "timestamp_end": "0:26.248",
+      "evidence": "Contact data (name and city) collected without explicit echo confirmation: customer introduces himself as 'Алексей' and gives city 'Из Санкт-Петербурга', operator only repeats 'Санкт-Петербург' without asking 'Верно?' or similar and without getting an explicit confirmation.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search (flag only)",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "1:13.380",
+      "timestamp_end": "1:57.713",
+      "evidence": "Operator announces search 'Сейчас посмотрю. Минуту, пожалуйста.' at ~1:13 and returns with 'Да, есть...' at ~1:57, total search duration ≈44.3s, which falls in the 40–45s flag window (no score reduction).",
+      "confidence": 0.9,
+      "flag_window": true,
+      "score_reduction": false
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 1,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data (name and city).",
+      "recommendation": "When collecting any contact details (name, city, phone, address), repeat them back and ask an explicit confirmation question such as 'Из Санкт-Петербурга, верно?' or 'Алексей, правильно записала?', and wait for the customer to confirm before proceeding.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Information search duration close to 45-second threshold.",
+      "recommendation": "Keep information searches under 40 seconds where possible, and if a search takes longer, consider giving interim updates more often and preparing key data in advance to avoid long silent pauses.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 44.3,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.01,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": false,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company and operator name and closing includes 'Чем-то ещё могу помочь?' and 'До свидания', with no obvious script violations visible in transcript.",
+      "note": "Project-specific script details not available; assessment based on generic rules."
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer provides name and city, but operator does not perform full echo method (no repeat+confirmation question+explicit confirmation).",
+      "note": "See violations_detected entry for detailed timestamps."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First operator phrase starts at ~0.01s (<5s) and call ends immediately after final farewell, with no >5s idle period before disconnect.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Transcript shows no clear cases of the operator cutting off the customer; no 'извините, что перебиваю' phrases and no obvious abrupt interruptions in text.",
+      "note": "Overlap cannot be fully assessed without multi-speaker timing or audio."
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No >45s silence leading to customer hangup; the only long pause (~44s) is a search after which the operator returns and continues the conversation.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "BORDERLINE",
+      "confidence": "HIGH",
+      "evidence": "Single information search lasts ≈44.3s (1:13.380–1:57.713), within the 40–45s flag window.",
+      "note": "Flagged for improvement only; does not reduce final grade."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Operator says 'Спасибо за ожидание' immediately after completing the search.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives full information about availability, condition, price and delivery; he declines due to tire condition and plans to search further or call back.",
+      "note": "No clear unanswered question or neglected request from the operator side."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No internal phone numbers, passwords or third-party personal data disclosed; only standard product, price and delivery information discussed.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Key factual information about the tire (availability, condition, price, delivery date) is provided after an explicit system search.",
+      "note": "Cannot fully verify project 'strict script' requirements from transcript alone."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives price, delivery cost and approximate delivery timing; no explicit request for additional mandatory details is left unanswered.",
+      "note": "Evaluation is partial because project-specific list of mandatory information is not available."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call follows a clear structure: greeting, clarifying needs (city, size), search, result explanation, discussion of options and closing.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator stays polite, listens to customer concerns about tire condition, offers reservation and alternative options, and closes with 'Чем-то ещё могу помочь?'.",
+      "note": "Customer name is not reused in dialogue but overall dialogue management remains good."
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator gives accurate information about tire model, discount reason, price, payment options and indicative delivery date.",
+      "note": "Some project-specific details (e.g., full logistics policy) are outside transcript scope."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call ends with mutual farewell after customer says 'Нет, спасибо, до свидания'; no unexpected dropout or unjustified refusal of service.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or explicitly rude phrases from the operator in the transcript; tone appears polite throughout.",
+      "note": "Tone and volume cannot be fully assessed without audio."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer expresses doubts and some frustration about buying a discounted tire, while operator remains calm, explains risks and options, and closes politely.",
+      "note": "Assessment based on text only; prosody and emotional tone not available."
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name.",
+    "Clarifies city and tire size before searching, ensuring request is understood.",
+    "Explains discounted tire condition (previous mounting and minor imbalance) in understandable terms.",
+    "Offers to reserve the tire and consult specialists, and suggests alternative options.",
+    "Ends the call with an offer of additional help and polite farewell."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level JSON marks all sentences as speaker 'A', so speaker roles were inferred from context; minor recognition issues on brand names but overall transcript is reliable."
+  }
+}

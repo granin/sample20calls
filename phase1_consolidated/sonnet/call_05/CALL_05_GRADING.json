@@ -1,0 +1,242 @@
+{
+  "call_metadata": {
+    "call_id": "call_05",
+    "duration_seconds": 568,
+    "call_start": "0:01.139",
+    "call_end": "9:28.172",
+    "operator_name": "Анна",
+    "customer_name": "Настя",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:06.679",
+      "timestamp_end": "0:10.479",
+      "evidence": "Customer name 'Настя' collected at 0:07.679, operator responded 'Красноуфимск, чем могу помочь?' without repeating name back or requesting confirmation ('Верно?')",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for customer name",
+      "recommendation": "When collecting customer contact information (name, phone, address, email), always repeat the information back to the customer and ask for explicit confirmation using phrases like 'Верно?', 'Правильно?', 'Подтверждаете?'. Wait for customer to confirm.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Customer name not used throughout call",
+      "recommendation": "After collecting customer name, use it periodically during the conversation to build rapport and personalize the interaction",
+      "related_criterion": "10.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 16.62,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 1.139,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.36,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name"
+      ],
+      "echo_performed": {
+        "name": false
+      },
+      "confirmation_received": {
+        "name": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Анна', and offer to help 'как можно к вам обращаться?' and 'чем могу помочь?'. Closing with 'Спасибо за звонок. Всего доброго. До свидания.'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name 'Настя' collected without echo confirmation",
+      "note": "See violations_detected for details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 1.139s (< 5s), disconnect at 0.36s after last speech (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected in transcript",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No prolonged silence causing customer hangup, call ended normally by both parties",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Multiple searches conducted, longest duration ~22.6s, all well under 40s threshold",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanked customer for waiting: 'Спасибо за ожидание' at 0:53.600",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All customer requests addressed: disk availability confirmed, compatibility checked, orders combined as requested",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator searched system before providing information, multiple instances of 'сейчас посмотрю' / 'проверю'",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Essential information provided: disk availability, pricing (2990, 3300, 11960 руб), delivery details (транспортная компания Киев), payment terms (2000 руб предоплата), order number (968076)",
+      "note": "Partial assessment without full project config"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical presentation of information, proper flow maintained throughout call",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Good dialogue management, proper opening and closing, conversation control maintained",
+      "note": "Customer name collected but not used consistently throughout call (area for improvement)"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Complete product information provided: disk types, sizes, compatibility parameters, pricing, delivery options",
+      "note": "Partial assessment without project config"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No service refusal or call dropout, operator completed transaction normally",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "No profanity or harsh language detected in text",
+      "note": "Text-based assessment only, full tone analysis would require audio"
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer was cooperative, no text indicators of operator frustration or difficulty",
+      "note": "Text-based partial assessment, full evaluation requires audio tone analysis"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name and operator name",
+    "Excellent timing compliance (intro and outro within 5 seconds)",
+    "Thanked customer for waiting after search",
+    "Verified product compatibility thoroughly using system",
+    "Provided detailed product information and pricing",
+    "Professional closing with gratitude and polite farewell",
+    "Patient with customer questions about compatibility",
+    "Multiple searches conducted efficiently (all under 40s)",
+    "Clear explanation of payment and delivery terms"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": null
+  }
+}

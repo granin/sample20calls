@@ -1,0 +1,280 @@
+{
+  "call_metadata": {
+    "call_id": "call_06",
+    "duration_seconds": 626.694,
+    "call_start": "0:00.000",
+    "call_end": "10:26.694",
+    "operator_name": "Евгений Коквара",
+    "customer_name": "Марат",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:08.603",
+      "timestamp_end": "0:11.563",
+      "evidence": "Customer name 'Марат' collected but operator did not repeat back or ask for confirmation ('Верно?')",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "7:51.588",
+      "timestamp_end": "7:58.728",
+      "evidence": "Second phone number '903-35-15-39999' collected without echo confirmation. Customer provided '903-35-15-39' then added '9-9-9. В конце.' No repeat-back or confirmation requested.",
+      "confidence": 0.98,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:48.737",
+      "timestamp_end": "1:34.846",
+      "evidence": "Search duration 46.1 seconds (from 'Минуту, пожалуйста' to 'Спасибо за ожидание'), exceeds 45-second threshold",
+      "confidence": 1.0,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "7": 2,
+      "9": 1
+    },
+    "sot_violations": 3,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not consistently applied for contact data",
+      "recommendation": "Must repeat back ALL contact data (name, phone, address, email) and ask for explicit confirmation using 'Верно?', 'Правильно?', or 'Подтверждаете?' Customer name and second phone number were not confirmed.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Information search exceeded time limit",
+      "recommendation": "First search took 46 seconds. Keep searches under 40 seconds, or check in with customer during longer searches. Consider improving system familiarity or database query efficiency.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 46.1,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 2.843,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 1.78,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "phone1",
+        "phone2",
+        "address"
+      ],
+      "echo_performed": {
+        "name": false,
+        "phone1": true,
+        "phone2": false,
+        "address": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone1": false,
+        "phone2": false,
+        "address": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Евгений Коквара', offer to help. Proper closing with thanks and farewell.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name 'Марат' and second phone number not confirmed using echo method",
+      "note": "First phone number (967-457-79-29) WAS confirmed with 'верно?' which is correct. However, customer name and second phone number violated protocol."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Intro at 2.843s (< 5s), disconnect gap 1.78s (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence causing customer hangup. Longest silence was 46s but customer remained engaged.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "First search 46.1 seconds exceeds 45s threshold",
+      "note": "Subsequent searches were within acceptable range (12.8s and 30.9s)"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanked customer after each search with 'Спасибо за ожидание'",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All customer requests resolved: tire/disk compatibility confirmed, VESTA compatibility confirmed, bolt compatibility confirmed, pricing explained, order placed successfully",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator searched system multiple times before providing compatibility and pricing information",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: warehouse address, delivery timeline, pricing with discounts, promotion details (fuel gift, free mounting, warranty)",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided systematically per script with logical flow",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Used customer name 'Марат' consistently, built rapport, maintained conversation control, proper opening and closing",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Accurate and complete project information delivered confidently",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal. Order completed successfully.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity, rudeness, or harsh language detected in transcript",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "N/A",
+      "confidence": "HIGH",
+      "evidence": "Customer was cooperative and polite throughout. No difficult customer handling required.",
+      "note": "Text-based assessment only. No indicators of operator difficulty."
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with complete company and operator introduction",
+    "Excellent customer service attitude and patience throughout lengthy call",
+    "Used customer name 'Марат' consistently to build rapport",
+    "Thanked customer for waiting after each information search",
+    "Provided detailed explanations of pricing, discounts, and promotions",
+    "Successfully handled multiple customer questions about compatibility",
+    "Proper closing with thanks and polite farewell",
+    "First phone number WAS properly confirmed using echo method (967-457-79-29, верно?)",
+    "Address confirmation requested (верно?)",
+    "Professional handling of customer's price questions and concerns"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level timestamps available for precise echo method detection. Clear speaker diarization between Agent and Customer."
+  }
+}

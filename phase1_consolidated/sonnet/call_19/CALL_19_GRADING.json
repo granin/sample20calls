@@ -1,0 +1,248 @@
+{
+  "call_metadata": {
+    "call_id": "call_19",
+    "duration_seconds": 264,
+    "call_start": "0:00.000",
+    "call_end": "4:23.772",
+    "operator_name": "Александра",
+    "customer_name": "Сергей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:05.988",
+      "timestamp_end": "0:08.428",
+      "evidence": "Customer provided name 'Сергей' at 0:05.988-0:07.408. Operator responded with 'Чем могу помочь?' at 0:07.748 without repeating the name back or requesting confirmation ('Верно?'). Echo method requires: (1) repeat contact data, (2) ask for confirmation, (3) receive confirmation. None of these steps were performed.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for customer name",
+      "recommendation": "When customer provides their name, immediately repeat it back and ask for confirmation: 'Сергей, верно?' or 'Правильно я вас поняла, Сергей?' This ensures accurate data capture and shows attentiveness.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Customer name not used during conversation",
+      "recommendation": "Use customer's name periodically throughout the call to build rapport. Example: 'Сергей, я нашла информацию' instead of just 'Я нашла информацию'.",
+      "related_criterion": "10.3"
+    },
+    {
+      "priority": 3,
+      "issue": "Informal address used once",
+      "recommendation": "Maintain formal address throughout. At 0:44, operator said 'я тебе посмотрю' (informal). Should consistently use 'вам' (formal) in all customer interactions.",
+      "related_criterion": "7.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 19.64,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.008,
+      "intro_within_5s": true,
+      "disconnect_time_sec": null,
+      "disconnect_within_5s": null
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name"
+      ],
+      "echo_performed": {
+        "name": false
+      },
+      "confirmation_received": {
+        "name": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 Колесами', operator name 'Александра', and request for customer name. Closing includes 'Чем-то ещё могу помочь?' Minor informal address 'тебе' at 0:44 noted but not severe enough for violation.",
+      "note": "One instance of informal 'тебе' usage - coaching opportunity"
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name 'Сергей' collected at 0:05.988 without echo confirmation",
+      "note": "Critical violation - operator must repeat contact data and request confirmation"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Intro at 0.008 seconds (well within 5s threshold)",
+      "note": "Outro timing cannot be determined without explicit call end timestamp"
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No overlapping speech patterns detected in transcript timestamps",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45s. Customer remained engaged throughout call.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Primary search duration 19.64s (from 0:18.168 to 0:37.808), well under 40s threshold",
+      "note": "Multiple brief searches performed, all under 20 seconds"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Operator thanked customer with 'Благодарю вас за ожидание' at 0:37.808 after search",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request for stamped disks fully addressed: product found, price provided (5470 rubles), availability confirmed (day after tomorrow), location given, article number provided",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator checked system multiple times before providing information ('Сейчас посмотрю', 'на складе ли она')",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: price, availability, delivery date (6th), location (Василия Васильева), article number (R3000-64), color (black)",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical script flow with proper greeting, needs identification, information search, and assistance offer",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Good dialogue management overall, conversation flowed naturally",
+      "note": "Operator did not use customer name 'Сергей' during conversation - missed rapport-building opportunity"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Accurate and complete information delivered with confidence",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or rudeness detected in transcript",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "N/A",
+      "confidence": "HIGH",
+      "evidence": "Customer was polite and cooperative throughout",
+      "note": "No difficult customer behavior to handle"
+    }
+  },
+  "positive_observations": [
+    "Excellent greeting with all required elements (company name, operator name, customer name request)",
+    "Prompt call answer (0.008 seconds)",
+    "Professional search behavior with announcements ('Сейчас посмотрю')",
+    "Thanked customer for waiting after search",
+    "Efficient information search (19.6 seconds, well under threshold)",
+    "Complete and accurate information provided (price, availability, location, article number)",
+    "Helpful with website navigation guidance",
+    "Professional closing with offer for additional help",
+    "Patient and thorough explanation of product availability and delivery timeline"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level timestamps available for precise echo method analysis. Clean transcript with clear speaker diarization."
+  }
+}

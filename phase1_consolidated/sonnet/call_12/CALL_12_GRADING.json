@@ -1,0 +1,256 @@
+{
+  "call_metadata": {
+    "call_id": "call_12",
+    "duration_seconds": 356,
+    "call_start": "0:00.000",
+    "call_end": "5:55.782",
+    "operator_name": "Ирина",
+    "customer_name": "Денис",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:07.887",
+      "timestamp_end": "0:16.207",
+      "evidence": "Customer provided name 'Денис' at 0:07.887. Operator acknowledged with 'Хорошо' and moved to next question at 0:16.207 without repeating name back or requesting confirmation ('Верно?')",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method - partial compliance for city",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:19.607",
+      "timestamp_end": "0:21.987",
+      "evidence": "Customer provided city 'Екатеринбург' at 0:19.607. Operator repeated 'Город Екатеринбург' at 0:21.987 but did not request confirmation ('Верно?', 'Правильно?') or wait for customer confirmation",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 2
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not fully applied for contact data",
+      "recommendation": "When collecting customer name, city, or any contact data, must: (1) repeat it back verbatim, (2) ask for explicit confirmation using 'Верно?', 'Правильно?', or 'Подтверждаете?', (3) wait for customer to confirm. Example: Customer says 'Денис' → Operator should say 'Денис, верно?' → Wait for 'Да'",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Customer name not used throughout conversation",
+      "recommendation": "After learning customer name, use it periodically during conversation to build rapport (e.g., 'Денис, сейчас посмотрю наличие' instead of just 'Сейчас посмотрю')",
+      "related_criterion": "10.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 22.0,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.147,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.66,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city"
+      ],
+      "echo_performed": {
+        "name": false,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting: company name '54 колеса', operator name 'Ирина', offer to help. Proper closing with thanks and farewell. Customer orientation question asked: 'Чем-то еще могу вам помочь?'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Денис' collected without echo confirmation. City 'Екатеринбург' repeated but no confirmation request",
+      "note": "Critical violation: Echo method requires both repeat-back AND confirmation request with customer acknowledgment"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Intro at 3.147s (within 5s threshold). Disconnect within 0.66s of last speech (within 5s threshold)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45s detected. Customer ended call normally",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information searches completed within acceptable timeframes. Primary search 1:02-1:24 (~22s)",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Searches were brief and operator maintained conversation throughout",
+      "note": "No explicit 'thank you for waiting' but searches were quick enough that it may not be required"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer requested 4 disks for tomorrow. Operator found product but explained inventory constraint: only 1 disk available tomorrow, 4 available day after tomorrow. Customer's timing need couldn't be met due to genuine inventory limitation, not operator error",
+      "note": "Operator provided thorough explanation of availability, offered reservation alternative. Customer declined due to pickup hours incompatibility (closes 8pm, customer available 9pm). This is inventory constraint, not unresolved service issue"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator verified information through system searches ('посмотрю', 'сейчас посмотрю')",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: product availability, pricing (1840), pickup location (Серафим и Дерябина), hours (10 до 8), timeline",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided logically, proper script flow maintained",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Good dialogue management overall: built rapport, maintained conversation control, proper opening and closing. However, customer name 'Денис' was not used after being collected",
+      "note": "Minor improvement area: should use customer name during conversation to enhance rapport"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete and accurate product information delivered: specifications, availability, pricing, locations, hours",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal. Operator attempted to help, offered alternatives (reservation)",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional tone maintained throughout. No profanity or rudeness. One informal 'ты' slip at 1:30.205 ('как ты завтра') but immediately self-corrected, not harsh",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer expressed mild frustration about timing constraints. Operator handled professionally, offered solutions, maintained patience",
+      "note": "Text-based assessment only; full tone analysis requires audio"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name (54 колеса) and operator name (Ирина)",
+    "Excellent product knowledge and system navigation",
+    "Proactively offered reservation option to secure inventory",
+    "Provided complete information: availability, pricing, location, hours",
+    "Maintained patience when customer expressed frustration about timing",
+    "Proper closing with thanks and farewell",
+    "Customer orientation question asked before ending call",
+    "Timing rules fully compliant (intro 3.1s, disconnect 0.7s)"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "VTT transcript clear and complete with accurate timestamps. Word-level JSON available for enhanced echo method analysis if needed for verification"
+  }
+}

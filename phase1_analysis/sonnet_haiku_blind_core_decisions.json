@@ -1,0 +1,122 @@
+[
+  {
+    "call_id": "call_01",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_02",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_03",
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2."
+  },
+  {
+    "call_id": "call_04",
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2."
+  },
+  {
+    "call_id": "call_05",
+    "golden_source": "Sonnet",
+    "confidence": "medium",
+    "reason": "Sonnet and BLIND1 agree on core fields; no BLIND2."
+  },
+  {
+    "call_id": "call_06",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_07",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_08",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_09",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_10",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_11",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_12",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_13",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_14",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_15",
+    "golden_source": "BLIND",
+    "confidence": "medium",
+    "reason": "BLIND1 and BLIND2 agree on core fields and both differ from Sonnet."
+  },
+  {
+    "call_id": "call_16",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_17",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_18",
+    "golden_source": "Sonnet",
+    "confidence": "high",
+    "reason": "Sonnet, BLIND1, BLIND2 fully agree on core fields."
+  },
+  {
+    "call_id": "call_19",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  },
+  {
+    "call_id": "call_20",
+    "golden_source": "none",
+    "confidence": "low",
+    "reason": "Disagreement on core fields among Sonnet/BLIND1/BLIND2."
+  }
+]

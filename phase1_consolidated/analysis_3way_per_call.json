@@ -1,0 +1,3022 @@
+{
+  "call_01": {
+    "call_id": "call_01",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_01/CALL_01_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_01/CALL_01_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_01/CALL_01_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 10,
+        "blind2": 7,
+        "pattern": "blind1_outlier"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "BORDERLINE",
+        "blind1": "PASS",
+        "blind2": "BORDERLINE",
+        "pattern": "blind1_outlier"
+      },
+      "9.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": "MEDIUM",
+        "pattern": "blind1_outlier"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 17,
+      "sonnet_outlier": 1,
+      "blind1_outlier": 4,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_02": {
+    "call_id": "call_02",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_02/CALL_02_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_02/CALL_02_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_02/CALL_02_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "VERY_HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "sonnet_outlier"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "N/A",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "BORDERLINE",
+        "pattern": "blind2_outlier"
+      },
+      "9.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 18,
+      "sonnet_outlier": 2,
+      "blind1_outlier": 1,
+      "blind2_outlier": 1,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_03": {
+    "call_id": "call_03",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_03/CALL_03_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_03/CALL_03_BLIND.json",
+      "blind2": null
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "9.1": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "9.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": null,
+        "pattern": "missing_data"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 0,
+      "sonnet_outlier": 0,
+      "blind1_outlier": 0,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 22
+    }
+  },
+  "call_04": {
+    "call_id": "call_04",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_04/CALL_04_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_04/CALL_04_BLIND.json",
+      "blind2": null
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_data_security": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": null,
+        "pattern": "missing_data"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 0,
+      "sonnet_outlier": 0,
+      "blind1_outlier": 0,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 22
+    }
+  },
+  "call_05": {
+    "call_id": "call_05",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_05/CALL_05_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_05/CALL_05_BLIND.json",
+      "blind2": null
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": null,
+        "pattern": "missing_data"
+      },
+      "risk_data_security": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": null,
+        "pattern": "missing_data"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 0,
+      "sonnet_outlier": 0,
+      "blind1_outlier": 0,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 22
+    }
+  },
+  "call_06": {
+    "call_id": "call_06",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_06/CALL_06_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_06/CALL_06_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_06/CALL_06_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "VERY_HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "sonnet_outlier"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "N/A",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 19,
+      "sonnet_outlier": 2,
+      "blind1_outlier": 1,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_07": {
+    "call_id": "call_07",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_07/CALL_07_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_07/CALL_07_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_07/CALL_07_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind2_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "HIGH",
+        "pattern": "blind2_outlier"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "MEDIUM",
+        "pattern": "blind2_outlier"
+      },
+      "risk_data_security": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "sonnet_outlier"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 17,
+      "sonnet_outlier": 1,
+      "blind1_outlier": 1,
+      "blind2_outlier": 3,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_08": {
+    "call_id": "call_08",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_08/CALL_08_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_08/CALL_08_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_08/CALL_08_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 9,
+        "pattern": "blind2_outlier"
+      },
+      "final_confidence": {
+        "sonnet": "VERY_HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "sonnet_outlier"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "N/A",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "PASS",
+        "pattern": "blind2_outlier"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind2_outlier"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "LOW",
+        "pattern": "blind2_outlier"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "MEDIUM",
+        "pattern": "blind2_outlier"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 15,
+      "sonnet_outlier": 2,
+      "blind1_outlier": 0,
+      "blind2_outlier": 5,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_09": {
+    "call_id": "call_09",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_09/CALL_09_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_09/CALL_09_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_09/CALL_09_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 10,
+        "blind2": 7,
+        "pattern": "blind1_outlier"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": "MEDIUM",
+        "pattern": "blind1_outlier"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 18,
+      "sonnet_outlier": 0,
+      "blind1_outlier": 4,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_10": {
+    "call_id": "call_10",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_10/CALL_10_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_10/CALL_10_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_10/CALL_10_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 10,
+        "blind2": 7,
+        "pattern": "blind1_outlier"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": "MEDIUM",
+        "pattern": "blind1_outlier"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 18,
+      "sonnet_outlier": 0,
+      "blind1_outlier": 4,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_11": {
+    "call_id": "call_11",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_11/CALL_11_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_11/CALL_11_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_11/CALL_11_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "VERY_HIGH",
+        "blind1": "HIGH",
+        "blind2": "VERY_HIGH",
+        "pattern": "blind1_outlier"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "BORDERLINE",
+        "blind2": "PASS",
+        "pattern": "blind1_outlier"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind2_outlier"
+      },
+      "9.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "HIGH",
+        "pattern": "blind2_outlier"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "MEDIUM",
+        "pattern": "blind2_outlier"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 16,
+      "sonnet_outlier": 0,
+      "blind1_outlier": 3,
+      "blind2_outlier": 3,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_12": {
+    "call_id": "call_12",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_12/CALL_12_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_12/CALL_12_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_12/CALL_12_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "VERY_HIGH",
+        "blind1": "HIGH",
+        "blind2": "VERY_HIGH",
+        "pattern": "blind1_outlier"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "BORDERLINE",
+        "blind2": "PASS",
+        "pattern": "blind1_outlier"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind2_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "HIGH",
+        "pattern": "blind2_outlier"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "MEDIUM",
+        "pattern": "blind2_outlier"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 17,
+      "sonnet_outlier": 0,
+      "blind1_outlier": 2,
+      "blind2_outlier": 3,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_13": {
+    "call_id": "call_13",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_13/CALL_13_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_13/CALL_13_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_13/CALL_13_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "BORDERLINE",
+        "blind2": "PASS",
+        "pattern": "blind1_outlier"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "FLAG",
+        "blind1": "PASS",
+        "blind2": "BORDERLINE",
+        "pattern": "all_different"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "sonnet_outlier"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 19,
+      "sonnet_outlier": 1,
+      "blind1_outlier": 1,
+      "blind2_outlier": 0,
+      "all_different": 1,
+      "missing_data": 0
+    }
+  },
+  "call_14": {
+    "call_id": "call_14",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_14/CALL_14_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_14/CALL_14_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_14/CALL_14_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "VERY_HIGH",
+        "pattern": "blind2_outlier"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "BORDERLINE",
+        "blind2": "PASS",
+        "pattern": "blind1_outlier"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "sonnet_outlier"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 18,
+      "sonnet_outlier": 1,
+      "blind1_outlier": 2,
+      "blind2_outlier": 1,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_15": {
+    "call_id": "call_15",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_15/CALL_15_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_15/CALL_15_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_15/CALL_15_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "VERY_HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "sonnet_outlier"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "N/A",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 20,
+      "sonnet_outlier": 2,
+      "blind1_outlier": 0,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_16": {
+    "call_id": "call_16",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_16/CALL_16_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_16/CALL_16_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_16/CALL_16_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "N/A",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 20,
+      "sonnet_outlier": 1,
+      "blind1_outlier": 1,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_17": {
+    "call_id": "call_17",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_17/CALL_17_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_17/CALL_17_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_17/CALL_17_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "BORDERLINE",
+        "blind2": "PASS",
+        "pattern": "blind1_outlier"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "9.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 19,
+      "sonnet_outlier": 0,
+      "blind1_outlier": 3,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_18": {
+    "call_id": "call_18",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_18/CALL_18_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_18/CALL_18_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_18/CALL_18_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "BORDERLINE",
+        "blind2": "PASS",
+        "pattern": "blind1_outlier"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "N/A",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "HIGH",
+        "pattern": "blind2_outlier"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "sonnet_outlier"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 18,
+      "sonnet_outlier": 2,
+      "blind1_outlier": 1,
+      "blind2_outlier": 1,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_19": {
+    "call_id": "call_19",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_19/CALL_19_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_19/CALL_19_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_19/CALL_19_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "VERY_HIGH",
+        "blind1": "HIGH",
+        "blind2": "VERY_HIGH",
+        "pattern": "blind1_outlier"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "BORDERLINE",
+        "blind2": "PASS",
+        "pattern": "blind1_outlier"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "N/A",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "VIOLATION",
+        "pattern": "all_equal"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 19,
+      "sonnet_outlier": 1,
+      "blind1_outlier": 2,
+      "blind2_outlier": 0,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  },
+  "call_20": {
+    "call_id": "call_20",
+    "files": {
+      "sonnet": "/Users/m/git/clients/sample20calls/phase1_consolidated/sonnet/call_20/CALL_20_GRADING.json",
+      "blind1": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind1/call_20/CALL_20_BLIND.json",
+      "blind2": "/Users/m/git/clients/sample20calls/phase1_consolidated/blind2/call_20/CALL_20_BLIND2.json"
+    },
+    "per_field": {
+      "final_grade": {
+        "sonnet": 7,
+        "blind1": 7,
+        "blind2": 7,
+        "pattern": "all_equal"
+      },
+      "final_confidence": {
+        "sonnet": "HIGH",
+        "blind1": "HIGH",
+        "blind2": "HIGH",
+        "pattern": "all_equal"
+      },
+      "1.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "2.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.1": {
+        "sonnet": "PASS",
+        "blind1": "BORDERLINE",
+        "blind2": "PASS",
+        "pattern": "blind1_outlier"
+      },
+      "3.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "3.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "4.1": {
+        "sonnet": "N/A",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "sonnet_outlier"
+      },
+      "5.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "6.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.1": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "7.2": {
+        "sonnet": "VIOLATION",
+        "blind1": "VIOLATION",
+        "blind2": "PASS",
+        "pattern": "blind2_outlier"
+      },
+      "7.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "7.4": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.1": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "9.3": {
+        "sonnet": "VIOLATION",
+        "blind1": "PASS",
+        "blind2": "VIOLATION",
+        "pattern": "blind1_outlier"
+      },
+      "10.2": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.3": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "10.6": {
+        "sonnet": "PASS",
+        "blind1": "PASS",
+        "blind2": "PASS",
+        "pattern": "all_equal"
+      },
+      "risk_compliance": {
+        "sonnet": "MEDIUM",
+        "blind1": "MEDIUM",
+        "blind2": "MEDIUM",
+        "pattern": "all_equal"
+      },
+      "risk_customer_satisfaction": {
+        "sonnet": "LOW",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "all_equal"
+      },
+      "risk_data_security": {
+        "sonnet": "MEDIUM",
+        "blind1": "LOW",
+        "blind2": "LOW",
+        "pattern": "sonnet_outlier"
+      }
+    },
+    "summary": {
+      "total_fields": 22,
+      "all_equal": 16,
+      "sonnet_outlier": 2,
+      "blind1_outlier": 3,
+      "blind2_outlier": 1,
+      "all_different": 0,
+      "missing_data": 0
+    }
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "call_metadata": {
+    "call_id": "call_11",
+    "duration_seconds": 202.706,
+    "call_start": "00:00.000",
+    "call_end": "03:22.706",
+    "operator_name": "Ирина",
+    "customer_name": "Евгений",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo Method Not Used",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "00:08.362",
+      "timestamp_end": "00:14.702",
+      "evidence": "Operator records customer's name and city (\"Евгений\", \"Город Курган\") without an explicit confirmation question like \"Верно?\" or \"Правильно?\", and no verbal confirmation from the customer after the repeat.",
+      "confidence": 0.98,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long Information Search",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "00:36.817",
+      "timestamp_end": "01:35.903",
+      "evidence": "Search is announced with \"Сейчас, секунду, я посмотрю сейчас.\" and the price information is only delivered at \"Да, вот вижу диск, 10 тысяч он.\", resulting in a total search duration of about 59.1 seconds (>45s threshold).",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No Thank You for Waiting",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "03:18.866",
+      "timestamp_end": "03:22.706",
+      "evidence": "After the long search the operator closes with phrases like \"Спасибо все. До свидания. Спасибо за звонок, всем добра, до свидания.\", but never explicitly thanks the customer for waiting (no \"Спасибо за ожидание\" or similar).",
+      "confidence": 0.93,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 2
+    },
+    "sot_violations": 0,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not fully applied when recording customer name and city.",
+      "recommendation": "Whenever you record any contact data (name, city, phone, email, address), repeat it back and explicitly ask for confirmation, for example: \"Ваш город Курган, верно?\", and wait for a clear \"Да\".",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Information search took almost a minute before the customer received an answer.",
+      "recommendation": "Optimize product lookup and escalation so that even complex searches finish within 40 seconds total from \"Сейчас посмотрю\" to the start of the answer; if search will be long, consider managing expectations more actively.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "No explicit thanks for the customer's waiting after a long search.",
+      "recommendation": "After completing any noticeable search, add a clear phrase like \"Спасибо за ожидание\" before continuing with the answer or closing the call.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "HIGH",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 59.086,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.502,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting and closing follow the expected structure (company and operator name, \"Чем могу вам помочь?\", polite farewell).",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name and city are recorded around 00:08-00:15 (\"Евгений\", \"Город Курган\"), but there is no explicit confirmation question and no confirmation response.",
+      "note": "Echo method partially performed (repeat), but missing explicit confirmation question and customer confirmation."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First operator phrase starts at ~00:03.5 (<5s from call start); no evidence of long silence before disconnection.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Turn-taking appears smooth; no clear cases of the operator cutting off the customer mid-sentence.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Despite a long search, the customer waits for the answer and the call ends normally; there is no customer hangup.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Search from \"Сейчас, секунду, я посмотрю сейчас.\" (00:36.817) to \"Да, вот вижу диск, 10 тысяч он.\" (01:35.903) lasts about 59.1 seconds (>45s).",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After the long search, operator does not say \"Спасибо за ожидание\" or similar; only generic thanks like \"Спасибо за звонок\" are used.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer request about a specific disk is addressed with price, availability and alternatives; no clear unresolved question remains at call end.",
+      "note": "Borderline interpretation not detected; no indication that the customer's need stayed unmet."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential personal data, internal numbers or restricted information are disclosed in the transcript.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator searches the system before quoting price and availability; there is no clear sign of information given purely \"from memory\".",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives core information about the disk (price, quantity, size context) and offered alternatives; no obvious mandatory details are missing in this context.",
+      "note": "Assessment made without detailed project config; treated conservatively as PASS."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Scripted greeting and closing, plus orientation questions (\"Чем могу вам помочь?\", \"Чем-то еще могу вам помочь?\") are present.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Dialogue flows logically from request clarification to product details and closing, with polite phrasing and maintenance of conversation control.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator provides accurate price, availability, product size context (R-19) and explains installment options.",
+      "note": "Partial assessment without full project config."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call ends with a polite farewell from the operator; there is no unjustified service refusal or abrupt termination.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Transcript shows no profanity or overtly rude phrases from the operator.",
+      "note": "Tone nuances cannot be fully assessed without audio."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer behaves calmly; operator remains polite and structured throughout; no signs of difficulty handling the customer are visible in text.",
+      "note": "Criterion assessed using text only; no audio-based tone analysis."
+    }
+  },
+  "positive_observations": [
+    "Clear scripted greeting with company and operator name and a polite orientation question.",
+    "Operator identifies the needed disk, provides concrete price and availability information and offers to help select suitable alternatives.",
+    "Installment options are explained in a way that emphasizes benefits for the family budget.",
+    "Call is closed politely with a check for additional questions and a friendly farewell."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Assessment is based solely on the text transcript (VTT/SRT) and word-level JSON; tone-dependent criteria (1.1, 4.1) are evaluated with LOW confidence."
+  }
+}

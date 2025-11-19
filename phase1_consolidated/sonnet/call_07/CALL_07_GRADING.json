@@ -1,0 +1,297 @@
+{
+  "call_metadata": {
+    "call_id": "call_07",
+    "duration_seconds": 588,
+    "call_start": "0:00.000",
+    "call_end": "9:48.523",
+    "operator_name": "Евгений",
+    "customer_name": "Родион Геннадьевич",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:11.012",
+      "timestamp_end": "0:18.572",
+      "evidence": "Customer name 'Родион Геннадьевич' collected at 11.012s-13.992s. Operator used name at 15.312s ('Родион Геннадьевич, чем могу вам помочь?') but did not repeat back for confirmation with 'Верно?' or similar confirmation request. No explicit customer confirmation of correct spelling/pronunciation obtained.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used - Phone number",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "6:21.072",
+      "timestamp_end": "9:19.052",
+      "evidence": "Phone number '904-54-33-467' collected at 6:21.072s. Operator repeated it back during order confirmation at 9:11.912s ('Вот контактный телефон 904-54-33-467') but did not ask for explicit confirmation ('Верно?', 'Правильно?'). Customer said 'Да-да-да' at 9:18.292s but this appears to be general agreement to order, not specific phone number confirmation as required by echo method protocol.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used - INN",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "5:41.119",
+      "timestamp_end": "5:49.499",
+      "evidence": "INN number '667-905-6727' provided by customer at 5:41.119s-5:49.499s. No echo back or confirmation request detected. Operator proceeded without verifying the INN.",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "7:34.729",
+      "timestamp_end": "8:35.565",
+      "evidence": "Search announced at 7:34.729 ('Минута, пожалуйста'). Operator returned at 8:35.565 with information. Total search duration: 60.8 seconds, exceeding 45-second threshold.",
+      "confidence": 0.98,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 4,
+    "violations_by_grade": {
+      "7": 3,
+      "9": 1
+    },
+    "sot_violations": 4,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 4
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not consistently applied to contact data",
+      "recommendation": "For ALL contact data (name, phone, INN, email), must: 1) Repeat data back to customer, 2) Ask explicit confirmation 'Верно?'/'Правильно?', 3) Wait for customer to confirm. Even if customer provides data clearly, protocol requires verification to prevent errors.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Information search exceeded time limit",
+      "recommendation": "Search duration was 60.8 seconds (>45s threshold). When searches extend beyond 30-40 seconds, check in with customer ('Еще немного времени') and thank them after ('Спасибо за ожидание'). Consider optimizing search process or requesting callback for complex queries.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "Name echo protocol particularly important",
+      "recommendation": "Customer name 'Родион Геннадьевич' was used throughout call but never confirmed. Russian patronymics are complex and errors are common. Always confirm: 'Родион Геннадьевич, верно я записал?' This prevents documentation errors.",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 60.8,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 2.472,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.5,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "phone",
+        "inn",
+        "email"
+      ],
+      "echo_performed": {
+        "name": false,
+        "phone": true,
+        "inn": false,
+        "email": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone": false,
+        "inn": false,
+        "email": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Евгений', customer name request. Closing included thanks and polite farewell. Customer orientation questions asked ('чем могу вам помочь?').",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Multiple contact data points collected without proper echo method: name, phone, INN. Phone was repeated during order confirmation but without explicit 'Верно?' confirmation request.",
+      "note": "Critical protocol violation affecting data accuracy"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Intro at 2.472s (< 5s threshold). Disconnect occurred within 0.5s after final farewell (< 5s threshold).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions of customer detected in transcript timestamps.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45s leading to customer hangup. Customer completed call normally.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Search from 7:34.729 to 8:35.565 = 60.8 seconds, exceeding 45-second threshold.",
+      "note": "First search at 0:57.873-1:20.573 was 22.7s (compliant)"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanked customer after search at 8:35.565 ('За ожидание' - 'for waiting').",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request for winter tires fully resolved. Order placed successfully, all questions answered, pickup location confirmed.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed. No office phone numbers, internal codes, or unauthorized data shared.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator searched system before providing availability and pricing information. Did not rely on memory.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete order information provided: tire specifications, pricing (25,400 руб), pickup location (Серафима Деребина), contact details, order confirmation process.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided logically and per script. Professional product consultation, availability check, order processing.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Excellent dialogue management. Operator used customer name 'Родион Геннадьевич' consistently, built rapport, maintained control through lengthy customer questions, proper opening/closing.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete and accurate information delivered: tire specifications, availability, pricing, ordering process, pickup details.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal. Operator completed full service cycle professionally.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness, profanity, or harsh language detected from operator. Professional tone maintained throughout.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer was talkative with many technical questions. Operator handled patiently and professionally, adapted to customer's pace and knowledge level.",
+      "note": "Text-based assessment only; tone analysis would require audio"
+    }
+  },
+  "positive_observations": [
+    "Excellent use of customer name throughout conversation",
+    "Professional and patient handling of talkative customer with many technical questions",
+    "Strong product knowledge - answered questions about tire sizes, profiles, manufacturing origins",
+    "Proper greeting and closing with company and operator name",
+    "Thanked customer for waiting after long search",
+    "Successfully completed complex order with multiple data points",
+    "Maintained professional tone throughout lengthy call",
+    "Good conversation control despite customer's tangential discussions"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Clear transcription with accurate timestamps. Word-level JSON available for precise echo method analysis."
+  }
+}

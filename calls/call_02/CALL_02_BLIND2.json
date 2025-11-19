@@ -1,0 +1,269 @@
+{
+  "call_metadata": {
+    "call_id": "call_02",
+    "duration_seconds": 332.8,
+    "call_start": "0:00.000",
+    "call_end": "5:32.821",
+    "operator_name": "Ирина",
+    "customer_name": "Владимир",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "3:42.890",
+      "timestamp_end": "3:45.050",
+      "evidence": "Surname 'Ведерников' and other contact data (city, first name) are recorded without an explicit echo confirmation question like 'Верно?' or 'Правильно?'; the agent only repeats the data.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "1:12.293",
+      "timestamp_end": "1:55.903",
+      "evidence": "From 'Давайте сейчас посмотрим сразу' (~1:12) until 'Ну вот смотрите. Есть...' (~1:55) the main product search lasts about 43 seconds, which falls into the 40–45s flag-only window.",
+      "confidence": 0.9,
+      "flag_window": true,
+      "score_reduction": false
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "1:55.903",
+      "timestamp_end": null,
+      "evidence": "After completing the long search and beginning to present results, the agent never says 'Спасибо за ожидание' or similar; only 'Спасибо за заказ' appears at the very end of the call.",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 2
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 1,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method for contact data (7.2) not fully applied.",
+      "recommendation": "Whenever recording any contact data (name, surname, city, phone, address), repeat the data back and explicitly ask for confirmation (e.g. 'Верно?', 'Правильно?' or 'Подтверждаете номер?') and wait for a clear 'Да'.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "No explicit thanks for waiting after search (9.3).",
+      "recommendation": "After finishing any information search, especially if it takes more than a few seconds, add a phrase like 'Спасибо за ожидание' before giving the answer.",
+      "related_criterion": "9.3"
+    },
+    {
+      "priority": 3,
+      "issue": "Main product search took about 43 seconds (9.1 flag window).",
+      "recommendation": "Try to shorten search time by preparing filters and product lists in advance and, during longer searches, briefly update the customer on progress to improve perceived service.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 43.6,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.6,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "phone"],
+      "echo_performed": {
+        "name": true,
+        "city": true,
+        "phone": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language from the agent appears in the transcript; tone is consistently polite.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "The call ends with mutual goodbyes after order confirmation; there is no unjustified refusal of service or abrupt disconnect.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer receives clear information on product availability, price, installation option, pick-up date, location, order number and payment methods; the initial request is fully resolved.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent provides only standard commercial information and confirms the customer's own contact data; no internal phone numbers, passwords or third-party personal data are disclosed.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Agent explicitly announces searches ('сейчас посмотрим', 'сейчас проверяю') before giving key factual information; there are no obvious \"from memory\" answers.",
+      "note": "Project rules about mandatory database verification are not visible in the transcript; assessed as PASS based on available text only."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer remains calm and cooperative; the agent stays patient and structured with no textual signs of frustration or loss of control.",
+      "note": "Criterion relies heavily on tone; transcript-only judgment."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives key information about tyres, total price, pick-up point, date and payment options; no clearly requested mandatory details are missing.",
+      "note": "Full check of mandatory information would require project-specific configuration."
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "There are no silences longer than 45 seconds and no customer hang-up; the call closes normally.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent uses a full greeting with company and operator name and offers help, and closes the call with thanks and goodbye.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Phone number is repeated and confirmed ('Да, да, да, да'), but first name, surname and city are recorded without an explicit confirmation question like 'Верно?' or 'Правильно?'; per rules this counts as an echo method violation.",
+      "note": "Contact data set (name, surname, city, phone) is partially but not fully confirmed; overall criterion 7.2 is graded as VIOLATION."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First agent phrase starts at about 3.6s from call start (<5s), and the call ends immediately after the final 'До свидания' with no extended post-conversation delay.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Transcript shows turn-taking without overlapping phrases where the agent cuts the customer off without an apology.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "BORDERLINE",
+      "confidence": "HIGH",
+      "evidence": "From 'Давайте сейчас посмотрим сразу' (~1:12) to 'Ну вот смотрите. Есть...' (~1:55) the search lasts about 43 seconds.",
+      "note": "Duration falls into the 40–45 second flag-only window; no score reduction but improvement recommended."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After the product search is finished, the agent does not say 'Спасибо за ожидание' or similar thanks for waiting; only generic thanks for the order at the very end.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call follows a logical sales script: greeting, need clarification, offer, order confirmation, extra services and polite closing.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent manages the dialogue structure, uses the customer's name and leads the conversation to a clear conclusion while checking if anything else is needed.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Key information about product, promotions, logistics and payment is provided clearly; no obvious factual gaps are visible in the transcript.",
+      "note": "Assessment is limited by lack of full project information matrix; some completeness aspects may depend on external configuration."
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name and clear offer to help.",
+    "Careful clarification of tyre parameters (size, season, studs, model) before confirming the order.",
+    "Clear explanation of price, pick-up location, date and additional benefits (free storage bags, puncture protection program).",
+    "Order details (product, size, model, price and order number) are summarised for the customer before closing.",
+    "Polite closing with confirmation that nothing else is needed and thanks for the order."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Minor ASR artefacts (typos, one speaker-label inversion near closing) but they do not affect detection of key criteria."
+  }
+}
+

@@ -1,0 +1,282 @@
+{
+  "call_metadata": {
+    "call_id": "call_01",
+    "duration_seconds": 455.658,
+    "call_start": "0:00.000",
+    "call_end": "7:35.658",
+    "operator_name": "Ирина",
+    "customer_name": "Алексей Калинин",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:14.940",
+      "timestamp_end": "0:17.900",
+      "evidence": "Customer name 'Алексей' collected at 14.94s. Operator used name immediately ('Алексей, из какого города вы звоните?') but never asked for confirmation ('Верно?', 'Правильно?'). Same with last name 'Калинин' at 3:31.638 - operator repeated it but no confirmation request.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long search - FLAG ONLY",
+      "severity": "none",
+      "sot_flag": false,
+      "timestamp_start": "3:57.178",
+      "timestamp_end": "4:39.376",
+      "evidence": "Search announced at 3:57 ('Минуту, пожалуйста'), completed at 4:39 ('Спасибо за ожидание'). Duration: 42.2 seconds. Falls in 40-45s flag window.",
+      "confidence": 1.0,
+      "flag_window": true,
+      "score_reduction": false
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "2:13.483",
+      "timestamp_end": "2:26.523",
+      "evidence": "Search announced at 2:13 ('Минуту, пожалуйста'), results delivered at 2:26, but no 'Спасибо за ожидание' or gratitude expressed after this search completed.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "9": 2,
+      "7": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 1,
+    "score_affecting_violations": 2
+  },
+  
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for customer name collection",
+      "recommendation": "When customer provides their name (first name, last name, or full name), must repeat it back and explicitly ask 'Верно?' or 'Правильно?' for confirmation. Example: Customer says 'Алексей' → Operator should say 'Алексей, верно?' and wait for confirmation.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing gratitude after information search",
+      "recommendation": "After every search completes, must thank customer for waiting with 'Спасибо за ожидание' or similar phrase, regardless of search duration. Operator correctly thanked customer after longer searches but missed it after the first short search.",
+      "related_criterion": "9.3"
+    },
+    {
+      "priority": 3,
+      "issue": "Search duration approaching threshold",
+      "recommendation": "One search took 42 seconds (flagged for improvement). Try to keep searches under 40 seconds, or check in with customer during longer searches. Operator was distracted during this search.",
+      "related_criterion": "9.1"
+    }
+  ],
+  
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 42.2,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.94,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 1.32,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["first_name", "last_name", "phone"],
+      "echo_performed": {
+        "first_name": false,
+        "last_name": false,
+        "phone": true
+      },
+      "confirmation_received": {
+        "first_name": false,
+        "last_name": false,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 3
+    }
+  },
+  
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness, profanity, or harsh tone from operator. Customer used profanity ('херня') but operator remained professional.",
+      "note": "Customer profanity does not count as violation - only operator behavior matters"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call completed successfully, no dropout or service refusal",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer requested winter tire order, operator successfully processed order #96-39-18 and addressed city selection issue",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator verified product codes in system before providing information",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer was frustrated about website issues, operator handled professionally and offered workaround",
+      "note": "Text-based assessment only, full tone analysis would require audio"
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Order details, delivery info, pricing, and payment instructions provided",
+      "note": "Full validation would require project config for mandatory fields"
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence leading to customer hangup",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Ирина', and offer to help. Proper closing with thanks and farewell.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Names collected without echo confirmation: 'Алексей' and 'Калинин'. Phone number properly confirmed.",
+      "note": "Critical SOT violation - see violations_detected for details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Intro at 3.94s (< 5s threshold), disconnect gap 1.32s (< 5s threshold)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No customer interruptions detected",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "BORDERLINE",
+      "confidence": "VERY_HIGH",
+      "evidence": "One search 42.2s (40-45s flag window), other searches under 40s",
+      "note": "Flagged for improvement but no score reduction per 40-45s rule"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "First search (2:13-2:26) completed without thanking customer. Later searches properly thanked.",
+      "note": "See violations_detected for details"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical flow, proper information delivery per script",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Used customer name 'Алексей' throughout call, built rapport, maintained conversation control, proper opening/closing",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Complete information about products, pricing, delivery, payment process provided",
+      "note": "Partial assessment without full project config"
+    }
+  },
+  
+  "positive_observations": [
+    "Excellent timing compliance - intro within 4 seconds, quick disconnect",
+    "Professional greeting with all required elements (company, operator name, offer to help)",
+    "Used customer name consistently throughout call, creating personal connection",
+    "Handled customer frustration professionally regarding website issues",
+    "Proactive problem-solving - added comment to managers about city correction",
+    "Proper phone number echo confirmation with 'верно' received from customer",
+    "Multiple customer orientation questions ('Чем ещё могу помочь?')",
+    "Clear explanation of payment discount and process",
+    "Proper closing with thanks and well-wishes",
+    "Order successfully completed despite technical challenges"
+  ],
+  
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Some background noise during longer search (operator appears to be managing children), but transcript quality is adequate for grading. Word-level timestamps enabled precise echo method detection."
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "call_metadata": {
+    "call_id": "call_19",
+    "duration_seconds": 263.8,
+    "call_start": "0:00.008",
+    "call_end": "4:23.772",
+    "operator_name": "Александра",
+    "customer_name": "Сергей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:05.988",
+      "timestamp_end": "0:18.168",
+      "evidence": "Customer provides contact data (name 'Сергей' at ~0:06 and city 'Пермь' at ~0:15); operator asks for name and city but never repeats them with an explicit confirmation question like \"Верно?\" and never receives a clear \"Да\" confirming these details.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not applied to customer contact data (name and city).",
+      "recommendation": "Whenever capturing customer name or city, repeat the data back and explicitly ask for confirmation (for example, \"Сергей, верно?\", \"Город Пермь, верно?\") and wait for a clear \"Да\" before proceeding.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Clarify product details on the website together with the customer.",
+      "recommendation": "When guiding the customer through the site, continue to use article numbers and also explicitly confirm that the product card, size and price on the customer’s screen match what you see before closing the call.",
+      "related_criterion": "10.6"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 21.8,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.008,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": false,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent opens with a structured greeting including company and name, asks clarifying questions about vehicle and wheel parameters, and delivers information in a logical order.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent maintains control of the dialogue, listens to detailed questions about the site and vehicle, provides clear answers, and closes with \"Чем-то ещё могу помочь\".",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Agent provides availability, warehouse location, delivery timing and price, and gives the article number so the customer can find the disc on the site; minor price confusion is resolved in dialogue.",
+      "note": "Assessment based on transcript only without full project configuration."
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First search runs from \"Сейчас посмотрю\" at ~0:17.4 to the informative question \"Автомобиль какого года выпуска?\" at ~0:39.2 (≈22 seconds), well below the 40-second threshold.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "After the search the agent explicitly says \"Благодарю вас за ожидание\" at ~0:37.8, clearly thanking the customer for waiting.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company and operator name and an offer of help; structure of questions about city, vehicle year and wheel size is logical and consistent with script intent.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name \"Сергей\" and city \"Пермь\" are collected but not confirmed with a full echo method (no explicit \"Верно?/Правильно?\" and no customer confirmation).",
+      "note": "See violations_detected entry for detailed timestamps and description."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First agent phrase starts at ~0:00.0 (<5s from call start); conversation ends with agent phrase at ~4:23.7 and there is no evidence of a long delay before disconnect.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Transcript shows no clear cases where the agent cuts off the customer mid-sentence without apology; overlapping speech cannot be fully assessed without audio.",
+      "note": "Text-only assessment; no overlap timing beyond transcript granularity."
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No long silence (>45s) leading to customer hangup; searches are under 40 seconds and call ends normally.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives key information (availability, location, delivery terms, price and article number) needed to make a decision; no clearly missing mandatory fields are visible in the transcript.",
+      "note": "Full validation of mandatory information would require detailed project configuration."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is active and asks many detailed questions, but agent remains calm and structured; no textual signs of irritation or loss of control.",
+      "note": "Tone and emotional handling cannot be fully evaluated without audio."
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Main request about availability of stamped discs is answered with specific option, price, location and delivery timing; customer chooses to \"погуглить\" and call back later.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Only public store location and retail prices are shared; no internal phone numbers, credentials or personal data are disclosed.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Agent refers to search results and visible product card when confirming that the disc should fit; there is no obvious case of giving information purely \"from memory\" without checking.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No unjustified service refusal or abrupt disconnect from the agent side; call ends after the customer says he will think and the agent offers further help.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Transcript contains no profanity, insults or harsh language from the agent.",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Agent delivers a clear, structured greeting with company and name and quickly clarifies the customer’s need.",
+    "Information about product availability, location, delivery timing and price is provided in a confident and easy-to-understand way, including an article number for website search.",
+    "Agent politely thanks the customer for waiting after the search and closes the call by checking if there are any additional questions."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Minor recognition inaccuracies (brand and model naming) do not affect detection of key criteria or timing."
+  }
+}

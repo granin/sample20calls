@@ -1,0 +1,271 @@
+{
+  "call_metadata": {
+    "call_id": "call_03",
+    "duration_seconds": 472.0,
+    "call_start": "0:00.000",
+    "call_end": "7:51.984",
+    "operator_name": "Ирина",
+    "customer_name": "Сергей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "00:06.815",
+      "timestamp_end": "00:21.515",
+      "evidence": "Оператор спрашивает, как обращаться к клиенту; клиент называет имя 'Сергей', оператор далее использует имя ('Чем могу вам помочь, Сергей?') но ни разу не повторяет его с явным подтверждением ('Верно? / Правильно?').",
+      "confidence": 0.88,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "01:18.314",
+      "timestamp_end": "03:17.435",
+      "evidence": "После фразы оператора 'Камешкова, Владимирская область, да, нашла. И давайте сейчас посмотрим' начинается поиск по товару, первый полноценный блок информации о диске ('Диск штампованный...') оператор озвучивает только около 03:17, общая длительность поиска значительно превышает 45 секунд.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting after search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "03:17.435",
+      "timestamp_end": "03:25.000",
+      "evidence": "После завершения длительного поиска и начала выдачи информации по диску оператор не благодарит клиента за ожидание (нет фраз типа 'спасибо за ожидание' в ближайшие секунды после окончания поиска).",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 2
+    },
+    "sot_violations": 3,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Неиспользование метода эха для имени клиента",
+      "recommendation": "После записи контактных данных (имя, телефон, адрес) обязательно повторять их и задавать уточняющий вопрос ('Ваше имя Сергей, верно?') с ожиданием подтверждения.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Слишком длительный поиск информации по товару",
+      "recommendation": "Сократить длительность поиска: быстрее уточнять код товара/параметры и активнее использовать инструменты поиска, при ожидании более 40 секунд информировать клиента о ходе поиска.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "Отсутствие благодарности за ожидание после длительного поиска",
+      "recommendation": "После любого заметного ожидания (поиск товара, проверка данных) произносить фразы благодарности за ожидание ('Спасибо за ожидание, продолжаем оформление заказа').",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 119.1,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.835,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "phone", "city", "order_id"],
+      "echo_performed": {
+        "name": false,
+        "phone": true,
+        "city": true,
+        "order_id": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone": true,
+        "city": false,
+        "order_id": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Корректное приветствие с названием компании, именем оператора и предложением помощи; присутствует корректное закрытие с благодарностью и прощанием.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Имя клиента 'Сергей' фиксируется, но не подтверждается методом эха (нет повторения с вопросом 'верно/правильно').",
+      "note": "Метод эха соблюдён для фамилии и части других данных, но имя не подтверждено явно."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Первое обращение оператора происходит в пределах 5 секунд от начала, завершение разговора и отключение происходят без заметной паузы.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Перебиваний клиента без извинений в расшифровке не зафиксировано.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Длительных периодов тишины более 45 секунд и обрыва звонка по инициативе клиента нет, оператор доводит оформление до конца.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "От объявления поиска ('давайте сейчас посмотрим') до выдачи информации по диску проходит существенно более 45 секунд.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "После длительного поиска оператор не благодарит клиента за ожидание.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Основной запрос клиента (невозможность оформить заказ на сайте) решён: оператор оформляет заказ, клиент получает SMS и подтверждает номер заказа.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Конфиденциальные внутренние телефоны, коды доступа или персональные данные третьих лиц не раскрываются.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Информация о товаре и условиях (характеристики дисков, стоимость) озвучивается после поиска в системе, без явных признаков выдачи 'по памяти'.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Клиент получает информацию о товаре, стоимости и базовых условиях доставки; явных пробелов в обязательной информации по транскрипту не видно.",
+      "note": "Полная проверка обязательных полей требует проектной конфигурации."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Структура разговора соответствует скрипту: приветствие, выявление потребности, уточнение параметров, предложение решения и завершение.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор вежлив, использует имя клиента, контролирует ход диалога и корректно завершает разговор с вопросом о дополнительной помощи.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Оператор уверенно озвучивает характеристики дисков, стоимость и порядок дальнейших действий, серьезных пробелов в информации не видно.",
+      "note": "Точная полнота информации зависит от проектных требований, которые из транскрипта не известны."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Обрыва вызова по инициативе оператора и отказа в обслуживании при наличии возможности помочь нет.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "В речи оператора отсутствуют нецензурная лексика и грубые формулировки.",
+      "note": "Оценка тона ограничена текстом без аудио."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Даже при затруднении клиента с сайтом оператор сохраняет спокойный, поддерживающий стиль общения.",
+      "note": "Полная оценка работы с 'трудным клиентом' требует аудио."
+    }
+  },
+  "positive_observations": [
+    "Профессиональное приветствие с указанием компании и имени оператора.",
+    "Оператор активно помогает клиенту оформить заказ и фактически решает его проблему с сайтом.",
+    "Вежливое обращение по имени и поддерживающий тон на протяжении всего разговора.",
+    "Четкое озвучивание характеристик товара и дальнейших шагов по заказу.",
+    "Корректное завершение разговора с вопросом о дополнительной помощи и благодарностью за заказ."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": null
+  }
+}
+

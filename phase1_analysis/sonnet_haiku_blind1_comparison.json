@@ -1,0 +1,3202 @@
+[
+  {
+    "call_id": "call_01",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "VERY_HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "BORDERLINE",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_02",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "VERY_HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "N/A",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_03",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_04",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_05",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 9,
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "N/A",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_06",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "VERY_HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "N/A",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_07",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "VERY_HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_08",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 10,
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "VERY_HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "N/A",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_09",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_10",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 9,
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_11",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "VERY_HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_12",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "VERY_HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "BORDERLINE",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "BORDERLINE",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_13",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "BORDERLINE",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "FLAG",
+        "haiku": "FLAG_ONLY",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_14",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_15",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "VERY_HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "N/A",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_16",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 9,
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "N/A",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_17",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 9,
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_18",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "N/A",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_19",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "VERY_HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "N/A",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "PASS",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      }
+    }
+  },
+  {
+    "call_id": "call_20",
+    "match_percent_sonnet_blind1": null,
+    "fields": {
+      "final_grade": {
+        "sonnet": 7,
+        "haiku": 7,
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "final_conf": {
+        "sonnet": "HIGH",
+        "haiku": "HIGH",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_1.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_2.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_3.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_4.1": {
+        "sonnet": "N/A",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_5.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_6.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.1": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.2": {
+        "sonnet": "VIOLATION",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_7.4": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.1": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_9.3": {
+        "sonnet": "VIOLATION",
+        "haiku": "VIOLATION",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.2": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.3": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "crit_10.6": {
+        "sonnet": "PASS",
+        "haiku": "PASS",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_compliance_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "MEDIUM",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_customer_satisfaction_risk": {
+        "sonnet": "LOW",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": true,
+        "match_sonnet_blind1": null
+      },
+      "risk_data_security_risk": {
+        "sonnet": "MEDIUM",
+        "haiku": "LOW",
+        "blind1": null,
+        "match_sonnet_haiku": false,
+        "match_sonnet_blind1": null
+      }
+    }
+  }
+]

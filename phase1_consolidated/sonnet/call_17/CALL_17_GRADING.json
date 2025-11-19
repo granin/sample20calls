@@ -1,0 +1,279 @@
+{
+  "call_metadata": {
+    "call_id": "call_17",
+    "duration_seconds": 356,
+    "call_start": "0:01.662",
+    "call_end": "5:57.676",
+    "operator_name": "Александра",
+    "customer_name": "Денис",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:28.222",
+      "timestamp_end": "0:29.402",
+      "evidence": "Customer provided name 'Денис' at 28.222s. Operator used the name ('Денис, подскажите, пожалуйста, еще раз город.') but did not repeat it back with confirmation request ('Верно?') and did not receive explicit confirmation from customer.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "2:02.082",
+      "timestamp_end": "3:11.792",
+      "evidence": "Search announced at 2:02.082 ('Сейчас я посмотрю, подойдет ли он на хавейл. Минуту, пожалуйста.'). Information delivery began at 3:11.792 ('Ну, 34-35 для 18 дюймовых.'). Total duration approximately 70 seconds, exceeding 45-second threshold.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "3:11.792",
+      "timestamp_end": "3:23.832",
+      "evidence": "After second search completion (70+ seconds), operator delivered information but did not thank customer for waiting. First search was properly thanked ('Благодарю вас за ожидание' at 1:06.738), but second longer search was not.",
+      "confidence": 0.8,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 2
+    },
+    "sot_violations": 3,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "When customer provides their name, must repeat it back and ask for explicit confirmation: 'Денис, верно?' and wait for customer confirmation 'Да'",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Extended search time exceeded threshold",
+      "recommendation": "Keep information searches under 40 seconds. If complex lookup needed, provide more frequent check-ins to customer and consider offering callback option for extended research.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "Missing gratitude after extended wait",
+      "recommendation": "Always thank customer for waiting after information search, especially after longer searches: 'Спасибо за ожидание' or 'Благодарю вас за ожидание'",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 70.0,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 1.662,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 2.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city"
+      ],
+      "echo_performed": {
+        "name": false,
+        "city": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 Колеса', operator name 'Александра', and offer to help 'Как можно к вам обращаться?'. Proper closing 'Всего доброго, до свидания'. Customer orientation question 'Чем-то ещё можно помочь?' present.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Денис' collected without echo method confirmation",
+      "note": "See violations_detected for details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 1.662s (<5s requirement), disconnect timing compliant",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45s. Call completed normally by mutual agreement.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Second search duration 70 seconds exceeded 45-second threshold",
+      "note": "First search at 19 seconds was compliant. Second search violated."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "No thank you after second search (first search was properly thanked)",
+      "note": "Operator thanked for first search but not second longer search"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer inquiry about wheel disks fully addressed. Product codes, specifications, pricing, and availability provided. Customer chose to think about purchase - decision not resolution failure.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator consistently checked system before providing information ('сейчас посмотрю')",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: product codes (R306-903, R327693), specifications (вылет 34), price (14400), availability (завтра), color (черный с серебристыми вставками)",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical presentation of information, proper script flow, professional information delivery",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Consistent use of customer name 'Денис', good rapport building, maintained conversation control, proper opening/closing",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Accurate and complete product information delivered confidently",
+      "note": "Partial assessment without full project config"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No service refusal or call dropout. Call ended professionally with customer agreement.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness, profanity, or harsh language detected in transcript",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer was cooperative throughout. No difficult customer handling issues.",
+      "note": "Text-based assessment only"
+    }
+  },
+  "positive_observations": [
+    "Professional and complete greeting with company name and operator identification",
+    "Consistently used customer name 'Денис' throughout conversation",
+    "Proactive in helping customer find correct product specifications",
+    "Offered to dictate product codes when customer couldn't find items on website",
+    "Patient and collaborative approach during complex product search",
+    "Proper closing with customer orientation question 'Чем-то ещё можно помочь?'",
+    "Thanked customer for waiting after first search with 'Благодарю вас за ожидание'",
+    "Offered to make reservation to help customer think about decision"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "timestamps_json"
+    ],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level timestamps available for precise echo method detection. Some timestamps in conversation show collaborative searching which complicated search duration assessment."
+  }
+}

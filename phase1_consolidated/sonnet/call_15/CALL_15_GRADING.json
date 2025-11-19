@@ -1,0 +1,248 @@
+{
+  "call_metadata": {
+    "call_id": "call_15",
+    "duration_seconds": 124,
+    "call_start": "0:00.447",
+    "call_end": "2:04.216",
+    "operator_name": "Александра",
+    "customer_name": "Алексей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:05.867",
+      "timestamp_end": "0:08.047",
+      "evidence": "Customer provided name 'Алексей' at 5.867-6.587s. Operator responded 'Чем могу помочь?' at 7.247-8.047s without repeating the name back or requesting confirmation ('Верно?'). Echo method requires both repeat-back and explicit confirmation.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for customer name",
+      "recommendation": "When customer provides their name, immediately repeat it back and ask for confirmation: 'Алексей, верно?' and wait for customer's confirmation ('Да', 'Верно', etc.)",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Customer name not used during conversation",
+      "recommendation": "After collecting customer's name, use it periodically during the conversation to build rapport and demonstrate attentiveness",
+      "related_criterion": "10.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 16.231,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.447,
+      "intro_within_5s": true,
+      "disconnect_time_sec": null,
+      "disconnect_within_5s": null
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city",
+        "tire_size"
+      ],
+      "echo_performed": {
+        "name": false,
+        "city": true,
+        "tire_size": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "tire_size": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Александра', and offer to help. Proper closing with 'Всего доброго'. Customer orientation question 'чем дальше я могу помочь?' at 119.256s.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Алексей' collected at 5.867-6.587s without echo confirmation. City 'Екатеринбург' repeated but without confirmation request. Tire size '185, 65, 14' properly echoed with confirmation.",
+      "note": "Primary violation - name not echoed back with confirmation"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 0.447s (< 5s requirement). Outro timing acceptable.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 16.231s, well under 45s threshold. Customer did not hang up.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 16.231s from 52.087s to 68.318s, under 40s threshold",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanked customer: 'Благодарю вас за ожидание' at 68.878-69.838s",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer requested tire availability information. Operator provided complete answer: price (4110 rubles), availability (tomorrow at 10am), locations (Шерстку и Триэм, Хераклим и Дерибиной). Customer satisfied.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator performed system search before providing information ('Сейчас, смотри минуту, пожалуйста')",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All requested information provided: tire specifications, price, availability, delivery time, and locations",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script, logical presentation maintained",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Professional dialogue maintained, proper opening and closing. Customer name collected but not used during conversation.",
+      "note": "Minor improvement opportunity: use customer name during conversation for better rapport"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete and accurate project information delivered",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness or profanity detected from operator",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "N/A",
+      "confidence": "N/A",
+      "evidence": "Customer was cooperative and polite throughout call",
+      "note": "No difficult customer behavior to assess"
+    }
+  },
+  "positive_observations": [
+    "Excellent search efficiency (16.2 seconds, well under threshold)",
+    "Proper gratitude expressed after search ('Благодарю вас за ожидание')",
+    "Professional greeting with all required elements (company name, operator name, offer to help)",
+    "Tire size properly verified using echo method with confirmation",
+    "Complete information provided (price, availability, timing, locations)",
+    "Proper closing with customer orientation question",
+    "Professional and courteous tone throughout"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "paragraphs_json",
+      "sentences_json",
+      "timestamps_json"
+    ],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level timestamps available for precise echo method analysis. Some low-confidence words in transcript but overall quality sufficient for evaluation."
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "call_metadata": {
+    "call_id": "call_12",
+    "duration_seconds": 355.781,
+    "call_start": "0:00.000",
+    "call_end": "5:55.781",
+    "operator_name": "Ирина",
+    "customer_name": "Денис",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:07.886",
+      "timestamp_end": "0:34.563",
+      "evidence": "Customer provides name and city (0:07-0:20), operator repeats the city but never repeats the name, does not ask for explicit confirmation and the customer never confirms.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "4:53.144",
+      "timestamp_end": "5:23.223",
+      "evidence": "After the search announced around 4:53 and information given about pickup hours at about 5:18, the operator does not thank the customer for waiting; only generic thanks for the call appear at the very end.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "Always repeat customer name and city and ask an explicit confirmation question such as Верно? or Правильно? and wait for a clear confirmation.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "No thank you for waiting after search",
+      "recommendation": "After completing any information search, explicitly thank the customer for waiting using phrases like Спасибо за ожидание before continuing.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "HIGH",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 25.161,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.146,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": false,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company and operator name at about 0:03 and the closing is structured and polite.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name and city collected without echo confirmation question or customer confirmation.",
+      "note": "Critical echo method violation on contact data."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at about 3.1s (<5s) and call ends immediately after closing without prolonged silence.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No cases where the operator clearly interrupts the customer; turn-taking is sequential.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No long search or silence that leads to the customer hanging up; call ends after normal closing.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Longest announced search lasts about 25 seconds (4:53-5:18), well under the 40s threshold.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After search completion the operator resumes with information but does not explicitly thank the customer for waiting.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator explains product availability and pickup dates, offers reservation and schedule change; customer declines and ends the call.",
+      "note": "Request cannot be fulfilled due to stock and schedule constraints, not due to operator inaction."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Only public store address and hours are provided; no internal office numbers or sensitive data disclosed.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Information about availability and pickup is given after searches; no clear signs of guessing from memory.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives key information on availability, pickup dates and hours; no obvious mandatory details are missing in the transcript.",
+      "note": "Project-specific list of mandatory fields is not available, so assessment uses transcript only."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting and closing follow script style and information is presented in a logical order.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator listens to constraints, clarifies needs and proposes alternatives such as reservation or rescheduling.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator supplies product parameters, availability by date and pickup address and hours; remaining gap is physical stock, not missing information.",
+      "note": "Some aspects of completeness depend on project config not present in transcript."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No unjustified refusal of service or abrupt disconnection by the operator; call ends after mutual goodbyes.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Transcript shows no profanity or harsh language from the operator; tone cannot be fully assessed without audio.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is somewhat disappointed but remains polite; operator stays calm, offers options and does not show frustration.",
+      "note": "Assessment is text-only; emotional tone cannot be fully evaluated without audio."
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name at the start of the call.",
+    "Clarifies product code and technical parameters before checking availability.",
+    "Offers alternatives such as reservation and rescheduling when immediate pickup is impossible.",
+    "Provides clear information about pickup hours and store address.",
+    "Maintains polite and respectful tone throughout, including at the end of the unsuccessful call."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Full VTT and word-level timestamps available; no missing segments detected."
+  }
+}

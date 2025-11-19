@@ -1,0 +1,261 @@
+{
+  "call_metadata": {
+    "call_id": "call_16",
+    "duration_seconds": 144.581,
+    "call_start": "0:00.000",
+    "call_end": "2:24.581",
+    "operator_name": "Irina",
+    "customer_name": "Dmitry",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:07.777",
+      "timestamp_end": "0:13.697",
+      "evidence": "Customer name 'Dmitry' collected at 7.777s and city 'Екатеринбург' collected at 11.937s. Operator repeated city but never requested confirmation ('Верно?', 'Правильно?') for either piece of contact data.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:33.278",
+      "timestamp_end": "0:52.678",
+      "evidence": "Information search announced at 33.278s ('я посмотрю'), results delivered at 52.678s (19.4s search duration). No gratitude expressed for waiting after search completion.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not applied to contact data",
+      "recommendation": "When customer provides name or city, must repeat back AND explicitly ask for confirmation: 'Дмитрий, верно?' or 'Город Екатеринбург, правильно?'",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing thank you after information search",
+      "recommendation": "After completing information lookup, thank customer for waiting: 'Спасибо, что подождали' or 'Благодарю за ожидание'",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 19.4,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.097,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 1.32,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city"
+      ],
+      "echo_performed": {
+        "name": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Ирина', and offer to help. Proper closing with thanks and customer orientation question 'Чем-то ещё могу вам помочь?'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name and city collected without confirmation request",
+      "note": "Operator repeated contact data but did not ask for explicit confirmation ('Верно?')"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.097s (< 5s), disconnect gap 1.32s (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence, call ended normally",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 19.4s, well under 40s threshold",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "No thank you for waiting after information search",
+      "note": "Search from 33.278s to 52.678s (19.4s)"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer question about production year fully answered, customer satisfied",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator checked system before providing information ('я посмотрю')",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All required information provided",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical flow, script adherence maintained",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name used consistently, good rapport, proper opening/closing",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete and accurate information provided",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness or profanity detected",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "N/A",
+      "confidence": "HIGH",
+      "evidence": "Customer was polite and cooperative throughout",
+      "note": "No difficult customer handling required"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name",
+    "Used customer name consistently throughout call",
+    "Proper timing compliance (intro and outro within 5s)",
+    "Efficient information search (19.4s)",
+    "Clear explanation of process to customer",
+    "Offered additional assistance before closing",
+    "Polite and professional tone maintained",
+    "Customer satisfaction achieved (customer satisfied with 24-25 production year)"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "paragraphs-2.json",
+      "sentences-2.json",
+      "timestamps-2.json"
+    ],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level timestamps available for precise echo method detection"
+  }
+}

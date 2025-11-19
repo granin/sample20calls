@@ -1,0 +1,275 @@
+{
+  "call_metadata": {
+    "call_id": "call_11",
+    "duration_seconds": 203,
+    "call_start": "0:00.000",
+    "call_end": "3:22.706",
+    "operator_name": "Ирина",
+    "customer_name": "Евгений",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:09.102",
+      "timestamp_end": "0:11.042",
+      "evidence": "Customer name 'Евгений' collected at 9.322s. Operator repeated 'Евгений' at 10.402s but never asked for confirmation ('Верно?', 'Правильно?'). No customer confirmation received.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:12.482",
+      "timestamp_end": "0:14.702",
+      "evidence": "City 'Курган' collected at 12.922s. Operator repeated 'Город Курган' at 14.022s but never asked for confirmation. No customer confirmation received.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:36.377",
+      "timestamp_end": "0:55.757",
+      "evidence": "Search announced at 36.377s ('Сейчас, секунду, я посмотрю сейчас'). Search completed at 55.757s (duration ~19s). No gratitude expressed for waiting. Missing phrases like 'спасибо за ожидание'.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "7": 2,
+      "9": 1
+    },
+    "sot_violations": 3,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not applied for contact data verification",
+      "recommendation": "When collecting customer name or location, must repeat the information back AND explicitly ask for confirmation using phrases like 'Верно?', 'Правильно?', or 'Подтверждаете?'. Wait for customer's explicit confirmation ('Да', 'Верно', etc.).",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing gratitude after information search",
+      "recommendation": "After completing any information search, thank the customer for waiting using phrases like 'Спасибо за ожидание' or 'Благодарю, что подождали', even if the search was brief.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 19.4,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.5,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city"
+      ],
+      "echo_performed": {
+        "name": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Ирина', offer to help. Proper closing with thanks. Customer orientation questions present.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Contact data (name and city) collected with echo repeat but without confirmation request",
+      "note": "Two instances detected: name 'Евгений' and city 'Курган' both echoed but not confirmed"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.5s (< 5s), immediate disconnect after conversation end",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected in transcript",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence detected. Call ended naturally by operator.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration ~19s, well under 40s threshold",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "No gratitude expressed after search completion",
+      "note": "Search completed at 55.757s but no 'спасибо за ожидание' phrase detected"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer inquiry about wheels fully addressed. Information provided, additional options offered.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator searched system before providing product information",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Provided availability, price, size, type information as requested",
+      "note": "Information appears complete for customer's inquiry"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical script flow, proper information delivery structure",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name 'Евгений' used, rapport maintained, proper dialogue control",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Complete information about product provided",
+      "note": "Partial assessment without full project configuration"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or rudeness detected in text",
+      "note": "Text-based assessment only"
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer was cooperative, no difficulty handling required",
+      "note": "Text-based indicators only, full assessment requires audio"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name and operator identification",
+    "Timely greeting within 5 seconds of call start",
+    "Customer name used appropriately in conversation",
+    "Proper closing with thanks and polite farewell",
+    "Multiple customer orientation questions ('Чем могу вам помочь?' repeated)",
+    "Efficient information search (19s, well under threshold)",
+    "Offered additional product selection assistance proactively",
+    "Maintained professional and friendly tone throughout call",
+    "Provided complete product information (price, availability, specifications)"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "paragraphs_json",
+      "sentences_json",
+      "timestamps_json"
+    ],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level timestamps available with good confidence scores. Some speaker diarization shows all as 'Agent' which may indicate mixed customer/operator speech in same channel."
+  }
+}

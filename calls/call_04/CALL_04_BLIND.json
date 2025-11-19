@@ -1,0 +1,230 @@
+{
+  "call_metadata": {
+    "call_id": "call_04",
+    "duration_seconds": 483.0,
+    "call_start": "0:00.000",
+    "call_end": "8:02.972",
+    "operator_name": "Анна",
+    "customer_name": "Михаил",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "00:12.450",
+      "timestamp_end": "00:18.230",
+      "evidence": "Клиент сообщает имя 'Михаил', оператор использует его в обращении ('Михаил. Чем могу помочь вам?'), но не повторяет данные с явным запросом подтверждения ('Верно? / Правильно? / Подтверждаете?').",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Неиспользование метода эха при фиксации имени клиента",
+      "recommendation": "После записи контактных данных (имя, телефон, адрес) повторять их и задавать уточняющий вопрос ('Ваше имя Михаил, верно?') с ожиданием явного подтверждения клиента.",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 36.9,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.65,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["city", "name", "phone"],
+      "echo_performed": {
+        "city": true,
+        "name": false,
+        "phone": true
+      },
+      "confirmation_received": {
+        "city": false,
+        "name": false,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Корректное приветствие с указанием компании и имени оператора, вопрос о городе и о том, как обращаться; завершение с благодарностью за звонок и прощанием.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Имя клиента фиксируется, но не подтверждается методом эха (нет повторения с вопросом 'верно/правильно').",
+      "note": "Телефон и город проговариваются и подтверждаются, но имя не подтверждено явно."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Первое обращение оператора начинается менее чем через 5 секунд от начала звонка, завершение разговора и отключение происходят без заметной паузы.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Признаков грубых перебиваний клиента без извинения в транскрипте не обнаружено.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Длительных периодов тишины более 45 секунд нет, клиент не завершает звонок из-за ожидания.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Информационные поиски (после фраз 'сейчас минуту') длятся ориентировочно до 20–37 секунд и не превышают 40 секунд.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "После завершения поисков оператор благодарит клиента за ожидание ('Спасибо за ожидание').",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Основной запрос клиента (вопрос по возврату и желанию оформить новый заказ) обрабатывается: оформлена бронь, информация передана менеджеру, согласовано время звонка.",
+      "note": "Фактическое поступление средств будет подтверждено позже, но план действий согласован."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор не раскрывает внутренние телефоны, коды доступов или персональные данные третьих лиц.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Информация о шинах и условиях акций предоставляется со ссылкой на систему и при необходимости передается менеджеру, избегается выдача данных 'по памяти'.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Клиент получает ключевую информацию: по возврату, брони, акциям и пунктам выдачи; явных пропусков обязательных данных по транскрипту не видно.",
+      "note": "Полная оценка полноты требует проектной конфигурации."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Соблюдается базовая структура скрипта: приветствие, уточнение города и имени, выявление потребности, предложение решения, согласование дальнейших действий и завершение.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор выслушивает возражения клиента, сохраняет контроль над диалогом и корректно его завершает, задавая уточняющие вопросы.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Предоставляется подробная информация по акциям, пунктам выдачи и комплекту шин; не наблюдается явной неопределенности в ответах.",
+      "note": "Полная проверка полноты проектной информации невозможна без дополнительных данных."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор не прерывает звонок и не отказывается обслуживать клиента при наличии возможности помочь.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "В речи оператора отсутствуют нецензурная лексика и оскорбительные выражения.",
+      "note": "Оценка тона ограничена текстом без аудио."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Несмотря на эмоциональные реплики клиента, оператор сохраняет спокойный, вежливый стиль общения.",
+      "note": "Полная оценка работы с трудным клиентом требует аудио."
+    }
+  },
+  "positive_observations": [
+    "Профессиональное приветствие с указанием компании и имени оператора.",
+    "Оператор несколько раз благодарит клиента за ожидание при поиске информации.",
+    "Подробно рассказывает об акциях, скидках и дополнительных услугах (монтаж, трейд-ин).",
+    "Предлагает забронировать шины, чтобы клиент не остался без товара.",
+    "Корректно завершает разговор с благодарностью за звонок и прощанием."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": null
+  }
+}
+

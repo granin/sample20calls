@@ -1,0 +1,250 @@
+{
+  "call_metadata": {
+    "call_id": "call_06",
+    "duration_seconds": 627,
+    "call_start": "0:00.000",
+    "call_end": "10:26.694",
+    "operator_name": "Евгений Коквара",
+    "customer_name": "Марат",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "7:51.588",
+      "timestamp_end": "7:58.728",
+      "evidence": "At 07:51.588 customer provides new contact phone '903-35-15-39, 999 в конце', operator accepts and moves on to address without repeating the number or asking for confirmation; earlier name 'Марат' and city 'Уфа' were also recorded without explicit echo plus confirmation question.",
+      "confidence": 0.96,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "0:48.737",
+      "timestamp_end": "1:34.846",
+      "evidence": "First search starts at 00:48.737 with 'Минуту, пожалуйста' and ends only at 01:34.846 when the operator returns with 'Спасибо за ожидание. Да, данные сейчас подойдут к этим дискам', total search duration about 46.1 seconds, which exceeds the 45-second violation threshold.",
+      "confidence": 0.96,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for all collected contact data",
+      "recommendation": "Whenever recording any contact data (name, city, phone), repeat the information back and ask an explicit confirmation question like 'верно?' and wait for a clear confirmation before saving.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Initial information search exceeded 45 seconds",
+      "recommendation": "During complex database searches keep total search time under 40 seconds by optimizing lookup or splitting requests, and if search runs long provide interim updates and consider escalation.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 46.1,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 2.843,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "phone"],
+      "echo_performed": {
+        "name": true,
+        "city": false,
+        "phone": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company and operator name ('Здравствуйте, компания «74 колеса», меня зовут Евгений Коквара') and closing is polite ('Спасибо за звонок, всего доброго, до свидания'); question flow is logical.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "New contact phone 903-35-15-39 (07:51.588–07:58.728) is taken without repeat-back or explicit confirmation, and name 'Марат' with city 'Уфа' are also recorded without echo plus confirmation.",
+      "note": "Echo is required for each contact data item; partial confirmation of an earlier phone does not compensate for missing echo on the new phone and other contact data."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First operator speech starts at 0:02.843 (<5s from call start) and call ends immediately after the closing phrase with no visible long silence.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Transcript shows turn-taking without any clear operator interruptions or overlapping speech.",
+      "note": "Overlap and tone detection are limited with transcript-only data."
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silences over 45 seconds leading to a customer hangup; operator always returns from searches and the call ends normally.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "First search from 'Минуту, пожалуйста' at 0:48.737 to 'Спасибо за ожидание. Да, данные сейчас подойдут...' at 1:34.846 lasts about 46.1 seconds, exceeding the 45-second threshold.",
+      "note": "Second search around 02:05–02:18 is within 40 seconds and does not violate timing."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator explicitly thanks the customer for waiting after searches ('Спасибо за ожидание' at approximately 1:34.846, 2:18.527 and 3:13.953).",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer's main requests (fitment of tires and disks, discounts, pickup timing and process) are fully answered and an order is created; the customer ends the call satisfied.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator does not disclose office phone numbers, internal codes, or other confidential data; only product and delivery information is provided.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Key technical information (compatibility of wheels and tires) is verified via explicit database searches; remaining information is standard offer details with no signs of guessing or contradictions.",
+      "note": "Project strictness for verification is not specified, but no clear unverified information is visible in the transcript."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives confirmation of fitment, final price, discount rules, pickup location and timing, and SMS order flow; no obvious mandatory information appears to be missing.",
+      "note": "Full mandatory field list is not provided, so assessment is partial."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call follows the sales script with clear greeting, needs identification, product confirmation, benefit explanation (warranty, free mounting, fuel gift), order processing, and closing.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator listens to multiple questions, maintains conversation structure, uses the customer's name and leads the dialogue to order placement and clear closing.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator provides comprehensive information about product compatibility, discounts, free services, fuel gift, pickup options and payment timing.",
+      "note": "Exact project information requirements are not specified, but no significant gaps are evident."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator never refuses service or disconnects abruptly; call ends after mutual agreement and thanks.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Transcript contains no profanity or harsh phrases from the operator; language remains polite throughout.",
+      "note": "Tone (e.g. yelling or harshness) cannot be fully assessed without audio."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer is inquisitive and asks many detailed questions, but operator stays calm, structured, and helpful without any visible signs of losing control.",
+      "note": "Difficult customer tone nuances require audio, but text shows good handling."
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name within three seconds of call start.",
+    "Clear, detailed answers about product compatibility, discounts, free services, and fuel gift.",
+    "Patient handling of a curious customer with many follow-up questions.",
+    "Proactive order processing with explanation of SMS confirmation and payment options.",
+    "Polite closing thanking the customer for the call."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Minor transcription errors (e.g. 'Слыхал из ожидания' instead of 'Спасибо за ожидание'), but key phrases for searches, thanks for waiting, and contact data are clearly captured."
+  }
+}
+

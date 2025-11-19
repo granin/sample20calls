@@ -1,0 +1,241 @@
+{
+  "call_metadata": {
+    "call_id": "call_20",
+    "duration_seconds": 106.267,
+    "call_start": "0:00.346",
+    "call_end": "1:46.613",
+    "operator_name": "Екатерина",
+    "customer_name": "Дмитрий",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.1",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.1",
+      "grade": 7,
+      "title": "Script violations",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:00.346",
+      "timestamp_end": "1:46.613",
+      "evidence": "Operator does not give a formal greeting with company and name at the start (only short 'А.' at 0:00.346) and does not provide a standard closing. Customer says 'Спасибо большое. До свидания.' around 1:43-1:45, but the operator only adds 'Это вас ничему не обязывает?' without a farewell phrase.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "0:52.868",
+      "timestamp_end": "1:23.033",
+      "evidence": "Operator announces a product availability search ('Сейчас я посмотрю.') at 0:52.868 and then delivers detailed results up to about 1:21.302, but never thanks the customer for waiting (no phrases like 'Спасибо за ожидание') before the customer reply at 1:23.033.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "No standard greeting and closing per script",
+      "recommendation": "Start the call with a full greeting that includes company and operator name, and finish with a clear closing phrase such as 'Спасибо за звонок, до свидания'.",
+      "related_criterion": "7.1"
+    },
+    {
+      "priority": 2,
+      "issue": "No explicit thank you for waiting after search",
+      "recommendation": "After any noticeable information search or pause, explicitly thank the customer for waiting (e.g. 'Спасибо за ожидание') before continuing.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 28.4,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.346,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": false,
+      "entities_collected": [],
+      "echo_performed": {},
+      "confirmation_received": {}
+    },
+    "script_compliance": {
+      "greeting_present": false,
+      "company_name_mentioned": false,
+      "operator_name_mentioned": false,
+      "closing_present": false,
+      "customer_name_used": true,
+      "customer_orientation_questions": 0
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "No formal greeting or closing from the operator; only a short initial 'А.' and no 'До свидания' from the agent.",
+      "note": "Script likely requires company and operator introduction plus polite closing."
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "No recording of customer contact data (name, phone, address, email, city) by the operator in this call, so echo method requirement was not triggered.",
+      "note": null
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First agent speech at 0:00.346 (<5s from call start) and call ends immediately after the last agent phrase (disconnect within 5s).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No overlapping speech where the agent cuts off the customer without apology is visible in the transcript.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No long silences (>45s) or customer hangup; conversation flows continuously until the end.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Longest information search (from 'Сейчас я посмотрю.' at ~0:52.868 to end of explanation at ~1:21.302) is about 28.4s, well under the 40s threshold.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After completing the availability search and giving detailed information, the operator never thanks the customer for waiting with a phrase like 'Спасибо за ожидание'.",
+      "note": "Customer says 'Спасибо большое' but there is no explicit gratitude from the agent for waiting."
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer questions about store operation and tyre availability are answered; customer responds 'Понял. Спасибо большое.' and explains his plan.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No internal phone numbers, passwords, or other confidential internal data are disclosed; only public store address and product information are given.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator explicitly announces checks ('Сейчас я проверю', 'Сейчас я посмотрю') before giving availability information, indicating verification rather than memory-only answers.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives clear answers on whether the store operates and detailed info on tyre availability, price, discounts, address, and promotions; no obvious missing mandatory data.",
+      "note": "Full mandatory fields list is project-specific, so assessment is partial."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent asks clarifying questions about tyre size and purchase timing and structures information about availability, ordering, price and bonuses in a logical sequence.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent listens to the customer, clarifies needs, uses the customer name 'Дмитрий' and offers additional options (other models, reservation) while keeping control of the dialogue.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Provides detailed and confident information about product name, date of availability, address, price, discount and promotions.",
+      "note": "Project configuration for full completeness is not available, so assessment is partial."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No unjustified disconnection or refusal of service; customer ends the conversation after declining further actions.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "No profanity or clearly harsh language from the agent appears in the transcript.",
+      "note": "Tone and volume cannot be assessed without audio."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer remains polite and cooperative; agent responds professionally throughout, with no signs of difficulty handling a challenging customer.",
+      "note": "Full assessment of irritation or frustration requires audio."
+    }
+  },
+  "positive_observations": [
+    "Agent quickly confirms that the store/warehouse is operating in normal mode without long delays.",
+    "Clarifies tyre size and purchase timing with focused follow-up questions.",
+    "Provides detailed information on product name, availability date, address, price, discount and promotions.",
+    "Uses the customer name 'Дмитрий' when offering to reserve the tyres.",
+    "Offers alternative models and reservation as additional service options."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Minor ASR imperfections on some brand names, but they do not affect grading conclusions."
+  }
+}

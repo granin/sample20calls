@@ -1,0 +1,200 @@
+{
+  "final_grade": {
+    "all_equal": 13,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 3,
+    "blind2_outlier": 1,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "final_confidence": {
+    "all_equal": 9,
+    "sonnet_outlier": 4,
+    "blind1_outlier": 3,
+    "blind2_outlier": 1,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "1.1": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "2.1": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "3.1": {
+    "all_equal": 9,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 8,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "3.3": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "3.6": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "4.1": {
+    "all_equal": 9,
+    "sonnet_outlier": 8,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "5.1": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "6.1": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "7.1": {
+    "all_equal": 16,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 1,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "7.2": {
+    "all_equal": 12,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 3,
+    "blind2_outlier": 2,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "7.3": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "7.4": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "9.1": {
+    "all_equal": 7,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 6,
+    "blind2_outlier": 3,
+    "all_different": 1,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "9.3": {
+    "all_equal": 8,
+    "sonnet_outlier": 1,
+    "blind1_outlier": 6,
+    "blind2_outlier": 2,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "10.2": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "10.3": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "10.6": {
+    "all_equal": 17,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "risk_compliance": {
+    "all_equal": 9,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 3,
+    "blind2_outlier": 5,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "risk_customer_satisfaction": {
+    "all_equal": 13,
+    "sonnet_outlier": 0,
+    "blind1_outlier": 0,
+    "blind2_outlier": 4,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  },
+  "risk_data_security": {
+    "all_equal": 12,
+    "sonnet_outlier": 5,
+    "blind1_outlier": 0,
+    "blind2_outlier": 0,
+    "all_different": 0,
+    "missing_data": 3,
+    "total_calls_used": 17
+  }
+}

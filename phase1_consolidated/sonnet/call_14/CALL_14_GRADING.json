@@ -1,0 +1,258 @@
+{
+  "call_metadata": {
+    "call_id": "call_14",
+    "duration_seconds": 339,
+    "call_start": "0:00.000",
+    "call_end": "5:39.237",
+    "operator_name": "Ирина",
+    "customer_name": "Евгений",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:09.129",
+      "timestamp_end": "0:14.669",
+      "evidence": "Customer name 'Евгений' collected at 9.129s, agent echoed name at 10.009s but never requested confirmation ('Верно?'). City 'Пермь' collected at 12.949s, agent echoed 'Город Пермь' at 13.969s but again no confirmation requested.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:31.727",
+      "timestamp_end": "0:47.087",
+      "evidence": "After information search (duration 15.36s), operator delivered results but did not thank customer for waiting",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "When collecting customer name or city, must repeat back and explicitly ask for confirmation using 'Верно?' or 'Правильно?' and wait for customer confirmation",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Missing gratitude after information search",
+      "recommendation": "After completing information search, thank customer for waiting using phrases like 'Спасибо за ожидание' within 5 seconds of delivering results",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 15.36,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.029,
+      "intro_within_5s": true,
+      "disconnect_time_sec": null,
+      "disconnect_within_5s": null
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city"
+      ],
+      "echo_performed": {
+        "name": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name '74 колеса', operator name 'Ирина', and offer to help 'как я могу к вам обращаться?'. Proper closing with 'Чем-то еще могу вам помочь?' and 'Спасибо за звонок. Всем доброго, до свидания.'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Contact data (name and city) echoed but no confirmation requested",
+      "note": "Operator repeated 'Евгений' and 'Город Пермь' but never asked 'Верно?' or obtained confirmation"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.029s (within 5s threshold)",
+      "note": "Disconnect timing not precisely measurable from available data"
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No impolite interruptions detected in transcript",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence periods >45s detected, customer did not hang up due to waiting",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search durations: 15.36s (first search), all under 40s threshold",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After search completion at 47.087s, no gratitude expressed for waiting",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer requested SUV-rated tires within budget, operator provided comprehensive information about available options, explained pricing, and offered alternatives including installment plan",
+      "note": "Customer's budget constraint (15,000) not met by SUV-rated options, but operator fully informed customer of all available choices. Request addressed though customer did not purchase."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator consistently checked system before providing information ('Давайте посмотрим', 'Сейчас посмотрю')",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "All requested tire information provided: sizes, prices, brands, SUV rating, availability, installment options",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical information flow, professional presentation of tire options",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Used customer name 'Евгений', maintained professional rapport, proper opening and closing",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete product information delivered: tire sizes, brands, prices, SUV ratings, availability, delivery timing, installment options",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No service refusal, call ended naturally after customer declined to reserve",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness or profanity detected in operator speech",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator handled customer professionally, adapted to customer's specific requirements (SUV rating)",
+      "note": "Text-based assessment only"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name",
+    "Used customer name appropriately throughout call",
+    "Comprehensive product knowledge and options presented",
+    "Offered additional services (installment plan, reservation)",
+    "Proper closing with offer for additional help",
+    "Patient and thorough in explaining tire options and pricing",
+    "Actively verified availability and explained delivery process"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": null
+  }
+}

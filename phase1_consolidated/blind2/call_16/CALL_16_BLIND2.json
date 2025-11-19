@@ -1,0 +1,248 @@
+{
+  "call_metadata": {
+    "call_id": "call_16",
+    "duration_seconds": 144.581,
+    "call_start": "0:00.000",
+    "call_end": "2:24.581",
+    "operator_name": "Ирина",
+    "customer_name": "Дмитрий",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:07.777",
+      "timestamp_end": "0:15.537",
+      "evidence": "Customer provides name 'Дмитрий' and city 'Екатеринбург'; operator repeats them but never asks an explicit confirmation question (\"Верно?\", \"Правильно?\") and does not receive explicit confirmation.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "0:52.678",
+      "timestamp_end": "0:57.678",
+      "evidence": "After announcing a search (\"я посмотрю\") around 0:33 and returning with the result at 0:52.678 (\"Шина Тойо\"), the operator immediately continues the explanation without saying \"Спасибо за ожидание\" or any explicit thanks for waiting.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method missing for name and city",
+      "recommendation": "When recording any contact data (name, city, phone, etc.), repeat the data back to the customer and ask an explicit confirmation question such as \"Дмитрий, верно? Город Екатеринбург, верно?\", then wait for a clear \"Да\" before proceeding.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "No thanks for waiting after search",
+      "recommendation": "After completing any information search, thank the customer for waiting (for example, \"Спасибо за ожидание\") before giving the result, even if the search was relatively short.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 19.4,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.097,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name and operator name, followed by a clear closing and offer of additional help.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name and city are collected and repeated but the operator does not ask for explicit confirmation or receive a clear \"Да\".",
+      "note": "Echo method requires repeat-back plus explicit confirmation question and customer confirmation."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro starts at 3.097s (<5s) and the call ends immediately after the final farewell (disconnect within 5 seconds).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Transcript shows turn-taking without clear interruptions or overlapping speech where the operator cuts the customer off.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No long silences or customer hangup; both parties close the call normally after resolving the question.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Single search from about 0:33.278 (\"я посмотрю\") to 0:52.678 (~19.4s), well under the 40s threshold.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After completing the search and starting the answer, the operator does not say \"Спасибо за ожидание\" or similar thanks for waiting.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer’s request about tyre production year is answered (24–25 year) and the customer confirms this is acceptable and proceeds to place the order.",
+      "note": "No unresolved issues or complaints remain at the end of the call."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No internal phone numbers, access codes, or other confidential internal information disclosed.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Information about production years is presented as coming from the website; no statements appear to be given purely \"from memory\" without any lookup.",
+      "note": "Project-specific rules about when lookup is mandatory are not visible in the transcript."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Core requested information (expected production years and option to clarify exact date via pre-order) is provided; no obvious mandatory fields are left unaddressed.",
+      "note": "Full verification of mandatory information list would require project configuration."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting, clarification questions and closing follow a logical script-like flow.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator remains polite, keeps control of the dialogue and offers additional help before closing.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Provides clear explanation of expected production years (24–25) and describes how exact production week can be clarified via pre-order.",
+      "note": "Full completeness assessment would need detailed project configuration."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call ends courteously with mutual goodbyes; there is no unjustified refusal of service or abrupt disconnection by the operator.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "No profanity or rude phrases from the operator are visible in the transcript.",
+      "note": "Full tone assessment (harshness, yelling) would require audio."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is cooperative and the operator responds calmly; no signs of difficulty managing the customer in text.",
+      "note": "Text-only view; emotional tone and stress handling would require audio."
+    }
+  },
+  "positive_observations": [
+    "Warm professional greeting including company and operator name.",
+    "Clarified the customer’s city and restated it before moving to the main question.",
+    "Explained limitations of checking exact production date and offered a pre-order process as an option.",
+    "Clearly stated expected production years (24–25) and reassured the customer.",
+    "Offered help with order placement and checked if anything else was needed before closing.",
+    "Ended the call with a polite thanks for the call and farewell."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Minor transcription typos (e.g. English tyre model wording) but overall transcript is clear enough for all 17 criteria."
+  }
+}

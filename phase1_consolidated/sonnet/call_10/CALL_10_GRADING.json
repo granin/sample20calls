@@ -1,0 +1,262 @@
+{
+  "call_metadata": {
+    "call_id": "call_10",
+    "duration_seconds": 1090,
+    "call_start": "0:00.000",
+    "call_end": "18:10.033",
+    "operator_name": "Alina",
+    "customer_name": "Sergey",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:08.436",
+      "timestamp_end": "0:12.816",
+      "evidence": "Customer name 'Сергей' collected at 8.436s. Operator responded 'Слушаю вас' at 12.816s but never repeated name back or requested confirmation ('Сергей, верно?'). Phone number was properly echoed at 11:56.515 with confirmation.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "5:41.635",
+      "timestamp_end": "6:53.311",
+      "evidence": "Search for available tire mounting dates. Operator announced 'Сейчас посмотрю информацию. Минуту, пожалуйста' at 5:41.635. Delivered information 'Ближайшая свободная запись на 24 октября' at 6:53.311. Total duration: 71.7 seconds (>45s threshold). Operator checked in at 6:26.446 ('Спасибо') and 6:35.326 ('за ждающую минуту'), but total search time still exceeds limit.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "9": 1,
+      "7": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for customer name",
+      "recommendation": "When customer provides their name, repeat it back and ask for confirmation: 'Сергей, верно?' This was done correctly for phone number (912-615-69-64, верно?) but missed for the customer name.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Information search exceeded 45-second limit",
+      "recommendation": "When searching for available dates, work to complete search within 40 seconds. If search requires more time, consider taking customer callback information to research thoroughly. The 71.7-second search, while including customer check-ins, exceeded acceptable duration.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 71.7,
+      "customer_check_ins": 2,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.316,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 2.7,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "phone"
+      ],
+      "echo_performed": {
+        "name": false,
+        "phone": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting 'Здравствуйте, компания 74-х колесами, зовут Алина. Как к вам можно обращаться?' includes company name, operator name, and request for customer name. Proper closing 'спасибо за звонок. Всего доброго, до свидания.' Customer orientation question asked 'Чем-то ещё могу вам помочь?'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Сергей' not echoed back with confirmation. Phone number was properly echoed.",
+      "note": "Partial compliance - phone handled correctly, name was not"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.316s (<5s). Disconnect at ~2.7s after last speech (<5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45s leading to customer hangup. Call completed successfully.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Search duration 71.7 seconds exceeds 45-second limit",
+      "note": "Operator did check in with customer during search, but total duration still exceeded threshold"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanked customer after searches: 'Спасибо за ожидание' (multiple instances at 6:26, 11:18, 17:33)",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All customer requests addressed: tire purchase completed, trade-in and tire size compatibility questions escalated to manager with callback scheduled, tire mounting location resolved with partner addresses provided",
+      "note": "Proper escalation to manager for technical questions demonstrates good service"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Only partner public phone number disclosed (904-174-4111). No confidential internal information shared.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator consistently searched system before providing information: 'Сейчас посмотрю', 'Сейчас проверю информацию'",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: tire models, prices (9670₽, 10590₽), addresses (Шевская 3М, Серафима Дерябина 30А, Волгоградская 208), partner phone, order number (96-97-64)",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical information presentation, proper script adherence throughout call",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional dialogue management, maintained conversation control, proper opening and closing, addressed all customer questions systematically",
+      "note": "Customer name collected but not used consistently throughout call - minor opportunity for improvement"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete and accurate product information, pricing, promotional offers (extended warranty, free tire mounting, trade-in, 5% discount, 15L fuel), locations, scheduling",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No service refusal or call dropout. Call completed successfully with order placement.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness, profanity, or harsh language detected. Professional tone maintained throughout.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer asked many questions and required clarification multiple times. Operator handled patiently and professionally without showing frustration.",
+      "note": "Good handling of inquisitive customer with complex requirements"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name clearly stated",
+    "Proper closing with thanks and polite farewell",
+    "Excellent phone number echo confirmation (912-615-69-64, верно?)",
+    "Consistent system verification before providing information",
+    "Multiple customer check-ins during long search showing attentiveness",
+    "Thanked customer for waiting after each search ('Спасибо за ожидание')",
+    "Patient handling of customer's multiple questions and concerns",
+    "Complete product information with all promotional details provided",
+    "Proper escalation to manager for technical questions beyond call center scope",
+    "Successfully completed complex order with trade-in inquiry and callback scheduling",
+    "Confirmation of order number and SMS notification"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Clear transcription with accurate timestamps. Word-level JSON available for precise echo method detection."
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "call_metadata": {
+    "call_id": "call_04",
+    "duration_seconds": 480,
+    "call_start": "0:00.000",
+    "call_end": "8:00.152",
+    "operator_name": "Анна",
+    "customer_name": "Михаил",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:12.450",
+      "timestamp_end": "0:18.230",
+      "evidence": "Customer name 'Михаил' collected at 15.450s, operator repeated it at 16.630s but never requested confirmation ('Верно?', 'Правильно?'). City 'Екатеринбург' collected at 11.170s, operator repeated at 12.450s without confirmation. Phone '912-666-9332' repeated at 04:13.353 and 07:06.710 without confirmation request.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search - FLAG ONLY",
+      "severity": "flag_only",
+      "sot_flag": false,
+      "timestamp_start": "0:36.760",
+      "timestamp_end": "1:01.383",
+      "evidence": "Operator announces search ('Час-минуту') at 36.760s, delivers information at 1:01.383s. Total search duration: 24.623 seconds (within acceptable 40s limit)",
+      "confidence": 1.0,
+      "flag_window": false,
+      "score_reduction": false
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 1,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data verification",
+      "recommendation": "After collecting and repeating customer's name, city, and phone number, MUST ask for explicit confirmation: 'Верно?', 'Правильно?', 'Подтверждаете?' and wait for customer to confirm ('Да', 'Верно', 'Угу')",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 24.623,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.65,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 2.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city",
+        "phone"
+      ],
+      "echo_performed": {
+        "name": true,
+        "city": true,
+        "phone": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "phone": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting: 'Здравствуйте, компания 7964 Колеса. Меня зовут Анна. Как можно к вам обращаться?' includes company name, operator name, and offer to help. Proper closing: 'Спасибо за звонок. Всего доброго. До свидания.'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Contact data (name, city, phone) collected and repeated but NO confirmation request ('Верно?') made",
+      "note": "Operator repeated all data back but failed to ask for explicit confirmation"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 0.650s (< 5s), disconnect estimated at ~2s after last speech (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected without apology",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45s leading to customer hangup. Operator ended call professionally",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 24.623s (< 40s threshold)",
+      "note": "Well within acceptable limits"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanked customer for waiting: 'Спасибо за ожидание' at 1:01.383",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer's refund issue was addressed by escalating to manager. Operator offered to reserve tires and provided callback time.",
+      "note": "Customer expressed frustration but accepted the resolution plan. Borderline case but operator provided clear next steps"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator searched system before providing information, used 'сейчас', 'минуту' before searching",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator provided pickup addresses, delivery info, promotions, booking number (964-003), callback time (9:30), phone confirmation",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical information flow, script followed, promotions offered, proper reservation process",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Used customer name 'Михаил' consistently, built rapport, maintained conversation control, proper opening/closing, asked 'Чем-то могу ещё помочь вам?' at end",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: tire specifications, prices, promotions, delivery options, pickup locations, booking process",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No service refusal, call ended professionally by operator after confirming no additional needs",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or rudeness detected from operator. Professional tone maintained throughout",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Handled frustrated customer professionally, maintained composure, repeated explanations patiently",
+      "note": "Text indicators show good customer handling. Full assessment would require audio tone"
+    }
+  },
+  "positive_observations": [
+    "Excellent professional greeting with company name (7964 Колеса), operator name (Анна), and offer to help",
+    "Used customer name 'Михаил' consistently throughout call showing good rapport building",
+    "Thanked customer for waiting after search ('Спасибо за ожидание')",
+    "Handled frustrated customer professionally and patiently explained refund escalation process",
+    "Offered proactive solution by reserving tires while refund is being processed",
+    "Provided comprehensive information about promotions, delivery options, and pickup locations",
+    "Proper closing with gratitude and offer for additional help",
+    "Good timing compliance: started greeting within 1 second of call start"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "timestamps_json"
+    ],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level timestamps available for echo method detection. Some customer speech has lower confidence scores but overall quality is sufficient for assessment."
+  }
+}

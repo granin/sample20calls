@@ -1,0 +1,293 @@
+{
+  "call_metadata": {
+    "call_id": "call_20",
+    "duration_seconds": 106,
+    "call_start": "0:00.346",
+    "call_end": "1:46.613",
+    "operator_name": null,
+    "customer_name": "Дмитрий",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.1",
+    "all_violation_grades": [
+      7,
+      7,
+      9
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.1",
+      "grade": 7,
+      "title": "Script violations",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:00.346",
+      "timestamp_end": "0:01.346",
+      "evidence": "Greeting: Agent opens call with only 'А' - missing company name, operator name, and offer to help. Closing: After customer says 'До свидания', agent asks 'Это вас ничему не обязывает?' instead of proper farewell with thanks and polite closing.",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:04.686",
+      "timestamp_end": "0:05.386",
+      "evidence": "Customer provided name 'Дмитрий' at 4.686s. Operator never repeated the name back with confirmation request ('Верно?', 'Правильно?'). Operator used the name later at 97.353s but did not perform echo verification.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:11.166",
+      "timestamp_end": "0:16.786",
+      "evidence": "After first information search (announced at 11.166s 'Сейчас я подскажу' and 13.926s 'Сейчас я проверю'), operator provided answer at 15.466s without thanking customer for waiting.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:52.868",
+      "timestamp_end": "0:56.202",
+      "evidence": "After second information search (announced at 52.868s 'Сейчас я посмотрю'), operator provided answer at 56.202s without thanking customer for waiting.",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 4,
+    "violations_by_grade": {
+      "7": 2,
+      "9": 2
+    },
+    "sot_violations": 4,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 4
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Missing proper greeting with company name and operator name",
+      "recommendation": "Always start calls with full greeting: company name, your name, and offer to help (e.g., 'Добрый день, компания [Название], меня зовут [Имя], чем могу помочь?')",
+      "related_criterion": "7.1"
+    },
+    {
+      "priority": 2,
+      "issue": "Echo method not used for customer name verification",
+      "recommendation": "When customer provides contact information (name, phone, address), immediately repeat it back and ask for confirmation: 'Дмитрий, верно?' and wait for customer to confirm",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 3,
+      "issue": "Not thanking customer for waiting after information searches",
+      "recommendation": "After completing any information search, thank the customer for waiting before providing the answer (e.g., 'Спасибо за ожидание')",
+      "related_criterion": "9.3"
+    },
+    {
+      "priority": 4,
+      "issue": "Improper call closing",
+      "recommendation": "Always close calls properly with thanks and polite farewell, even after customer initiates goodbye",
+      "related_criterion": "7.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 3.2,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.346,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name"
+      ],
+      "echo_performed": {
+        "name": false
+      },
+      "confirmation_received": {
+        "name": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": false,
+      "company_name_mentioned": false,
+      "operator_name_mentioned": false,
+      "closing_present": false,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Opening: Only 'А' spoken, no proper greeting. Closing: No proper farewell after customer goodbye.",
+      "note": "Critical script compliance issues at both call opening and closing"
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name 'Дмитрий' collected but not echoed back with confirmation request",
+      "note": null
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 0.346s (< 5s), disconnect at 0s from last speech (< 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected in transcript",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence detected, normal call termination",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First search ~4s, second search ~3s, both well under 40s threshold",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "No gratitude expressed after either of two information searches",
+      "note": "Two separate violations - neither search was followed by thank you"
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All customer requests answered: store hours provided, tire availability checked and communicated with full details",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator announced search before providing information, used system verification",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: availability date (Nov 7), price (6710 rub with 10% discount = 6039 rub), location (Vasilieva 37), product details (Kumho Wintercraft Ice White 32), bonus offers",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information delivery was logical and per script (after greeting issues)",
+      "note": "Information content was good, but opening/closing violations captured in 7.1"
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator used customer name (Dmitry), maintained conversation flow, offered additional help",
+      "note": "Dialogue management was adequate despite greeting/closing issues"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Accurate and complete information delivered about tire availability, pricing, and store details",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No service refusal, customer ended call naturally after receiving information",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected in transcript",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "N/A",
+      "confidence": "LOW",
+      "evidence": "Customer was polite and cooperative throughout call",
+      "note": "Text-based assessment only, full tone analysis would require audio"
+    }
+  },
+  "positive_observations": [
+    "Fast and efficient information searches (both under 5 seconds)",
+    "Used customer name appropriately during conversation",
+    "Provided comprehensive product information including pricing, availability dates, and location",
+    "Offered additional alternatives when initial product was unavailable",
+    "Attempted to help customer with reservation offer",
+    "Professional tone maintained throughout the call"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level timestamps available for precise echo method detection. Transcription clear with good speaker diarization."
+  }
+}

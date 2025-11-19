@@ -1,0 +1,247 @@
+{
+  "call_metadata": {
+    "call_id": "call_14",
+    "duration_seconds": 339.237,
+    "call_start": "0:00.000",
+    "call_end": "5:39.237",
+    "operator_name": "Ирина",
+    "customer_name": "Евгений",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:08.349",
+      "timestamp_end": "0:13.549",
+      "evidence": "Customer provides name 'Евгений' (0:08.349-0:09.509) and city 'Пермь' (0:12.949-0:13.549); operator uses these data but never repeats them back with an explicit confirmation question ('Верно?','Правильно?') and does not get verbal confirmation.",
+      "confidence": 0.96,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.3",
+      "grade": 9,
+      "title": "No thank you for waiting after search",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "0:31.727",
+      "timestamp_end": "1:08.953",
+      "evidence": "After announcing a search ('Давайте посмотрим сейчас') at 0:31.727 and then returning with tyre options around 1:08.953, the operator immediately continues with information and further questions without thanking the customer for waiting; no phrases like 'Спасибо за ожидание' appear after any search.",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for captured contact data (name and city).",
+      "recommendation": "Whenever recording any customer contact data (name, city, phone, email, etc.), repeat the data back and ask an explicit confirmation question such as 'Правильно записала: Евгений, город Пермь, верно?' and wait for a clear confirmation before moving on.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "No explicit thanks for waiting after information searches.",
+      "recommendation": "After each search (e.g. after 'Сейчас посмотрю'), first thank the customer for waiting with a phrase like 'Спасибо за ожидание' and only then start giving the results.",
+      "related_criterion": "9.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 37.2,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.0,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": false,
+        "city": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or explicit rudeness from the operator is present in the transcript; tone cannot be fully assessed without audio.",
+      "note": "Text-based assessment only; audio tone not available."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call ends politely after the operator\u2019s closing; there is no unjustified service refusal or abrupt operator-side dropout.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives several specific tyre options with prices and availability conditions; he indicates he may come later, and no unresolved request is visible at the end of the call.",
+      "note": "Some aspects of business policy are unknown from transcript alone."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential internal numbers, passwords, or personal data are disclosed; only public product and price information is discussed.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator repeatedly announces searches (e.g. 'Давайте посмотрим сейчас', 'Сейчас посмотрю по наличию') and bases answers on these checks; no obviously 'from memory' answers are seen where strict verification would be required.",
+      "note": "Project-specific rules about when system verification is mandatory are not available."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer behaves calmly and cooperatively; operator remains polite and structured throughout with no visible difficulty handling the interaction.",
+      "note": "Full evaluation of emotional tone would require audio; text shows no handling problems."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator provides key information about SUV tyres, including brands, prices, and availability/reservation options; no clear mandatory elements (such as addresses or hours) are requested but missing.",
+      "note": "Without detailed project documentation, some potential information requirements cannot be fully verified."
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "There are no long silences or searches over 45 seconds leading to a customer hangup; the customer does not terminate the call prematurely.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company and operator name and an offer of help; closing is polite and complete; question sequence appears logical with no obvious script violations visible in the transcript.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name and city are collected as contact data but not echoed back with an explicit confirmation question and customer confirmation.",
+      "note": "See violations_detected for detailed timestamps and context."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First operator phrase starts at about 3.0s (<5s) and the call appears to end immediately after the operator\u2019s closing, with no extended silence before disconnect.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Turn-taking is orderly; there are no overlapping segments where the operator cuts off the customer mid-sentence without an apology.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Longest search (from 'Давайте посмотрим сейчас' at 0:31.727 to the start of detailed tyre offer around 1:08.953) is roughly 37 seconds, below the 40-second threshold; no search segments fall into the 40\u201345s flag window or exceed 45 seconds.",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "After searches the operator returns directly to providing information without thanking the customer for waiting; phrases such as 'Спасибо за ожидание' are absent, including after the main tyre search.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting and closing follow a clear script, and the information about tyres is presented in a structured, script-like way.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator maintains control of the dialogue, asks clarifying questions, uses the customer\u2019s name, and properly opens and closes the conversation.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator demonstrates good knowledge of tyre models, price ranges, and availability options (reservation, instalment), and answers the customer\u2019s questions without visible gaps.",
+      "note": "Project-specific completeness requirements are not fully known from the transcript."
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name plus clarification of how to address the customer.",
+    "Clarifies customer needs (SUV tyres, price expectations) before recommending specific products.",
+    "Provides several concrete tyre options with prices and comments on features and benefits.",
+    "Proactively offers reservation and instalment options, emphasizing customer convenience.",
+    "Checks at the end of the call whether anything else is needed and closes politely."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Minor ASR quirks on brand names and technical terms, but overall transcript quality is sufficient for reliable assessment across all 17 Phase 1 criteria."
+  }
+}

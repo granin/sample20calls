@@ -1,0 +1,207 @@
+{
+  "call_metadata": {
+    "call_id": "call_01",
+    "duration_seconds": 455.7,
+    "call_start": "0:00.000",
+    "call_end": "7:35.658",
+    "operator_name": "Ирина",
+    "customer_name": "Алексей Калинин",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 10,
+    "confidence": "HIGH",
+    "primary_violation": null,
+    "all_violation_grades": [],
+    "lowest_code_rule_applied": false,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [],
+  "violations_summary": {
+    "total_violations": 0,
+    "violations_by_grade": {},
+    "sot_violations": 0,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 0
+  },
+  "coaching_priorities": [],
+  "risk_assessment": {
+    "compliance_risk": "LOW",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": false
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 25.0,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.94,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "phone"],
+      "echo_performed": {
+        "name": true,
+        "city": true,
+        "phone": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Приветствие включает компанию, имя оператора и вопрос о том, как обращаться; завершение с благодарностью за заказ и прощанием.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Оператор явно фиксирует телефон ('912‑778‑1421?') с подтверждением клиента, а также уточняет и повторяет имя и фамилию, хотя формулы 'верно/правильно?' по имени/фамилии в явном виде нет.",
+      "note": "По тексту есть частичное применение метода эха; консервативно оценено как PASS."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Презентация оператора начинается на 3.94 секунде, отключение следует сразу после финального прощания.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "По тексту нет перебиваний клиента без извинения.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Длительной тишины более 45 секунд и обрыва звонка клиентом из-за ожидания нет.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Поиски (после 'минуту, пожалуйста') занимают по оценке менее 40 секунд до выдачи информации о шинах и заказе.",
+      "note": "Оценено по VTT, без word-level JSON."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор благодарит клиента за ожидание ('спасибо за ожидание') после пауз.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Основной запрос клиента (невозможность оформить заказ и доставку в его город) решён: оператор оформляет заказ, отправляет комментарий менеджерам и обещает звонок и ссылку на оплату.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Конфиденциальная внутренняя информация (коды доступов, внутренние телефоны, данные третьих лиц) не раскрывается.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Информация о характеристиках шин и акциях (топливо, гарантия) озвучивается с опорой на систему и промо‑материалы, а не 'по памяти'.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Клиенту сообщены цена, характеристики шин, условия доставки, скидка за оплату на сайте и бонус 'топливо в подарок'.",
+      "note": "Полная проверка обязательной информации требует проектного регламента."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Диалог структурирован: приветствие, уточнение потребности, подбор товара, оформление заказа, объяснение дальнейших шагов, завершение.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор управляет диалогом, отвечает на вопросы по сайту и доставке, несколько раз уточняет, нужна ли ещё помощь.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Информация о товарах, цене, бонусах и процедуре оплаты/доставки подана уверенно и последовательно.",
+      "note": "Ограничения связаны с отсутствием полного проектного перечня обязательной информации."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор не отказывает в обслуживании и не завершает звонок преждевременно; оформляет заказ и передаёт его менеджерам.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Нецензурной лексики и грубых выражений со стороны оператора нет.",
+      "note": "Оценка тона ограничена текстовым уровнем."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Оператор дружелюбно реагирует на эмоциональные реплики и шутки клиента, сохраняя вежливый стиль общения.",
+      "note": "Полная оценка работы с трудным клиентом требует аудио."
+    }
+  },
+  "positive_observations": [
+    "Оператор помогает клиенту оформить заказ, когда тот сталкивается с ошибкой на сайте при выборе города.",
+    "Чётко проговаривает характеристики шин, цену, скидку при оплате на сайте и бонус 'топливо в подарок'.",
+    "Подтверждает номер телефона и фиксирует фамилию для корректного оформления.",
+    "Передаёт комментарий менеджерам о смене города и необходимости связи с клиентом.",
+    "Корректно завершает разговор с благодарностью за заказ и напоминанием о дальнейшем звонке менеджера."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": null
+  }
+}
+

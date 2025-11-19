@@ -1,0 +1,249 @@
+{
+  "call_metadata": {
+    "call_id": "74_WHEELS_001",
+    "duration_seconds": 455,
+    "call_start": "0:00.000",
+    "call_end": "7:35.658",
+    "operator_name": "Irina",
+    "customer_name": "Alexey",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [9, 7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:14.940",
+      "timestamp_end": "0:24.000",
+      "evidence": "Customer name 'Алексей' and city 'Учкотов' recorded as contact data without full echo confirmation: operator uses them but never explicitly asks for confirmation ('Верно?') and receives no confirmation for city/name.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long search - FLAG ONLY",
+      "severity": "flag_only",
+      "sot_flag": false,
+      "timestamp_start": "3:56.178",
+      "timestamp_end": "4:39.376",
+      "evidence": "From 3:56.178 ('Минуту, пожалуйста') to 4:39.376 ('Спасибо за ожидание. Размеры сверяю') the operator is searching for information (~43s total), which falls in the 40–45s flag window (no score reduction).",
+      "confidence": 0.98,
+      "flag_window": true,
+      "score_reduction": false
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 1,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method incomplete for some contact data (name and city).",
+      "recommendation": "After capturing customer name, surname, city and other contact data, always repeat them back and ask an explicit confirmation question (e.g. 'Верно?'), wait for confirmation before proceeding.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 3,
+      "issue": "One long information search close to the 40–45s timing threshold.",
+      "recommendation": "During long system searches, aim to complete lookup faster or break into shorter steps, keep the customer informed, and continue thanking them for waiting after each search.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 43.2,
+      "customer_check_ins": 1,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.94,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 3.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "phone"],
+      "echo_performed": {
+        "name": false,
+        "city": true,
+        "phone": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "phone": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company and operator name plus offer to help; closing thanks customer for the order and offers further help.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name and city captured as contact data without full echo confirmation, while phone is confirmed; per rules this still counts as an echo-method violation.",
+      "note": "See violations_detected for detailed timestamps."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro starts at 3.94s (<5s from call start) and there is no evidence in the transcript of a long delay between conversation end and disconnect.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No clear cases where the operator cuts the customer off mid-sentence; overlaps are minimal and not impolite.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All searches are under 45 seconds and the customer does not hang up; the call ends normally after resolution.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "BORDERLINE",
+      "confidence": "HIGH",
+      "evidence": "Longest search from 3:56.178 to 4:39.376 is about 43 seconds, which falls into the 40–45s flag window.",
+      "note": "Flag for improvement only; reflected as a flag-only entry in violations_detected with no score reduction."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator clearly thanks the customer for waiting after searches (e.g. 'Спасибо за ожидание' at 4:39 and 6:37).",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer’s main request (ordering tires with delivery to Усть-Катав and fixing site issue) is handled: order is created, order number given, and comment added to correct the city.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information like internal office numbers, passwords or extra personal data is disclosed; only necessary order and delivery details are provided.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator searches systems before giving prices, discounts and delivery details; no obvious cases of giving factual information purely 'from memory'.",
+      "note": "Project-specific strict verification rules are not visible; assessment is based on text and timing only."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives prices, discount conditions, delivery company and address, and an order number; no clear gaps in mandatory information are visible in the transcript.",
+      "note": "Exact list of mandatory fields for this project is unknown, so assessment is conservative."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call follows a logical, script-like structure from greeting through problem clarification, offer, order creation and closing.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator listens, clarifies needs, keeps control of the dialogue, uses the customer’s name and closes the call properly.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator provides key information about product, price, discount, delivery company and address, and fuel bonus conditions; no obvious missing elements.",
+      "note": "Full completeness validation would require detailed project configuration; here only transcript evidence is used."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal: operator completes the order, provides next steps and ends the call politely.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator does not use profanity or rude phrases; when the customer uses mild profanity, the operator remains professional.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is somewhat frustrated and talkative with background noise, but operator stays calm and structured; no text evidence of poor handling.",
+      "note": "Tone and emotional nuances cannot be fully assessed without audio."
+    }
+  },
+  "positive_observations": [
+    "Professional greeting including company and operator name.",
+    "Used customer name and city to personalize the conversation.",
+    "Handled customer frustration and distractions calmly and politely.",
+    "Announced searches and clearly thanked the customer for waiting.",
+    "Provided detailed information on price, discount, delivery and fuel bonus, and issued an order number."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Minor recognition artefacts (e.g., place names), but contact data and key phrases are clear enough for confident grading."
+  }
+}

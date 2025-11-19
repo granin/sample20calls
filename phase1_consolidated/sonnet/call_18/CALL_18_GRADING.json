@@ -1,0 +1,259 @@
+{
+  "call_metadata": {
+    "call_id": "call_18",
+    "duration_seconds": 217,
+    "call_start": "0:00.000",
+    "call_end": "3:37.483",
+    "operator_name": "Ирина",
+    "customer_name": "Руслан",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [
+      7,
+      7
+    ],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:14.659",
+      "timestamp_end": "0:27.779",
+      "evidence": "Customer name 'Руслан' collected and repeated by operator, but no confirmation requested. City 'Самара' repeated as 'Город Самара' without asking 'Верно?' or receiving explicit confirmation.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "7.3",
+      "grade": 7,
+      "title": "5-second intro timing violation",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:00.000",
+      "timestamp_end": "0:07.619",
+      "evidence": "Operator greeting started at 7.619 seconds, exceeding 5-second threshold",
+      "confidence": 1.0,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 2
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not properly applied",
+      "recommendation": "When collecting contact data (name, city, phone, etc.), must repeat back AND explicitly ask for confirmation: 'Верно?', 'Правильно?', 'Подтверждаете?'",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Delayed greeting",
+      "recommendation": "Begin greeting within 5 seconds of call start. Current: 7.6 seconds.",
+      "related_criterion": "7.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "MEDIUM",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 27.5,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 7.619,
+      "intro_within_5s": false,
+      "disconnect_time_sec": null,
+      "disconnect_within_5s": null
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city"
+      ],
+      "echo_performed": {
+        "name": true,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name (74 колеса), operator name (Ирина), and offer to help. Proper closing with thanks and farewell.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name and city collected and repeated, but confirmation not requested",
+      "note": "Operator repeated 'Руслан' and 'Город Самара' but did not ask 'Верно?' for explicit confirmation"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Intro at 7.619s exceeds 5s threshold",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence, no customer hangup",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 27.5 seconds (well under 40s threshold)",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanked customer: 'Спасибо за ожидание' immediately after search",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Specific tire unavailable, operator provided alternatives with detailed explanation. Product unavailability, not operator failure.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator checked system before providing availability information",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Comprehensive information provided: delivery details, payment options, promotion, alternatives",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Logical presentation and proper flow throughout call",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name used consistently, good rapport, professional dialogue management",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information about alternatives, delivery, payment, and promotions",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No call dropout or service refusal",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No rudeness or profanity detected",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "N/A",
+      "confidence": "LOW",
+      "evidence": "Customer was cooperative and polite throughout",
+      "note": "No difficult customer handling required"
+    }
+  },
+  "positive_observations": [
+    "Professional and friendly greeting with all required elements",
+    "Excellent customer service when product unavailable - offered alternatives with pricing",
+    "Thanked customer for waiting after search",
+    "Used customer name consistently throughout call",
+    "Provided comprehensive information about delivery, payment options, and promotion",
+    "Patient and helpful when clarifying customer name (Руслан vs Рустам)",
+    "Professional closing with thanks for the call",
+    "Good technical knowledge explaining tire matching requirements"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "timestamps_json",
+      "paragraphs_json"
+    ],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Word-level timestamps available for precise echo method detection. Some speaker diarization shows all as 'Agent' but conversation flow is clear from context."
+  }
+}

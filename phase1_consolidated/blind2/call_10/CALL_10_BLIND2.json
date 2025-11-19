@@ -1,0 +1,269 @@
+{
+  "call_metadata": {
+    "call_id": "call_10",
+    "duration_seconds": 1090,
+    "call_start": "0:00.000",
+    "call_end": "18:10.033",
+    "operator_name": "Алина",
+    "customer_name": "Сергей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [9, 9, 7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "00:07.656",
+      "timestamp_end": "00:13.376",
+      "evidence": "Agent asks how to address the customer, customer gives name and city (Сергей, из Екатеринбурга) around 00:08-00:11, but agent moves on with Слушаю вас without repeating name or city and without an explicit confirmation question.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "05:41.635",
+      "timestamp_end": "06:53.311",
+      "evidence": "After saying Сейчас посмотрю информацию. Минуту, пожалуйста at 05:41.6 the agent only begins delivering the search result (nearest available appointment) at 06:53.3, so this search lasts about 72 seconds (>45s violation threshold).",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": false,
+      "timestamp_start": "10:32.648",
+      "timestamp_end": "11:18.805",
+      "evidence": "Agent says В данном случае сейчас оформим заказ. Минуту, пожалуйста at 10:32.6 and is silent until returning with Спасибо / за ожидание and new information at 11:18.8, a search duration of about 46 seconds (>45s violation threshold).",
+      "confidence": 0.9,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 3,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 2
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 3
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not consistently used for all contact data",
+      "recommendation": "Whenever collecting any contact data such as customer name, city or phone, repeat the data back and ask an explicit confirmation question (for example Верно? or Правильно?) and wait for a clear confirmation.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Long information searches before giving answers",
+      "recommendation": "Reduce long search times by preparing key information in advance where possible, and if a search is likely to take longer than 40 seconds, offer a call back or provide interim updates so the customer is not left waiting too long.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "Limited use of customer name and personalization",
+      "recommendation": "Use the customer name periodically during the conversation, especially when confirming key decisions and at closing, to strengthen rapport and dialogue management.",
+      "related_criterion": "10.3"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 71.7,
+      "customer_check_ins": 3,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.3,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 2.7,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "phone", "pickup_address"],
+      "echo_performed": {
+        "name": false,
+        "city": false,
+        "phone": true,
+        "pickup_address": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "phone": true,
+        "pickup_address": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent uses a complete script-like greeting with company and operator name and closes the call politely with спасибо за звонок and до свидания, with a logical flow of questions.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer provides name and city in response to a direct contact question near the start of the call, but the agent does not repeat or confirm these details, while later correctly echoing and confirming the mobile phone number and pickup address.",
+      "note": "Echo method requirements are only fully met for the phone and pickup address; name and city remain unconfirmed."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "First agent utterance occurs around 00:03.3 (<5 seconds from call start), and the call disconnects about 2–3 seconds after the final closing phrase.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No clear instances where the agent cuts off the customer mid-sentence; turns alternate in an orderly way and the agent allows the customer to finish questions.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Although there are several long searches, the customer does not hang up; the call ends with an agent closing after the order is confirmed.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Two information searches last longer than 45 seconds: one from about 05:41.6 to 06:53.3 while checking dates, and another from about 10:32.6 to 11:18.8 while processing the order.",
+      "note": "Search durations clearly exceed the 45 second threshold, so both episodes are score-affecting violations rather than flag-only events."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "After major searches the agent explicitly thanks the customer for waiting with phrases such as Спасибо за ожидание before providing results.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "The main request (purchase of winter Yokohama tires with promo and trade-in options) is fulfilled: product and promo are explained, an order is created, and trade-in specifics are escalated to a manager with a scheduled callback.",
+      "note": "Some technical questions about tire size and trade-in details are delegated to a manager but this is framed as part of the resolution rather than leaving the request unresolved."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "The agent provides public partner addresses and phone numbers but does not disclose internal office numbers, passwords, or personal data without verification.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Product and promo information is usually preceded by explicit search phrases such as Сейчас посмотрю, suggesting system verification rather than guessing from memory.",
+      "note": "Without project configuration it is not possible to fully verify where strict lookup is mandatory, so assessment remains partial."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Customer receives tire model, size, price, promo package, partner address and phone, booking number and callback time; no obvious mandatory element is missing given available context.",
+      "note": "Project-specific lists of mandatory information are not available, so this is a conservative pass based on the transcript alone."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent follows a structured flow from greeting through needs clarification, offer presentation, conditions explanation and order confirmation consistent with script-like work.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent keeps control of the dialogue, clarifies misunderstandings, offers next steps, and closes with an additional help question before goodbye, while remaining polite throughout.",
+      "note": "Customer name is not used after the introduction, so there is room to further strengthen personalization."
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Key information about products, promo benefits, trade-in conditions and partner services is provided, and additional technical questions are explicitly passed to a manager for clarification.",
+      "note": "Full validation of information completeness would require project configuration; assessment is based on transcript only."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "The agent does not refuse service or drop the call; instead, a full order is placed and the call ends after mutual goodbye.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "No profanity or clearly harsh language from the agent is visible in the transcript; the wording remains polite even when the customer is confused.",
+      "note": "Tone and volume cannot be assessed without audio, so this is a text-only assessment."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "The customer asks many detailed questions and expresses some confusion, but the agent stays calm, explains options, and does not show textual signs of frustration or loss of control.",
+      "note": "Full evaluation of handling a difficult customer would require audio; here only text indicators are used."
+    }
+  },
+  "positive_observations": [
+    "Strong script usage with clear greeting including company and operator name and a polite closing with offer of additional help.",
+    "Agent provides detailed and structured explanations of tire options, promotions and trade-in conditions in understandable language.",
+    "Customer questions and confusion about addresses, trade-in and tire sizes are handled patiently with clarifications and escalation to a manager where appropriate.",
+    "Agent repeatedly thanks the customer for waiting after longer searches, which helps maintain a polite and professional tone."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Transcript is generally clear with minor recognition errors on some names and terms that do not materially affect grading."
+  }
+}

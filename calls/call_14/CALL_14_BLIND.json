@@ -1,0 +1,228 @@
+{
+  "call_metadata": {
+    "call_id": "call_14",
+    "duration_seconds": 339.0,
+    "call_start": "0:00.000",
+    "call_end": "5:39.237",
+    "operator_name": "Ирина",
+    "customer_name": "Евгений",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "00:08.349",
+      "timestamp_end": "00:13.969",
+      "evidence": "Клиент представляется ('меня зовут Евгений') и называет город ('Пермь'); оператор использует имя и город в речи, но не повторяет их с явным подтверждающим вопросом ('верно/правильно?').",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Неиспользование метода эха при фиксации имени и города клиента",
+      "recommendation": "После получения имени и города клиента повторять их и задавать уточняющий вопрос ('Евгений из Перми, верно?') с ожиданием подтверждения.",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 40.0,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.029,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city"],
+      "echo_performed": {
+        "name": false,
+        "city": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Приветствие по скрипту с указанием компании, имени оператора и вопросами об имени и городе клиента; завершение с благодарностью за звонок и прощанием.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Имя клиента не подтверждается методом эха (нет повторения с вопросом 'верно/правильно/подтверждаете?').",
+      "note": null
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Первое обращение оператора — в течение первых 5 секунд, отключение следует сразу после прощания.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Перебиваний клиента без извинения по тексту не видно.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Нет тишины более 45 секунд и завершения звонка клиентом из-за ожидания.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Поиски вариантов (после 'давайте посмотрим') занимают ориентировочно до 40 секунд до выдачи информации.",
+      "note": "Оценено по сегментам VTT, без word-level JSON."
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Формула 'спасибо за ожидание' явно не звучит, но ожидание не выглядит критичным и оператор активно общается.",
+      "note": "Консервативно оценено как PASS."
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "BORDERLINE",
+      "confidence": "MEDIUM",
+      "evidence": "Клиент хочет подобрать шины SUV до определённого бюджета; оператор называет варианты, но их нет в нужном ценовом диапазоне или количестве, клиент в итоге не оформляет заказ.",
+      "note": "Ситуация обусловлена ограничениями наличия, а не поведением оператора."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Конфиденциальная внутренняя информация или данные третьих лиц не раскрываются.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Информация о моделях и нагрузке (SUV, индексы) берётся из ассортимента, а не 'по памяти'.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Оператор озвучивает конкретные модели, цены, наличие по штукам и выгоду по комплекту.",
+      "note": "Полная оценка полноты информации без регламента ограничена."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Соблюдается структура: приветствие, выявление потребности (SUV, бюджет), подбор вариантов, предложение резерва/рассрочки, завершение.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор ведёт диалог, уточняет предпочтения (SUV, цена), предлагает решения и корректно завершает звонок.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Информация о брендах, ценах, нагрузке и наличии подана ясно и уверенно.",
+      "note": "Объём информации достаточен для предварительного выбора."
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Оператор не отказывает в обслуживании и не завершает звонок преждевременно; решение не покупать принимает клиент.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Нецензурной лексики и грубых выражений со стороны оператора нет.",
+      "note": "Оценка тона ограничена текстом."
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "При неудовлетворенности клиента ценой и наличием оператор сохраняет вежливое отношение.",
+      "note": "Полная оценка требует аудио."
+    }
+  },
+  "positive_observations": [
+    "Оператор приветствует по скрипту и уточняет ключевые параметры запроса (размер, SUV, бюджет).",
+    "Детально озвучивает варианты шин с индексом SUV и их цены.",
+    "Честно сообщает об ограничениях по количеству и наличии на складе.",
+    "Предлагает резерв и рассрочку как дополнительные опции.",
+    "Вежливо завершает разговор с благодарностью за звонок."
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": null
+  }
+}
+
