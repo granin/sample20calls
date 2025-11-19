@@ -1,0 +1,228 @@
+{
+  "call_metadata": {
+    "call_id": "call_15",
+    "duration_seconds": 124,
+    "call_start": "0:00.447",
+    "call_end": "2:04.216",
+    "operator_name": "Aleksandr",
+    "customer_name": "Alexey",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:05.767",
+      "timestamp_end": "0:06.587",
+      "evidence": "Customer provides name 'Алексей' at 00:05.767-00:06.587. Agent uses name in subsequent conversation but never repeats back 'Ваше имя Алексей, правильно?' or asks for confirmation. Contact data collected without echo method verification.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "When collecting customer name, repeat it back and ask for explicit confirmation: 'Ваше имя Алексей, правильно?' Wait for customer confirmation 'Да' or 'Верно' before proceeding.",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 16.231,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.447,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.14,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name"],
+      "echo_performed": {
+        "name": false
+      },
+      "confirmation_received": {
+        "name": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected. Professional tone throughout call.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent does not disconnect prematurely or refuse service. Call handled professionally to completion.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer's request fully resolved: knows tire location (2 warehouse options), timing (tomorrow 10 AM), price (4110 rubles), and specifications.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed. No office numbers, internal codes, or unauthorized data sharing detected.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent announces search ('Сейчас, смотри минуту') before providing tire information, indicating database verification rather than memory-based response.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer is cooperative and professional. No indicators of difficult customer handling required. Text-based assessment only.",
+      "note": "Full tone analysis would require audio"
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All required information provided: tire specs (185/65/14), model (Sony Quintor X-Pro), price (4110 rubles), warehouse locations, and delivery timing (tomorrow 10 AM).",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 16 seconds (well under 40s threshold). Customer did not hang up.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name ('74 колеса'), operator name (Aleksandr), and offer to help. Professional closing ('Всего доброго'). Logical question sequence maintained.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Алексей' collected at 00:05.767-00:06.587 without echo confirmation. Agent uses name but never repeats back or asks 'Правильно?'",
+      "note": "See violations_detected for full details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 0:00.447 (well within 5s from call start). Disconnect immediate after final speech.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No instances of operator cutting off customer mid-sentence without apology.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search announced at 0:52.087, answer delivery begins at 1:08.318. Duration: 16.231 seconds (well under 40s threshold).",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Agent thanks customer for waiting: 'Благодарю вас за ожидание' at 1:08.318, immediately after search completion.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per professional script. Logical flow from greeting to inquiry to product verification to search to information delivery.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Uses customer name 'Алексей' consistently. Professional rapport maintained throughout. Conversation control evident in systematic question sequence.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "All required tire shop information provided accurately: specifications, pricing, availability, warehouse locations, delivery timeline.",
+      "note": "Partial assessment without complete project configuration"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name, operator identification, and customer orientation",
+    "Clear echo method attempted for product specifications ('185, 65, 14, правильно?') with customer confirmation",
+    "Efficient information search (16 seconds) within acceptable timeframe",
+    "Thanked customer for waiting after search completion",
+    "Provided comprehensive information: pricing, availability status, multiple warehouse options, delivery timing",
+    "Professional closing with standard farewell ('Всего доброго')",
+    "Consistent use of customer name throughout conversation",
+    "Calm and professional response to technical issues (customer asking 'Что?' - repeated information clearly)"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level JSON precision enabled high-confidence detection of echo method violation. VTT timing data confirmed search duration and greeting/closing compliance."
+  }
+}
