@@ -1,0 +1,227 @@
+{
+  "call_metadata": {
+    "call_id": "call_17",
+    "duration_seconds": 357.676,
+    "call_start": "0:00.000",
+    "call_end": "5:57.676",
+    "operator_name": "Александра",
+    "customer_name": "Денис",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "VERY_HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:28.222",
+      "timestamp_end": "0:31.502",
+      "evidence": "Customer provided name 'Денис' at 0:28.222. Operator used the name immediately in next turn ('Денис, подскажите, пожалуйста, еще раз город.') but never repeated it back or asked for confirmation ('Верно?'). Required confirmation request and customer confirmation were both missing.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for customer name",
+      "recommendation": "When customer provides their name or contact data, immediately repeat it back and ask for explicit confirmation: 'Итак, ваше имя Денис, верно?' Wait for customer to confirm 'Да' or 'Верно' before proceeding. This ensures accuracy and builds trust.",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 18.66,
+      "customer_check_ins": 1,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 1.662,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name"
+      ],
+      "echo_performed": {
+        "name": false
+      },
+      "confirmation_received": {
+        "name": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected. Operator maintains professional and polite tone throughout the call.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator completed the call normally and did not refuse service. Customer was offered additional assistance.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request to find wheel disks was addressed. Operator provided multiple product options (R 306-903 and R 32 76-93) with prices and specifications. Customer chose to think about the purchase decision rather than complete transaction.",
+      "note": "Request adequately addressed with product information provided"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information (office phone numbers, internal codes, passwords) disclosed during the call.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator announced search before providing information: 'Сейчас я посмотрю'. Information about products appears to come from system verification.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "All core information was provided: product codes (R 306-903, R 32 76-93), prices (14400), specifications (year, wheel size, design details, color). No booking number required for this product inquiry type.",
+      "note": "Partial assessment without project-specific mandatory fields list"
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence occurred. Maximum search duration was ~18 seconds. Customer did not hang up due to silence. Call completed normally.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name ('Компания 74 Колеса'), operator name ('Меня зовут Александра'), opening question ('Как можно к вам обращаться?'). Proper closing ('Всего доброго, до свидания'). Customer orientation question present ('Чем-то ещё можно помочь?').",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Денис' collected at 0:28.222 without echo confirmation. Operator used name but never repeated it back with confirmation request.",
+      "note": "See violations_detected for full details"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro: Operator greeting starts at 0:01.662 (within 5-second threshold). Outro: Call ends at 5:57.676, last operator speech ('до свидания') at 5:57.356, disconnect within 5 seconds.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No instances of operator cutting off customer mid-sentence without apology detected.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Primary search: Announced at 0:47.078, result provided at 0:66.738 = 19.66 seconds (within 40-second limit). All searches completed well within thresholds.",
+      "note": "All search durations significantly under 40-second threshold"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "After information search completed, operator said 'Благодарю вас за ожидание' (Thank you for waiting) at 0:66.738. Contains both gratitude and waiting acknowledgment.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script structure: greeting → customer identification → product requirements gathering → information search → results presentation → closing. Logical flow maintained throughout.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator uses customer name 'Денис' multiple times throughout conversation. Professional tone, patient listening during customer's extended explanation about wheel specifications and concerns. Proper opening and closing phrases present.",
+      "note": "Demonstrates good dialogue management and rapport building"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Complete product information delivered: product codes, prices (14400), specifications (18-inch wheels, design types, colors - black with silver inserts), availability (available tomorrow). Accurate command of product details demonstrated.",
+      "note": "Partial assessment without full project configuration"
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name and operator identification",
+    "Excellent search efficiency - all searches completed in under 20 seconds",
+    "Proper thank-you for waiting after search completion",
+    "Consistent use of customer name (Денис) throughout call, building rapport",
+    "Patient handling of customer's detailed questions and concerns about wheel specifications",
+    "Provided multiple product options with specific details (codes, prices, specifications, colors)",
+    "Proper timing compliance (intro within 5s, disconnect within 5s)",
+    "Offered reservation service to help customer think about purchase",
+    "Professional closing with offer for additional help"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Call transcript clear with good speaker diarization. Word-level JSON timestamps enable precise detection of contact data collection moment. Confidence in 7.2 violation detection is VERY_HIGH."
+  }
+}
