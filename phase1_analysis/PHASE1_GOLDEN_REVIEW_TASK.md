@@ -22,21 +22,27 @@ For each call `call_01`–`call_20` under `calls/`:
   - Transcript package: `calls/call_XX/transcript-2.vtt` (+ `paragraphs-2.json`, `sentences-2.json`, `timestamps-2.json`).
   - Call‑specific instructions: `calls/call_XX/CALL_XX_TASK.md`.
 
-We then ran **three grading waves** with different LLM setups:
+We then ran **four grading waves** with different LLM setups:
 
 1. **Sonnet grading (original “gold” candidate)**
-   - One Sonnet run per call using `prompt_for_transcript_only_grading.txt`.
+   - One Sonnet‑based run per call using `prompt_for_transcript_only_grading.txt`.
    - Output JSONs are normalized under:
      - `phase1_consolidated/sonnet/call_XX/CALL_XX_GRADING.json`
 
-2. **BLIND1 grading (first blind pass, transcript‑only)**
-   - A second agent (Codex) graded each call from scratch using only the transcript and Phase 1 docs.
+2. **Haiku grading (cost‑optimized model)**
+   - One Haiku‑based run per call using the same high‑level grading instructions.
+   - Original outputs came from `/tmp/phase1_haiku` and `~/Downloads/phase1_call_01/haiku/CALL_01_GRADING.json`.
+   - They are normalized into this repo under:
+     - `phase1_consolidated/haiku/call_XX/CALL_XX_HAIKU.json`
+
+3. **BLIND1 grading (first blind pass, Codex transcript‑only)**
+   - A second agent (Codex, via this repo) graded each call from scratch using only the transcript and Phase 1 docs.
    - Output JSONs are in:
      - Per‑call package: `calls/call_XX/CALL_XX_BLIND.json`
      - Normalized copy: `phase1_consolidated/blind1/call_XX/CALL_XX_BLIND.json`
 
-3. **BLIND2 grading (third, more constrained blind pass)**
-   - For calls where Sonnet vs BLIND1 disagreed noticeably, we created **isolated per‑call repos** (no access to any grading JSONs or git history) and asked a third agent to grade again.
+4. **BLIND2 grading (third, more constrained blind pass, also Codex)**
+   - For calls where Sonnet vs BLIND1 disagreed noticeably, we created **isolated per‑call repos** (no access to any grading JSONs or git history) and asked a third, independent Codex run to grade again.
    - Source repos (for context, not needed here) were under `/Users/m/phase1_blind2/call_XX/…`.
    - The per‑call BLIND2 task prompts used in those isolated runs are copied into this repo at:
      - `phase1_analysis/blind2_tasks/BLIND2_TASK_call_XX.md`
@@ -261,4 +267,3 @@ At the end of your work, we expect:
 
 - A clarified, documented proposal for the Phase 1 **golden dataset** for these 20 calls.
 - Concrete suggestions for how to adjust the **prompt/spec** to make future graders (Haiku/Sonnet/Opus) match that gold more reliably on the most fragile criteria.
-

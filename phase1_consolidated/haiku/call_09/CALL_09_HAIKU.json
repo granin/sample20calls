@@ -1,0 +1,261 @@
+{
+  "call_metadata": {
+    "call_id": "call_09",
+    "duration_seconds": 704,
+    "call_start": "0:00.000",
+    "call_end": "11:44.000",
+    "operator_name": "Алина",
+    "customer_name": "Александр",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:00.232",
+      "timestamp_end": "0:00.712",
+      "evidence": "Customer provides name 'Александр' at 00:00:08.232-00:00:08.712, operator proceeds to next question without repeating name back or asking for confirmation",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:02.461",
+      "timestamp_end": "0:03.471",
+      "evidence": "Operator announces search 'Минуту, пожалуйста' at 00:02:46.120, provides response 'Спасибо за ожидание' at 00:03:47.062. Total duration 60.9 seconds exceeds 45-second threshold.",
+      "confidence": 0.92,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "9": 1,
+      "7": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data collection",
+      "recommendation": "Always repeat customer's name back and ask for confirmation ('Ваше имя Александр, верно?') when collecting contact information. This is critical for data accuracy.",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Search duration exceeded maximum allowed time",
+      "recommendation": "Complex information searches must be completed within 40 seconds. If additional time is needed (40-45s), flag for improvement. Searches over 45 seconds require coaching. Consider having payment method information readily available or performing searches more efficiently.",
+      "related_criterion": "9.1"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 60.9,
+      "customer_check_ins": 1,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.552,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 3.4,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "phone",
+        "address"
+      ],
+      "echo_performed": {
+        "name": false,
+        "phone": true,
+        "address": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone": true,
+        "address": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting format including company name '74 колеса', operator name 'Алина', and offer to help. Closing with 'Спасибо за звонок. Всего доброго. До свидания.' is correct.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Name 'Александр' collected without echo-back and confirmation request. Phone number and address were properly echoed with confirmation.",
+      "note": "Critical violation for name collection - must always use echo method for all contact data"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.552 seconds from call start (within 5s threshold). Disconnect at 3.4 seconds after last speech (within 5s threshold).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No instances of interruption without apology detected in transcript.",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "While there was a 60.9-second search, this is a 9.1 violation (not 6.1). Customer did not hang up and conversation continued throughout.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Search duration from 00:02:46.120 to 00:03:47.062 = 60.9 seconds, exceeding 45-second threshold.",
+      "note": "Search was for payment method information"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "After search completion at 00:03:47.062, operator says 'Спасибо за ожидание' (Thank you for waiting), satisfying requirement.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request to purchase tires was resolved. Order was formed with all specifications, payment method options explained, and pickup location agreed upon.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information (office numbers, internal codes, passwords) disclosed without authorization.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Tire specifications and pricing information provided appeared to be from system knowledge. No 'from memory' unverified information detected.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: tire specifications (225-45-18), brand (Fortuna Polara Ice), price (7110 rubles, 6399 with discount), pickup locations with addresses, and contact confirmation.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Script followed: greeting with company/operator names, systematic questioning about tire specifications, multiple product options presented, payment method discussion, address selection, order confirmation.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name 'Александр' used consistently throughout call. Operator maintained professional rapport, handled customer's detailed questions patiently, and maintained conversation control throughout the 11+ minute call.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Comprehensive information delivered: tire specifications, multiple brand options with pricing, delivery options, payment methods, pickup addresses, and order confirmation with order number.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call completed successfully. Order was processed and operator offered 'Чем-то ещё могу вам помочь?' (Can I help with anything else?) before closing.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity, yelling, or harsh language detected in operator speech. Professional tone maintained throughout.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer was somewhat demanding with many questions about tire options and payment methods. Operator handled patiently without frustration, adapted communication style, and provided multiple solutions.",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company and operator name provided immediately",
+    "Systematic approach to tire specification collection (size, type, brand preferences)",
+    "Presented multiple tire options with pricing to accommodate customer preferences",
+    "Used echo method properly for phone number and address confirmation",
+    "Provided comprehensive delivery and payment method options",
+    "Maintained customer name usage throughout the call",
+    "Handled customer's complex questions about payment methods patiently and professionally",
+    "Confirmed all order details before closing (order number, confirmation)",
+    "Proper closing with thanks and offer for additional help",
+    "Long call duration (11+ minutes) demonstrates thorough service despite time pressure"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level JSON timestamps enabled precise detection of echo method violation and search duration timing. Transcription clarity is excellent throughout the call."
+  }
+}

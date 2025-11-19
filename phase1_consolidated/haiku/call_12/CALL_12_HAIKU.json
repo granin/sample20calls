@@ -1,0 +1,273 @@
+{
+  "call_metadata": {
+    "call_id": "call_12",
+    "duration_seconds": 352.3,
+    "call_start": "0:00.000",
+    "call_end": "5:52.300",
+    "operator_name": "Ирина",
+    "customer_name": "Денис",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7, 9],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:09.047",
+      "timestamp_end": "0:20.627",
+      "evidence": "Customer name Denis (9:047-9:907ms) collected without systematic echo-back. City Yekaterinburg (19:607-20:627ms) echoed partially ('Город Екатеринбург') but no explicit confirmation ('Верно?'). Product code 26-27-72 provided but unclear confirmation of exact specifications. Contact data collected without formal echo method verification.",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    },
+    {
+      "code": "9.1",
+      "grade": 9,
+      "title": "Long information search",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "1:50.725",
+      "timestamp_end": "3:09.658",
+      "evidence": "Search duration from operator announcement 'сейчас посмотрю' at 1:51.105 to results delivery 'диски есть' at 3:09.658 = 78.7 seconds. This exceeds the 45-second threshold for information search completion.",
+      "confidence": 0.98,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+
+  "violations_summary": {
+    "total_violations": 2,
+    "violations_by_grade": {
+      "7": 1,
+      "9": 1
+    },
+    "sot_violations": 2,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 2
+  },
+
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not properly implemented for contact data",
+      "recommendation": "When collecting customer name, address, phone, or product specifications, must repeat back exactly what customer said and ask 'Верно?' or 'Правильно?' for explicit confirmation. Example: 'Denis, to confirm: you are in Yekaterinburg, need 4 wheels with 4x98 bolt pattern, 14-inch diameter. Correct?'",
+      "related_criterion": "7.2"
+    },
+    {
+      "priority": 2,
+      "issue": "Information search exceeded 45-second threshold",
+      "recommendation": "Product lookup took 78.7 seconds (33.7 seconds over limit). For complex database searches, provide status updates to customer every 20-30 seconds ('Еще минутку...') and complete search within 45 seconds. If unable, offer callback with information.",
+      "related_criterion": "9.1"
+    },
+    {
+      "priority": 3,
+      "issue": "Missing thank you after long search",
+      "recommendation": "After completing the 78-second product search, should have said 'Спасибо за ожидание' (Thank you for waiting) before providing results. This acknowledges customer patience during extended lookup.",
+      "related_criterion": "9.3"
+    },
+    {
+      "priority": 4,
+      "issue": "Incomplete contact information collection",
+      "recommendation": "Call ended without collecting complete customer address or phone number. Essential for order confirmation. Must obtain: full name, phone number, street address, city, postal code before call conclusion.",
+      "related_criterion": "5.1"
+    }
+  ],
+
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "MEDIUM",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 78.7,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.147,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 2.3,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "product_code"],
+      "echo_performed": {
+        "name": false,
+        "city": true,
+        "product_code": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "product_code": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 0
+    }
+  },
+
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Greeting includes company name '54 колеса', operator name 'Ирина', offer to help 'Как я могу к вам обращаться?'. Closing includes thanks 'Благодарю вас. Спасибо за звонок' and farewell 'До свидания.'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Contact data collected (name Denis, city Yekaterinburg, product code) without systematic echo method. City partially echoed but no explicit confirmation. Product code unclear if confirmed.",
+      "note": "Word-level JSON analysis confirms echo method not properly implemented throughout call"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.147 seconds (within 5s threshold). Disconnect at 2.3 seconds after last speech (within 5s threshold).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No clear interruptions without apology detected. Operator clarifies product code gently without abrupt cutoffs.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Search announced at 1:51.105, results delivered at 3:09.658. Total search duration 78.7 seconds, exceeding 45-second violation threshold.",
+      "note": "No customer status check-ins during search"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "VIOLATION",
+      "confidence": "MEDIUM",
+      "evidence": "After 78-second search completion, operator did not explicitly say 'спасибо за ожидание' (thank you for waiting). Went directly to results.",
+      "note": "Technical violation, though customer did not express frustration"
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45 seconds detected. Longest silence gaps were within normal parameters (5.26s max). Customer did not hang up.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "BORDERLINE",
+      "confidence": "MEDIUM",
+      "evidence": "Customer needed 4 discs for next-day installation. Operator confirmed discs available only for after-tomorrow pickup. Customer's timeline need could not be met. Customer declined reserve offer due to inability to access store (works late, store closes 8pm).",
+      "note": "Borderline: Operator provided available solution (reserve) but customer's original request (next-day delivery) was not fulfilled. Product availability issue rather than operator failure."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information disclosed. Store hours and address provided are public business information.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator announced system lookup: 'Сейчас я посмотрю, их открою' (Now I'll look them up). Information came from database/system, not from memory.",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Call ended without collecting complete address or phone number. Operator never asked for customer's phone number. Address collection attempt (around 5:00-5:20) was unclear and incomplete (no house number, apartment, or postal code recorded).",
+      "note": "Critical gap: Cannot process order without phone number and complete address"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information about payment methods, availability, pickup location, and store hours provided. Logical flow from product inquiry to availability to solution options.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator uses customer name 'Денис' throughout call. Builds rapport by clarifying product specifications. Maintains professional, helpful tone. Proper opening and closing.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "BORDERLINE",
+      "confidence": "MEDIUM",
+      "evidence": "Accurate information provided about product availability, specifications, and store location/hours. However, incomplete final information package due to missing contact details.",
+      "note": "Information accurate but delivery incomplete"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call ended normally with proper farewell. Operator offered to help and customer thanked operator. No abrupt disconnection or service refusal.",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected. Professional, polite tone throughout conversation.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer was polite and reasonable despite frustration about scheduling. Operator maintained professional demeanor. No tone decline detected in text.",
+      "note": "Text-based assessment only; full tone evaluation deferred to audio analysis"
+    }
+  },
+
+  "positive_observations": [
+    "Professional greeting with company name and operator identification",
+    "Thorough product specification lookup and explanation",
+    "Patience in clarifying product code with customer",
+    "Offered creative solution (reserve option) when timeline couldn't be met",
+    "Polite, respectful tone throughout conversation",
+    "Proper call closure with thanks and farewell",
+    "Used customer name consistently (Denis) to build rapport",
+    "Accurate information about store hours and locations"
+  ],
+
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level JSON timestamps available and used for precise timing analysis. Transcript clear and complete."
+  }
+}
