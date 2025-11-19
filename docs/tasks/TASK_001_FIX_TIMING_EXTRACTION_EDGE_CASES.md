@@ -838,3 +838,107 @@ Scenario Outline: Detect search start vs false positive
 3. Fix tool to pass all tests
 4. Verify regression: call_08, call_09, call_10 must still pass
 5. Expand coverage to remaining 15 calls
+
+### Critical Failure: VTT Without Speaker Diarization
+
+```gherkin
+Scenario: call_05 - VTT without speaker tags (CRITICAL FAILURE)
+  Given I have call_05 VTT transcript
+  And the VTT has no <AGENT> or <CUSTOMER> speaker tags
+  And transcript contains "Сейчас минуту, пожалуйста" and "Спасибо за ожидание"
+  When I run extract_timing.py on call_05
+  Then tool detects 0 searches
+  But manual inspection shows multiple searches present
+  
+  Because:
+    - Tool depends on speaker diarization
+    - Without <AGENT> tags, cannot identify who is speaking
+    - All search patterns ignored
+  
+  Solution Options:
+    1. Require diarization as prerequisite
+    2. Add fallback: detect patterns regardless of speaker
+    3. Document as limitation in tool README
+    
+Scenario: Handle VTT without diarization gracefully
+  Given VTT file without speaker tags
+  When I run extract_timing.py
+  Then tool should either:
+    - Report ERROR: "Speaker diarization required" AND exit
+    - OR use fallback mode with reduced confidence
+  And NOT silently return 0 searches (misleading result)
+```
+
+---
+
+## Tool Dependency Analysis
+
+**CRITICAL DEPENDENCY**: VTT speaker diarization
+
+**Success rate by diarization quality**:
+- Good diarization (call_08, call_09): 100% success
+- Poor diarization (call_13, call_18, call_20): Low detection rate
+- NO diarization (call_05): 0% (false negative)
+
+**Recommendation**: Add diarization quality check as first step in tool
+
+---
+
+## Audit Summary (5 Calls Verified)
+
+| Call | Tool Result | Manual Verification | Status |
+|------|-------------|-------------------|--------|
+| call_02 | 3 searches (longest 14.8s PASS) | Search #3 is FALSE POSITIVE | ✗ FAILURE |
+| call_05 | 0 searches | Many searches present (VTT no diarization) | ✗ CRITICAL |
+| call_07 | 2 searches (60.8s VIOLATION) | Correct | ✓ SUCCESS |
+| call_08 | 6 searches (96s VIOLATION) | Correct (check-ins handled) | ✓ SUCCESS |
+| call_09 | 8 searches (60.9s VIOLATION) | Correct | ✓ SUCCESS |
+| call_10 | 9 searches (2 violations) | Correct (manual: 46s, 51s) | ✓ SUCCESS |
+| call_17 | 2 searches (26.9s PASS) | WRONG (actual 69.7s VIOLATION) | ✗ FAILURE |
+
+**Success Rate**: 4/7 calls (57%)  
+**Failure Types**:
+- False positives: 1 (call_02)
+- Missed patterns: 1 (call_17)
+- No diarization: 1 (call_05)
+
+---
+
+## Regression Test Suite
+
+```gherkin
+Feature: Timing Extraction Regression Suite
+  Ensure fixes don't break currently working calls
+  
+  Scenario Outline: Verified success cases must continue to work
+    Given I have the <call_id> VTT transcript
+    When I run extract_timing.py
+    Then total searches detected should be <total>
+    And longest search should be <longest>s
+    And final 9.1 assessment should be <assessment>
+    
+    Examples:
+      | call_id | total | longest | assessment |
+      | call_07 | 2     | 60.836  | VIOLATION  |
+      | call_08 | 6     | 96.061  | VIOLATION  |
+      | call_09 | 8     | 60.942  | VIOLATION  |
+      | call_10 | 9     | 51.122  | VIOLATION  |
+```
+
+---
+
+## Tool Improvement Priority
+
+**P0 - Critical (Breaks Golden Dataset)**:
+1. Fix call_17: Multi-pattern announcement detection
+2. Fix call_05: Handle VTT without diarization gracefully
+
+**P1 - High (False Positives)**:
+3. Fix call_02: Eliminate false positive detection
+
+**P2 - Medium (Edge Cases)**:
+4. Document ambiguous cases (search+info same utterance)
+5. Add diarization quality check
+
+**Test Coverage Target**: 20/20 calls (100%)  
+**Current Coverage**: 7/20 calls (35%)
