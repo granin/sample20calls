@@ -1,0 +1,239 @@
+{
+  "call_metadata": {
+    "call_id": "call_04",
+    "duration_seconds": 482,
+    "call_start": "0:00.650",
+    "call_end": "0:08:02.972",
+    "operator_name": "Анна",
+    "customer_name": "Михаил",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:00.650",
+      "timestamp_end": "0:04:13.353",
+      "evidence": "Customer name 'Михаил' collected at 0:15.450 - agent repeats but does not request confirmation ('Верно?'). Phone number '912-666-9332' provided at 0:04:13.353 - agent states the number but does not use echo method with explicit confirmation request",
+      "confidence": 0.85,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data verification",
+      "recommendation": "When recording customer name, phone number, or other contact information, must repeat the data back and explicitly ask 'Верно?' or 'Правильно?' and wait for customer confirmation ('Да', 'Верно', etc.) before proceeding. Example: 'Ваш номер 912-666-9332, верно?' → Customer: 'Да'",
+      "related_criterion": "7.2"
+    }
+  ],
+
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 25.0,
+      "customer_check_ins": 1,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.65,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 3.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "phone"],
+      "echo_performed": {
+        "name": true,
+        "phone": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "phone": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 2
+    }
+  },
+
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected from operator",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator completed call professionally without refusing service",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Primary request (return money) appropriately escalated to manager. Secondary request (tire booking) completed with reservation number 964-003",
+      "note": "Escalation was appropriate given system limitations"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information (office numbers, internal codes, passwords) disclosed",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided from system lookups. Uncertain details appropriately deferred to manager",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator handled frustrated customer professionally without showing frustration or inability to cope",
+      "note": "Text-based assessment only; full tone analysis would require audio"
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Core information provided: booking number (964-003), product details, delivery points, promo codes",
+      "note": "Without project config for mandatory fields, assessment is partial"
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence >45 seconds. All search delays were under 30 seconds. Customer did not hang up",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name and operator name. Logical question sequence. Appropriate closing with offer for help",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "HIGH",
+      "evidence": "Name 'Михаил' repeated but no 'Верно?' confirmation. Phone '912-666-9332' stated but no explicit confirmation request",
+      "note": "Echo method requires both repetition AND explicit confirmation request"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 0:00.650 (within 5s). Disconnect at ~3s after last speech",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Multiple search periods all under 40 seconds (ranging from 18-25 seconds)",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Thank you for waiting expressed after searches at 0:01:01, 0:02:17, and 0:03:43",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script with logical flow and structure",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer name used, professional rapport maintained, proper opening/closing, conversation control maintained throughout",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Product information provided with some uncertainty appropriately deferred to manager",
+      "note": "Partial assessment without project-specific config"
+    }
+  },
+
+  "positive_observations": [
+    "Professional and courteous greeting with company name and operator identification",
+    "Handled customer frustration about delayed refund with patience and empathy",
+    "Thanked customer for waiting multiple times during search periods",
+    "Successfully completed secondary request (tire booking with reservation number 964-003)",
+    "Appropriate escalation of unresolved issues to manager with handoff information",
+    "Used customer name consistently throughout conversation",
+    "Maintained proper call timing (intro within 5s, disconnect within 5s)",
+    "Provided multiple delivery point options to customer"
+  ],
+
+  "data_quality": {
+    "data_sources_used": ["vtt"],
+    "transcription_quality": "GOOD",
+    "confidence_notes": "Assessment based on VTT transcript only. Word-level JSON timestamps would provide additional precision for 7.2 echo method detection."
+  }
+}
