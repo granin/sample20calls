@@ -732,3 +732,109 @@ This is a perfect example of why **ground truth tools must be tested rigorously*
 - Implement BDD tests as specified above
 - Fix tool to pass call_17 test
 - Verify regression tests still pass for call_02, call_08, call_09, call_10
+
+---
+
+## BDD Test Cases from Multi-Call Audit (2025-11-19)
+
+### Success Cases (Regression Tests - Must Continue Working)
+
+```gherkin
+Scenario: call_08 - Long search with multiple check-ins (SUCCESS)
+  Given I have the call_08 VTT transcript
+  When I run extract_timing.py on call_08
+  Then search #1 should have:
+    | property          | value                     |
+    | start_timestamp   | 0:00:27.869              |
+    | start_phrase      | Минутку, пожалуйста      |
+    | end_timestamp     | 0:02:03.930              |
+    | duration_seconds  | 96.061                   |
+    | status            | VIOLATION                |
+  And search #1 should have 2 check-ins
+  And check-in #1 should be at 0:00:56.793 with phrase "Спасибо. Заждание ещё минут, пожалуйста"
+  And final 9.1 assessment should be VIOLATION
+  
+Scenario: call_09 - Search exceeding threshold by 15 seconds (SUCCESS)
+  Given I have the call_09 VTT transcript
+  When I run extract_timing.py on call_09
+  Then search #2 should have:
+    | property          | value              |
+    | start_timestamp   | 0:02:46.120       |
+    | end_timestamp     | 0:03:47.062       |
+    | duration_seconds  | 60.942            |
+    | status            | VIOLATION         |
+    | exceeds_by        | 15.942            |
+  And final 9.1 assessment should be VIOLATION
+```
+
+### Failure Cases (Tool Bugs to Fix)
+
+```gherkin
+Scenario: call_02 - False positive detection (FAILURE)
+  Given I have the call_02 VTT transcript
+  When I run extract_timing.py on call_02
+  Then I should detect exactly 2 searches
+  And search #3 should NOT be detected
+  Because line 46 "Обязательно на ваш номер. И сотрудники с вами свяжутся..." has no search pattern
+  
+Scenario: call_17 - Missed multi-pattern announcement (FAILURE - DOCUMENTED)
+  # Already documented above in main spec
+  # Tool detected line 32 as search start instead of line 25
+  
+Scenario: Search announcement with immediate info delivery in same utterance
+  Given agent says "Сейчас проверяю. Ну вот смотрите. Есть нижний кам с кшина кама пятьсот пятая."
+  When I detect search timing
+  Then this is AMBIGUOUS - could be:
+    - Search started before this line (during silence)
+    - OR search start + immediate result in one utterance
+  And tool should handle consistently across all calls
+```
+
+### Edge Case: Search Pattern Detection Rules
+
+```gherkin
+Scenario Outline: Detect search start vs false positive
+  Given agent utterance "<text>"
+  When I check if this is a search announcement
+  Then result should be <is_search>
+  And reason should be "<reason>"
+  
+  Examples:
+    | text | is_search | reason |
+    | Минутку, пожалуйста. | True | Explicit time promise |
+    | Сейчас посмотрю информацию | True | Active search verb |
+    | Обязательно на ваш номер. И сотрудники с вами свяжутся | False | No search pattern present |
+    | Сейчас проверяю. Ну вот смотрите. Есть... | Ambiguous | Pattern present but info delivered immediately |
+```
+
+---
+
+## Test Coverage Summary
+
+**Verified Calls**:
+- call_02: Partial success (1 false positive found)
+- call_08: Full success (complex case with check-ins)
+- call_09: Full success (60s violation)
+- call_10: Full success (manual verification: 46s, 51s violations)
+- call_17: Full failure (69.71s detected as 26.9s)
+
+**Patterns Identified**:
+1. ✓ Long searches with check-ins (call_08: 96s)
+2. ✓ Multiple violations in one call (call_10)
+3. ✗ Multi-pattern announcements missed (call_17)
+4. ✗ False positive detection (call_02)
+5. ? Ambiguous cases: search+info same utterance (call_02)
+
+**Regression Suite Coverage**: 5/20 calls (25%)
+**Known Failures**: 2 (call_02 false positive, call_17 missed pattern)
+**BDD Scenarios**: 8 scenarios defined
+
+---
+
+## Next Agent Instructions
+
+1. Implement BDD tests as specified
+2. Run tests - expect 2 FAILURES (call_02, call_17)
+3. Fix tool to pass all tests
+4. Verify regression: call_08, call_09, call_10 must still pass
+5. Expand coverage to remaining 15 calls
