@@ -1,0 +1,238 @@
+{
+  "call_metadata": {
+    "call_id": "call_19",
+    "duration_seconds": 263.772,
+    "call_start": "0:00.008",
+    "call_end": "4:23.772",
+    "operator_name": "Александра",
+    "customer_name": "Сергей",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:05.988",
+      "timestamp_end": "0:16.308",
+      "evidence": "Customer provides name 'Сергей' at 5.988s and city 'Пермь' at 15.768s. Operator acknowledges city 'Пермь' but does not repeat back customer's name with confirmation request ('Верно?' or 'Правильно?'), nor does operator explicitly repeat and confirm the city. No echo method applied for contact data verification.",
+      "confidence": 0.8,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "When customer provides name or city, repeat back the information and ask for explicit confirmation ('Сергей, верно?' or 'Пермь, правильно?') and wait for customer to confirm ('Да' or 'Верно'). This must be done even for preliminary contact information.",
+      "related_criterion": "7.2"
+    }
+  ],
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 20.2,
+      "customer_check_ins": 0,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.008,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.0,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": [
+        "name",
+        "city"
+      ],
+      "echo_performed": {
+        "name": false,
+        "city": false
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": false,
+      "customer_orientation_questions": 0
+    }
+  },
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected. Professional tone maintained throughout call.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call completed normally without operator disconnection or service refusal.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request for stamped Citroën Jumpy disk was fulfilled. Product found (5,370 rubles), availability confirmed (arriving day after tomorrow), article number provided (R3000 64), storage location mentioned (Vasily Vasiliev Street).",
+      "note": "Customer's request to find product on website was addressed with workaround (use article number in search engine)."
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information (office numbers, internal codes, unauthorized personal data) disclosed.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator announces system check ('Сейчас посмотрю') at 17.608s before providing product information.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Text-based assessment only. Customer is polite and organized; operator remains professional and patient throughout.",
+      "note": "Tone assessment deferred to audio analysis for full evaluation."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Core information provided: product specifications (Citroën Jumpy 16-year stamped disk, 16\" diameter), pricing (5,370 rubles), availability (day after tomorrow, 6th), storage location (Vasily Vasiliev Street), article number (R3000 64).",
+      "note": "Partial assessment without project configuration for mandatory field requirements."
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search duration 20.2 seconds (within 40s threshold). Customer did not hang up. Call terminated normally.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name (74 Колесами), operator name (Александра), and offer to help ('Как можно к вам обращаться?'). Professional closing with continued offer ('Чем-то ещё могу помочь'). Logical question sequence.",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Customer name 'Сергей' and city 'Пермь' collected without echo method confirmation. Operator acknowledged city but did not request confirmation ('Верно?' 'Правильно?'). No explicit repeat-back with customer confirmation ('Да', 'Верно').",
+      "note": "See violations_detected for full details. Critical protocol violation."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator greeting begins at 0.008s (well within 5s). Call terminates immediately after last operator speech with minimal disconnect time.",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions detected. Operator and customer alternate turns naturally without cutting off mid-sentence.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search announced at 17.608s ('Сейчас посмотрю'). Information delivery begins at 37.808s ('Благодарю вас за ожидание'). Total search duration: 20.2 seconds (well under 40s threshold).",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator thanks customer for waiting: 'Благодарю вас за ожидание' at 37.808s, immediately after search completion.",
+      "note": null
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script. Greeting format correct, closing correct, logical flow of information delivery (product details → availability → pricing → article number).",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Professional dialogue management. Operator maintains conversation control, asks clarifying questions, builds rapport through patient information search. Proper opening and closing.",
+      "note": "Customer name not reused after initial greeting, but conversation flow and control maintained."
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "Operator provides accurate product information: correct model identification (Jumpy vs Jumper confusion resolved), correct specifications (16\" diameter), accurate pricing (5,370 rubles), correct storage location and delivery timeline.",
+      "note": "Partial assessment without project configuration baseline."
+    }
+  },
+  "positive_observations": [
+    "Professional greeting with company name, operator name, and offer to assist",
+    "Accurate product identification despite customer corrections (Jumpy vs Jumper)",
+    "Efficient search with customer check-ins (20.2 seconds total)",
+    "Proper thanks provided after information search",
+    "Clear articulation of pricing and payment information",
+    "Helpful guidance on finding product (article number lookup suggestion)",
+    "Accurate delivery timeline and storage location information",
+    "Proper closing with continued offer for assistance",
+    "Patient handling of customer questions about website compatibility",
+    "Professional tone throughout entire call"
+  ],
+  "data_quality": {
+    "data_sources_used": [
+      "vtt",
+      "word_json"
+    ],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level timing JSON available for precise timestamp analysis. VTT transcript clear and complete."
+  }
+}
