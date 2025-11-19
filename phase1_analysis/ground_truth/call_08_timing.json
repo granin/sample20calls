@@ -1,0 +1,181 @@
+{
+  "call_id": "call_08",
+  "total_searches": 6,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:00:27.869",
+      "start_line_number": 7,
+      "start_phrase": "Минутку, пожалуйста. Остампованные диски, верно?",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:02:03.930",
+      "end_line_number": 12,
+      "end_phrase": "Спасибо за ожидание, а уточните, пожалуйста, марку модели вашего автомобиля.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 96.061,
+      "duration_formatted": "1m 36.1s",
+      "check_ins": [
+        {
+          "timestamp": "0:00:31.229",
+          "phrase": "Да, да.",
+          "speaker": "CUSTOMER",
+          "line_number": 8,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:00:56.793",
+          "phrase": "Спасибо. Заждание ещё минут, пожалуйста.",
+          "line_number": 10
+        },
+        {
+          "timestamp": "0:02:00.850",
+          "phrase": "А его?",
+          "speaker": "CUSTOMER",
+          "line_number": 11,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "VIOLATION",
+        "threshold_applied": "45s",
+        "flag_window": false,
+        "grade_impact": 9,
+        "exceeds_threshold_by": 51.061,
+        "coaching_note": "Exceeds 45s threshold by 51.1s (Grade 9)"
+      }
+    },
+    {
+      "search_number": 2,
+      "start_timestamp": "0:02:16.210",
+      "start_line_number": 14,
+      "start_phrase": "Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:02:35.393",
+      "end_line_number": 15,
+      "end_phrase": "Спасибо за ожидание. Я прошу прощения, какая модель?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 19.183,
+      "duration_formatted": "19.2s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 3,
+      "start_timestamp": "0:07:09.746",
+      "start_line_number": 45,
+      "start_phrase": "Хорошо. Минуточку.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:07:43.413",
+      "end_line_number": 46,
+      "end_phrase": "Спасибо за ожидание. Нет, вы оплачиваете сумму только за диск, так как транспортная компания лучи, у них бесплатная доставка идет.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 33.667,
+      "duration_formatted": "33.7s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 4,
+      "start_timestamp": "0:11:55.585",
+      "start_line_number": 80,
+      "start_phrase": "Хорошо, я вас поняла. Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:12:07.051",
+      "end_line_number": 81,
+      "end_phrase": "Скажите, пожалуйста, когда вам будет удобно, в какой половине дня, когда вам будет удобно принять звонок от менеджера для согласования?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 11.466,
+      "duration_formatted": "11.5s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 5,
+      "start_timestamp": "0:14:19.758",
+      "start_line_number": 92,
+      "start_phrase": "Сейчас одну минуту, пожалуйста. В заказе у вас диски штампованные Treble 8125, 15 на 6, 0G, 4 на 114, 3. D61, ET46, Black. Количество четырёх штук, верно?",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:14:46.266",
+      "end_line_number": 96,
+      "end_phrase": "Самолёт у вас будет на адрес город Мексикорск, улица Вокзальная, 1 дробь 1. Угу. И также ваш контактный номер телефона 906-898-2454, верно?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 26.508,
+      "duration_formatted": "26.5s",
+      "check_ins": [
+        {
+          "timestamp": "0:14:39.218",
+          "phrase": "Да, всё правильно.",
+          "speaker": "CUSTOMER",
+          "line_number": 93,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:14:45.706",
+          "phrase": "Угу.",
+          "speaker": "CUSTOMER",
+          "line_number": 95,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 6,
+      "start_timestamp": "0:15:02.366",
+      "start_line_number": 98,
+      "start_phrase": "Хорошо, через минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:15:12.355",
+      "end_line_number": 99,
+      "end_phrase": "Спасибо за ожидание. Также ваш заказ оформлен. Номер вашего заказа 98-23-85. Также я вам отправила смс номера вашего заказа.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 9.989,
+      "duration_formatted": "10.0s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 196.874,
+    "longest_search": 96.061,
+    "violations_count": 1,
+    "flag_count": 0,
+    "pass_count": 5
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "flag_for_coaching": true
+  }
+}

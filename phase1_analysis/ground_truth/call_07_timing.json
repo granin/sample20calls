@@ -1,0 +1,85 @@
+{
+  "call_id": "call_07",
+  "total_searches": 2,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:00:57.873",
+      "start_line_number": 8,
+      "start_phrase": "Сейчас проверю наличие в этом размере.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:01:20.573",
+      "end_line_number": 11,
+      "end_phrase": "Да, есть шины по заказу в этом размере.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 22.7,
+      "duration_formatted": "22.7s",
+      "check_ins": [
+        {
+          "timestamp": "0:01:00.673",
+          "phrase": "Ну я вот открыл, тут полно всяких у вас. Или что, сайт-то не это. Я вот сейчас настройте у вас.",
+          "speaker": "CUSTOMER",
+          "line_number": 9,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:01:10.613",
+          "phrase": "Вот я выбрал 185 на 65 на 15. Липучка, зимняя липучка. Без шипов.",
+          "speaker": "CUSTOMER",
+          "line_number": 10,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 2,
+      "start_timestamp": "0:07:34.729",
+      "start_line_number": 63,
+      "start_phrase": "Минута, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:08:35.565",
+      "end_line_number": 65,
+      "end_phrase": "За ожидание. Пишите, получаете заказы удобно будет по шерсткой трембе?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 60.836,
+      "duration_formatted": "1m 0.8s",
+      "check_ins": [
+        {
+          "timestamp": "0:08:23.525",
+          "phrase": "Спасибо.",
+          "speaker": "CUSTOMER",
+          "line_number": 64,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "VIOLATION",
+        "threshold_applied": "45s",
+        "flag_window": false,
+        "grade_impact": 9,
+        "exceeds_threshold_by": 15.836,
+        "coaching_note": "Exceeds 45s threshold by 15.8s (Grade 9)"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 83.536,
+    "longest_search": 60.836,
+    "violations_count": 1,
+    "flag_count": 0,
+    "pass_count": 1
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "flag_for_coaching": true
+  }
+}

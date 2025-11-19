@@ -1,0 +1,18 @@
+{
+  "call_id": "call_01",
+  "total_searches": 0,
+  "searches": [],
+  "summary": {
+    "total_duration_all_searches": 0,
+    "longest_search": 0,
+    "violations_count": 0,
+    "flag_count": 0,
+    "pass_count": 0
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "PASS",
+    "grade_impact": 10,
+    "flag_for_coaching": false
+  }
+}

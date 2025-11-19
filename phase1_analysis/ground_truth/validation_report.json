@@ -1,0 +1,146 @@
+[
+  {
+    "call_id": "call_07",
+    "ground_truth": {
+      "9.1": "VIOLATION",
+      "9.3": "VIOLATION"
+    },
+    "grader_accuracy": {
+      "sonnet": {
+        "9.1": {
+          "grader_status": "VIOLATION",
+          "match": true
+        },
+        "9.3": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "overall_accuracy": "50%",
+        "correct": 1,
+        "total": 2
+      },
+      "blind1": {
+        "9.1": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "9.3": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "overall_accuracy": "0%",
+        "correct": 0,
+        "total": 2
+      },
+      "blind2": {
+        "9.1": {
+          "grader_status": "VIOLATION",
+          "match": true
+        },
+        "9.3": {
+          "grader_status": "VIOLATION",
+          "match": true
+        },
+        "overall_accuracy": "100%",
+        "correct": 2,
+        "total": 2
+      }
+    }
+  },
+  {
+    "call_id": "call_08",
+    "ground_truth": {
+      "9.1": "VIOLATION",
+      "9.3": "VIOLATION"
+    },
+    "grader_accuracy": {
+      "sonnet": {
+        "9.1": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "9.3": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "overall_accuracy": "0%",
+        "correct": 0,
+        "total": 2
+      },
+      "blind1": {
+        "9.1": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "9.3": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "overall_accuracy": "0%",
+        "correct": 0,
+        "total": 2
+      },
+      "blind2": {
+        "9.1": {
+          "grader_status": "VIOLATION",
+          "match": true
+        },
+        "9.3": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "overall_accuracy": "50%",
+        "correct": 1,
+        "total": 2
+      }
+    }
+  },
+  {
+    "call_id": "call_12",
+    "ground_truth": {
+      "9.1": "PASS",
+      "9.3": "VIOLATION"
+    },
+    "grader_accuracy": {
+      "sonnet": {
+        "9.1": {
+          "grader_status": "PASS",
+          "match": true
+        },
+        "9.3": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "overall_accuracy": "50%",
+        "correct": 1,
+        "total": 2
+      },
+      "blind1": {
+        "9.1": {
+          "grader_status": "PASS",
+          "match": true
+        },
+        "9.3": {
+          "grader_status": "PASS",
+          "match": false
+        },
+        "overall_accuracy": "50%",
+        "correct": 1,
+        "total": 2
+      },
+      "blind2": {
+        "9.1": {
+          "grader_status": "PASS",
+          "match": true
+        },
+        "9.3": {
+          "grader_status": "VIOLATION",
+          "match": true
+        },
+        "overall_accuracy": "100%",
+        "correct": 2,
+        "total": 2
+      }
+    }
+  }
+]
