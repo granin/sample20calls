@@ -76,9 +76,11 @@
   {
     "call_id": "call_10",
     "golden_source": "Sonnet",
-    "confidence": "medium",
-    "reason": "Sonnet/BLIND2 consensus on core violations. Pattern mirrors call_01 (partial echo).",
-    "notes": "82% field agreement. BLIND1 outlier on 7.2 similar to call_01."
+    "confidence": "high",
+    "reason": "Manual transcript verification confirms multiple 9.1 violations. Sonnet correctly identified violations.",
+    "notes": "Manual analysis: Search #5 (46.16s) and Search #8 (51.12s) both exceed 45s threshold. Ground truth tool also detected 2 violations (46.2s, 51.1s). 7.2 VIOLATION (name 'Сергей' not echoed). Upgraded from medium based on manual verification.",
+    "transcript_evidence": "Search #5: 10:32.648-11:18.805 = 46.16s. Search #8: 14:48.750-15:39.872 = 51.12s.",
+    "manual_review_validated": true
   },
   {
     "call_id": "call_11",
@@ -131,9 +133,12 @@
   {
     "call_id": "call_17",
     "golden_source": "Sonnet",
-    "confidence": "medium",
-    "reason": "86% field agreement. Disagreements limited to 9.1, 9.3, and Tier 3 fields.",
-    "notes": "High stability. BLIND1 outliers on Grade 9 criteria expected pre-spec-fix."
+    "confidence": "high",
+    "reason": "Manual transcript verification confirms Sonnet correct on 9.1 VIOLATION. Ground truth tool failed.",
+    "notes": "Manual analysis: Search #2 starts at line 25 (02:02.082) 'Сейчас я посмотрю... Минуту, пожалуйста', ends at line 32 (03:11.792) = 69.71s VIOLATION. Ground truth tool incorrectly detected 26.9s (missed search announcement, detected info delivery as search start). Sonnet ~70s assessment correct. 9.3 VIOLATION confirmed (no gratitude). Upgraded from medium based on manual verification proving Sonnet accurate.",
+    "transcript_evidence": "Search #2: 02:02.082-03:11.792 = 69.71s (exceeds 45s by 24.71s). Line 25: 'Сейчас я посмотрю, подойдет ли он на хавейл. Минуту, пожалуйста.' Line 32: 'Ну, 34-35 для 18 дюймовых...'",
+    "manual_review_validated": true,
+    "ground_truth_tool_failed": true
   },
   {
     "call_id": "call_18",

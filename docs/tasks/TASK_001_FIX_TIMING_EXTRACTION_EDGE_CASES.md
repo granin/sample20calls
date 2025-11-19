@@ -650,7 +650,7 @@ done
 - [ ] Tool fixed to make tests pass
 - [ ] Regression tests pass for call_02, call_08, call_09, call_10
 - [ ] Re-run extraction on call_17 and verify output matches manual calculation
-- [ ] Update `sonnet_haiku_blind_core_decisions.json` if call_17 assessment changes
+- [x] Update `sonnet_haiku_blind_core_decisions.json` (call_10 and call_17 upgraded to HIGH)
 - [ ] Document the fix in tool README
 
 ---
@@ -683,9 +683,10 @@ After fixing the tool:
 ```
 
 **Impact**:
-- call_17 upgraded from MEDIUM → HIGH
-- **19/20 HIGH confidence (95%)**
-- Tool reliability increased
+- call_10 upgraded from MEDIUM → HIGH (manual verification: multiple violations 46.16s, 51.12s)
+- call_17 upgraded from MEDIUM → HIGH (manual verification: 69.71s violation, tool failed)
+- **20/20 HIGH confidence (100%)**
+- Tool reliability must be improved (call_17 failure documented)
 - Future edge cases prevented through regression tests
 
 ---
@@ -710,3 +711,24 @@ This is a perfect example of why **ground truth tools must be tested rigorously*
 4. **Edge cases are preserved** - weird patterns like "Сейчас посмотрим" in info delivery are documented forever
 
 **This is the right way to build reliable tooling.**
+
+---
+
+## Update 2025-11-19: Manual Verification Completed
+
+**Status**: Golden dataset updated before tool fix
+
+**Actions Taken**:
+1. Manually analyzed call_17 transcript - confirmed 69.71s violation
+2. Manually analyzed call_10 transcript - confirmed 46.16s and 51.12s violations  
+3. Updated golden dataset: call_10 and call_17 → HIGH confidence
+4. Result: **20/20 HIGH confidence (100%)**
+
+**Tool Status**:
+- call_17: Tool FAILED (detected 26.9s instead of 69.71s) - BDD tests required
+- call_10: Tool SUCCEEDED (detected 46.2s and 51.1s) - regression tests should pass
+
+**Next Steps**:
+- Implement BDD tests as specified above
+- Fix tool to pass call_17 test
+- Verify regression tests still pass for call_02, call_08, call_09, call_10
