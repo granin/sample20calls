@@ -1,0 +1,133 @@
+{
+  "call_id": "call_04",
+  "total_searches": 4,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:00:36.760",
+      "start_line_number": 11,
+      "start_phrase": "Час-минуту.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:01:01.383",
+      "end_line_number": 13,
+      "end_phrase": "Спасибо за ожидание. Сейчас я информацию передам менеджеру. Завтра он вам перезвонит по времени. Сориентируйтесь, когда вам удобно будет принять звонок.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 24.623,
+      "duration_formatted": "24.6s",
+      "check_ins": [
+        {
+          "timestamp": "0:00:41.540",
+          "phrase": "Час-минуту.",
+          "speaker": "CUSTOMER",
+          "line_number": 12,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 2,
+      "start_timestamp": "0:01:42.499",
+      "start_line_number": 18,
+      "start_phrase": "Я вас поняла, сейчас, минуту.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:02:17.837",
+      "end_line_number": 25,
+      "end_phrase": "За ожидание. Сейчас я информацию передала, но менеджеры завтра с вами свяжутся по возврату денежных средств.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 35.338,
+      "duration_formatted": "35.3s",
+      "check_ins": [
+        {
+          "timestamp": "0:01:44.559",
+          "phrase": "О чем тут менеджеры там вообще?",
+          "speaker": "CUSTOMER",
+          "line_number": 19,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:01:50.819",
+          "phrase": "Так кто у меня сейчас возврат делал?",
+          "speaker": "CUSTOMER",
+          "line_number": 21,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:02:05.957",
+          "phrase": "Спасибо.",
+          "speaker": "CUSTOMER",
+          "line_number": 24,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 3,
+      "start_timestamp": "0:03:19.820",
+      "start_line_number": 33,
+      "start_phrase": "То есть 500 рублей, да? Ну я вам могу информацию передать, но завтра вам только перезвонят в рабочее время. Час-минуту.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:03:43.653",
+      "end_line_number": 34,
+      "end_phrase": "Спасибо за ожидание. По времени сориентируете, когда вам перезвонить?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 23.833,
+      "duration_formatted": "23.8s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 4,
+      "start_timestamp": "0:07:06.710",
+      "start_line_number": 68,
+      "start_phrase": "Доставка по городу, да, бесплатная. Сейчас, минуту, пожалуйста. Номер телефона тогда укажу, с которого вы звоните. 912-666-9332. Сейчас я забронировала. Номер брони в виде СМС отправлю. 964-003. Сейчас, минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:07:43.632",
+      "end_line_number": 69,
+      "end_phrase": "Спасибо за ожидание. Сейчас я информацию передала менеджеру по возврату и также оформила бронь. И ожидайте, пожалуйста, завтра менеджер с утра с вами свяжется.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 36.922,
+      "duration_formatted": "36.9s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 120.716,
+    "longest_search": 36.922,
+    "violations_count": 0,
+    "flag_count": 0,
+    "pass_count": 4
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "PASS",
+    "grade_impact": 10,
+    "flag_for_coaching": false
+  }
+}

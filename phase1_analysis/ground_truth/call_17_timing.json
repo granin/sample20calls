@@ -1,0 +1,77 @@
+{
+  "call_id": "call_17",
+  "total_searches": 2,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:00:49.918",
+      "start_line_number": 13,
+      "start_phrase": "Да, минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:01:06.738",
+      "end_line_number": 15,
+      "end_phrase": "Благодарю вас за ожидание. Какой год выпуска?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 16.82,
+      "duration_formatted": "16.8s",
+      "check_ins": [
+        {
+          "timestamp": "0:01:02.918",
+          "phrase": "Какой-то товар подсказать.",
+          "speaker": "CUSTOMER",
+          "line_number": 14,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 2,
+      "start_timestamp": "0:03:11.792",
+      "start_line_number": 32,
+      "start_phrase": "Ну, 34-35 для 18 дюймовых. Сейчас посмотрим. Здесь у нас 37.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:03:38.694",
+      "end_line_number": 35,
+      "end_phrase": "Вот вижу, что есть такой же. Практически такой же дизайн, только алмаз. Они по стоимости 14400. Можно будет тоже завтра ее забрать. Как и предыдущий. Они практически одинаковые. По дизайну.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 26.902,
+      "duration_formatted": "26.9s",
+      "check_ins": [
+        {
+          "timestamp": "0:03:32.954",
+          "phrase": "Я.",
+          "speaker": "CUSTOMER",
+          "line_number": 34,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 43.722,
+    "longest_search": 26.902,
+    "violations_count": 0,
+    "flag_count": 0,
+    "pass_count": 2
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "PASS",
+    "grade_impact": 10,
+    "flag_for_coaching": false
+  }
+}

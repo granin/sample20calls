@@ -1,0 +1,307 @@
+{
+  "call_id": "call_10",
+  "total_searches": 9,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:00:32.797",
+      "start_line_number": 9,
+      "start_phrase": "Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:00:59.017",
+      "end_line_number": 14,
+      "end_phrase": "Пожалуйста, вам необходимы летние шины или зимние?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 26.22,
+      "duration_formatted": "26.2s",
+      "check_ins": [
+        {
+          "timestamp": "0:00:37.197",
+          "phrase": "Купон есть на шиномонтаж?",
+          "speaker": "CUSTOMER",
+          "line_number": 10,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:00:47.377",
+          "phrase": "Давайте.",
+          "speaker": "CUSTOMER",
+          "line_number": 12,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:00:52.757",
+          "phrase": "Скажите.",
+          "speaker": "CUSTOMER",
+          "line_number": 13,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 2,
+      "start_timestamp": "0:04:34.740",
+      "start_line_number": 54,
+      "start_phrase": "Угу, сейчас минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:05:04.478",
+      "end_line_number": 58,
+      "end_phrase": "Спасибо за ожидание. К сожалению, именно наш шиномонтаж можно только по записи по адресу шерстка 3М. А на серфине Дерябина можно именно забрать шины, так как это Адрес наших партнёров. А именно, чтобы для записи наших монтажей только по данному адресу, к сожалению. Могу вам просмотреть свободную дату?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 29.738,
+      "duration_formatted": "29.7s",
+      "check_ins": [
+        {
+          "timestamp": "0:04:41.820",
+          "phrase": "Шесть, Крытого. Другой конец города.",
+          "speaker": "CUSTOMER",
+          "line_number": 55,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:04:50.478",
+          "phrase": "ничего не успеем.",
+          "speaker": "CUSTOMER",
+          "line_number": 56,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:04:57.818",
+          "phrase": "Я вообще не понимаю, как это происходит. Я же не знаю, что закажешь, что пишешь.",
+          "speaker": "CUSTOMER",
+          "line_number": 57,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 3,
+      "start_timestamp": "0:06:35.326",
+      "start_line_number": 64,
+      "start_phrase": "за ждающую минуту, пожалуйста, просматриваю дату свободную.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:06:53.311",
+      "end_line_number": 65,
+      "end_phrase": "Ближайшая свободная запись на 24 октября. Есть время на 17 часов.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 17.985,
+      "duration_formatted": "18.0s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 4,
+      "start_timestamp": "0:07:36.340",
+      "start_line_number": 71,
+      "start_phrase": "Ева Смила, 1 минуту, пожалуйста. Просмотри информацию.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:07:58.482",
+      "end_line_number": 72,
+      "end_phrase": "Я могу вам подсказать? У нас указаны, к сожалению, другие адреса. Именно партнер сказал, что на монтаже в городе Екатеринбург. Но, к сожалению, на монтировке Немодеряевна данный адрес отсутствует.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 22.142,
+      "duration_formatted": "22.1s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 5,
+      "start_timestamp": "0:10:32.648",
+      "start_line_number": 105,
+      "start_phrase": "В данном случае сейчас оформим заказ. Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:11:18.805",
+      "end_line_number": 110,
+      "end_phrase": "Спасибо",
+      "end_speaker": "AGENT",
+      "duration_seconds": 46.157,
+      "duration_formatted": "46.2s",
+      "check_ins": [
+        {
+          "timestamp": "0:10:35.628",
+          "phrase": "Давайте, оформляйте. Поплатим потом.",
+          "speaker": "CUSTOMER",
+          "line_number": 106,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:10:42.648",
+          "phrase": "Физическое.",
+          "speaker": "CUSTOMER",
+          "line_number": 108,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "VIOLATION",
+        "threshold_applied": "45s",
+        "flag_window": false,
+        "grade_impact": 9,
+        "exceeds_threshold_by": 1.157,
+        "coaching_note": "Exceeds 45s threshold by 1.2s (Grade 9)"
+      }
+    },
+    {
+      "search_number": 6,
+      "start_timestamp": "0:11:45.425",
+      "start_line_number": 113,
+      "start_phrase": "Хорошо, я вас сниму. Минуту, пожалуйста. А подскажите, пожалуйста, ваш мобильный телефон для оформления заказа.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:11:56.515",
+      "end_line_number": 115,
+      "end_phrase": "912-615-69-64, верно?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 11.09,
+      "duration_formatted": "11.1s",
+      "check_ins": [
+        {
+          "timestamp": "0:11:51.435",
+          "phrase": "912... В который вы звоните? 600... Да.",
+          "speaker": "CUSTOMER",
+          "line_number": 114,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 7,
+      "start_timestamp": "0:13:40.228",
+      "start_line_number": 131,
+      "start_phrase": "Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:14:02.748",
+      "end_line_number": 134,
+      "end_phrase": "За ожидание. В заказе у вас в данный момент шины Yokohama Ice World IG 55 215 60 на 16. В количестве 4 штук и та же общая сумма у вас будет 38680 рублей. И подскажите, самого вас у нас У вас самолёт будет, верно?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 22.52,
+      "duration_formatted": "22.5s",
+      "check_ins": [
+        {
+          "timestamp": "0:13:41.848",
+          "phrase": "Почему 215-й?",
+          "speaker": "CUSTOMER",
+          "line_number": 132,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:13:56.148",
+          "phrase": "Спасибо.",
+          "speaker": "CUSTOMER",
+          "line_number": 133,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 8,
+      "start_timestamp": "0:14:48.750",
+      "start_line_number": 140,
+      "start_phrase": "Хорошо, минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:15:39.872",
+      "end_line_number": 144,
+      "end_phrase": "Готово.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 51.122,
+      "duration_formatted": "51.1s",
+      "check_ins": [
+        {
+          "timestamp": "0:15:21.192",
+          "phrase": "Да, да. Спросил я у него, как это всё происходит.",
+          "speaker": "CUSTOMER",
+          "line_number": 142,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:15:31.612",
+          "phrase": "Возвратка 208.",
+          "speaker": "CUSTOMER",
+          "line_number": 143,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "VIOLATION",
+        "threshold_applied": "45s",
+        "flag_window": false,
+        "grade_impact": 9,
+        "exceeds_threshold_by": 6.122,
+        "coaching_note": "Exceeds 45s threshold by 6.1s (Grade 9)"
+      }
+    },
+    {
+      "search_number": 9,
+      "start_timestamp": "0:17:19.964",
+      "start_line_number": 158,
+      "start_phrase": "Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:17:33.084",
+      "end_line_number": 159,
+      "end_phrase": "Спасибо",
+      "end_speaker": "AGENT",
+      "duration_seconds": 13.12,
+      "duration_formatted": "13.1s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 240.094,
+    "longest_search": 51.122,
+    "violations_count": 2,
+    "flag_count": 0,
+    "pass_count": 7
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "flag_for_coaching": true
+  }
+}
