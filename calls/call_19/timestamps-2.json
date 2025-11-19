@@ -1,0 +1,3138 @@
+[
+  {
+    "text": "Здравствуйте.",
+    "start": 8,
+    "end": 1608,
+    "confidence": 0.332,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Компания",
+    "start": 1788,
+    "end": 2068,
+    "confidence": 0.79052734,
+    "speaker": "Agent"
+  },
+  {
+    "text": "74",
+    "start": 2068,
+    "end": 2548,
+    "confidence": 0.1763916,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Колесами.",
+    "start": 2548,
+    "end": 3168,
+    "confidence": 0.712,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Я",
+    "start": 3308,
+    "end": 3428,
+    "confidence": 0.40429688,
+    "speaker": "Agent"
+  },
+  {
+    "text": "зовут",
+    "start": 3428,
+    "end": 3548,
+    "confidence": 0.81884766,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Александра.",
+    "start": 3548,
+    "end": 4028,
+    "confidence": 0.848,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Как",
+    "start": 4048,
+    "end": 4248,
+    "confidence": 0.7519531,
+    "speaker": "Agent"
+  },
+  {
+    "text": "можно",
+    "start": 4248,
+    "end": 4448,
+    "confidence": 0.84472656,
+    "speaker": "Agent"
+  },
+  {
+    "text": "к",
+    "start": 4448,
+    "end": 4588,
+    "confidence": 0.91796875,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вам",
+    "start": 4588,
+    "end": 4688,
+    "confidence": 0.4970703,
+    "speaker": "Agent"
+  },
+  {
+    "text": "обращаться?",
+    "start": 4688,
+    "end": 5108,
+    "confidence": 0.947,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Здравствуйте.",
+    "start": 5988,
+    "end": 6468,
+    "confidence": 0.805,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Сергей.",
+    "start": 6608,
+    "end": 6888,
+    "confidence": 0.668,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Меня",
+    "start": 7028,
+    "end": 7068,
+    "confidence": 0.84472656,
+    "speaker": "Customer"
+  },
+  {
+    "text": "зовут.",
+    "start": 7068,
+    "end": 7408,
+    "confidence": 0.919,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Чем",
+    "start": 7748,
+    "end": 7988,
+    "confidence": 0.69555664,
+    "speaker": "Agent"
+  },
+  {
+    "text": "могу",
+    "start": 7988,
+    "end": 8128,
+    "confidence": 0.9375,
+    "speaker": "Agent"
+  },
+  {
+    "text": "помочь?",
+    "start": 8128,
+    "end": 8428,
+    "confidence": 0.935,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Александра,",
+    "start": 8548,
+    "end": 9648,
+    "confidence": 0.874,
+    "speaker": "Customer"
+  },
+  {
+    "text": "скажите,",
+    "start": 9688,
+    "end": 9948,
+    "confidence": 0.715,
+    "speaker": "Customer"
+  },
+  {
+    "text": "есть",
+    "start": 10068,
+    "end": 10248,
+    "confidence": 0.7871094,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диск",
+    "start": 10248,
+    "end": 10888,
+    "confidence": 0.921875,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 10888,
+    "end": 11288,
+    "confidence": 0.90527344,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Citroёn",
+    "start": 11288,
+    "end": 11948,
+    "confidence": 0.7597046,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Jumpy",
+    "start": 11948,
+    "end": 12588,
+    "confidence": 0.21331787,
+    "speaker": "Customer"
+  },
+  {
+    "text": "штампованный?",
+    "start": 12588,
+    "end": 13428,
+    "confidence": 0.934,
+    "speaker": "Customer"
+  },
+  {
+    "text": "А",
+    "start": 14128,
+    "end": 14428,
+    "confidence": 0.6430664,
+    "speaker": "Agent"
+  },
+  {
+    "text": "город",
+    "start": 14428,
+    "end": 14628,
+    "confidence": 0.8666992,
+    "speaker": "Agent"
+  },
+  {
+    "text": "у",
+    "start": 14628,
+    "end": 14748,
+    "confidence": 0.84228516,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вас",
+    "start": 14748,
+    "end": 14848,
+    "confidence": 0.69384766,
+    "speaker": "Agent"
+  },
+  {
+    "text": "какой?",
+    "start": 14848,
+    "end": 15108,
+    "confidence": 0.903,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Пермь.",
+    "start": 15768,
+    "end": 16308,
+    "confidence": 0.796,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Пермь.",
+    "start": 16808,
+    "end": 17208,
+    "confidence": 0.739,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Сейчас",
+    "start": 17368,
+    "end": 17608,
+    "confidence": 0.8979492,
+    "speaker": "Agent"
+  },
+  {
+    "text": "посмотрю.",
+    "start": 17608,
+    "end": 18168,
+    "confidence": 0.836,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Благодарю",
+    "start": 37808,
+    "end": 38308,
+    "confidence": 0.90405273,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вас",
+    "start": 38308,
+    "end": 38428,
+    "confidence": 0.72558594,
+    "speaker": "Agent"
+  },
+  {
+    "text": "за",
+    "start": 38428,
+    "end": 38528,
+    "confidence": 0.89160156,
+    "speaker": "Agent"
+  },
+  {
+    "text": "ожидание.",
+    "start": 38528,
+    "end": 38928,
+    "confidence": 0.525,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Автомобиль",
+    "start": 39208,
+    "end": 40108,
+    "confidence": 0.8291626,
+    "speaker": "Agent"
+  },
+  {
+    "text": "какого",
+    "start": 40108,
+    "end": 40468,
+    "confidence": 0.79052734,
+    "speaker": "Agent"
+  },
+  {
+    "text": "года",
+    "start": 40468,
+    "end": 40668,
+    "confidence": 0.6582031,
+    "speaker": "Agent"
+  },
+  {
+    "text": "выпуска?",
+    "start": 40668,
+    "end": 41068,
+    "confidence": 0.963,
+    "speaker": "Agent"
+  },
+  {
+    "text": "16-Го.",
+    "start": 41828,
+    "end": 42428,
+    "confidence": 0.527,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Citroёn",
+    "start": 42528,
+    "end": 42968,
+    "confidence": 0.75201416,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Jumper",
+    "start": 42968,
+    "end": 43528,
+    "confidence": 0.77701825,
+    "speaker": "Customer"
+  },
+  {
+    "text": "16-го",
+    "start": 43528,
+    "end": 44288,
+    "confidence": 0.64,
+    "speaker": "Customer"
+  },
+  {
+    "text": "года.",
+    "start": 44288,
+    "end": 44588,
+    "confidence": 0.826,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Ну",
+    "start": 44948,
+    "end": 45088,
+    "confidence": 0.25683594,
+    "speaker": "Agent"
+  },
+  {
+    "text": "всё,",
+    "start": 45088,
+    "end": 45208,
+    "confidence": 0.701,
+    "speaker": "Agent"
+  },
+  {
+    "text": "я",
+    "start": 45268,
+    "end": 45348,
+    "confidence": 0.5932617,
+    "speaker": "Agent"
+  },
+  {
+    "text": "тебе",
+    "start": 45348,
+    "end": 45388,
+    "confidence": 0.46313477,
+    "speaker": "Agent"
+  },
+  {
+    "text": "посмотрю,",
+    "start": 45388,
+    "end": 45908,
+    "confidence": 0.778,
+    "speaker": "Agent"
+  },
+  {
+    "text": "если",
+    "start": 45968,
+    "end": 46168,
+    "confidence": 0.48266602,
+    "speaker": "Agent"
+  },
+  {
+    "text": "в",
+    "start": 46168,
+    "end": 46348,
+    "confidence": 0.67285156,
+    "speaker": "Agent"
+  },
+  {
+    "text": "наличии.",
+    "start": 46348,
+    "end": 46828,
+    "confidence": 0.877,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Это",
+    "start": 50188,
+    "end": 51788,
+    "confidence": 0.88720703,
+    "speaker": "Customer"
+  },
+  {
+    "text": "фургон.",
+    "start": 51788,
+    "end": 52668,
+    "confidence": 0.609,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Фургончик.",
+    "start": 53108,
+    "end": 53648,
+    "confidence": 0.919,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Citroёn.",
+    "start": 56608,
+    "end": 59608,
+    "confidence": 0.8084717,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Jumper,",
+    "start": 62988,
+    "end": 63668,
+    "confidence": 0.75,
+    "speaker": "Agent"
+  },
+  {
+    "text": "правильно?",
+    "start": 63928,
+    "end": 64248,
+    "confidence": 0.911,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Не-не,",
+    "start": 64893,
+    "end": 65433,
+    "confidence": 0.475,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Jumpy,",
+    "start": 65533,
+    "end": 66093,
+    "confidence": 0.432,
+    "speaker": "Customer"
+  },
+  {
+    "text": "P",
+    "start": 66293,
+    "end": 66393,
+    "confidence": 0.44921875,
+    "speaker": "Customer"
+  },
+  {
+    "text": "без",
+    "start": 66393,
+    "end": 66733,
+    "confidence": 0.74609375,
+    "speaker": "Customer"
+  },
+  {
+    "text": "R.",
+    "start": 66733,
+    "end": 67073,
+    "confidence": 0.631,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Jumpy.",
+    "start": 67293,
+    "end": 67833,
+    "confidence": 0.769,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Ну",
+    "start": 69133,
+    "end": 70973,
+    "confidence": 0.79248047,
+    "speaker": "Customer"
+  },
+  {
+    "text": "или",
+    "start": 70973,
+    "end": 71133,
+    "confidence": 0.6020508,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Peugeot",
+    "start": 71133,
+    "end": 71473,
+    "confidence": 0.8601888,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Expert.",
+    "start": 71473,
+    "end": 71953,
+    "confidence": 0.708,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Или",
+    "start": 72473,
+    "end": 72693,
+    "confidence": 0.890625,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Peugeot",
+    "start": 72693,
+    "end": 73033,
+    "confidence": 0.93896484,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Expert",
+    "start": 73033,
+    "end": 73373,
+    "confidence": 0.79833984,
+    "speaker": "Customer"
+  },
+  {
+    "text": "тоже",
+    "start": 73373,
+    "end": 73613,
+    "confidence": 0.27270508,
+    "speaker": "Customer"
+  },
+  {
+    "text": "самое.",
+    "start": 73613,
+    "end": 74013,
+    "confidence": 0.912,
+    "speaker": "Customer"
+  },
+  {
+    "text": "А",
+    "start": 75533,
+    "end": 75853,
+    "confidence": 0.69384766,
+    "speaker": "Agent"
+  },
+  {
+    "text": "шестнадцатый",
+    "start": 75853,
+    "end": 76433,
+    "confidence": 0.8265381,
+    "speaker": "Agent"
+  },
+  {
+    "text": "или",
+    "start": 76433,
+    "end": 76573,
+    "confidence": 0.7807617,
+    "speaker": "Agent"
+  },
+  {
+    "text": "семнадцатый",
+    "start": 76573,
+    "end": 77093,
+    "confidence": 0.9361328,
+    "speaker": "Agent"
+  },
+  {
+    "text": "диаметр",
+    "start": 77093,
+    "end": 77473,
+    "confidence": 0.9280599,
+    "speaker": "Agent"
+  },
+  {
+    "text": "у",
+    "start": 77473,
+    "end": 77633,
+    "confidence": 0.9042969,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вас",
+    "start": 77633,
+    "end": 77753,
+    "confidence": 0.61621094,
+    "speaker": "Agent"
+  },
+  {
+    "text": "какой?",
+    "start": 77753,
+    "end": 78013,
+    "confidence": 0.866,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Шестнадцатый.",
+    "start": 78913,
+    "end": 79773,
+    "confidence": 0.924,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Шестнадцатый.",
+    "start": 80453,
+    "end": 81193,
+    "confidence": 0.85,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Ну",
+    "start": 81253,
+    "end": 81353,
+    "confidence": 0.2998047,
+    "speaker": "Agent"
+  },
+  {
+    "text": "штамповка",
+    "start": 81353,
+    "end": 81913,
+    "confidence": 0.8422241,
+    "speaker": "Agent"
+  },
+  {
+    "text": "есть?",
+    "start": 81913,
+    "end": 82233,
+    "confidence": 0.841,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Сейчас",
+    "start": 83333,
+    "end": 83573,
+    "confidence": 0.82714844,
+    "speaker": "Agent"
+  },
+  {
+    "text": "я",
+    "start": 83573,
+    "end": 83713,
+    "confidence": 0.8959961,
+    "speaker": "Agent"
+  },
+  {
+    "text": "посмотрю,",
+    "start": 83713,
+    "end": 84413,
+    "confidence": 0.573,
+    "speaker": "Agent"
+  },
+  {
+    "text": "на",
+    "start": 85453,
+    "end": 85633,
+    "confidence": 0.92578125,
+    "speaker": "Agent"
+  },
+  {
+    "text": "складе",
+    "start": 85633,
+    "end": 86073,
+    "confidence": 0.9628906,
+    "speaker": "Agent"
+  },
+  {
+    "text": "ли",
+    "start": 86073,
+    "end": 86213,
+    "confidence": 0.93603516,
+    "speaker": "Agent"
+  },
+  {
+    "text": "она.",
+    "start": 86213,
+    "end": 86413,
+    "confidence": 0.747,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Так.",
+    "start": 88533,
+    "end": 89013,
+    "confidence": 0.493,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Да,",
+    "start": 89333,
+    "end": 89493,
+    "confidence": 0.89,
+    "speaker": "Agent"
+  },
+  {
+    "text": "есть.",
+    "start": 89633,
+    "end": 89973,
+    "confidence": 0.805,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Сейчас",
+    "start": 91113,
+    "end": 91993,
+    "confidence": 0.67626953,
+    "speaker": "Agent"
+  },
+  {
+    "text": "посмотрим.",
+    "start": 91993,
+    "end": 92693,
+    "confidence": 0.81,
+    "speaker": "Agent"
+  },
+  {
+    "text": "На",
+    "start": 93333,
+    "end": 93573,
+    "confidence": 0.9296875,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Василия",
+    "start": 93573,
+    "end": 94033,
+    "confidence": 0.72281903,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Васильева.",
+    "start": 94033,
+    "end": 94653,
+    "confidence": 0.911,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Да,",
+    "start": 95723,
+    "end": 96103,
+    "confidence": 0.493,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 96223,
+    "end": 96263,
+    "confidence": 0.36767578,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Васильево",
+    "start": 96263,
+    "end": 96743,
+    "confidence": 0.741272,
+    "speaker": "Customer"
+  },
+  {
+    "text": "знаю",
+    "start": 96743,
+    "end": 96963,
+    "confidence": 0.7001953,
+    "speaker": "Customer"
+  },
+  {
+    "text": "такую",
+    "start": 96963,
+    "end": 97263,
+    "confidence": 0.30297852,
+    "speaker": "Customer"
+  },
+  {
+    "text": "улицу.",
+    "start": 97263,
+    "end": 97643,
+    "confidence": 0.856,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Вот,",
+    "start": 97903,
+    "end": 98143,
+    "confidence": 0.588,
+    "speaker": "Agent"
+  },
+  {
+    "text": "они",
+    "start": 98203,
+    "end": 98383,
+    "confidence": 0.7973633,
+    "speaker": "Agent"
+  },
+  {
+    "text": "будут,",
+    "start": 98383,
+    "end": 98903,
+    "confidence": 0.579,
+    "speaker": "Agent"
+  },
+  {
+    "text": "диски,",
+    "start": 99103,
+    "end": 99743,
+    "confidence": 0.621,
+    "speaker": "Agent"
+  },
+  {
+    "text": "ну",
+    "start": 99863,
+    "end": 99933,
+    "confidence": 0.44458008,
+    "speaker": "Agent"
+  },
+  {
+    "text": "только",
+    "start": 99933,
+    "end": 100003,
+    "confidence": 0.7290039,
+    "speaker": "Agent"
+  },
+  {
+    "text": "черные",
+    "start": 100003,
+    "end": 100483,
+    "confidence": 0.75,
+    "speaker": "Agent"
+  },
+  {
+    "text": "есть,",
+    "start": 100483,
+    "end": 100783,
+    "confidence": 0.585,
+    "speaker": "Agent"
+  },
+  {
+    "text": "они",
+    "start": 101583,
+    "end": 101743,
+    "confidence": 0.7558594,
+    "speaker": "Agent"
+  },
+  {
+    "text": "будут,",
+    "start": 101743,
+    "end": 102043,
+    "confidence": 0.729,
+    "speaker": "Agent"
+  },
+  {
+    "text": "их",
+    "start": 102403,
+    "end": 102863,
+    "confidence": 0.6845703,
+    "speaker": "Agent"
+  },
+  {
+    "text": "на",
+    "start": 102863,
+    "end": 103043,
+    "confidence": 0.8857422,
+    "speaker": "Agent"
+  },
+  {
+    "text": "складе",
+    "start": 103043,
+    "end": 103423,
+    "confidence": 0.9604492,
+    "speaker": "Agent"
+  },
+  {
+    "text": "сейчас",
+    "start": 103423,
+    "end": 103643,
+    "confidence": 0.86816406,
+    "speaker": "Agent"
+  },
+  {
+    "text": "нет,",
+    "start": 103643,
+    "end": 103863,
+    "confidence": 0.727,
+    "speaker": "Agent"
+  },
+  {
+    "text": "их",
+    "start": 103943,
+    "end": 104043,
+    "confidence": 0.8100586,
+    "speaker": "Agent"
+  },
+  {
+    "text": "послезавтра",
+    "start": 104043,
+    "end": 104703,
+    "confidence": 0.9332031,
+    "speaker": "Agent"
+  },
+  {
+    "text": "привезут",
+    "start": 104703,
+    "end": 105263,
+    "confidence": 0.97314453,
+    "speaker": "Agent"
+  },
+  {
+    "text": "с",
+    "start": 105263,
+    "end": 105583,
+    "confidence": 0.25756836,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Челябинска,",
+    "start": 105583,
+    "end": 106203,
+    "confidence": 0.85,
+    "speaker": "Agent"
+  },
+  {
+    "text": "они",
+    "start": 106303,
+    "end": 106423,
+    "confidence": 0.81591797,
+    "speaker": "Agent"
+  },
+  {
+    "text": "сейчас",
+    "start": 106423,
+    "end": 106623,
+    "confidence": 0.8598633,
+    "speaker": "Agent"
+  },
+  {
+    "text": "в",
+    "start": 106623,
+    "end": 106743,
+    "confidence": 0.89697266,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Челябинске.",
+    "start": 106743,
+    "end": 107403,
+    "confidence": 0.748,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Они",
+    "start": 107903,
+    "end": 108043,
+    "confidence": 0.91748047,
+    "speaker": "Agent"
+  },
+  {
+    "text": "по",
+    "start": 108043,
+    "end": 108243,
+    "confidence": 0.88134766,
+    "speaker": "Agent"
+  },
+  {
+    "text": "стоимости",
+    "start": 108243,
+    "end": 108523,
+    "confidence": 0.8449707,
+    "speaker": "Agent"
+  },
+  {
+    "text": "5",
+    "start": 108523,
+    "end": 108823,
+    "confidence": 0.65966797,
+    "speaker": "Agent"
+  },
+  {
+    "text": "470",
+    "start": 108823,
+    "end": 109843,
+    "confidence": 0.5654297,
+    "speaker": "Agent"
+  },
+  {
+    "text": "рублей,",
+    "start": 109843,
+    "end": 110203,
+    "confidence": 0.708,
+    "speaker": "Agent"
+  },
+  {
+    "text": "можно",
+    "start": 110383,
+    "end": 110603,
+    "confidence": 0.8154297,
+    "speaker": "Agent"
+  },
+  {
+    "text": "будет",
+    "start": 110603,
+    "end": 110983,
+    "confidence": 0.87939453,
+    "speaker": "Agent"
+  },
+  {
+    "text": "их",
+    "start": 110983,
+    "end": 111183,
+    "confidence": 0.87646484,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вот",
+    "start": 111183,
+    "end": 111443,
+    "confidence": 0.70410156,
+    "speaker": "Agent"
+  },
+  {
+    "text": "послезавтра",
+    "start": 111443,
+    "end": 112643,
+    "confidence": 0.8883789,
+    "speaker": "Agent"
+  },
+  {
+    "text": "закрыть.",
+    "start": 112643,
+    "end": 112963,
+    "confidence": 0.823,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Сейчас",
+    "start": 112983,
+    "end": 112988,
+    "confidence": 0.6298828,
+    "speaker": "Customer"
+  },
+  {
+    "text": "5",
+    "start": 112988,
+    "end": 114435,
+    "confidence": 0.2619629,
+    "speaker": "Customer"
+  },
+  {
+    "text": "370",
+    "start": 114435,
+    "end": 115883,
+    "confidence": 0.7175293,
+    "speaker": "Customer"
+  },
+  {
+    "text": "рублей,",
+    "start": 115883,
+    "end": 116303,
+    "confidence": 0.675,
+    "speaker": "Customer"
+  },
+  {
+    "text": "5",
+    "start": 116363,
+    "end": 116763,
+    "confidence": 0.6635742,
+    "speaker": "Customer"
+  },
+  {
+    "text": "тысяч.",
+    "start": 116763,
+    "end": 117043,
+    "confidence": 0.654,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Так,",
+    "start": 117743,
+    "end": 118243,
+    "confidence": 0.687,
+    "speaker": "Customer"
+  },
+  {
+    "text": "смотри,",
+    "start": 118843,
+    "end": 119143,
+    "confidence": 0.626,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Александр,",
+    "start": 119263,
+    "end": 119503,
+    "confidence": 0.867,
+    "speaker": "Customer"
+  },
+  {
+    "text": "еще",
+    "start": 119583,
+    "end": 119663,
+    "confidence": 0.7553711,
+    "speaker": "Customer"
+  },
+  {
+    "text": "раз",
+    "start": 119663,
+    "end": 119843,
+    "confidence": 0.9169922,
+    "speaker": "Customer"
+  },
+  {
+    "text": "проверимся,",
+    "start": 119843,
+    "end": 120323,
+    "confidence": 0.758,
+    "speaker": "Customer"
+  },
+  {
+    "text": "то",
+    "start": 120443,
+    "end": 120563,
+    "confidence": 0.765625,
+    "speaker": "Customer"
+  },
+  {
+    "text": "есть",
+    "start": 120563,
+    "end": 120703,
+    "confidence": 0.8125,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Citroen,",
+    "start": 120703,
+    "end": 122943,
+    "confidence": 0.531,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Jumpy",
+    "start": 123063,
+    "end": 123423,
+    "confidence": 0.41937256,
+    "speaker": "Customer"
+  },
+  {
+    "text": "или",
+    "start": 123423,
+    "end": 123703,
+    "confidence": 0.8120117,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Peugeot",
+    "start": 123703,
+    "end": 124643,
+    "confidence": 0.94189453,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Expert,",
+    "start": 124643,
+    "end": 125083,
+    "confidence": 0.645,
+    "speaker": "Customer"
+  },
+  {
+    "text": "16-го",
+    "start": 125609,
+    "end": 126949,
+    "confidence": 0.483,
+    "speaker": "Customer"
+  },
+  {
+    "text": "года,",
+    "start": 126949,
+    "end": 127389,
+    "confidence": 0.639,
+    "speaker": "Customer"
+  },
+  {
+    "text": "16-й",
+    "start": 128249,
+    "end": 128869,
+    "confidence": 0.722,
+    "speaker": "Customer"
+  },
+  {
+    "text": "радиус,",
+    "start": 128869,
+    "end": 129469,
+    "confidence": 0.815,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диски,",
+    "start": 130429,
+    "end": 131309,
+    "confidence": 0.849,
+    "speaker": "Customer"
+  },
+  {
+    "text": "штамповка.",
+    "start": 131789,
+    "end": 133729,
+    "confidence": 0.629,
+    "speaker": "Customer"
+  },
+  {
+    "text": "5",
+    "start": 133829,
+    "end": 135489,
+    "confidence": 0.48046875,
+    "speaker": "Agent"
+  },
+  {
+    "text": "370.",
+    "start": 135489,
+    "end": 136169,
+    "confidence": 0.655,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Скажите,",
+    "start": 137089,
+    "end": 137449,
+    "confidence": 0.913,
+    "speaker": "Customer"
+  },
+  {
+    "text": "а",
+    "start": 137569,
+    "end": 137589,
+    "confidence": 0.88916016,
+    "speaker": "Customer"
+  },
+  {
+    "text": "вон",
+    "start": 137589,
+    "end": 137709,
+    "confidence": 0.42712402,
+    "speaker": "Customer"
+  },
+  {
+    "text": "как",
+    "start": 137709,
+    "end": 137869,
+    "confidence": 0.68652344,
+    "speaker": "Customer"
+  },
+  {
+    "text": "правильно",
+    "start": 137869,
+    "end": 138189,
+    "confidence": 0.8745117,
+    "speaker": "Customer"
+  },
+  {
+    "text": "маркируется",
+    "start": 138189,
+    "end": 138769,
+    "confidence": 0.923584,
+    "speaker": "Customer"
+  },
+  {
+    "text": "этот",
+    "start": 138769,
+    "end": 139049,
+    "confidence": 0.70654297,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диск?",
+    "start": 139049,
+    "end": 139369,
+    "confidence": 0.784,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Как",
+    "start": 139549,
+    "end": 139969,
+    "confidence": 0.6254883,
+    "speaker": "Customer"
+  },
+  {
+    "text": "его",
+    "start": 139969,
+    "end": 141689,
+    "confidence": 0.390625,
+    "speaker": "Customer"
+  },
+  {
+    "text": "у",
+    "start": 141689,
+    "end": 141829,
+    "confidence": 0.78515625,
+    "speaker": "Customer"
+  },
+  {
+    "text": "вас",
+    "start": 141829,
+    "end": 141929,
+    "confidence": 0.68359375,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 141929,
+    "end": 142109,
+    "confidence": 0.87939453,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сайте",
+    "start": 142109,
+    "end": 142269,
+    "confidence": 0.8937988,
+    "speaker": "Customer"
+  },
+  {
+    "text": "найти?",
+    "start": 142269,
+    "end": 142589,
+    "confidence": 0.767,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Я",
+    "start": 143209,
+    "end": 143769,
+    "confidence": 0.5185547,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вам",
+    "start": 143769,
+    "end": 143949,
+    "confidence": 0.56884766,
+    "speaker": "Agent"
+  },
+  {
+    "text": "могу",
+    "start": 143949,
+    "end": 144149,
+    "confidence": 0.8720703,
+    "speaker": "Agent"
+  },
+  {
+    "text": "подсказать",
+    "start": 144149,
+    "end": 144829,
+    "confidence": 0.96484375,
+    "speaker": "Agent"
+  },
+  {
+    "text": "артикул.",
+    "start": 144829,
+    "end": 145589,
+    "confidence": 0.687,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Запишите,",
+    "start": 145649,
+    "end": 146029,
+    "confidence": 0.896,
+    "speaker": "Agent"
+  },
+  {
+    "text": "пожалуйста.",
+    "start": 146169,
+    "end": 146429,
+    "confidence": 0.903,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Да.",
+    "start": 147189,
+    "end": 147369,
+    "confidence": 0.651,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Записываем.",
+    "start": 148549,
+    "end": 149089,
+    "confidence": 0.843,
+    "speaker": "Customer"
+  },
+  {
+    "text": "R",
+    "start": 149489,
+    "end": 150009,
+    "confidence": 0.40429688,
+    "speaker": "Agent"
+  },
+  {
+    "text": "английская.",
+    "start": 150009,
+    "end": 150789,
+    "confidence": 0.706,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Да,",
+    "start": 153470,
+    "end": 153690,
+    "confidence": 0.639,
+    "speaker": "Agent"
+  },
+  {
+    "text": "потом",
+    "start": 153790,
+    "end": 154130,
+    "confidence": 0.46899414,
+    "speaker": "Agent"
+  },
+  {
+    "text": "три",
+    "start": 154130,
+    "end": 155030,
+    "confidence": 0.11340332,
+    "speaker": "Agent"
+  },
+  {
+    "text": "тысячи",
+    "start": 155030,
+    "end": 155690,
+    "confidence": 0.85302734,
+    "speaker": "Agent"
+  },
+  {
+    "text": "ровно.",
+    "start": 155690,
+    "end": 156330,
+    "confidence": 0.762,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Три",
+    "start": 157170,
+    "end": 157870,
+    "confidence": 0.677124,
+    "speaker": "Customer"
+  },
+  {
+    "text": "тысячи",
+    "start": 157870,
+    "end": 158530,
+    "confidence": 0.8791504,
+    "speaker": "Customer"
+  },
+  {
+    "text": "ровно.",
+    "start": 158530,
+    "end": 158990,
+    "confidence": 0.788,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Да,",
+    "start": 159390,
+    "end": 159630,
+    "confidence": 0.825,
+    "speaker": "Agent"
+  },
+  {
+    "text": "и",
+    "start": 159750,
+    "end": 159870,
+    "confidence": 0.91259766,
+    "speaker": "Agent"
+  },
+  {
+    "text": "64",
+    "start": 159870,
+    "end": 160390,
+    "confidence": 0.5083008,
+    "speaker": "Agent"
+  },
+  {
+    "text": "в",
+    "start": 160390,
+    "end": 160810,
+    "confidence": 0.91259766,
+    "speaker": "Agent"
+  },
+  {
+    "text": "конце.",
+    "start": 160810,
+    "end": 161110,
+    "confidence": 0.906,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Три",
+    "start": 162730,
+    "end": 162910,
+    "confidence": 0.78759766,
+    "speaker": "Customer"
+  },
+  {
+    "text": "тысячи",
+    "start": 162910,
+    "end": 163310,
+    "confidence": 0.93774414,
+    "speaker": "Customer"
+  },
+  {
+    "text": "шестьдесят",
+    "start": 163310,
+    "end": 163830,
+    "confidence": 0.7908325,
+    "speaker": "Customer"
+  },
+  {
+    "text": "четыре.",
+    "start": 163830,
+    "end": 164190,
+    "confidence": 0.833,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Ну,",
+    "start": 164670,
+    "end": 164970,
+    "confidence": 0.497,
+    "speaker": "Customer"
+  },
+  {
+    "text": "в",
+    "start": 165010,
+    "end": 165270,
+    "confidence": 0.68310547,
+    "speaker": "Customer"
+  },
+  {
+    "text": "смысле,",
+    "start": 165270,
+    "end": 165310,
+    "confidence": 0.758,
+    "speaker": "Customer"
+  },
+  {
+    "text": "три",
+    "start": 165410,
+    "end": 165550,
+    "confidence": 0.68408203,
+    "speaker": "Customer"
+  },
+  {
+    "text": "тысячи",
+    "start": 165550,
+    "end": 165990,
+    "confidence": 0.93310547,
+    "speaker": "Customer"
+  },
+  {
+    "text": "три",
+    "start": 165990,
+    "end": 166270,
+    "confidence": 0.85791016,
+    "speaker": "Customer"
+  },
+  {
+    "text": "три",
+    "start": 166270,
+    "end": 166930,
+    "confidence": 0.22375488,
+    "speaker": "Customer"
+  },
+  {
+    "text": "нуля",
+    "start": 166930,
+    "end": 167210,
+    "confidence": 0.5614624,
+    "speaker": "Customer"
+  },
+  {
+    "text": "шестьдесят",
+    "start": 167210,
+    "end": 167510,
+    "confidence": 0.9055176,
+    "speaker": "Customer"
+  },
+  {
+    "text": "четыре.",
+    "start": 167510,
+    "end": 167850,
+    "confidence": 0.924,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Да-да-да,",
+    "start": 168090,
+    "end": 168650,
+    "confidence": 0.847,
+    "speaker": "Agent"
+  },
+  {
+    "text": "всё",
+    "start": 168670,
+    "end": 168890,
+    "confidence": 0.56640625,
+    "speaker": "Agent"
+  },
+  {
+    "text": "верно.",
+    "start": 168890,
+    "end": 169110,
+    "confidence": 0.988,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Это",
+    "start": 169890,
+    "end": 170410,
+    "confidence": 0.67041016,
+    "speaker": "Customer"
+  },
+  {
+    "text": "у",
+    "start": 170410,
+    "end": 170510,
+    "confidence": 0.8413086,
+    "speaker": "Customer"
+  },
+  {
+    "text": "вас",
+    "start": 170510,
+    "end": 170610,
+    "confidence": 0.6401367,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 170610,
+    "end": 170770,
+    "confidence": 0.92285156,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сайте,",
+    "start": 170770,
+    "end": 170930,
+    "confidence": 0.811,
+    "speaker": "Customer"
+  },
+  {
+    "text": "этот",
+    "start": 171070,
+    "end": 171190,
+    "confidence": 0.28100586,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диск",
+    "start": 171190,
+    "end": 171390,
+    "confidence": 0.91308594,
+    "speaker": "Customer"
+  },
+  {
+    "text": "можно",
+    "start": 171390,
+    "end": 171590,
+    "confidence": 0.80908203,
+    "speaker": "Customer"
+  },
+  {
+    "text": "найти,",
+    "start": 171590,
+    "end": 171890,
+    "confidence": 0.733,
+    "speaker": "Customer"
+  },
+  {
+    "text": "да?",
+    "start": 172030,
+    "end": 172090,
+    "confidence": 0.763,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Это",
+    "start": 172150,
+    "end": 172210,
+    "confidence": 0.46264648,
+    "speaker": "Customer"
+  },
+  {
+    "text": "я",
+    "start": 172210,
+    "end": 172350,
+    "confidence": 0.8852539,
+    "speaker": "Customer"
+  },
+  {
+    "text": "смотрю",
+    "start": 172350,
+    "end": 172690,
+    "confidence": 0.9338379,
+    "speaker": "Customer"
+  },
+  {
+    "text": "в",
+    "start": 172690,
+    "end": 172810,
+    "confidence": 0.43896484,
+    "speaker": "Customer"
+  },
+  {
+    "text": "ваш",
+    "start": 172810,
+    "end": 172910,
+    "confidence": 0.7285156,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сайте,",
+    "start": 172910,
+    "end": 173130,
+    "confidence": 0.758,
+    "speaker": "Customer"
+  },
+  {
+    "text": "не.",
+    "start": 173190,
+    "end": 173350,
+    "confidence": 0.8486328,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Могу...",
+    "start": 173350,
+    "end": 174070,
+    "confidence": 0.6405029,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Вот",
+    "start": 174070,
+    "end": 175090,
+    "confidence": 0.86816406,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вы",
+    "start": 175090,
+    "end": 175310,
+    "confidence": 0.7709961,
+    "speaker": "Agent"
+  },
+  {
+    "text": "можете",
+    "start": 175310,
+    "end": 175650,
+    "confidence": 0.8666992,
+    "speaker": "Agent"
+  },
+  {
+    "text": "сейчас",
+    "start": 175650,
+    "end": 175970,
+    "confidence": 0.82373047,
+    "speaker": "Agent"
+  },
+  {
+    "text": "прям",
+    "start": 175970,
+    "end": 176210,
+    "confidence": 0.69970703,
+    "speaker": "Agent"
+  },
+  {
+    "text": "посмотреть,",
+    "start": 176210,
+    "end": 176750,
+    "confidence": 0.698,
+    "speaker": "Agent"
+  },
+  {
+    "text": "он",
+    "start": 177030,
+    "end": 177310,
+    "confidence": 0.84814453,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вот",
+    "start": 177310,
+    "end": 177610,
+    "confidence": 0.70703125,
+    "speaker": "Agent"
+  },
+  {
+    "text": "должен",
+    "start": 177610,
+    "end": 177890,
+    "confidence": 0.85058594,
+    "speaker": "Agent"
+  },
+  {
+    "text": "подойти.",
+    "start": 177890,
+    "end": 178370,
+    "confidence": 0.951,
+    "speaker": "Agent"
+  },
+  {
+    "text": "По",
+    "start": 178951,
+    "end": 179131,
+    "confidence": 0.31811523,
+    "speaker": "Agent"
+  },
+  {
+    "text": "маркировке?",
+    "start": 179131,
+    "end": 179911,
+    "confidence": 0.6,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Ну",
+    "start": 180191,
+    "end": 180251,
+    "confidence": 0.67041016,
+    "speaker": "Customer"
+  },
+  {
+    "text": "имеется",
+    "start": 180251,
+    "end": 180611,
+    "confidence": 0.717041,
+    "speaker": "Customer"
+  },
+  {
+    "text": "ввиду,",
+    "start": 180611,
+    "end": 180891,
+    "confidence": 0.519,
+    "speaker": "Customer"
+  },
+  {
+    "text": "по...",
+    "start": 180971,
+    "end": 181291,
+    "confidence": 0.734375,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Ну,",
+    "start": 181291,
+    "end": 181431,
+    "confidence": 0.623,
+    "speaker": "Customer"
+  },
+  {
+    "text": "смотрите,",
+    "start": 181551,
+    "end": 181751,
+    "confidence": 0.619,
+    "speaker": "Customer"
+  },
+  {
+    "text": "я",
+    "start": 181991,
+    "end": 182371,
+    "confidence": 0.45581055,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 182371,
+    "end": 182511,
+    "confidence": 0.9121094,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сайте",
+    "start": 182511,
+    "end": 182711,
+    "confidence": 0.9057617,
+    "speaker": "Customer"
+  },
+  {
+    "text": "вас",
+    "start": 182711,
+    "end": 182991,
+    "confidence": 0.47680664,
+    "speaker": "Customer"
+  },
+  {
+    "text": "набрал,",
+    "start": 182991,
+    "end": 183391,
+    "confidence": 0.576,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Светровиан",
+    "start": 183511,
+    "end": 184011,
+    "confidence": 0.40351564,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Джанке,",
+    "start": 184011,
+    "end": 184331,
+    "confidence": 0.546,
+    "speaker": "Customer"
+  },
+  {
+    "text": "2016",
+    "start": 184391,
+    "end": 184911,
+    "confidence": 0.55566406,
+    "speaker": "Customer"
+  },
+  {
+    "text": "год,",
+    "start": 184911,
+    "end": 185451,
+    "confidence": 0.669,
+    "speaker": "Customer"
+  },
+  {
+    "text": "двухлитровый",
+    "start": 185491,
+    "end": 186051,
+    "confidence": 0.8558594,
+    "speaker": "Customer"
+  },
+  {
+    "text": "двигатель,",
+    "start": 186051,
+    "end": 186511,
+    "confidence": 0.717,
+    "speaker": "Customer"
+  },
+  {
+    "text": "и",
+    "start": 186951,
+    "end": 187071,
+    "confidence": 0.84033203,
+    "speaker": "Customer"
+  },
+  {
+    "text": "он",
+    "start": 187071,
+    "end": 187171,
+    "confidence": 0.84521484,
+    "speaker": "Customer"
+  },
+  {
+    "text": "не",
+    "start": 187171,
+    "end": 187291,
+    "confidence": 0.71240234,
+    "speaker": "Customer"
+  },
+  {
+    "text": "дает",
+    "start": 187291,
+    "end": 187511,
+    "confidence": 0.713501,
+    "speaker": "Customer"
+  },
+  {
+    "text": "кучу",
+    "start": 187511,
+    "end": 188091,
+    "confidence": 0.9711914,
+    "speaker": "Customer"
+  },
+  {
+    "text": "литых",
+    "start": 188091,
+    "end": 188571,
+    "confidence": 0.90625,
+    "speaker": "Customer"
+  },
+  {
+    "text": "дисков,",
+    "start": 188571,
+    "end": 188951,
+    "confidence": 0.955,
+    "speaker": "Customer"
+  },
+  {
+    "text": "а",
+    "start": 189071,
+    "end": 189091,
+    "confidence": 0.78564453,
+    "speaker": "Customer"
+  },
+  {
+    "text": "не",
+    "start": 189091,
+    "end": 189151,
+    "confidence": 0.9326172,
+    "speaker": "Customer"
+  },
+  {
+    "text": "штампованных.",
+    "start": 189151,
+    "end": 190351,
+    "confidence": 0.867,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Нет,",
+    "start": 191691,
+    "end": 192791,
+    "confidence": 0.821,
+    "speaker": "Agent"
+  },
+  {
+    "text": "это",
+    "start": 192791,
+    "end": 193071,
+    "confidence": 0.6616211,
+    "speaker": "Agent"
+  },
+  {
+    "text": "тоже",
+    "start": 193071,
+    "end": 193411,
+    "confidence": 0.828125,
+    "speaker": "Agent"
+  },
+  {
+    "text": "должен",
+    "start": 193411,
+    "end": 193751,
+    "confidence": 0.48242188,
+    "speaker": "Agent"
+  },
+  {
+    "text": "подойти.",
+    "start": 193751,
+    "end": 194231,
+    "confidence": 0.85,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Я",
+    "start": 194831,
+    "end": 195051,
+    "confidence": 0.90283203,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вижу",
+    "start": 195051,
+    "end": 195311,
+    "confidence": 0.7783203,
+    "speaker": "Agent"
+  },
+  {
+    "text": "его.",
+    "start": 195311,
+    "end": 195591,
+    "confidence": 0.835,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Вы,",
+    "start": 196531,
+    "end": 196651,
+    "confidence": 0.486,
+    "speaker": "Customer"
+  },
+  {
+    "text": "наверное,",
+    "start": 196951,
+    "end": 197551,
+    "confidence": 0.545,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диаметр",
+    "start": 197671,
+    "end": 197971,
+    "confidence": 0.69628906,
+    "speaker": "Customer"
+  },
+  {
+    "text": "выбирали.",
+    "start": 197971,
+    "end": 198511,
+    "confidence": 0.887,
+    "speaker": "Customer"
+  },
+  {
+    "text": "А",
+    "start": 200151,
+    "end": 200831,
+    "confidence": 0.4892578,
+    "speaker": "Customer"
+  },
+  {
+    "text": "тут",
+    "start": 200831,
+    "end": 201071,
+    "confidence": 0.77783203,
+    "speaker": "Customer"
+  },
+  {
+    "text": "он",
+    "start": 201071,
+    "end": 201211,
+    "confidence": 0.8105469,
+    "speaker": "Customer"
+  },
+  {
+    "text": "не",
+    "start": 201211,
+    "end": 201331,
+    "confidence": 0.9121094,
+    "speaker": "Customer"
+  },
+  {
+    "text": "спрашивает",
+    "start": 201331,
+    "end": 201731,
+    "confidence": 0.9527995,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диаметр,",
+    "start": 201731,
+    "end": 202231,
+    "confidence": 0.755,
+    "speaker": "Customer"
+  },
+  {
+    "text": "он",
+    "start": 202431,
+    "end": 202651,
+    "confidence": 0.47729492,
+    "speaker": "Customer"
+  },
+  {
+    "text": "спрашивает",
+    "start": 202651,
+    "end": 203231,
+    "confidence": 0.9584961,
+    "speaker": "Customer"
+  },
+  {
+    "text": "марку,",
+    "start": 203231,
+    "end": 203671,
+    "confidence": 0.9,
+    "speaker": "Customer"
+  },
+  {
+    "text": "модель,",
+    "start": 203831,
+    "end": 204191,
+    "confidence": 0.955,
+    "speaker": "Customer"
+  },
+  {
+    "text": "год",
+    "start": 204331,
+    "end": 204471,
+    "confidence": 0.8051758,
+    "speaker": "Customer"
+  },
+  {
+    "text": "выпуска,",
+    "start": 204471,
+    "end": 204931,
+    "confidence": 0.967,
+    "speaker": "Customer"
+  },
+  {
+    "text": "двигатель.",
+    "start": 205011,
+    "end": 205491,
+    "confidence": 0.717,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Пишу",
+    "start": 206896,
+    "end": 207636,
+    "confidence": 0.3345388,
+    "speaker": "Customer"
+  },
+  {
+    "text": "подобрать",
+    "start": 207636,
+    "end": 208216,
+    "confidence": 0.8071289,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диски",
+    "start": 208216,
+    "end": 208576,
+    "confidence": 0.70654297,
+    "speaker": "Customer"
+  },
+  {
+    "text": "и",
+    "start": 208576,
+    "end": 208736,
+    "confidence": 0.41577148,
+    "speaker": "Customer"
+  },
+  {
+    "text": "он",
+    "start": 208736,
+    "end": 208896,
+    "confidence": 0.7192383,
+    "speaker": "Customer"
+  },
+  {
+    "text": "мне",
+    "start": 208896,
+    "end": 209096,
+    "confidence": 0.6977539,
+    "speaker": "Customer"
+  },
+  {
+    "text": "выдаёт",
+    "start": 209096,
+    "end": 209536,
+    "confidence": 0.7027995,
+    "speaker": "Customer"
+  },
+  {
+    "text": "литые",
+    "start": 209536,
+    "end": 209936,
+    "confidence": 0.89778644,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диски.",
+    "start": 209936,
+    "end": 210596,
+    "confidence": 0.734,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Штампованные,",
+    "start": 211576,
+    "end": 212356,
+    "confidence": 0.443,
+    "speaker": "Customer"
+  },
+  {
+    "text": "я",
+    "start": 212436,
+    "end": 212596,
+    "confidence": 0.4951172,
+    "speaker": "Customer"
+  },
+  {
+    "text": "не",
+    "start": 212596,
+    "end": 212676,
+    "confidence": 0.74560547,
+    "speaker": "Customer"
+  },
+  {
+    "text": "знаю.",
+    "start": 212676,
+    "end": 212716,
+    "confidence": 0.588,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Как",
+    "start": 215736,
+    "end": 216136,
+    "confidence": 0.2578125,
+    "speaker": "Customer"
+  },
+  {
+    "text": "его",
+    "start": 216136,
+    "end": 216396,
+    "confidence": 0.5263672,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 216396,
+    "end": 216536,
+    "confidence": 0.8520508,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сайте",
+    "start": 216536,
+    "end": 216756,
+    "confidence": 0.78564453,
+    "speaker": "Customer"
+  },
+  {
+    "text": "проверить?",
+    "start": 216756,
+    "end": 217236,
+    "confidence": 0.722,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Как",
+    "start": 217576,
+    "end": 217836,
+    "confidence": 0.7446289,
+    "speaker": "Customer"
+  },
+  {
+    "text": "правильно",
+    "start": 217836,
+    "end": 218136,
+    "confidence": 0.8330078,
+    "speaker": "Customer"
+  },
+  {
+    "text": "набрать",
+    "start": 218136,
+    "end": 218476,
+    "confidence": 0.77490234,
+    "speaker": "Customer"
+  },
+  {
+    "text": "его",
+    "start": 218476,
+    "end": 218676,
+    "confidence": 0.7167969,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 218676,
+    "end": 218696,
+    "confidence": 0.7480469,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сайте?",
+    "start": 218696,
+    "end": 218701,
+    "confidence": 0.839,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Вы",
+    "start": 218701,
+    "end": 218858,
+    "confidence": 0.5493164,
+    "speaker": "Agent"
+  },
+  {
+    "text": "можете",
+    "start": 218858,
+    "end": 219016,
+    "confidence": 0.8066406,
+    "speaker": "Agent"
+  },
+  {
+    "text": "ввести",
+    "start": 219016,
+    "end": 219336,
+    "confidence": 0.86246747,
+    "speaker": "Agent"
+  },
+  {
+    "text": "в",
+    "start": 219336,
+    "end": 219516,
+    "confidence": 0.87841797,
+    "speaker": "Agent"
+  },
+  {
+    "text": "поисковике",
+    "start": 219516,
+    "end": 220016,
+    "confidence": 0.7939453,
+    "speaker": "Agent"
+  },
+  {
+    "text": "артикул",
+    "start": 220016,
+    "end": 220476,
+    "confidence": 0.6734619,
+    "speaker": "Agent"
+  },
+  {
+    "text": "и",
+    "start": 220476,
+    "end": 220596,
+    "confidence": 0.5239258,
+    "speaker": "Agent"
+  },
+  {
+    "text": "посмотреть.",
+    "start": 220596,
+    "end": 221036,
+    "confidence": 0.762,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Хорошо,",
+    "start": 221676,
+    "end": 222656,
+    "confidence": 0.645,
+    "speaker": "Customer"
+  },
+  {
+    "text": "спасибо.",
+    "start": 222816,
+    "end": 223036,
+    "confidence": 0.604,
+    "speaker": "Customer"
+  },
+  {
+    "text": "А",
+    "start": 224796,
+    "end": 225116,
+    "confidence": 0.63964844,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сейчас...",
+    "start": 225116,
+    "end": 226196,
+    "confidence": 0.6027832,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Да,",
+    "start": 227028,
+    "end": 227208,
+    "confidence": 0.295,
+    "speaker": "Customer"
+  },
+  {
+    "text": "смотрите,",
+    "start": 227448,
+    "end": 227548,
+    "confidence": 0.456,
+    "speaker": "Customer"
+  },
+  {
+    "text": "а",
+    "start": 227568,
+    "end": 227628,
+    "confidence": 0.52734375,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сейчас",
+    "start": 227628,
+    "end": 227848,
+    "confidence": 0.48779297,
+    "speaker": "Customer"
+  },
+  {
+    "text": "новоселье,",
+    "start": 227848,
+    "end": 228248,
+    "confidence": 0.523,
+    "speaker": "Customer"
+  },
+  {
+    "text": "ну",
+    "start": 228248,
+    "end": 228328,
+    "confidence": 0.39208984,
+    "speaker": "Customer"
+  },
+  {
+    "text": "в",
+    "start": 228328,
+    "end": 228528,
+    "confidence": 0.74609375,
+    "speaker": "Customer"
+  },
+  {
+    "text": "смысле,",
+    "start": 228528,
+    "end": 228627,
+    "confidence": 0.623,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сегодня",
+    "start": 228628,
+    "end": 228848,
+    "confidence": 0.8652344,
+    "speaker": "Customer"
+  },
+  {
+    "text": "новоселье",
+    "start": 228848,
+    "end": 229308,
+    "confidence": 0.97766113,
+    "speaker": "Customer"
+  },
+  {
+    "text": "вы",
+    "start": 229308,
+    "end": 229368,
+    "confidence": 0.7036133,
+    "speaker": "Customer"
+  },
+  {
+    "text": "не",
+    "start": 229368,
+    "end": 229448,
+    "confidence": 0.9086914,
+    "speaker": "Customer"
+  },
+  {
+    "text": "купите",
+    "start": 229448,
+    "end": 229788,
+    "confidence": 0.9382324,
+    "speaker": "Customer"
+  },
+  {
+    "text": "этот",
+    "start": 229788,
+    "end": 230048,
+    "confidence": 0.60839844,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диск,",
+    "start": 230048,
+    "end": 230188,
+    "confidence": 0.828,
+    "speaker": "Customer"
+  },
+  {
+    "text": "да?",
+    "start": 230308,
+    "end": 230368,
+    "confidence": 0.946,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Нет,",
+    "start": 230448,
+    "end": 230628,
+    "confidence": 0.884,
+    "speaker": "Agent"
+  },
+  {
+    "text": "они",
+    "start": 230728,
+    "end": 230868,
+    "confidence": 0.7597656,
+    "speaker": "Agent"
+  },
+  {
+    "text": "будут",
+    "start": 230868,
+    "end": 231148,
+    "confidence": 0.9033203,
+    "speaker": "Agent"
+  },
+  {
+    "text": "только",
+    "start": 231148,
+    "end": 231408,
+    "confidence": 0.8461914,
+    "speaker": "Agent"
+  },
+  {
+    "text": "послезавтра,",
+    "start": 231408,
+    "end": 232028,
+    "confidence": 0.911,
+    "speaker": "Agent"
+  },
+  {
+    "text": "к",
+    "start": 232128,
+    "end": 232188,
+    "confidence": 0.8852539,
+    "speaker": "Agent"
+  },
+  {
+    "text": "сожалению.",
+    "start": 232188,
+    "end": 232448,
+    "confidence": 0.778,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Они",
+    "start": 232608,
+    "end": 232748,
+    "confidence": 0.91308594,
+    "speaker": "Agent"
+  },
+  {
+    "text": "сейчас",
+    "start": 232748,
+    "end": 232948,
+    "confidence": 0.88183594,
+    "speaker": "Agent"
+  },
+  {
+    "text": "в",
+    "start": 232948,
+    "end": 233088,
+    "confidence": 0.8769531,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Челябинске,",
+    "start": 233088,
+    "end": 233628,
+    "confidence": 0.773,
+    "speaker": "Agent"
+  },
+  {
+    "text": "их",
+    "start": 233828,
+    "end": 234308,
+    "confidence": 0.38330078,
+    "speaker": "Agent"
+  },
+  {
+    "text": "оттуда,",
+    "start": 234308,
+    "end": 234788,
+    "confidence": 0.774,
+    "speaker": "Agent"
+  },
+  {
+    "text": "если",
+    "start": 234868,
+    "end": 234988,
+    "confidence": 0.76953125,
+    "speaker": "Agent"
+  },
+  {
+    "text": "мы",
+    "start": 234988,
+    "end": 235248,
+    "confidence": 0.9277344,
+    "speaker": "Agent"
+  },
+  {
+    "text": "сегодня",
+    "start": 235248,
+    "end": 235648,
+    "confidence": 0.8442383,
+    "speaker": "Agent"
+  },
+  {
+    "text": "сделаем",
+    "start": 235648,
+    "end": 235988,
+    "confidence": 0.7939453,
+    "speaker": "Agent"
+  },
+  {
+    "text": "вроде",
+    "start": 235988,
+    "end": 236228,
+    "confidence": 0.48095703,
+    "speaker": "Agent"
+  },
+  {
+    "text": "бы",
+    "start": 236228,
+    "end": 236428,
+    "confidence": 0.9067383,
+    "speaker": "Agent"
+  },
+  {
+    "text": "заказ,",
+    "start": 236428,
+    "end": 236808,
+    "confidence": 0.864,
+    "speaker": "Agent"
+  },
+  {
+    "text": "их",
+    "start": 237268,
+    "end": 237448,
+    "confidence": 0.86328125,
+    "speaker": "Agent"
+  },
+  {
+    "text": "послезавтра",
+    "start": 237448,
+    "end": 238188,
+    "confidence": 0.97138673,
+    "speaker": "Agent"
+  },
+  {
+    "text": "привезут.",
+    "start": 238188,
+    "end": 238748,
+    "confidence": 0.758,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Шестого",
+    "start": 239488,
+    "end": 240168,
+    "confidence": 0.6547038,
+    "speaker": "Agent"
+  },
+  {
+    "text": "числа.",
+    "start": 240168,
+    "end": 240448,
+    "confidence": 0.843,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Пять",
+    "start": 241488,
+    "end": 242268,
+    "confidence": 0.48809814,
+    "speaker": "Customer"
+  },
+  {
+    "text": "тысяч",
+    "start": 242268,
+    "end": 242648,
+    "confidence": 0.8408203,
+    "speaker": "Customer"
+  },
+  {
+    "text": "триста",
+    "start": 242648,
+    "end": 243028,
+    "confidence": 0.8466797,
+    "speaker": "Customer"
+  },
+  {
+    "text": "семьдесят.",
+    "start": 243028,
+    "end": 243348,
+    "confidence": 0.823,
+    "speaker": "Customer"
+  },
+  {
+    "text": "А",
+    "start": 243468,
+    "end": 243568,
+    "confidence": 0.8828125,
+    "speaker": "Customer"
+  },
+  {
+    "text": "вот",
+    "start": 243568,
+    "end": 243728,
+    "confidence": 0.71435547,
+    "speaker": "Customer"
+  },
+  {
+    "text": "он,",
+    "start": 243728,
+    "end": 243928,
+    "confidence": 0.586,
+    "speaker": "Customer"
+  },
+  {
+    "text": "этот",
+    "start": 244028,
+    "end": 244188,
+    "confidence": 0.85498047,
+    "speaker": "Customer"
+  },
+  {
+    "text": "диск",
+    "start": 244188,
+    "end": 244828,
+    "confidence": 0.8964844,
+    "speaker": "Customer"
+  },
+  {
+    "text": "штампованный,",
+    "start": 244828,
+    "end": 245508,
+    "confidence": 0.865,
+    "speaker": "Customer"
+  },
+  {
+    "text": "он",
+    "start": 245508,
+    "end": 245628,
+    "confidence": 0.8256836,
+    "speaker": "Customer"
+  },
+  {
+    "text": "как",
+    "start": 245628,
+    "end": 245788,
+    "confidence": 0.71240234,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 245788,
+    "end": 245928,
+    "confidence": 0.89746094,
+    "speaker": "Customer"
+  },
+  {
+    "text": "фургон",
+    "start": 245928,
+    "end": 246308,
+    "confidence": 0.9559326,
+    "speaker": "Customer"
+  },
+  {
+    "text": "идет?",
+    "start": 246308,
+    "end": 246508,
+    "confidence": 0.494,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Ну,",
+    "start": 246648,
+    "end": 246728,
+    "confidence": 0.596,
+    "speaker": "Customer"
+  },
+  {
+    "text": "в",
+    "start": 246828,
+    "end": 247068,
+    "confidence": 0.8798828,
+    "speaker": "Customer"
+  },
+  {
+    "text": "смысле,",
+    "start": 247068,
+    "end": 247147,
+    "confidence": 0.915,
+    "speaker": "Customer"
+  },
+  {
+    "text": "без",
+    "start": 247148,
+    "end": 247268,
+    "confidence": 0.8876953,
+    "speaker": "Customer"
+  },
+  {
+    "text": "разницы,",
+    "start": 247268,
+    "end": 247608,
+    "confidence": 0.725,
+    "speaker": "Customer"
+  },
+  {
+    "text": "там,",
+    "start": 247748,
+    "end": 247828,
+    "confidence": 0.597,
+    "speaker": "Customer"
+  },
+  {
+    "text": "да,",
+    "start": 247888,
+    "end": 247948,
+    "confidence": 0.775,
+    "speaker": "Customer"
+  },
+  {
+    "text": "на",
+    "start": 248028,
+    "end": 248108,
+    "confidence": 0.7338867,
+    "speaker": "Customer"
+  },
+  {
+    "text": "то",
+    "start": 248108,
+    "end": 248228,
+    "confidence": 0.17663574,
+    "speaker": "Customer"
+  },
+  {
+    "text": "есть,",
+    "start": 248228,
+    "end": 248388,
+    "confidence": 0.431,
+    "speaker": "Customer"
+  },
+  {
+    "text": "или",
+    "start": 248468,
+    "end": 248508,
+    "confidence": 0.8261719,
+    "speaker": "Customer"
+  },
+  {
+    "text": "в",
+    "start": 248508,
+    "end": 248628,
+    "confidence": 0.50439453,
+    "speaker": "Customer"
+  },
+  {
+    "text": "фургон",
+    "start": 248628,
+    "end": 248988,
+    "confidence": 0.9189453,
+    "speaker": "Customer"
+  },
+  {
+    "text": "идет.",
+    "start": 248988,
+    "end": 249148,
+    "confidence": 0.392,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Или...",
+    "start": 249268,
+    "end": 249308,
+    "confidence": 0.4680481,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Ну,",
+    "start": 249308,
+    "end": 249588,
+    "confidence": 0.874,
+    "speaker": "Agent"
+  },
+  {
+    "text": "именно,",
+    "start": 249688,
+    "end": 249888,
+    "confidence": 0.64,
+    "speaker": "Agent"
+  },
+  {
+    "text": "да,",
+    "start": 250048,
+    "end": 250168,
+    "confidence": 0.947,
+    "speaker": "Agent"
+  },
+  {
+    "text": "на",
+    "start": 250168,
+    "end": 250328,
+    "confidence": 0.9399414,
+    "speaker": "Agent"
+  },
+  {
+    "text": "него.",
+    "start": 250328,
+    "end": 250528,
+    "confidence": 0.799,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Потому",
+    "start": 250968,
+    "end": 251228,
+    "confidence": 0.88623047,
+    "speaker": "Agent"
+  },
+  {
+    "text": "что",
+    "start": 251228,
+    "end": 251408,
+    "confidence": 0.8017578,
+    "speaker": "Agent"
+  },
+  {
+    "text": "другие,",
+    "start": 251408,
+    "end": 251808,
+    "confidence": 0.739,
+    "speaker": "Agent"
+  },
+  {
+    "text": "остальные",
+    "start": 251928,
+    "end": 252308,
+    "confidence": 0.88500977,
+    "speaker": "Agent"
+  },
+  {
+    "text": "семилитровые",
+    "start": 252308,
+    "end": 252928,
+    "confidence": 0.55322266,
+    "speaker": "Agent"
+  },
+  {
+    "text": "диски,",
+    "start": 252928,
+    "end": 253268,
+    "confidence": 0.761,
+    "speaker": "Agent"
+  },
+  {
+    "text": "только",
+    "start": 253368,
+    "end": 253568,
+    "confidence": 0.8696289,
+    "speaker": "Agent"
+  },
+  {
+    "text": "этот",
+    "start": 253568,
+    "end": 253888,
+    "confidence": 0.8125,
+    "speaker": "Agent"
+  },
+  {
+    "text": "штамповка.",
+    "start": 253888,
+    "end": 255268,
+    "confidence": 0.938,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Да.",
+    "start": 257892,
+    "end": 258092,
+    "confidence": 0.288,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Ну,",
+    "start": 258752,
+    "end": 259032,
+    "confidence": 0.573,
+    "speaker": "Customer"
+  },
+  {
+    "text": "давайте",
+    "start": 259152,
+    "end": 259372,
+    "confidence": 0.8027344,
+    "speaker": "Customer"
+  },
+  {
+    "text": "я",
+    "start": 259372,
+    "end": 259552,
+    "confidence": 0.7001953,
+    "speaker": "Customer"
+  },
+  {
+    "text": "сейчас",
+    "start": 259552,
+    "end": 259692,
+    "confidence": 0.7915039,
+    "speaker": "Customer"
+  },
+  {
+    "text": "всё",
+    "start": 259692,
+    "end": 259852,
+    "confidence": 0.3935547,
+    "speaker": "Customer"
+  },
+  {
+    "text": "посмотрю,",
+    "start": 259852,
+    "end": 260252,
+    "confidence": 0.608,
+    "speaker": "Customer"
+  },
+  {
+    "text": "погуглю,",
+    "start": 260312,
+    "end": 260732,
+    "confidence": 0.684,
+    "speaker": "Customer"
+  },
+  {
+    "text": "наберу.",
+    "start": 260932,
+    "end": 261232,
+    "confidence": 0.712,
+    "speaker": "Customer"
+  },
+  {
+    "text": "Хорошо.",
+    "start": 262012,
+    "end": 262272,
+    "confidence": 0.767,
+    "speaker": "Agent"
+  },
+  {
+    "text": "Чем-то",
+    "start": 262832,
+    "end": 263092,
+    "confidence": 0.792,
+    "speaker": "Agent"
+  },
+  {
+    "text": "ещё",
+    "start": 263092,
+    "end": 263272,
+    "confidence": 0.80615234,
+    "speaker": "Agent"
+  },
+  {
+    "text": "могу",
+    "start": 263272,
+    "end": 263412,
+    "confidence": 0.93603516,
+    "speaker": "Agent"
+  },
+  {
+    "text": "помочь.",
+    "start": 263412,
+    "end": 263772,
+    "confidence": 0.912,
+    "speaker": "Agent"
+  }
+]

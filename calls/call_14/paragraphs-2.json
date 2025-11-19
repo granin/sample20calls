@@ -1,0 +1,3804 @@
+{
+  "paragraphs": [
+    {
+      "text": "Здравствуйте, компания 74 колеса, меня зовут Ирина, как я могу к вам обращаться?",
+      "start": 3029,
+      "end": 7389,
+      "confidence": 0.7425257638461538,
+      "words": [
+        {
+          "text": "Здравствуйте,",
+          "start": 3029,
+          "end": 3509,
+          "confidence": 0.677,
+          "speaker": "A"
+        },
+        {
+          "text": "компания",
+          "start": 3649,
+          "end": 3989,
+          "confidence": 0.72314453,
+          "speaker": "A"
+        },
+        {
+          "text": "74",
+          "start": 3989,
+          "end": 4589,
+          "confidence": 0.21813965,
+          "speaker": "A"
+        },
+        {
+          "text": "колеса,",
+          "start": 4589,
+          "end": 5229,
+          "confidence": 0.736,
+          "speaker": "A"
+        },
+        {
+          "text": "меня",
+          "start": 5249,
+          "end": 5349,
+          "confidence": 0.58496094,
+          "speaker": "A"
+        },
+        {
+          "text": "зовут",
+          "start": 5349,
+          "end": 5609,
+          "confidence": 0.9394531,
+          "speaker": "A"
+        },
+        {
+          "text": "Ирина,",
+          "start": 5609,
+          "end": 6189,
+          "confidence": 0.819,
+          "speaker": "A"
+        },
+        {
+          "text": "как",
+          "start": 6289,
+          "end": 6429,
+          "confidence": 0.7236328,
+          "speaker": "A"
+        },
+        {
+          "text": "я",
+          "start": 6429,
+          "end": 6529,
+          "confidence": 0.92041016,
+          "speaker": "A"
+        },
+        {
+          "text": "могу",
+          "start": 6529,
+          "end": 6689,
+          "confidence": 0.9111328,
+          "speaker": "A"
+        },
+        {
+          "text": "к",
+          "start": 6689,
+          "end": 6809,
+          "confidence": 0.93359375,
+          "speaker": "A"
+        },
+        {
+          "text": "вам",
+          "start": 6809,
+          "end": 6929,
+          "confidence": 0.6513672,
+          "speaker": "A"
+        },
+        {
+          "text": "обращаться?",
+          "start": 6929,
+          "end": 7389,
+          "confidence": 0.815,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуйте, меня зовут Евгений.",
+      "start": 8349,
+      "end": 9509,
+      "confidence": 0.860331055,
+      "words": [
+        {
+          "text": "Здравствуйте,",
+          "start": 8349,
+          "end": 8709,
+          "confidence": 0.898,
+          "speaker": "B"
+        },
+        {
+          "text": "меня",
+          "start": 8809,
+          "end": 8949,
+          "confidence": 0.82128906,
+          "speaker": "B"
+        },
+        {
+          "text": "зовут",
+          "start": 8949,
+          "end": 9129,
+          "confidence": 0.93603516,
+          "speaker": "B"
+        },
+        {
+          "text": "Евгений.",
+          "start": 9129,
+          "end": 9509,
+          "confidence": 0.786,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Евгений, из какого города вы нам звоните?",
+      "start": 10009,
+      "end": 11909,
+      "confidence": 0.84408538,
+      "words": [
+        {
+          "text": "Евгений,",
+          "start": 10009,
+          "end": 10589,
+          "confidence": 0.914,
+          "speaker": "A"
+        },
+        {
+          "text": "из",
+          "start": 10629,
+          "end": 10729,
+          "confidence": 0.8183594,
+          "speaker": "A"
+        },
+        {
+          "text": "какого",
+          "start": 10729,
+          "end": 10989,
+          "confidence": 0.83203125,
+          "speaker": "A"
+        },
+        {
+          "text": "города",
+          "start": 10989,
+          "end": 11249,
+          "confidence": 0.77734375,
+          "speaker": "A"
+        },
+        {
+          "text": "вы",
+          "start": 11249,
+          "end": 11409,
+          "confidence": 0.7338867,
+          "speaker": "A"
+        },
+        {
+          "text": "нам",
+          "start": 11409,
+          "end": 11549,
+          "confidence": 0.87597656,
+          "speaker": "A"
+        },
+        {
+          "text": "звоните?",
+          "start": 11549,
+          "end": 11909,
+          "confidence": 0.957,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Пермь.",
+      "start": 12949,
+      "end": 13549,
+      "confidence": 0.757,
+      "words": [
+        {
+          "text": "Пермь.",
+          "start": 12949,
+          "end": 13549,
+          "confidence": 0.757,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Город Пермь, чем могу вам помочь?",
+      "start": 13969,
+      "end": 15429,
+      "confidence": 0.8569555116666666,
+      "words": [
+        {
+          "text": "Город",
+          "start": 13969,
+          "end": 14309,
+          "confidence": 0.9083659,
+          "speaker": "A"
+        },
+        {
+          "text": "Пермь,",
+          "start": 14309,
+          "end": 14669,
+          "confidence": 0.858,
+          "speaker": "A"
+        },
+        {
+          "text": "чем",
+          "start": 14689,
+          "end": 14789,
+          "confidence": 0.74658203,
+          "speaker": "A"
+        },
+        {
+          "text": "могу",
+          "start": 14789,
+          "end": 14969,
+          "confidence": 0.7783203,
+          "speaker": "A"
+        },
+        {
+          "text": "вам",
+          "start": 14969,
+          "end": 15129,
+          "confidence": 0.87646484,
+          "speaker": "A"
+        },
+        {
+          "text": "помочь?",
+          "start": 15129,
+          "end": 15429,
+          "confidence": 0.974,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Хотел бы спросить, сколько размера 215 на 65 радиус 17?",
+      "start": 16629,
+      "end": 23929,
+      "confidence": 0.6294811,
+      "words": [
+        {
+          "text": "Хотел",
+          "start": 16629,
+          "end": 17329,
+          "confidence": 0.7692871,
+          "speaker": "B"
+        },
+        {
+          "text": "бы",
+          "start": 17329,
+          "end": 17469,
+          "confidence": 0.78808594,
+          "speaker": "B"
+        },
+        {
+          "text": "спросить,",
+          "start": 17469,
+          "end": 18829,
+          "confidence": 0.724,
+          "speaker": "B"
+        },
+        {
+          "text": "сколько",
+          "start": 19189,
+          "end": 19769,
+          "confidence": 0.10760498,
+          "speaker": "B"
+        },
+        {
+          "text": "размера",
+          "start": 19769,
+          "end": 21049,
+          "confidence": 0.31835938,
+          "speaker": "B"
+        },
+        {
+          "text": "215",
+          "start": 21049,
+          "end": 21989,
+          "confidence": 0.6290283,
+          "speaker": "B"
+        },
+        {
+          "text": "на",
+          "start": 21989,
+          "end": 22249,
+          "confidence": 0.4921875,
+          "speaker": "B"
+        },
+        {
+          "text": "65",
+          "start": 22249,
+          "end": 22769,
+          "confidence": 0.8515625,
+          "speaker": "B"
+        },
+        {
+          "text": "радиус",
+          "start": 22769,
+          "end": 23529,
+          "confidence": 0.8876953,
+          "speaker": "B"
+        },
+        {
+          "text": "17?",
+          "start": 23529,
+          "end": 23929,
+          "confidence": 0.727,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "215, 65, 17. Зима?",
+      "start": 24809,
+      "end": 28629,
+      "confidence": 0.7995,
+      "words": [
+        {
+          "text": "215,",
+          "start": 24809,
+          "end": 25849,
+          "confidence": 0.68,
+          "speaker": "A"
+        },
+        {
+          "text": "65,",
+          "start": 26009,
+          "end": 26709,
+          "confidence": 0.827,
+          "speaker": "A"
+        },
+        {
+          "text": "17.",
+          "start": 27009,
+          "end": 27549,
+          "confidence": 0.722,
+          "speaker": "A"
+        },
+        {
+          "text": "Зима?",
+          "start": 28209,
+          "end": 28629,
+          "confidence": 0.969,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Зима. Шипы.",
+      "start": 30147,
+      "end": 31047,
+      "confidence": 0.628,
+      "words": [
+        {
+          "text": "Зима.",
+          "start": 30147,
+          "end": 30567,
+          "confidence": 0.475,
+          "speaker": "B"
+        },
+        {
+          "text": "Шипы.",
+          "start": 30727,
+          "end": 31047,
+          "confidence": 0.781,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Давайте посмотрим сейчас. 215, 65, 17. Зима. Шипы. Вам по ценному диапазону посмотреть? Или по производителям?",
+      "start": 31727,
+      "end": 58727,
+      "confidence": 0.739788089375,
+      "words": [
+        {
+          "text": "Давайте",
+          "start": 31727,
+          "end": 33347,
+          "confidence": 0.45629883,
+          "speaker": "A"
+        },
+        {
+          "text": "посмотрим",
+          "start": 33347,
+          "end": 34047,
+          "confidence": 0.67285156,
+          "speaker": "A"
+        },
+        {
+          "text": "сейчас.",
+          "start": 34047,
+          "end": 34567,
+          "confidence": 0.698,
+          "speaker": "A"
+        },
+        {
+          "text": "215,",
+          "start": 35587,
+          "end": 37087,
+          "confidence": 0.547,
+          "speaker": "A"
+        },
+        {
+          "text": "65,",
+          "start": 37347,
+          "end": 39667,
+          "confidence": 0.823,
+          "speaker": "A"
+        },
+        {
+          "text": "17.",
+          "start": 40947,
+          "end": 43947,
+          "confidence": 0.717,
+          "speaker": "A"
+        },
+        {
+          "text": "Зима.",
+          "start": 47087,
+          "end": 48147,
+          "confidence": 0.813,
+          "speaker": "A"
+        },
+        {
+          "text": "Шипы.",
+          "start": 49487,
+          "end": 50367,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "Вам",
+          "start": 52907,
+          "end": 53067,
+          "confidence": 0.7944336,
+          "speaker": "A"
+        },
+        {
+          "text": "по",
+          "start": 53067,
+          "end": 53247,
+          "confidence": 0.83447266,
+          "speaker": "A"
+        },
+        {
+          "text": "ценному",
+          "start": 53247,
+          "end": 53547,
+          "confidence": 0.5383301,
+          "speaker": "A"
+        },
+        {
+          "text": "диапазону",
+          "start": 53547,
+          "end": 54267,
+          "confidence": 0.9464844,
+          "speaker": "A"
+        },
+        {
+          "text": "посмотреть?",
+          "start": 54267,
+          "end": 54687,
+          "confidence": 0.543,
+          "speaker": "A"
+        },
+        {
+          "text": "Или",
+          "start": 55927,
+          "end": 56667,
+          "confidence": 0.83203125,
+          "speaker": "A"
+        },
+        {
+          "text": "по",
+          "start": 56667,
+          "end": 57667,
+          "confidence": 0.82470703,
+          "speaker": "A"
+        },
+        {
+          "text": "производителям?",
+          "start": 57667,
+          "end": 58727,
+          "confidence": 0.836,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Мне надо, чтобы они были для кроссоверов-синдромиков.",
+      "start": 60033,
+      "end": 63173,
+      "confidence": 0.6033610514285713,
+      "words": [
+        {
+          "text": "Мне",
+          "start": 60033,
+          "end": 60273,
+          "confidence": 0.16992188,
+          "speaker": "B"
+        },
+        {
+          "text": "надо,",
+          "start": 60273,
+          "end": 60473,
+          "confidence": 0.386,
+          "speaker": "B"
+        },
+        {
+          "text": "чтобы",
+          "start": 60573,
+          "end": 60673,
+          "confidence": 0.45898438,
+          "speaker": "B"
+        },
+        {
+          "text": "они",
+          "start": 60673,
+          "end": 60853,
+          "confidence": 0.7480469,
+          "speaker": "B"
+        },
+        {
+          "text": "были",
+          "start": 60853,
+          "end": 61093,
+          "confidence": 0.9057617,
+          "speaker": "B"
+        },
+        {
+          "text": "для",
+          "start": 61093,
+          "end": 61533,
+          "confidence": 0.8828125,
+          "speaker": "B"
+        },
+        {
+          "text": "кроссоверов-синдромиков.",
+          "start": 61533,
+          "end": 63173,
+          "confidence": 0.672,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Ну да, они идут регулярно.",
+      "start": 63713,
+      "end": 66378,
+      "confidence": 0.6940570239999999,
+      "words": [
+        {
+          "text": "Ну",
+          "start": 63713,
+          "end": 65793,
+          "confidence": 0.31079102,
+          "speaker": "A"
+        },
+        {
+          "text": "да,",
+          "start": 65793,
+          "end": 65993,
+          "confidence": 0.856,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 66093,
+          "end": 66313,
+          "confidence": 0.6635742,
+          "speaker": "A"
+        },
+        {
+          "text": "идут",
+          "start": 66313,
+          "end": 66373,
+          "confidence": 0.8679199,
+          "speaker": "A"
+        },
+        {
+          "text": "регулярно.",
+          "start": 66373,
+          "end": 66378,
+          "confidence": 0.772,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Там подмечение должно быть. СУФ.",
+      "start": 66378,
+      "end": 68293,
+      "confidence": 0.5423147580000001,
+      "words": [
+        {
+          "text": "Там",
+          "start": 66378,
+          "end": 66615,
+          "confidence": 0.5527344,
+          "speaker": "B"
+        },
+        {
+          "text": "подмечение",
+          "start": 66615,
+          "end": 66853,
+          "confidence": 0.22164409,
+          "speaker": "B"
+        },
+        {
+          "text": "должно",
+          "start": 66853,
+          "end": 67233,
+          "confidence": 0.8251953,
+          "speaker": "B"
+        },
+        {
+          "text": "быть.",
+          "start": 67233,
+          "end": 67513,
+          "confidence": 0.551,
+          "speaker": "B"
+        },
+        {
+          "text": "СУФ.",
+          "start": 67733,
+          "end": 68293,
+          "confidence": 0.561,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "СУФ. Посмотреть СУФ. Тогда давайте посмотрим. СУФ усиленные. Есть шина ГУДИЕР. По 15390 они СУФ идут. Арктик 2. Затем БРИДЖСТОУН. Тоже сув идут, 15690, хоккапелит.",
+      "start": 68953,
+      "end": 94150,
+      "confidence": 0.7254352828000001,
+      "words": [
+        {
+          "text": "СУФ.",
+          "start": 68953,
+          "end": 69573,
+          "confidence": 0.836,
+          "speaker": "A"
+        },
+        {
+          "text": "Посмотреть",
+          "start": 69933,
+          "end": 70513,
+          "confidence": 0.92496747,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ.",
+          "start": 70513,
+          "end": 70913,
+          "confidence": 0.913,
+          "speaker": "A"
+        },
+        {
+          "text": "Тогда",
+          "start": 71433,
+          "end": 71633,
+          "confidence": 0.3544922,
+          "speaker": "A"
+        },
+        {
+          "text": "давайте",
+          "start": 71633,
+          "end": 71953,
+          "confidence": 0.83203125,
+          "speaker": "A"
+        },
+        {
+          "text": "посмотрим.",
+          "start": 71953,
+          "end": 72593,
+          "confidence": 0.828,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ",
+          "start": 75233,
+          "end": 75673,
+          "confidence": 0.95963544,
+          "speaker": "A"
+        },
+        {
+          "text": "усиленные.",
+          "start": 75673,
+          "end": 76393,
+          "confidence": 0.893,
+          "speaker": "A"
+        },
+        {
+          "text": "Есть",
+          "start": 77033,
+          "end": 77393,
+          "confidence": 0.8574219,
+          "speaker": "A"
+        },
+        {
+          "text": "шина",
+          "start": 77393,
+          "end": 77993,
+          "confidence": 0.7663574,
+          "speaker": "A"
+        },
+        {
+          "text": "ГУДИЕР.",
+          "start": 77993,
+          "end": 80173,
+          "confidence": 0.559,
+          "speaker": "A"
+        },
+        {
+          "text": "По",
+          "start": 80973,
+          "end": 81113,
+          "confidence": 0.8251953,
+          "speaker": "A"
+        },
+        {
+          "text": "15390",
+          "start": 81113,
+          "end": 82793,
+          "confidence": 0.8095703,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 82793,
+          "end": 83173,
+          "confidence": 0.61816406,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ",
+          "start": 83173,
+          "end": 83593,
+          "confidence": 0.8282878,
+          "speaker": "A"
+        },
+        {
+          "text": "идут.",
+          "start": 83593,
+          "end": 83913,
+          "confidence": 0.628,
+          "speaker": "A"
+        },
+        {
+          "text": "Арктик",
+          "start": 84053,
+          "end": 84513,
+          "confidence": 0.8243408,
+          "speaker": "A"
+        },
+        {
+          "text": "2.",
+          "start": 84513,
+          "end": 84753,
+          "confidence": 0.801,
+          "speaker": "A"
+        },
+        {
+          "text": "Затем",
+          "start": 86573,
+          "end": 87273,
+          "confidence": 0.83951825,
+          "speaker": "A"
+        },
+        {
+          "text": "БРИДЖСТОУН.",
+          "start": 87273,
+          "end": 88573,
+          "confidence": 0.849,
+          "speaker": "A"
+        },
+        {
+          "text": "Тоже",
+          "start": 89210,
+          "end": 89530,
+          "confidence": 0.44302368,
+          "speaker": "A"
+        },
+        {
+          "text": "сув",
+          "start": 89530,
+          "end": 89910,
+          "confidence": 0.39187622,
+          "speaker": "A"
+        },
+        {
+          "text": "идут,",
+          "start": 89910,
+          "end": 90350,
+          "confidence": 0.596,
+          "speaker": "A"
+        },
+        {
+          "text": "15690,",
+          "start": 90450,
+          "end": 92190,
+          "confidence": 0.507,
+          "speaker": "A"
+        },
+        {
+          "text": "хоккапелит.",
+          "start": 93350,
+          "end": 94150,
+          "confidence": 0.451,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "А китайская что это у вас?",
+      "start": 94150,
+      "end": 95050,
+      "confidence": 0.5282517883333333,
+      "words": [
+        {
+          "text": "А",
+          "start": 94150,
+          "end": 94170,
+          "confidence": 0.2849121,
+          "speaker": "B"
+        },
+        {
+          "text": "китайская",
+          "start": 94170,
+          "end": 94490,
+          "confidence": 0.7998047,
+          "speaker": "B"
+        },
+        {
+          "text": "что",
+          "start": 94490,
+          "end": 94690,
+          "confidence": 0.17407227,
+          "speaker": "B"
+        },
+        {
+          "text": "это",
+          "start": 94690,
+          "end": 94810,
+          "confidence": 0.20739746,
+          "speaker": "B"
+        },
+        {
+          "text": "у",
+          "start": 94810,
+          "end": 94970,
+          "confidence": 0.8823242,
+          "speaker": "B"
+        },
+        {
+          "text": "вас?",
+          "start": 94970,
+          "end": 95050,
+          "confidence": 0.821,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Еще раз?",
+      "start": 95790,
+      "end": 96530,
+      "confidence": 0.587118165,
+      "words": [
+        {
+          "text": "Еще",
+          "start": 95790,
+          "end": 96270,
+          "confidence": 0.41723633,
+          "speaker": "A"
+        },
+        {
+          "text": "раз?",
+          "start": 96270,
+          "end": 96530,
+          "confidence": 0.757,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Китайская.",
+      "start": 97190,
+      "end": 97690,
+      "confidence": 0.775,
+      "words": [
+        {
+          "text": "Китайская.",
+          "start": 97190,
+          "end": 97690,
+          "confidence": 0.775,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Китайская. Сейчас посмотрю именно сув.",
+      "start": 98370,
+      "end": 103130,
+      "confidence": 0.5677199180000001,
+      "words": [
+        {
+          "text": "Китайская.",
+          "start": 98370,
+          "end": 99450,
+          "confidence": 0.769,
+          "speaker": "A"
+        },
+        {
+          "text": "Сейчас",
+          "start": 100710,
+          "end": 101530,
+          "confidence": 0.2890625,
+          "speaker": "A"
+        },
+        {
+          "text": "посмотрю",
+          "start": 101530,
+          "end": 102310,
+          "confidence": 0.7885742,
+          "speaker": "A"
+        },
+        {
+          "text": "именно",
+          "start": 102310,
+          "end": 102590,
+          "confidence": 0.13696289,
+          "speaker": "A"
+        },
+        {
+          "text": "сув.",
+          "start": 102590,
+          "end": 103130,
+          "confidence": 0.855,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "К сожалению, нет китайцев, СУФ нет.",
+      "start": 109983,
+      "end": 113423,
+      "confidence": 0.5417333966666668,
+      "words": [
+        {
+          "text": "К",
+          "start": 109983,
+          "end": 111163,
+          "confidence": 0.42358398,
+          "speaker": "B"
+        },
+        {
+          "text": "сожалению,",
+          "start": 111163,
+          "end": 111563,
+          "confidence": 0.653,
+          "speaker": "B"
+        },
+        {
+          "text": "нет",
+          "start": 111583,
+          "end": 111963,
+          "confidence": 0.5708008,
+          "speaker": "B"
+        },
+        {
+          "text": "китайцев,",
+          "start": 111963,
+          "end": 112683,
+          "confidence": 0.595,
+          "speaker": "B"
+        },
+        {
+          "text": "СУФ",
+          "start": 112903,
+          "end": 113123,
+          "confidence": 0.5410156,
+          "speaker": "B"
+        },
+        {
+          "text": "нет.",
+          "start": 113123,
+          "end": 113423,
+          "confidence": 0.467,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Вот именно, которые подороже, они СУФ идут. Которые идут подешевле, побюджетнее. Есть китайские вообще шины. У нас, пожалуйста, есть Lansail, Compassail, E-Link. Вот они идут по 7500, 7900, по 9000 вот есть. Но они идут и без обозначения СУФ, просто как Шины. Обычные. Ну, которые идут вот уже подороже, они идут сув.",
+      "start": 113563,
+      "end": 145370,
+      "confidence": 0.781452056346154,
+      "words": [
+        {
+          "text": "Вот",
+          "start": 113563,
+          "end": 113683,
+          "confidence": 0.5698242,
+          "speaker": "A"
+        },
+        {
+          "text": "именно,",
+          "start": 113683,
+          "end": 114383,
+          "confidence": 0.666,
+          "speaker": "A"
+        },
+        {
+          "text": "которые",
+          "start": 114703,
+          "end": 115423,
+          "confidence": 0.8413086,
+          "speaker": "A"
+        },
+        {
+          "text": "подороже,",
+          "start": 115423,
+          "end": 115883,
+          "confidence": 0.762,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 115923,
+          "end": 116083,
+          "confidence": 0.7036133,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ",
+          "start": 116083,
+          "end": 116423,
+          "confidence": 0.87125653,
+          "speaker": "A"
+        },
+        {
+          "text": "идут.",
+          "start": 116423,
+          "end": 116663,
+          "confidence": 0.746,
+          "speaker": "A"
+        },
+        {
+          "text": "Которые",
+          "start": 116783,
+          "end": 117163,
+          "confidence": 0.9354248,
+          "speaker": "A"
+        },
+        {
+          "text": "идут",
+          "start": 117163,
+          "end": 117803,
+          "confidence": 0.88134766,
+          "speaker": "A"
+        },
+        {
+          "text": "подешевле,",
+          "start": 117803,
+          "end": 118463,
+          "confidence": 0.961,
+          "speaker": "A"
+        },
+        {
+          "text": "побюджетнее.",
+          "start": 118563,
+          "end": 119343,
+          "confidence": 0.675,
+          "speaker": "A"
+        },
+        {
+          "text": "Есть",
+          "start": 119543,
+          "end": 119743,
+          "confidence": 0.828125,
+          "speaker": "A"
+        },
+        {
+          "text": "китайские",
+          "start": 119743,
+          "end": 120643,
+          "confidence": 0.9329427,
+          "speaker": "A"
+        },
+        {
+          "text": "вообще",
+          "start": 120643,
+          "end": 120983,
+          "confidence": 0.6542969,
+          "speaker": "A"
+        },
+        {
+          "text": "шины.",
+          "start": 120983,
+          "end": 121383,
+          "confidence": 0.795,
+          "speaker": "A"
+        },
+        {
+          "text": "У",
+          "start": 122063,
+          "end": 122143,
+          "confidence": 0.8808594,
+          "speaker": "A"
+        },
+        {
+          "text": "нас,",
+          "start": 122143,
+          "end": 122283,
+          "confidence": 0.795,
+          "speaker": "A"
+        },
+        {
+          "text": "пожалуйста,",
+          "start": 122743,
+          "end": 122843,
+          "confidence": 0.808,
+          "speaker": "A"
+        },
+        {
+          "text": "есть",
+          "start": 122863,
+          "end": 123103,
+          "confidence": 0.7441406,
+          "speaker": "A"
+        },
+        {
+          "text": "Lansail,",
+          "start": 123103,
+          "end": 123943,
+          "confidence": 0.71,
+          "speaker": "A"
+        },
+        {
+          "text": "Compassail,",
+          "start": 124103,
+          "end": 125023,
+          "confidence": 0.573,
+          "speaker": "A"
+        },
+        {
+          "text": "E-Link.",
+          "start": 126343,
+          "end": 126963,
+          "confidence": 0.744,
+          "speaker": "A"
+        },
+        {
+          "text": "Вот",
+          "start": 127503,
+          "end": 127683,
+          "confidence": 0.88134766,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 127683,
+          "end": 127863,
+          "confidence": 0.7583008,
+          "speaker": "A"
+        },
+        {
+          "text": "идут",
+          "start": 127863,
+          "end": 128143,
+          "confidence": 0.93847656,
+          "speaker": "A"
+        },
+        {
+          "text": "по",
+          "start": 128143,
+          "end": 128423,
+          "confidence": 0.9189453,
+          "speaker": "A"
+        },
+        {
+          "text": "7500,",
+          "start": 128423,
+          "end": 129383,
+          "confidence": 0.808,
+          "speaker": "A"
+        },
+        {
+          "text": "7900,",
+          "start": 129763,
+          "end": 130643,
+          "confidence": 0.801,
+          "speaker": "A"
+        },
+        {
+          "text": "по",
+          "start": 131803,
+          "end": 132163,
+          "confidence": 0.8413086,
+          "speaker": "A"
+        },
+        {
+          "text": "9000",
+          "start": 132163,
+          "end": 133283,
+          "confidence": 0.9470215,
+          "speaker": "A"
+        },
+        {
+          "text": "вот",
+          "start": 133283,
+          "end": 133623,
+          "confidence": 0.7319336,
+          "speaker": "A"
+        },
+        {
+          "text": "есть.",
+          "start": 133623,
+          "end": 134143,
+          "confidence": 0.825,
+          "speaker": "A"
+        },
+        {
+          "text": "Но",
+          "start": 135703,
+          "end": 135883,
+          "confidence": 0.9111328,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 135883,
+          "end": 136063,
+          "confidence": 0.82177734,
+          "speaker": "A"
+        },
+        {
+          "text": "идут",
+          "start": 136063,
+          "end": 136343,
+          "confidence": 0.92993164,
+          "speaker": "A"
+        },
+        {
+          "text": "и",
+          "start": 136343,
+          "end": 136463,
+          "confidence": 0.6376953,
+          "speaker": "A"
+        },
+        {
+          "text": "без",
+          "start": 136463,
+          "end": 136663,
+          "confidence": 0.90283203,
+          "speaker": "A"
+        },
+        {
+          "text": "обозначения",
+          "start": 136663,
+          "end": 137343,
+          "confidence": 0.9277344,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ,",
+          "start": 137343,
+          "end": 137643,
+          "confidence": 0.803,
+          "speaker": "A"
+        },
+        {
+          "text": "просто",
+          "start": 137703,
+          "end": 137983,
+          "confidence": 0.78466797,
+          "speaker": "A"
+        },
+        {
+          "text": "как",
+          "start": 137983,
+          "end": 138323,
+          "confidence": 0.71240234,
+          "speaker": "A"
+        },
+        {
+          "text": "Шины.",
+          "start": 139210,
+          "end": 139630,
+          "confidence": 0.329,
+          "speaker": "A"
+        },
+        {
+          "text": "Обычные.",
+          "start": 139950,
+          "end": 140530,
+          "confidence": 0.892,
+          "speaker": "A"
+        },
+        {
+          "text": "Ну,",
+          "start": 142050,
+          "end": 143030,
+          "confidence": 0.459,
+          "speaker": "A"
+        },
+        {
+          "text": "которые",
+          "start": 143150,
+          "end": 143350,
+          "confidence": 0.8754883,
+          "speaker": "A"
+        },
+        {
+          "text": "идут",
+          "start": 143350,
+          "end": 143630,
+          "confidence": 0.8120117,
+          "speaker": "A"
+        },
+        {
+          "text": "вот",
+          "start": 143630,
+          "end": 143770,
+          "confidence": 0.5136719,
+          "speaker": "A"
+        },
+        {
+          "text": "уже",
+          "start": 143770,
+          "end": 143950,
+          "confidence": 0.7553711,
+          "speaker": "A"
+        },
+        {
+          "text": "подороже,",
+          "start": 143950,
+          "end": 144530,
+          "confidence": 0.762,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 144630,
+          "end": 144730,
+          "confidence": 0.7832031,
+          "speaker": "A"
+        },
+        {
+          "text": "идут",
+          "start": 144730,
+          "end": 145050,
+          "confidence": 0.8911133,
+          "speaker": "A"
+        },
+        {
+          "text": "сув.",
+          "start": 145050,
+          "end": 145370,
+          "confidence": 0.602,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Ну, вот надо сув, чтобы... Чтобы сув, тогда смотрите.",
+      "start": 147510,
+      "end": 151450,
+      "confidence": 0.6204952211111112,
+      "words": [
+        {
+          "text": "Ну,",
+          "start": 147510,
+          "end": 148030,
+          "confidence": 0.385,
+          "speaker": "B"
+        },
+        {
+          "text": "вот",
+          "start": 148150,
+          "end": 148230,
+          "confidence": 0.625,
+          "speaker": "B"
+        },
+        {
+          "text": "надо",
+          "start": 148230,
+          "end": 148390,
+          "confidence": 0.59033203,
+          "speaker": "B"
+        },
+        {
+          "text": "сув,",
+          "start": 148390,
+          "end": 148730,
+          "confidence": 0.643,
+          "speaker": "B"
+        },
+        {
+          "text": "чтобы...",
+          "start": 148950,
+          "end": 149750,
+          "confidence": 0.6948242,
+          "speaker": "B"
+        },
+        {
+          "text": "Чтобы",
+          "start": 149750,
+          "end": 150250,
+          "confidence": 0.58447266,
+          "speaker": "B"
+        },
+        {
+          "text": "сув,",
+          "start": 150250,
+          "end": 150610,
+          "confidence": 0.765,
+          "speaker": "B"
+        },
+        {
+          "text": "тогда",
+          "start": 150730,
+          "end": 150890,
+          "confidence": 0.7988281,
+          "speaker": "B"
+        },
+        {
+          "text": "смотрите.",
+          "start": 150890,
+          "end": 151450,
+          "confidence": 0.498,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Сув есть, это... Самые... Именно... По цене сейчас дойду. Сув, сув, сув. Я смотрела, находила. Вот, да. Гудиэр. Гудиэр есть. Бриджтоун есть. Нет, Брит, что умно, нет, вам целиком надо же комплектом.",
+      "start": 151970,
+      "end": 170388,
+      "confidence": 0.717857491875,
+      "words": [
+        {
+          "text": "Сув",
+          "start": 151970,
+          "end": 152330,
+          "confidence": 0.9506836,
+          "speaker": "A"
+        },
+        {
+          "text": "есть,",
+          "start": 152330,
+          "end": 152770,
+          "confidence": 0.522,
+          "speaker": "A"
+        },
+        {
+          "text": "это...",
+          "start": 152990,
+          "end": 154250,
+          "confidence": 0.6298828,
+          "speaker": "A"
+        },
+        {
+          "text": "Самые...",
+          "start": 154250,
+          "end": 156950,
+          "confidence": 0.7491048,
+          "speaker": "A"
+        },
+        {
+          "text": "Именно...",
+          "start": 156950,
+          "end": 158890,
+          "confidence": 0.83251953,
+          "speaker": "A"
+        },
+        {
+          "text": "По",
+          "start": 158890,
+          "end": 159050,
+          "confidence": 0.6533203,
+          "speaker": "A"
+        },
+        {
+          "text": "цене",
+          "start": 159050,
+          "end": 159390,
+          "confidence": 0.8347168,
+          "speaker": "A"
+        },
+        {
+          "text": "сейчас",
+          "start": 159390,
+          "end": 159670,
+          "confidence": 0.4152832,
+          "speaker": "A"
+        },
+        {
+          "text": "дойду.",
+          "start": 159670,
+          "end": 160410,
+          "confidence": 0.58,
+          "speaker": "A"
+        },
+        {
+          "text": "Сув,",
+          "start": 160710,
+          "end": 160970,
+          "confidence": 0.865,
+          "speaker": "A"
+        },
+        {
+          "text": "сув,",
+          "start": 161150,
+          "end": 161250,
+          "confidence": 0.881,
+          "speaker": "A"
+        },
+        {
+          "text": "сув.",
+          "start": 161410,
+          "end": 161610,
+          "confidence": 0.598,
+          "speaker": "A"
+        },
+        {
+          "text": "Я",
+          "start": 161710,
+          "end": 161830,
+          "confidence": 0.86083984,
+          "speaker": "A"
+        },
+        {
+          "text": "смотрела,",
+          "start": 161830,
+          "end": 162270,
+          "confidence": 0.785,
+          "speaker": "A"
+        },
+        {
+          "text": "находила.",
+          "start": 162330,
+          "end": 162870,
+          "confidence": 0.85,
+          "speaker": "A"
+        },
+        {
+          "text": "Вот,",
+          "start": 162990,
+          "end": 163170,
+          "confidence": 0.681,
+          "speaker": "A"
+        },
+        {
+          "text": "да.",
+          "start": 163230,
+          "end": 163350,
+          "confidence": 0.701,
+          "speaker": "A"
+        },
+        {
+          "text": "Гудиэр.",
+          "start": 163470,
+          "end": 164050,
+          "confidence": 0.801,
+          "speaker": "A"
+        },
+        {
+          "text": "Гудиэр",
+          "start": 164710,
+          "end": 165430,
+          "confidence": 0.9536133,
+          "speaker": "A"
+        },
+        {
+          "text": "есть.",
+          "start": 165430,
+          "end": 165810,
+          "confidence": 0.691,
+          "speaker": "A"
+        },
+        {
+          "text": "Бриджтоун",
+          "start": 166190,
+          "end": 166970,
+          "confidence": 0.8133545,
+          "speaker": "A"
+        },
+        {
+          "text": "есть.",
+          "start": 166970,
+          "end": 167370,
+          "confidence": 0.835,
+          "speaker": "A"
+        },
+        {
+          "text": "Нет,",
+          "start": 167628,
+          "end": 167828,
+          "confidence": 0.296,
+          "speaker": "A"
+        },
+        {
+          "text": "Брит,",
+          "start": 167888,
+          "end": 168068,
+          "confidence": 0.581,
+          "speaker": "A"
+        },
+        {
+          "text": "что",
+          "start": 168168,
+          "end": 168308,
+          "confidence": 0.80322266,
+          "speaker": "A"
+        },
+        {
+          "text": "умно,",
+          "start": 168308,
+          "end": 168588,
+          "confidence": 0.385,
+          "speaker": "A"
+        },
+        {
+          "text": "нет,",
+          "start": 168668,
+          "end": 168808,
+          "confidence": 0.676,
+          "speaker": "A"
+        },
+        {
+          "text": "вам",
+          "start": 168868,
+          "end": 168968,
+          "confidence": 0.66308594,
+          "speaker": "A"
+        },
+        {
+          "text": "целиком",
+          "start": 168968,
+          "end": 169368,
+          "confidence": 0.92626953,
+          "speaker": "A"
+        },
+        {
+          "text": "надо",
+          "start": 169368,
+          "end": 169548,
+          "confidence": 0.63427734,
+          "speaker": "A"
+        },
+        {
+          "text": "же",
+          "start": 169548,
+          "end": 169688,
+          "confidence": 0.8222656,
+          "speaker": "A"
+        },
+        {
+          "text": "комплектом.",
+          "start": 169688,
+          "end": 170388,
+          "confidence": 0.701,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Угу.",
+      "start": 171128,
+      "end": 171428,
+      "confidence": 0.691,
+      "words": [
+        {
+          "text": "Угу.",
+          "start": 171128,
+          "end": 171428,
+          "confidence": 0.691,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Сейчас посмотрела, они по одной штуке остались. Есть оно Кенха Капелита, СУФ, по 16,510. Затем есть десятка, 17,680, автограф, тоже СУФ идёт. Вот вот эти шины, они идут СУФ, которые я вам сказала.",
+      "start": 171568,
+      "end": 194628,
+      "confidence": 0.7670358469696968,
+      "words": [
+        {
+          "text": "Сейчас",
+          "start": 171568,
+          "end": 171888,
+          "confidence": 0.8203125,
+          "speaker": "A"
+        },
+        {
+          "text": "посмотрела,",
+          "start": 171888,
+          "end": 172628,
+          "confidence": 0.852,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 172708,
+          "end": 172868,
+          "confidence": 0.7841797,
+          "speaker": "A"
+        },
+        {
+          "text": "по",
+          "start": 172868,
+          "end": 173068,
+          "confidence": 0.9042969,
+          "speaker": "A"
+        },
+        {
+          "text": "одной",
+          "start": 173068,
+          "end": 173388,
+          "confidence": 0.8227539,
+          "speaker": "A"
+        },
+        {
+          "text": "штуке",
+          "start": 173388,
+          "end": 173868,
+          "confidence": 0.88411456,
+          "speaker": "A"
+        },
+        {
+          "text": "остались.",
+          "start": 173868,
+          "end": 174548,
+          "confidence": 0.842,
+          "speaker": "A"
+        },
+        {
+          "text": "Есть",
+          "start": 175048,
+          "end": 175288,
+          "confidence": 0.7910156,
+          "speaker": "A"
+        },
+        {
+          "text": "оно",
+          "start": 175288,
+          "end": 175668,
+          "confidence": 0.32104492,
+          "speaker": "A"
+        },
+        {
+          "text": "Кенха",
+          "start": 175668,
+          "end": 176228,
+          "confidence": 0.62939453,
+          "speaker": "A"
+        },
+        {
+          "text": "Капелита,",
+          "start": 176228,
+          "end": 177028,
+          "confidence": 0.652,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ,",
+          "start": 177348,
+          "end": 177648,
+          "confidence": 0.592,
+          "speaker": "A"
+        },
+        {
+          "text": "по",
+          "start": 178168,
+          "end": 178428,
+          "confidence": 0.78759766,
+          "speaker": "A"
+        },
+        {
+          "text": "16,510.",
+          "start": 178428,
+          "end": 179908,
+          "confidence": 0.765,
+          "speaker": "A"
+        },
+        {
+          "text": "Затем",
+          "start": 181248,
+          "end": 181928,
+          "confidence": 0.91015625,
+          "speaker": "A"
+        },
+        {
+          "text": "есть",
+          "start": 181928,
+          "end": 182448,
+          "confidence": 0.74121094,
+          "speaker": "A"
+        },
+        {
+          "text": "десятка,",
+          "start": 182448,
+          "end": 183588,
+          "confidence": 0.6,
+          "speaker": "A"
+        },
+        {
+          "text": "17,680,",
+          "start": 183688,
+          "end": 185468,
+          "confidence": 0.736,
+          "speaker": "A"
+        },
+        {
+          "text": "автограф,",
+          "start": 186208,
+          "end": 187008,
+          "confidence": 0.728,
+          "speaker": "A"
+        },
+        {
+          "text": "тоже",
+          "start": 187968,
+          "end": 188228,
+          "confidence": 0.7871094,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ",
+          "start": 188228,
+          "end": 188648,
+          "confidence": 0.9506836,
+          "speaker": "A"
+        },
+        {
+          "text": "идёт.",
+          "start": 188648,
+          "end": 189088,
+          "confidence": 0.72,
+          "speaker": "A"
+        },
+        {
+          "text": "Вот",
+          "start": 191468,
+          "end": 191968,
+          "confidence": 0.6772461,
+          "speaker": "A"
+        },
+        {
+          "text": "вот",
+          "start": 191968,
+          "end": 192228,
+          "confidence": 0.36889648,
+          "speaker": "A"
+        },
+        {
+          "text": "эти",
+          "start": 192228,
+          "end": 192348,
+          "confidence": 0.8930664,
+          "speaker": "A"
+        },
+        {
+          "text": "шины,",
+          "start": 192348,
+          "end": 192628,
+          "confidence": 0.843,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 192728,
+          "end": 192828,
+          "confidence": 0.8339844,
+          "speaker": "A"
+        },
+        {
+          "text": "идут",
+          "start": 192828,
+          "end": 193088,
+          "confidence": 0.84887695,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ,",
+          "start": 193088,
+          "end": 193428,
+          "confidence": 0.898,
+          "speaker": "A"
+        },
+        {
+          "text": "которые",
+          "start": 193708,
+          "end": 193968,
+          "confidence": 0.7104492,
+          "speaker": "A"
+        },
+        {
+          "text": "я",
+          "start": 193968,
+          "end": 194068,
+          "confidence": 0.9033203,
+          "speaker": "A"
+        },
+        {
+          "text": "вам",
+          "start": 194068,
+          "end": 194188,
+          "confidence": 0.83447266,
+          "speaker": "A"
+        },
+        {
+          "text": "сказала.",
+          "start": 194188,
+          "end": 194628,
+          "confidence": 0.88,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Автограф который? Они сколько есть?",
+      "start": 194748,
+      "end": 196948,
+      "confidence": 0.733595066,
+      "words": [
+        {
+          "text": "Автограф",
+          "start": 194748,
+          "end": 195188,
+          "confidence": 0.93375653,
+          "speaker": "B"
+        },
+        {
+          "text": "который?",
+          "start": 195188,
+          "end": 195548,
+          "confidence": 0.527,
+          "speaker": "B"
+        },
+        {
+          "text": "Они",
+          "start": 196268,
+          "end": 196508,
+          "confidence": 0.6621094,
+          "speaker": "B"
+        },
+        {
+          "text": "сколько",
+          "start": 196508,
+          "end": 196728,
+          "confidence": 0.9121094,
+          "speaker": "B"
+        },
+        {
+          "text": "есть?",
+          "start": 196728,
+          "end": 196948,
+          "confidence": 0.633,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Автограф получается это новиночка идет 18740 автограф 9 сув нагрузка 103 т здесь идет у них уже идет конечно у них и шипы особым способом установлены и эластерон добавлен новейший по новейшим технологиям сделаны как.",
+      "start": 197277,
+      "end": 219897,
+      "confidence": 0.7312139608571429,
+      "words": [
+        {
+          "text": "Автограф",
+          "start": 197277,
+          "end": 197957,
+          "confidence": 0.7910156,
+          "speaker": "A"
+        },
+        {
+          "text": "получается",
+          "start": 197957,
+          "end": 198637,
+          "confidence": 0.5864258,
+          "speaker": "A"
+        },
+        {
+          "text": "это",
+          "start": 198637,
+          "end": 198877,
+          "confidence": 0.1932373,
+          "speaker": "A"
+        },
+        {
+          "text": "новиночка",
+          "start": 198877,
+          "end": 199997,
+          "confidence": 0.88500977,
+          "speaker": "A"
+        },
+        {
+          "text": "идет",
+          "start": 199997,
+          "end": 200337,
+          "confidence": 0.5136719,
+          "speaker": "A"
+        },
+        {
+          "text": "18740",
+          "start": 200337,
+          "end": 202497,
+          "confidence": 0.68310547,
+          "speaker": "A"
+        },
+        {
+          "text": "автограф",
+          "start": 202497,
+          "end": 203817,
+          "confidence": 0.75252277,
+          "speaker": "A"
+        },
+        {
+          "text": "9",
+          "start": 203817,
+          "end": 204377,
+          "confidence": 0.8515625,
+          "speaker": "A"
+        },
+        {
+          "text": "сув",
+          "start": 204377,
+          "end": 205077,
+          "confidence": 0.3145752,
+          "speaker": "A"
+        },
+        {
+          "text": "нагрузка",
+          "start": 205077,
+          "end": 206317,
+          "confidence": 0.86783856,
+          "speaker": "A"
+        },
+        {
+          "text": "103",
+          "start": 206317,
+          "end": 206697,
+          "confidence": 0.7348633,
+          "speaker": "A"
+        },
+        {
+          "text": "т",
+          "start": 206697,
+          "end": 206997,
+          "confidence": 0.2479248,
+          "speaker": "A"
+        },
+        {
+          "text": "здесь",
+          "start": 206997,
+          "end": 207337,
+          "confidence": 0.8076172,
+          "speaker": "A"
+        },
+        {
+          "text": "идет",
+          "start": 207337,
+          "end": 207777,
+          "confidence": 0.8413086,
+          "speaker": "A"
+        },
+        {
+          "text": "у",
+          "start": 207777,
+          "end": 210237,
+          "confidence": 0.48754883,
+          "speaker": "A"
+        },
+        {
+          "text": "них",
+          "start": 210237,
+          "end": 210397,
+          "confidence": 0.84765625,
+          "speaker": "A"
+        },
+        {
+          "text": "уже",
+          "start": 210397,
+          "end": 210597,
+          "confidence": 0.7529297,
+          "speaker": "A"
+        },
+        {
+          "text": "идет",
+          "start": 210597,
+          "end": 210897,
+          "confidence": 0.8647461,
+          "speaker": "A"
+        },
+        {
+          "text": "конечно",
+          "start": 210897,
+          "end": 211277,
+          "confidence": 0.70751953,
+          "speaker": "A"
+        },
+        {
+          "text": "у",
+          "start": 211277,
+          "end": 211457,
+          "confidence": 0.75390625,
+          "speaker": "A"
+        },
+        {
+          "text": "них",
+          "start": 211457,
+          "end": 211577,
+          "confidence": 0.8745117,
+          "speaker": "A"
+        },
+        {
+          "text": "и",
+          "start": 211577,
+          "end": 211797,
+          "confidence": 0.71728516,
+          "speaker": "A"
+        },
+        {
+          "text": "шипы",
+          "start": 211797,
+          "end": 212117,
+          "confidence": 0.9353841,
+          "speaker": "A"
+        },
+        {
+          "text": "особым",
+          "start": 212117,
+          "end": 212497,
+          "confidence": 0.74471027,
+          "speaker": "A"
+        },
+        {
+          "text": "способом",
+          "start": 212497,
+          "end": 213057,
+          "confidence": 0.935791,
+          "speaker": "A"
+        },
+        {
+          "text": "установлены",
+          "start": 213057,
+          "end": 214017,
+          "confidence": 0.85335284,
+          "speaker": "A"
+        },
+        {
+          "text": "и",
+          "start": 214017,
+          "end": 214437,
+          "confidence": 0.88427734,
+          "speaker": "A"
+        },
+        {
+          "text": "эластерон",
+          "start": 214437,
+          "end": 215337,
+          "confidence": 0.84228516,
+          "speaker": "A"
+        },
+        {
+          "text": "добавлен",
+          "start": 215337,
+          "end": 215977,
+          "confidence": 0.8984375,
+          "speaker": "A"
+        },
+        {
+          "text": "новейший",
+          "start": 215977,
+          "end": 217057,
+          "confidence": 0.7820638,
+          "speaker": "A"
+        },
+        {
+          "text": "по",
+          "start": 217057,
+          "end": 217337,
+          "confidence": 0.7866211,
+          "speaker": "A"
+        },
+        {
+          "text": "новейшим",
+          "start": 217337,
+          "end": 217697,
+          "confidence": 0.94873047,
+          "speaker": "A"
+        },
+        {
+          "text": "технологиям",
+          "start": 217697,
+          "end": 218337,
+          "confidence": 0.8808594,
+          "speaker": "A"
+        },
+        {
+          "text": "сделаны",
+          "start": 218337,
+          "end": 218977,
+          "confidence": 0.71899414,
+          "speaker": "A"
+        },
+        {
+          "text": "как.",
+          "start": 218977,
+          "end": 219897,
+          "confidence": 0.30419922,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "По бензине до 15 скажем по 15.",
+      "start": 219897,
+      "end": 225057,
+      "confidence": 0.6313411228571428,
+      "words": [
+        {
+          "text": "По",
+          "start": 219897,
+          "end": 220497,
+          "confidence": 0.22155762,
+          "speaker": "B"
+        },
+        {
+          "text": "бензине",
+          "start": 220497,
+          "end": 221037,
+          "confidence": 0.4622345,
+          "speaker": "B"
+        },
+        {
+          "text": "до",
+          "start": 221037,
+          "end": 222117,
+          "confidence": 0.5654297,
+          "speaker": "B"
+        },
+        {
+          "text": "15",
+          "start": 222117,
+          "end": 222477,
+          "confidence": 0.8183594,
+          "speaker": "B"
+        },
+        {
+          "text": "скажем",
+          "start": 222477,
+          "end": 224097,
+          "confidence": 0.67993164,
+          "speaker": "B"
+        },
+        {
+          "text": "по",
+          "start": 224097,
+          "end": 224517,
+          "confidence": 0.7885742,
+          "speaker": "B"
+        },
+        {
+          "text": "15.",
+          "start": 224517,
+          "end": 225057,
+          "confidence": 0.8833008,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Ну вот, смотрите, до 15-ти, к сожалению, вижу только СУФ, ГУДИЕР, 15-ти, прошу прощения, я же сказала, их нет, да, БРЕДСТОУН и ГУДИЕР, их нет. Могу только тогда, если хотите БРЕДСТОУН, можете, вот они 15-ти, 690, СУФ, усиленные, у нас 3 штуки, взято еще одну купить, если желаете. Но есть, допустим, вот по 16-ти, 510, ХОКОПЕЛИТА, 9-ка, они есть с комплектом. шиномонтаж подарок здесь идет и получается выгода состоит из комплекта 3350.",
+      "start": 226420,
+      "end": 263327,
+      "confidence": 0.7222984759166666,
+      "words": [
+        {
+          "text": "Ну",
+          "start": 226420,
+          "end": 226660,
+          "confidence": 0.048431396,
+          "speaker": "A"
+        },
+        {
+          "text": "вот,",
+          "start": 226660,
+          "end": 226880,
+          "confidence": 0.485,
+          "speaker": "A"
+        },
+        {
+          "text": "смотрите,",
+          "start": 227140,
+          "end": 227540,
+          "confidence": 0.566,
+          "speaker": "A"
+        },
+        {
+          "text": "до",
+          "start": 228020,
+          "end": 228200,
+          "confidence": 0.89746094,
+          "speaker": "A"
+        },
+        {
+          "text": "15-ти,",
+          "start": 228200,
+          "end": 228920,
+          "confidence": 0.645,
+          "speaker": "A"
+        },
+        {
+          "text": "к",
+          "start": 228980,
+          "end": 229080,
+          "confidence": 0.90283203,
+          "speaker": "A"
+        },
+        {
+          "text": "сожалению,",
+          "start": 229080,
+          "end": 229480,
+          "confidence": 0.806,
+          "speaker": "A"
+        },
+        {
+          "text": "вижу",
+          "start": 230880,
+          "end": 231200,
+          "confidence": 0.79003906,
+          "speaker": "A"
+        },
+        {
+          "text": "только",
+          "start": 231200,
+          "end": 231780,
+          "confidence": 0.86621094,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ,",
+          "start": 231780,
+          "end": 232680,
+          "confidence": 0.378,
+          "speaker": "A"
+        },
+        {
+          "text": "ГУДИЕР,",
+          "start": 234060,
+          "end": 234660,
+          "confidence": 0.588,
+          "speaker": "A"
+        },
+        {
+          "text": "15-ти,",
+          "start": 234840,
+          "end": 235600,
+          "confidence": 0.585,
+          "speaker": "A"
+        },
+        {
+          "text": "прошу",
+          "start": 236040,
+          "end": 236500,
+          "confidence": 0.84765625,
+          "speaker": "A"
+        },
+        {
+          "text": "прощения,",
+          "start": 236500,
+          "end": 236860,
+          "confidence": 0.915,
+          "speaker": "A"
+        },
+        {
+          "text": "я",
+          "start": 236900,
+          "end": 236980,
+          "confidence": 0.86279297,
+          "speaker": "A"
+        },
+        {
+          "text": "же",
+          "start": 236980,
+          "end": 237100,
+          "confidence": 0.90625,
+          "speaker": "A"
+        },
+        {
+          "text": "сказала,",
+          "start": 237100,
+          "end": 237340,
+          "confidence": 0.624,
+          "speaker": "A"
+        },
+        {
+          "text": "их",
+          "start": 237460,
+          "end": 237540,
+          "confidence": 0.69970703,
+          "speaker": "A"
+        },
+        {
+          "text": "нет,",
+          "start": 237540,
+          "end": 237760,
+          "confidence": 0.792,
+          "speaker": "A"
+        },
+        {
+          "text": "да,",
+          "start": 237900,
+          "end": 237940,
+          "confidence": 0.712,
+          "speaker": "A"
+        },
+        {
+          "text": "БРЕДСТОУН",
+          "start": 238140,
+          "end": 238560,
+          "confidence": 0.6861049,
+          "speaker": "A"
+        },
+        {
+          "text": "и",
+          "start": 238560,
+          "end": 238640,
+          "confidence": 0.77685547,
+          "speaker": "A"
+        },
+        {
+          "text": "ГУДИЕР,",
+          "start": 238640,
+          "end": 239100,
+          "confidence": 0.772,
+          "speaker": "A"
+        },
+        {
+          "text": "их",
+          "start": 239180,
+          "end": 239340,
+          "confidence": 0.86816406,
+          "speaker": "A"
+        },
+        {
+          "text": "нет.",
+          "start": 239340,
+          "end": 239880,
+          "confidence": 0.821,
+          "speaker": "A"
+        },
+        {
+          "text": "Могу",
+          "start": 240740,
+          "end": 241020,
+          "confidence": 0.95198566,
+          "speaker": "A"
+        },
+        {
+          "text": "только",
+          "start": 241020,
+          "end": 241240,
+          "confidence": 0.6484375,
+          "speaker": "A"
+        },
+        {
+          "text": "тогда,",
+          "start": 241240,
+          "end": 241480,
+          "confidence": 0.886,
+          "speaker": "A"
+        },
+        {
+          "text": "если",
+          "start": 241600,
+          "end": 241640,
+          "confidence": 0.80908203,
+          "speaker": "A"
+        },
+        {
+          "text": "хотите",
+          "start": 241640,
+          "end": 242000,
+          "confidence": 0.84277344,
+          "speaker": "A"
+        },
+        {
+          "text": "БРЕДСТОУН,",
+          "start": 242000,
+          "end": 242580,
+          "confidence": 0.903,
+          "speaker": "A"
+        },
+        {
+          "text": "можете,",
+          "start": 242620,
+          "end": 242880,
+          "confidence": 0.577,
+          "speaker": "A"
+        },
+        {
+          "text": "вот",
+          "start": 243000,
+          "end": 243080,
+          "confidence": 0.8251953,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 243080,
+          "end": 243220,
+          "confidence": 0.69433594,
+          "speaker": "A"
+        },
+        {
+          "text": "15-ти,",
+          "start": 243220,
+          "end": 243760,
+          "confidence": 0.567,
+          "speaker": "A"
+        },
+        {
+          "text": "690,",
+          "start": 243800,
+          "end": 244500,
+          "confidence": 0.79,
+          "speaker": "A"
+        },
+        {
+          "text": "СУФ,",
+          "start": 244780,
+          "end": 245140,
+          "confidence": 0.753,
+          "speaker": "A"
+        },
+        {
+          "text": "усиленные,",
+          "start": 245180,
+          "end": 245760,
+          "confidence": 0.759,
+          "speaker": "A"
+        },
+        {
+          "text": "у",
+          "start": 246180,
+          "end": 246300,
+          "confidence": 0.8300781,
+          "speaker": "A"
+        },
+        {
+          "text": "нас",
+          "start": 246300,
+          "end": 246340,
+          "confidence": 0.82958984,
+          "speaker": "A"
+        },
+        {
+          "text": "3",
+          "start": 246340,
+          "end": 246520,
+          "confidence": 0.52246094,
+          "speaker": "A"
+        },
+        {
+          "text": "штуки,",
+          "start": 246520,
+          "end": 246880,
+          "confidence": 0.867,
+          "speaker": "A"
+        },
+        {
+          "text": "взято",
+          "start": 246960,
+          "end": 247200,
+          "confidence": 0.7109375,
+          "speaker": "A"
+        },
+        {
+          "text": "еще",
+          "start": 247200,
+          "end": 247400,
+          "confidence": 0.52441406,
+          "speaker": "A"
+        },
+        {
+          "text": "одну",
+          "start": 247400,
+          "end": 247680,
+          "confidence": 0.58935547,
+          "speaker": "A"
+        },
+        {
+          "text": "купить,",
+          "start": 247680,
+          "end": 248220,
+          "confidence": 0.924,
+          "speaker": "A"
+        },
+        {
+          "text": "если",
+          "start": 248480,
+          "end": 248640,
+          "confidence": 0.79296875,
+          "speaker": "A"
+        },
+        {
+          "text": "желаете.",
+          "start": 248640,
+          "end": 249140,
+          "confidence": 0.883,
+          "speaker": "A"
+        },
+        {
+          "text": "Но",
+          "start": 250480,
+          "end": 250640,
+          "confidence": 0.7915039,
+          "speaker": "A"
+        },
+        {
+          "text": "есть,",
+          "start": 250640,
+          "end": 250840,
+          "confidence": 0.796,
+          "speaker": "A"
+        },
+        {
+          "text": "допустим,",
+          "start": 250960,
+          "end": 251240,
+          "confidence": 0.953,
+          "speaker": "A"
+        },
+        {
+          "text": "вот",
+          "start": 251300,
+          "end": 251460,
+          "confidence": 0.7524414,
+          "speaker": "A"
+        },
+        {
+          "text": "по",
+          "start": 251460,
+          "end": 251660,
+          "confidence": 0.55615234,
+          "speaker": "A"
+        },
+        {
+          "text": "16-ти,",
+          "start": 251660,
+          "end": 252260,
+          "confidence": 0.772,
+          "speaker": "A"
+        },
+        {
+          "text": "510,",
+          "start": 252300,
+          "end": 252840,
+          "confidence": 0.706,
+          "speaker": "A"
+        },
+        {
+          "text": "ХОКОПЕЛИТА,",
+          "start": 253020,
+          "end": 253640,
+          "confidence": 0.68,
+          "speaker": "A"
+        },
+        {
+          "text": "9-ка,",
+          "start": 253720,
+          "end": 254200,
+          "confidence": 0.717,
+          "speaker": "A"
+        },
+        {
+          "text": "они",
+          "start": 254380,
+          "end": 254620,
+          "confidence": 0.85058594,
+          "speaker": "A"
+        },
+        {
+          "text": "есть",
+          "start": 254620,
+          "end": 254860,
+          "confidence": 0.8120117,
+          "speaker": "A"
+        },
+        {
+          "text": "с",
+          "start": 254860,
+          "end": 254960,
+          "confidence": 0.7910156,
+          "speaker": "A"
+        },
+        {
+          "text": "комплектом.",
+          "start": 254960,
+          "end": 255580,
+          "confidence": 0.876,
+          "speaker": "A"
+        },
+        {
+          "text": "шиномонтаж",
+          "start": 255867,
+          "end": 256487,
+          "confidence": 0.78551227,
+          "speaker": "A"
+        },
+        {
+          "text": "подарок",
+          "start": 256487,
+          "end": 257007,
+          "confidence": 0.597229,
+          "speaker": "A"
+        },
+        {
+          "text": "здесь",
+          "start": 257007,
+          "end": 257227,
+          "confidence": 0.53027344,
+          "speaker": "A"
+        },
+        {
+          "text": "идет",
+          "start": 257227,
+          "end": 257607,
+          "confidence": 0.5654297,
+          "speaker": "A"
+        },
+        {
+          "text": "и",
+          "start": 257607,
+          "end": 258547,
+          "confidence": 0.58251953,
+          "speaker": "A"
+        },
+        {
+          "text": "получается",
+          "start": 258547,
+          "end": 260327,
+          "confidence": 0.23425293,
+          "speaker": "A"
+        },
+        {
+          "text": "выгода",
+          "start": 260327,
+          "end": 260847,
+          "confidence": 0.8826497,
+          "speaker": "A"
+        },
+        {
+          "text": "состоит",
+          "start": 260847,
+          "end": 261267,
+          "confidence": 0.58166504,
+          "speaker": "A"
+        },
+        {
+          "text": "из",
+          "start": 261267,
+          "end": 261567,
+          "confidence": 0.4802246,
+          "speaker": "A"
+        },
+        {
+          "text": "комплекта",
+          "start": 261567,
+          "end": 262087,
+          "confidence": 0.8929036,
+          "speaker": "A"
+        },
+        {
+          "text": "3350.",
+          "start": 262087,
+          "end": 263327,
+          "confidence": 0.497,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Если желаете могу вам их в резерв.",
+      "start": 265227,
+      "end": 270467,
+      "confidence": 0.6810477085714286,
+      "words": [
+        {
+          "text": "Если",
+          "start": 265227,
+          "end": 267727,
+          "confidence": 0.1105957,
+          "speaker": "B"
+        },
+        {
+          "text": "желаете",
+          "start": 267727,
+          "end": 269267,
+          "confidence": 0.75561523,
+          "speaker": "B"
+        },
+        {
+          "text": "могу",
+          "start": 269267,
+          "end": 269547,
+          "confidence": 0.58691406,
+          "speaker": "B"
+        },
+        {
+          "text": "вам",
+          "start": 269547,
+          "end": 269767,
+          "confidence": 0.67041016,
+          "speaker": "B"
+        },
+        {
+          "text": "их",
+          "start": 269767,
+          "end": 269927,
+          "confidence": 0.8198242,
+          "speaker": "B"
+        },
+        {
+          "text": "в",
+          "start": 269927,
+          "end": 270147,
+          "confidence": 0.87841797,
+          "speaker": "B"
+        },
+        {
+          "text": "резерв.",
+          "start": 270147,
+          "end": 270467,
+          "confidence": 0.94555664,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Поставить потому что тоже могут уйти что будет потом одна две штуки. И у нас также есть рассрочка если желаете на три месяца через теньков без переплаты без первоначального взрослого.",
+      "start": 270467,
+      "end": 284927,
+      "confidence": 0.7584631983333332,
+      "words": [
+        {
+          "text": "Поставить",
+          "start": 270467,
+          "end": 271007,
+          "confidence": 0.8647461,
+          "speaker": "A"
+        },
+        {
+          "text": "потому",
+          "start": 271007,
+          "end": 271287,
+          "confidence": 0.5307617,
+          "speaker": "A"
+        },
+        {
+          "text": "что",
+          "start": 271287,
+          "end": 271447,
+          "confidence": 0.7739258,
+          "speaker": "A"
+        },
+        {
+          "text": "тоже",
+          "start": 271447,
+          "end": 271707,
+          "confidence": 0.7050781,
+          "speaker": "A"
+        },
+        {
+          "text": "могут",
+          "start": 271707,
+          "end": 272007,
+          "confidence": 0.9277344,
+          "speaker": "A"
+        },
+        {
+          "text": "уйти",
+          "start": 272007,
+          "end": 272267,
+          "confidence": 0.96158856,
+          "speaker": "A"
+        },
+        {
+          "text": "что",
+          "start": 272267,
+          "end": 272487,
+          "confidence": 0.64697266,
+          "speaker": "A"
+        },
+        {
+          "text": "будет",
+          "start": 272487,
+          "end": 272727,
+          "confidence": 0.74658203,
+          "speaker": "A"
+        },
+        {
+          "text": "потом",
+          "start": 272727,
+          "end": 273027,
+          "confidence": 0.7763672,
+          "speaker": "A"
+        },
+        {
+          "text": "одна",
+          "start": 273027,
+          "end": 273327,
+          "confidence": 0.5527344,
+          "speaker": "A"
+        },
+        {
+          "text": "две",
+          "start": 273327,
+          "end": 273567,
+          "confidence": 0.44995117,
+          "speaker": "A"
+        },
+        {
+          "text": "штуки.",
+          "start": 273567,
+          "end": 274067,
+          "confidence": 0.791,
+          "speaker": "A"
+        },
+        {
+          "text": "И",
+          "start": 274827,
+          "end": 276027,
+          "confidence": 0.26831055,
+          "speaker": "A"
+        },
+        {
+          "text": "у",
+          "start": 276027,
+          "end": 277767,
+          "confidence": 0.8876953,
+          "speaker": "A"
+        },
+        {
+          "text": "нас",
+          "start": 277767,
+          "end": 277887,
+          "confidence": 0.8544922,
+          "speaker": "A"
+        },
+        {
+          "text": "также",
+          "start": 277887,
+          "end": 278147,
+          "confidence": 0.70996094,
+          "speaker": "A"
+        },
+        {
+          "text": "есть",
+          "start": 278147,
+          "end": 278427,
+          "confidence": 0.7890625,
+          "speaker": "A"
+        },
+        {
+          "text": "рассрочка",
+          "start": 278427,
+          "end": 279047,
+          "confidence": 0.9248047,
+          "speaker": "A"
+        },
+        {
+          "text": "если",
+          "start": 279047,
+          "end": 279247,
+          "confidence": 0.671875,
+          "speaker": "A"
+        },
+        {
+          "text": "желаете",
+          "start": 279247,
+          "end": 279807,
+          "confidence": 0.828125,
+          "speaker": "A"
+        },
+        {
+          "text": "на",
+          "start": 279807,
+          "end": 280467,
+          "confidence": 0.78222656,
+          "speaker": "A"
+        },
+        {
+          "text": "три",
+          "start": 280467,
+          "end": 280747,
+          "confidence": 0.6689453,
+          "speaker": "A"
+        },
+        {
+          "text": "месяца",
+          "start": 280747,
+          "end": 281167,
+          "confidence": 0.95214844,
+          "speaker": "A"
+        },
+        {
+          "text": "через",
+          "start": 281167,
+          "end": 281547,
+          "confidence": 0.85058594,
+          "speaker": "A"
+        },
+        {
+          "text": "теньков",
+          "start": 281547,
+          "end": 282207,
+          "confidence": 0.5616862,
+          "speaker": "A"
+        },
+        {
+          "text": "без",
+          "start": 282207,
+          "end": 282567,
+          "confidence": 0.8417969,
+          "speaker": "A"
+        },
+        {
+          "text": "переплаты",
+          "start": 282567,
+          "end": 283267,
+          "confidence": 0.9472656,
+          "speaker": "A"
+        },
+        {
+          "text": "без",
+          "start": 283267,
+          "end": 283507,
+          "confidence": 0.6333008,
+          "speaker": "A"
+        },
+        {
+          "text": "первоначального",
+          "start": 283507,
+          "end": 284427,
+          "confidence": 0.9511719,
+          "speaker": "A"
+        },
+        {
+          "text": "взрослого.",
+          "start": 284427,
+          "end": 284927,
+          "confidence": 0.903,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Не желаете в рассрочку? Нет, нет.",
+      "start": 286208,
+      "end": 290548,
+      "confidence": 0.5164991866666666,
+      "words": [
+        {
+          "text": "Не",
+          "start": 286208,
+          "end": 288528,
+          "confidence": 0.03894043,
+          "speaker": "B"
+        },
+        {
+          "text": "желаете",
+          "start": 288528,
+          "end": 288888,
+          "confidence": 0.79589844,
+          "speaker": "B"
+        },
+        {
+          "text": "в",
+          "start": 288888,
+          "end": 289028,
+          "confidence": 0.16015625,
+          "speaker": "B"
+        },
+        {
+          "text": "рассрочку?",
+          "start": 289028,
+          "end": 289508,
+          "confidence": 0.819,
+          "speaker": "B"
+        },
+        {
+          "text": "Нет,",
+          "start": 289988,
+          "end": 290228,
+          "confidence": 0.489,
+          "speaker": "B"
+        },
+        {
+          "text": "нет.",
+          "start": 290308,
+          "end": 290548,
+          "confidence": 0.796,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Хорошо, я вас поняла.",
+      "start": 292208,
+      "end": 294328,
+      "confidence": 0.7560844725,
+      "words": [
+        {
+          "text": "Хорошо,",
+          "start": 292208,
+          "end": 293608,
+          "confidence": 0.744,
+          "speaker": "A"
+        },
+        {
+          "text": "я",
+          "start": 293748,
+          "end": 293808,
+          "confidence": 0.89453125,
+          "speaker": "A"
+        },
+        {
+          "text": "вас",
+          "start": 293808,
+          "end": 293988,
+          "confidence": 0.47680664,
+          "speaker": "A"
+        },
+        {
+          "text": "поняла.",
+          "start": 293988,
+          "end": 294328,
+          "confidence": 0.909,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Если что, они в наличии, да? На выселиве находятся.",
+      "start": 296128,
+      "end": 298968,
+      "confidence": 0.6187562966666666,
+      "words": [
+        {
+          "text": "Если",
+          "start": 296128,
+          "end": 296508,
+          "confidence": 0.2626953,
+          "speaker": "B"
+        },
+        {
+          "text": "что,",
+          "start": 296508,
+          "end": 296728,
+          "confidence": 0.687,
+          "speaker": "B"
+        },
+        {
+          "text": "они",
+          "start": 296828,
+          "end": 296928,
+          "confidence": 0.6801758,
+          "speaker": "B"
+        },
+        {
+          "text": "в",
+          "start": 296928,
+          "end": 297148,
+          "confidence": 0.72216797,
+          "speaker": "B"
+        },
+        {
+          "text": "наличии,",
+          "start": 297148,
+          "end": 297548,
+          "confidence": 0.746,
+          "speaker": "B"
+        },
+        {
+          "text": "да?",
+          "start": 297568,
+          "end": 297708,
+          "confidence": 0.487,
+          "speaker": "B"
+        },
+        {
+          "text": "На",
+          "start": 297868,
+          "end": 298028,
+          "confidence": 0.7060547,
+          "speaker": "B"
+        },
+        {
+          "text": "выселиве",
+          "start": 298028,
+          "end": 298488,
+          "confidence": 0.4807129,
+          "speaker": "B"
+        },
+        {
+          "text": "находятся.",
+          "start": 298488,
+          "end": 298968,
+          "confidence": 0.797,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Сейчас посмотрю. По наличию. Смотрите, их нет на самом складе. Можно, если вы делаете заказ, тогда на следующий день можно будет их забрать.",
+      "start": 300448,
+      "end": 313728,
+      "confidence": 0.7890934117391304,
+      "words": [
+        {
+          "text": "Сейчас",
+          "start": 300448,
+          "end": 301288,
+          "confidence": 0.73291016,
+          "speaker": "A"
+        },
+        {
+          "text": "посмотрю.",
+          "start": 301288,
+          "end": 302148,
+          "confidence": 0.589,
+          "speaker": "A"
+        },
+        {
+          "text": "По",
+          "start": 303108,
+          "end": 303348,
+          "confidence": 0.40600586,
+          "speaker": "A"
+        },
+        {
+          "text": "наличию.",
+          "start": 303348,
+          "end": 304008,
+          "confidence": 0.815,
+          "speaker": "A"
+        },
+        {
+          "text": "Смотрите,",
+          "start": 305268,
+          "end": 305768,
+          "confidence": 0.847,
+          "speaker": "A"
+        },
+        {
+          "text": "их",
+          "start": 305868,
+          "end": 306008,
+          "confidence": 0.8666992,
+          "speaker": "A"
+        },
+        {
+          "text": "нет",
+          "start": 306008,
+          "end": 306368,
+          "confidence": 0.9199219,
+          "speaker": "A"
+        },
+        {
+          "text": "на",
+          "start": 306368,
+          "end": 306868,
+          "confidence": 0.8754883,
+          "speaker": "A"
+        },
+        {
+          "text": "самом",
+          "start": 306868,
+          "end": 307368,
+          "confidence": 0.90234375,
+          "speaker": "A"
+        },
+        {
+          "text": "складе.",
+          "start": 307368,
+          "end": 308108,
+          "confidence": 0.888,
+          "speaker": "A"
+        },
+        {
+          "text": "Можно,",
+          "start": 308468,
+          "end": 308688,
+          "confidence": 0.724,
+          "speaker": "A"
+        },
+        {
+          "text": "если",
+          "start": 308928,
+          "end": 309128,
+          "confidence": 0.80126953,
+          "speaker": "A"
+        },
+        {
+          "text": "вы",
+          "start": 309128,
+          "end": 309328,
+          "confidence": 0.7597656,
+          "speaker": "A"
+        },
+        {
+          "text": "делаете",
+          "start": 309328,
+          "end": 309808,
+          "confidence": 0.85961914,
+          "speaker": "A"
+        },
+        {
+          "text": "заказ,",
+          "start": 309808,
+          "end": 310788,
+          "confidence": 0.897,
+          "speaker": "A"
+        },
+        {
+          "text": "тогда",
+          "start": 310888,
+          "end": 311208,
+          "confidence": 0.32128906,
+          "speaker": "A"
+        },
+        {
+          "text": "на",
+          "start": 311208,
+          "end": 311428,
+          "confidence": 0.89990234,
+          "speaker": "A"
+        },
+        {
+          "text": "следующий",
+          "start": 311428,
+          "end": 311968,
+          "confidence": 0.87939453,
+          "speaker": "A"
+        },
+        {
+          "text": "день",
+          "start": 311968,
+          "end": 312268,
+          "confidence": 0.8574219,
+          "speaker": "A"
+        },
+        {
+          "text": "можно",
+          "start": 312268,
+          "end": 312788,
+          "confidence": 0.7060547,
+          "speaker": "A"
+        },
+        {
+          "text": "будет",
+          "start": 312788,
+          "end": 313068,
+          "confidence": 0.8178711,
+          "speaker": "A"
+        },
+        {
+          "text": "их",
+          "start": 313068,
+          "end": 313248,
+          "confidence": 0.8461914,
+          "speaker": "A"
+        },
+        {
+          "text": "забрать.",
+          "start": 313248,
+          "end": 313728,
+          "confidence": 0.937,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Ага.",
+      "start": 315088,
+      "end": 315428,
+      "confidence": 0.904,
+      "words": [
+        {
+          "text": "Ага.",
+          "start": 315088,
+          "end": 315428,
+          "confidence": 0.904,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "И вы подъедете, вы там их не увидите. Поэтому я и предлагаю в разручку, не в разручку, а в резерв поставить, если желаете.",
+      "start": 315537,
+      "end": 325577,
+      "confidence": 0.7164144715652173,
+      "words": [
+        {
+          "text": "И",
+          "start": 315537,
+          "end": 316157,
+          "confidence": 0.022354126,
+          "speaker": "A"
+        },
+        {
+          "text": "вы",
+          "start": 316157,
+          "end": 316737,
+          "confidence": 0.41186523,
+          "speaker": "A"
+        },
+        {
+          "text": "подъедете,",
+          "start": 316737,
+          "end": 317357,
+          "confidence": 0.691,
+          "speaker": "A"
+        },
+        {
+          "text": "вы",
+          "start": 317437,
+          "end": 317557,
+          "confidence": 0.61279297,
+          "speaker": "A"
+        },
+        {
+          "text": "там",
+          "start": 317557,
+          "end": 317777,
+          "confidence": 0.6879883,
+          "speaker": "A"
+        },
+        {
+          "text": "их",
+          "start": 317777,
+          "end": 318017,
+          "confidence": 0.77001953,
+          "speaker": "A"
+        },
+        {
+          "text": "не",
+          "start": 318017,
+          "end": 318277,
+          "confidence": 0.8886719,
+          "speaker": "A"
+        },
+        {
+          "text": "увидите.",
+          "start": 318277,
+          "end": 318877,
+          "confidence": 0.827,
+          "speaker": "A"
+        },
+        {
+          "text": "Поэтому",
+          "start": 319497,
+          "end": 319757,
+          "confidence": 0.81933594,
+          "speaker": "A"
+        },
+        {
+          "text": "я",
+          "start": 319757,
+          "end": 319917,
+          "confidence": 0.8378906,
+          "speaker": "A"
+        },
+        {
+          "text": "и",
+          "start": 319917,
+          "end": 320057,
+          "confidence": 0.6411133,
+          "speaker": "A"
+        },
+        {
+          "text": "предлагаю",
+          "start": 320057,
+          "end": 320577,
+          "confidence": 0.9694824,
+          "speaker": "A"
+        },
+        {
+          "text": "в",
+          "start": 320577,
+          "end": 320737,
+          "confidence": 0.7451172,
+          "speaker": "A"
+        },
+        {
+          "text": "разручку,",
+          "start": 320737,
+          "end": 321317,
+          "confidence": 0.536,
+          "speaker": "A"
+        },
+        {
+          "text": "не",
+          "start": 321997,
+          "end": 322157,
+          "confidence": 0.20812988,
+          "speaker": "A"
+        },
+        {
+          "text": "в",
+          "start": 322157,
+          "end": 322337,
+          "confidence": 0.8457031,
+          "speaker": "A"
+        },
+        {
+          "text": "разручку,",
+          "start": 322337,
+          "end": 322757,
+          "confidence": 0.911,
+          "speaker": "A"
+        },
+        {
+          "text": "а",
+          "start": 322857,
+          "end": 322997,
+          "confidence": 0.8491211,
+          "speaker": "A"
+        },
+        {
+          "text": "в",
+          "start": 322997,
+          "end": 323317,
+          "confidence": 0.88720703,
+          "speaker": "A"
+        },
+        {
+          "text": "резерв",
+          "start": 323317,
+          "end": 323757,
+          "confidence": 0.9206543,
+          "speaker": "A"
+        },
+        {
+          "text": "поставить,",
+          "start": 323757,
+          "end": 324437,
+          "confidence": 0.718,
+          "speaker": "A"
+        },
+        {
+          "text": "если",
+          "start": 324897,
+          "end": 325137,
+          "confidence": 0.78808594,
+          "speaker": "A"
+        },
+        {
+          "text": "желаете.",
+          "start": 325137,
+          "end": 325577,
+          "confidence": 0.889,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Если что, приеду.",
+      "start": 325997,
+      "end": 326757,
+      "confidence": 0.6164772133333334,
+      "words": [
+        {
+          "text": "Если",
+          "start": 325997,
+          "end": 326237,
+          "confidence": 0.49243164,
+          "speaker": "B"
+        },
+        {
+          "text": "что,",
+          "start": 326237,
+          "end": 326497,
+          "confidence": 0.673,
+          "speaker": "B"
+        },
+        {
+          "text": "приеду.",
+          "start": 326517,
+          "end": 326757,
+          "confidence": 0.684,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Хорошо, я вас поняла.",
+      "start": 327697,
+      "end": 329237,
+      "confidence": 0.757909185,
+      "words": [
+        {
+          "text": "Хорошо,",
+          "start": 327697,
+          "end": 328637,
+          "confidence": 0.886,
+          "speaker": "A"
+        },
+        {
+          "text": "я",
+          "start": 328737,
+          "end": 328777,
+          "confidence": 0.5864258,
+          "speaker": "A"
+        },
+        {
+          "text": "вас",
+          "start": 328777,
+          "end": 328877,
+          "confidence": 0.61621094,
+          "speaker": "A"
+        },
+        {
+          "text": "поняла.",
+          "start": 328877,
+          "end": 329237,
+          "confidence": 0.943,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Угу, оставлю.",
+      "start": 330337,
+      "end": 331117,
+      "confidence": 0.623,
+      "words": [
+        {
+          "text": "Угу,",
+          "start": 330337,
+          "end": 330577,
+          "confidence": 0.675,
+          "speaker": "B"
+        },
+        {
+          "text": "оставлю.",
+          "start": 330717,
+          "end": 331117,
+          "confidence": 0.571,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Чем-то еще могу вам помочь?",
+      "start": 332597,
+      "end": 333857,
+      "confidence": 0.6696789080000001,
+      "words": [
+        {
+          "text": "Чем-то",
+          "start": 332597,
+          "end": 333037,
+          "confidence": 0.83,
+          "speaker": "A"
+        },
+        {
+          "text": "еще",
+          "start": 333037,
+          "end": 333157,
+          "confidence": 0.50634766,
+          "speaker": "A"
+        },
+        {
+          "text": "могу",
+          "start": 333157,
+          "end": 333357,
+          "confidence": 0.54589844,
+          "speaker": "A"
+        },
+        {
+          "text": "вам",
+          "start": 333357,
+          "end": 333497,
+          "confidence": 0.70214844,
+          "speaker": "A"
+        },
+        {
+          "text": "помочь?",
+          "start": 333497,
+          "end": 333857,
+          "confidence": 0.764,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "text": "Нет.",
+      "start": 334597,
+      "end": 335017,
+      "confidence": 0.63,
+      "words": [
+        {
+          "text": "Нет.",
+          "start": 334597,
+          "end": 335017,
+          "confidence": 0.63,
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "text": "Спасибо за звонок. Всем доброго, до свидания.",
+      "start": 336077,
+      "end": 339237,
+      "confidence": 0.7694748871428573,
+      "words": [
+        {
+          "text": "Спасибо",
+          "start": 336077,
+          "end": 336917,
+          "confidence": 0.80615234,
+          "speaker": "A"
+        },
+        {
+          "text": "за",
+          "start": 336917,
+          "end": 337237,
+          "confidence": 0.8144531,
+          "speaker": "A"
+        },
+        {
+          "text": "звонок.",
+          "start": 337237,
+          "end": 338177,
+          "confidence": 0.743,
+          "speaker": "A"
+        },
+        {
+          "text": "Всем",
+          "start": 338237,
+          "end": 338337,
+          "confidence": 0.47216797,
+          "speaker": "A"
+        },
+        {
+          "text": "доброго,",
+          "start": 338337,
+          "end": 338657,
+          "confidence": 0.723,
+          "speaker": "A"
+        },
+        {
+          "text": "до",
+          "start": 338717,
+          "end": 338857,
+          "confidence": 0.9145508,
+          "speaker": "A"
+        },
+        {
+          "text": "свидания.",
+          "start": 338857,
+          "end": 339237,
+          "confidence": 0.913,
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
