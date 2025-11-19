@@ -1,0 +1,216 @@
+{
+  "call_metadata": {
+    "call_id": "call_08",
+    "duration_seconds": 952,
+    "call_start": "0:00.000",
+    "call_end": "15:52.308",
+    "operator_name": "Алина",
+    "customer_name": "Дмитрий",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+  "final_scoring": {
+    "final_grade": 10,
+    "confidence": "HIGH",
+    "primary_violation": null,
+    "all_violation_grades": [],
+    "lowest_code_rule_applied": false,
+    "requires_review": false,
+    "review_reason": null
+  },
+  "violations_detected": [],
+  "violations_summary": {
+    "total_violations": 0,
+    "violations_by_grade": {},
+    "sot_violations": 0,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 0
+  },
+  "coaching_priorities": [],
+  "risk_assessment": {
+    "compliance_risk": "LOW",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": false
+  },
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 25.0,
+      "customer_check_ins": 3,
+      "thank_you_after_search": true
+    },
+    "timing_compliance": {
+      "intro_time_sec": 0.008,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.68,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "surname", "phone", "address"],
+      "echo_performed": {
+        "name": true,
+        "surname": true,
+        "phone": true,
+        "address": true
+      },
+      "confirmation_received": {
+        "name": true,
+        "surname": true,
+        "phone": true,
+        "address": true
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+  "criteria_assessment": {
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting with company name 'Семьчетыре колеса', operator name 'Алина', offer to help. Proper closing with thanks 'спасибо за звонок, всего доброго, до свидания'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "PASS",
+      "confidence": "VERY_HIGH",
+      "evidence": "Phone number collected with echo method: operator repeats each segment (906?, Восемьсот девяносто восемь, Двадцать четыре, Пятьдесят четыре) and gets confirmation (Да). Name 'Бру-вер' repeated back with customer confirmation 'Да, всё правильно'. Address verified with system and confirmed by customer.",
+      "note": "Excellent echo method implementation across all contact data types"
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 0:00.008 (well under 5s), disconnect at 0.68s after last speech (under 5s)",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No interruptions without apology detected. Conversation flows naturally with customer speaking fully",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Multiple searches conducted but all under 45 seconds. Longest search approximately 25 seconds. Customer does not hang up; call completes normally",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information searches: 'Минутку, пожалуйста' (00:27) to response (00:56) = 29s. Subsequent searches are 15-20 seconds each. All under 40-second threshold",
+      "note": "No flag-window violations (40-45s) detected"
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Multiple thank-you expressions after searches: 'Спасибо за ожидание' at 00:56, 00:02:35, 00:02:03, 00:07:43, 00:12:30. Gratitude expressed consistently",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer request to purchase stamped discs with delivery/payment information fully resolved. Operator provides product confirmation, pricing (3200 rub per disc, 12800 total for 4), delivery details (Луч company, free shipping), payment options (cash on delivery or online with 2500 rub discount), and successfully facilitates order completion with order number 98-23-85",
+      "note": "Customer needs fully met and exceeded with upsell offer"
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No office phone numbers, internal codes, passwords, or personal data disclosed without verification. Information disclosed is appropriate and customer-authorized",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator uses system verification: 'Угу, сейчас посмотрю' at multiple points. Product specifications ('Treble 8725, 15 на 6, 0G, 4 на 114, 3D67') confirmed from system, not from memory",
+      "note": null
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete information provided: address (Магнитогорск, улица Вокзальная, 1), product specifications, delivery company details, payment options, order number (98-23-85). No mandatory information missing",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Customer is not difficult; operator handles normal customer interaction professionally. No frustration indicators, no inability to adapt",
+      "note": "N/A - customer not difficult"
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided per script: greeting, product confirmation, specifications, delivery/payment options, upsell attempt, order confirmation. Logical presentation and proper flow throughout",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Excellent dialogue management: operator uses customer name 'Дмитрий' appropriately, builds rapport through professional tone, maintains conversation control, proper opening 'как к вам можно обращаться', proper closing with goodbye",
+      "note": "Strong customer interaction and rapport building"
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Complete, accurate project information delivered: product specs confirmed, delivery company identified, payment methods explained clearly, pricing calculated, order number provided",
+      "note": "Confident command of information demonstrated"
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator provides complete service, answers all customer questions, facilitates successful order placement. No refusal of service or unjustified disconnection",
+      "note": null
+    },
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity (блять, хрен, черт, ебан, пизд), no harsh language (отвали, отстань, надоел), no yelling detected. Professional and polite tone throughout",
+      "note": null
+    }
+  },
+  "positive_observations": [
+    "Excellent professional greeting with company name, operator name, and offer to help",
+    "Perfect echo method implementation across all contact data collection (phone, name, surname, address)",
+    "Consistent use of 'thank you for waiting' after all information searches",
+    "Strong product knowledge and system verification of specifications",
+    "Clear explanation of delivery options and payment methods",
+    "Effective upsell attempt (secret bolts) with proper handling of customer decline",
+    "Successful order completion with clear confirmation and order number provision",
+    "Professional dialogue management with appropriate use of customer name",
+    "Efficient search times (all under 40 seconds)",
+    "Proper timing compliance on greeting and disconnection",
+    "Well-structured conversation flow with logical question sequence",
+    "Customer satisfaction indicators throughout (multiple affirmative responses)",
+    "Proper follow-up communication plan established (manager callback at 10am)"
+  ],
+  "data_quality": {
+    "data_sources_used": ["vtt"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "VTT transcript provides clear speaker diarization and line-level timestamps. Complete conversation captured with minimal transcription errors. Sufficient for comprehensive evaluation of all 17 criteria"
+  }
+}
