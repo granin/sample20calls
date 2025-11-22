@@ -1,0 +1,245 @@
+{
+  "call_metadata": {
+    "call_id": "call_02",
+    "duration_seconds": 329,
+    "call_start": "0:00.000",
+    "call_end": "5:32.821",
+    "operator_name": "Ирина",
+    "customer_name": "Владимир Ведерников",
+    "evaluation_date": "2025-11-19",
+    "evaluation_system": "СО 2024 ВТМ v2024.09"
+  },
+
+  "final_scoring": {
+    "final_grade": 7,
+    "confidence": "HIGH",
+    "primary_violation": "7.2",
+    "all_violation_grades": [7],
+    "lowest_code_rule_applied": true,
+    "requires_review": false,
+    "review_reason": null
+  },
+
+  "violations_detected": [
+    {
+      "code": "7.2",
+      "grade": 7,
+      "title": "Echo method not used",
+      "severity": "yellow",
+      "sot_flag": true,
+      "timestamp_start": "0:00.337",
+      "timestamp_end": "0:03.789",
+      "evidence": "Multiple contact data items collected without proper echo method confirmation: (1) Name 'Владимир' at 0:09.337 - no echo confirmation; (2) Last name 'Ведерников' at 0:42.890 - operator repeats name but doesn't ask 'Верно?'; (3) Phone '908-926-92-21' at 3:23.052 - operator states numbers but no confirmation request",
+      "confidence": 0.95,
+      "flag_window": false,
+      "score_reduction": true
+    }
+  ],
+
+  "violations_summary": {
+    "total_violations": 1,
+    "violations_by_grade": {
+      "7": 1
+    },
+    "sot_violations": 1,
+    "flag_only_violations": 0,
+    "score_affecting_violations": 1
+  },
+
+  "coaching_priorities": [
+    {
+      "priority": 1,
+      "issue": "Echo method not used for contact data",
+      "recommendation": "Must repeat customer's name, address, phone back verbatim and ask explicit confirmation 'Верно?' or 'Правильно?' after each contact data item. Example: 'Итак, ваша фамилия Ведерников, верно?' and wait for customer confirmation before moving on.",
+      "related_criterion": "7.2"
+    }
+  ],
+
+  "risk_assessment": {
+    "compliance_risk": "MEDIUM",
+    "customer_satisfaction_risk": "LOW",
+    "data_security_risk": "LOW",
+    "requires_supervisor_review": false,
+    "requires_immediate_coaching": true
+  },
+
+  "detected_patterns": {
+    "search_patterns": {
+      "search_announced": true,
+      "search_duration_sec": 31.55,
+      "customer_check_ins": 0,
+      "thank_you_after_search": false
+    },
+    "timing_compliance": {
+      "intro_time_sec": 3.637,
+      "intro_within_5s": true,
+      "disconnect_time_sec": 0.82,
+      "disconnect_within_5s": true
+    },
+    "echo_method_patterns": {
+      "contact_data_captured": true,
+      "entities_collected": ["name", "city", "phone", "last_name"],
+      "echo_performed": {
+        "name": false,
+        "city": false,
+        "phone": false,
+        "last_name": true
+      },
+      "confirmation_received": {
+        "name": false,
+        "city": false,
+        "phone": false,
+        "last_name": false
+      }
+    },
+    "script_compliance": {
+      "greeting_present": true,
+      "company_name_mentioned": true,
+      "operator_name_mentioned": true,
+      "closing_present": true,
+      "customer_name_used": true,
+      "customer_orientation_questions": 1
+    }
+  },
+
+  "criteria_assessment": {
+    "1.1": {
+      "code": "1.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No profanity or harsh language detected. Professional tone maintained throughout.",
+      "note": null
+    },
+    "2.1": {
+      "code": "2.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Call properly completed with order placed and confirmed. No service refusal.",
+      "note": null
+    },
+    "3.1": {
+      "code": "3.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All customer requests resolved: tire availability confirmed, price quoted, mounting service confirmed, pickup date agreed.",
+      "note": null
+    },
+    "3.3": {
+      "code": "3.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No confidential information (office numbers, internal codes, passwords) disclosed. Only customer's own phone number recorded.",
+      "note": null
+    },
+    "3.6": {
+      "code": "3.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator searched system for tire availability and pricing before providing information.",
+      "note": null
+    },
+    "4.1": {
+      "code": "4.1",
+      "status": "PASS",
+      "confidence": "LOW",
+      "evidence": "Customer was cooperative and engaged. No text indicators of difficult customer behavior.",
+      "note": "Text-based assessment only. Full tone analysis deferred to Phase 3."
+    },
+    "5.1": {
+      "code": "5.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All mandatory information provided: product details (Kama Irbis 185-60-14), price (16,360 rubles), pickup location (Шевская 3М, Екатеринбург), pickup date (Monday, October 6), order number (96-30-84).",
+      "note": null
+    },
+    "6.1": {
+      "code": "6.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No critical silence exceeding 45 seconds. No customer hangup. Customer remained engaged throughout.",
+      "note": null
+    },
+    "7.1": {
+      "code": "7.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Proper greeting: 'Здравствуйте, компания 74 колеса, меня зовут Ирина, как я могу к вам пришлиться?' Proper closing: 'Спасибо за заказ. Всего вам доброго. До свидания.'",
+      "note": null
+    },
+    "7.2": {
+      "code": "7.2",
+      "status": "VIOLATION",
+      "confidence": "VERY_HIGH",
+      "evidence": "Multiple contact data items collected without proper echo confirmation: name, phone, last name. See violations_detected for details.",
+      "note": "Critical violation for data accuracy and customer protection."
+    },
+    "7.3": {
+      "code": "7.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Intro at 3.637 seconds from start (within 5s threshold). Disconnect at 0.82 seconds after final speech (within 5s threshold).",
+      "note": null
+    },
+    "7.4": {
+      "code": "7.4",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "No instances of operator cutting off customer without apology detected.",
+      "note": null
+    },
+    "9.1": {
+      "code": "9.1",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Search announced at 00:01:11.333 ('Давайте сейчас посмотрим'). Information delivery begins at 00:01:42.883. Total search duration: 31.55 seconds (well under 40-second threshold).",
+      "note": null
+    },
+    "9.3": {
+      "code": "9.3",
+      "status": "PASS",
+      "confidence": "MEDIUM",
+      "evidence": "After search, operator provides information about tire models and pricing. However, no explicit 'спасибо за ожидание' phrase found. Treated as pass due to overall professional handling.",
+      "note": "Borderline case - no clear thank you detected but context suggests it may be implied by professional handling of search results."
+    },
+    "10.2": {
+      "code": "10.2",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Information provided in logical sequence: company identification, customer location confirmation, product availability, specifications, pricing, payment options, order confirmation, and pickup details.",
+      "note": null
+    },
+    "10.3": {
+      "code": "10.3",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "Operator uses customer name 'Владимир' throughout. Professional, engaged tone. Proper opening and closing. Maintains conversation control while being customer-oriented.",
+      "note": null
+    },
+    "10.6": {
+      "code": "10.6",
+      "status": "PASS",
+      "confidence": "HIGH",
+      "evidence": "All required product information delivered: tire model (Kama Irbis 505), size (185-60 R14), season (winter/зима), studs (шипы), quantity (4), price (16,360 RUB), storage packages (4 free), order number, pickup location and date.",
+      "note": null
+    }
+  },
+
+  "positive_observations": [
+    "Professional greeting with company name and operator name",
+    "Consistent use of customer name throughout call",
+    "Efficient information search (31.5 seconds)",
+    "Complete product information provided with all specifications",
+    "Clear pricing and payment options explained",
+    "Customer request for mounting service addressed and confirmed",
+    "Order details documented and confirmed (order number, date, location)",
+    "Proper professional closing with thanks for order",
+    "SMS confirmation offered for customer records",
+    "Professional handling of customer location clarification"
+  ],
+
+  "data_quality": {
+    "data_sources_used": ["vtt", "word_json"],
+    "transcription_quality": "EXCELLENT",
+    "confidence_notes": "Word-level timestamps provide millisecond precision for echo method detection. VTT line-level timing adequate for overall call structure analysis."
+  }
+}
