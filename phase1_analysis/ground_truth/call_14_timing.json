@@ -1,0 +1,98 @@
+{
+  "call_id": "call_14",
+  "total_searches": 3,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:00:31.727",
+      "start_line_number": 9,
+      "start_phrase": "Давайте посмотрим сейчас. 215, 65, 17.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:00:47.087",
+      "end_line_number": 10,
+      "end_phrase": "Зима. Шипы. Вам по ценному диапазону посмотреть? Или по производителям?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 15.36,
+      "duration_formatted": "15.4s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 2,
+      "start_timestamp": "0:01:08.953",
+      "start_line_number": 14,
+      "start_phrase": "СУФ. Посмотреть СУФ. Тогда давайте посмотрим. СУФ усиленные. Есть шина ГУДИЕР. По 15390 они СУФ идут. Арктик 2. Затем БРИДЖСТОУН. Тоже сув идут, 15690, хоккапелит.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:01:35.789",
+      "end_line_number": 16,
+      "end_phrase": "Еще раз?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 26.837,
+      "duration_formatted": "26.8s",
+      "check_ins": [
+        {
+          "timestamp": "0:01:34.150",
+          "phrase": "А китайская что это у вас?",
+          "speaker": "CUSTOMER",
+          "line_number": 15,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 3,
+      "start_timestamp": "0:02:51.567",
+      "start_line_number": 24,
+      "start_phrase": "Сейчас посмотрела, они по одной штуке остались. Есть оно Кенха Капелита, СУФ, по 16,510. Затем есть десятка, 17,680, автограф, тоже СУФ идёт. Вот вот эти шины, они идут СУФ, которые я вам сказала.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:03:17.277",
+      "end_line_number": 26,
+      "end_phrase": "Автограф получается это новиночка идет 18740 автограф 9 сув нагрузка 103 т здесь идет у них уже идет конечно у них и шипы особым способом установлены и эластерон добавлен новейший по новейшим технологиям сделаны как.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 25.709,
+      "duration_formatted": "25.7s",
+      "check_ins": [
+        {
+          "timestamp": "0:03:14.748",
+          "phrase": "Автограф который? Они сколько есть?",
+          "speaker": "CUSTOMER",
+          "line_number": 25,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 67.906,
+    "longest_search": 26.837,
+    "violations_count": 0,
+    "flag_count": 0,
+    "pass_count": 3
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "PASS",
+    "grade_impact": 10,
+    "flag_for_coaching": false
+  }
+}

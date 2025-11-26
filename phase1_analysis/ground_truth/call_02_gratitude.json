@@ -1,0 +1,73 @@
+{
+  "call_id": "call_02",
+  "searches": [
+    {
+      "search_number": 1,
+      "duration_seconds": 14.8,
+      "end_timestamp": "0:01:26.133",
+      "end_phrase": "Получается сто восемьдесят пять. Шестьдесят. Четырнадцать. Зима. Шипы. Кама.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 14.8s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 14.8s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 2,
+      "duration_seconds": 14.28,
+      "end_timestamp": "0:02:03.123",
+      "end_phrase": "Пятьсот пятая нужна. Да. Пятьсот пятая камма по четыре тысячи девяносто рублей. И сама вывоза можно будет забрать сегодня, пишут. Ага.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 14.3s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 14.3s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 3,
+      "duration_seconds": 8.452,
+      "end_timestamp": "0:05:00.232",
+      "end_phrase": "Ожидайте, пожалуйста. Да, и смотрите, я вам еще забыла сказать по поводу оплаты. Там у нас получается оплатить, можно будет на нашем складе, картой, либо наличными при получении.",
+      "gratitude_check": {
+        "required": false,
+        "rationale": "Search duration 8.5s <= 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    }
+  ],
+  "summary": {
+    "total_searches": 3,
+    "searches_requiring_gratitude": 2,
+    "searches_with_gratitude": 0,
+    "violations": 2,
+    "violation_search_numbers": [
+      1,
+      2
+    ]
+  },
+  "final_9_3_assessment": {
+    "criterion": "9.3 - No Thank You for Waiting",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "violations_found": 2,
+    "note": "2 search(es) without required gratitude"
+  }
+}

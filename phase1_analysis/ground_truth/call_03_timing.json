@@ -1,0 +1,48 @@
+{
+  "call_id": "call_03",
+  "total_searches": 1,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:01:18.314",
+      "start_line_number": 13,
+      "start_phrase": "Камешкова, Владимирская область, да, нашла. И давайте сейчас посмотрим. Код товара скажите.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:01:33.407",
+      "end_line_number": 15,
+      "end_phrase": "9312. Это код товара?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 15.093,
+      "duration_formatted": "15.1s",
+      "check_ins": [
+        {
+          "timestamp": "0:01:29.007",
+          "phrase": "Ну я искал диски 9312.",
+          "speaker": "CUSTOMER",
+          "line_number": 14,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 15.093,
+    "longest_search": 15.093,
+    "violations_count": 0,
+    "flag_count": 0,
+    "pass_count": 1
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "PASS",
+    "grade_impact": 10,
+    "flag_for_coaching": false
+  }
+}

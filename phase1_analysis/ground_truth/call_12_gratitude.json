@@ -1,0 +1,38 @@
+{
+  "call_id": "call_12",
+  "searches": [
+    {
+      "search_number": 1,
+      "duration_seconds": 25.276,
+      "end_timestamp": "0:00:41.483",
+      "end_phrase": "R2-62-772.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 25.3s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 25.3s requires gratitude, but none found after answer delivery."
+      }
+    }
+  ],
+  "summary": {
+    "total_searches": 1,
+    "searches_requiring_gratitude": 1,
+    "searches_with_gratitude": 0,
+    "violations": 1,
+    "violation_search_numbers": [
+      1
+    ]
+  },
+  "final_9_3_assessment": {
+    "criterion": "9.3 - No Thank You for Waiting",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "violations_found": 1,
+    "note": "1 search(es) without required gratitude"
+  }
+}

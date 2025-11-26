@@ -1,0 +1,161 @@
+{
+  "call_id": "call_09",
+  "searches": [
+    {
+      "search_number": 1,
+      "duration_seconds": 15.931,
+      "end_timestamp": "0:01:28.096",
+      "end_phrase": "Спасибо за ожидание. Вы скажите, пожалуйста, вас интересует определенный бренд или бренд не важен?",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 15.9s > 10.0s threshold",
+        "gratitude_found": true,
+        "gratitude_phrase": "спасибо за ожидание",
+        "gratitude_timestamp": "0:01:28.096",
+        "time_after_search": 0.0,
+        "location": "same_utterance",
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    },
+    {
+      "search_number": 2,
+      "duration_seconds": 60.942,
+      "end_timestamp": "0:03:47.062",
+      "end_phrase": "Спасибо за ожидание. Да, предусмотрено наличным при получении, также картой при получении в наших складах и партнерских пунктах выдачи заказов предусмотрено наличные в офисе, безналичная оплата только для юридических лиц, к сожалению, либо онлайн оплата сетическим лицам.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 60.9s > 10.0s threshold",
+        "gratitude_found": true,
+        "gratitude_phrase": "спасибо за ожидание",
+        "gratitude_timestamp": "0:03:47.062",
+        "time_after_search": 0.0,
+        "location": "same_utterance",
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    },
+    {
+      "search_number": 3,
+      "duration_seconds": 34.222,
+      "end_timestamp": "0:05:00.900",
+      "end_phrase": "Чё, сам подскажу. Да, к сожалению, данные шины именно Китай. Мне Китай предложить?",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 34.2s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 34.2s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 4,
+      "duration_seconds": 11.845,
+      "end_timestamp": "0:06:15.038",
+      "end_phrase": "даже могу вам предложить шины Triangle Group, также 225.45 на 18, плюс сумма будет 8540 рублей. У них есть защита от проколов, также средний и старый шин за счет новых есть скидка 10% при оплате картой на сайте.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 11.8s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 11.8s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 5,
+      "duration_seconds": 7.78,
+      "end_timestamp": "0:10:22.943",
+      "end_phrase": "Подскажите, пожалуйста, оформляете заказ как физическое или как юридическое лицо?",
+      "gratitude_check": {
+        "required": false,
+        "rationale": "Search duration 7.8s <= 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    },
+    {
+      "search_number": 6,
+      "duration_seconds": 15.74,
+      "end_timestamp": "0:11:51.670",
+      "end_phrase": "Расскажите, пожалуйста, с какого адреса вас самому удобнее самого самогон-подковица? Город Екатеринбург, улица Шевская, 3М, дроп-2. Также улица Серахима-Деряби, 30А. Также улица Щербакова, 2Д, дроп-1.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 15.7s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 15.7s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 7,
+      "duration_seconds": 31.774,
+      "end_timestamp": "0:12:54.284",
+      "end_phrase": "Также в заказе у вас шины фортуны Плара Айс 225.45 на 18 в количестве четырёх штук. Общая сумма у вас будет 28 440 рублей. Также Самолылыс указал на адрес улица Шевка, 3 Н, дробь 2.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 31.8s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 31.8s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 8,
+      "duration_seconds": 17.549,
+      "end_timestamp": "0:14:24.076",
+      "end_phrase": "Ваш заказ оформлен. Номер вашего заказа 96-63-54. Также вам придёт смс с номером вашего заказа.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 17.5s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 17.5s requires gratitude, but none found after answer delivery."
+      }
+    }
+  ],
+  "summary": {
+    "total_searches": 8,
+    "searches_requiring_gratitude": 7,
+    "searches_with_gratitude": 2,
+    "violations": 5,
+    "violation_search_numbers": [
+      3,
+      4,
+      6,
+      7,
+      8
+    ]
+  },
+  "final_9_3_assessment": {
+    "criterion": "9.3 - No Thank You for Waiting",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "violations_found": 5,
+    "note": "5 search(es) without required gratitude"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "call_id": "call_15",
+  "searches": [
+    {
+      "search_number": 1,
+      "duration_seconds": 16.231,
+      "end_timestamp": "0:01:08.318",
+      "end_phrase": "Так. Благодарю вас за ожидание. Я нашла данные шины. Они по 4110 рублей.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 16.2s > 10.0s threshold",
+        "gratitude_found": true,
+        "gratitude_phrase": "благодарю вас за ожидание",
+        "gratitude_timestamp": "0:01:08.318",
+        "time_after_search": 0.0,
+        "location": "same_utterance",
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    }
+  ],
+  "summary": {
+    "total_searches": 1,
+    "searches_requiring_gratitude": 1,
+    "searches_with_gratitude": 1,
+    "violations": 0,
+    "violation_search_numbers": []
+  },
+  "final_9_3_assessment": {
+    "criterion": "9.3 - No Thank You for Waiting",
+    "status": "PASS",
+    "grade_impact": 10,
+    "violations_found": 0,
+    "note": "All searches properly acknowledged"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "call_id": "call_12",
+  "total_searches": 1,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:00:16.207",
+      "start_line_number": 3,
+      "start_phrase": "Хорошо, давайте посмотрим, из какого города вы звоните.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:00:41.483",
+      "end_line_number": 7,
+      "end_phrase": "R2-62-772.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 25.276,
+      "duration_formatted": "25.3s",
+      "check_ins": [
+        {
+          "timestamp": "0:00:19.607",
+          "phrase": "Екатеринбург.",
+          "speaker": "CUSTOMER",
+          "line_number": 4,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:00:21.987",
+          "phrase": "Город Екатеринбург. Там у нас оплатить можно картой, наличными или вот как сейчас по акции. Акция идёт. Код товара скажите, пожалуйста, я посмотрю сразу по Екатеринбургу.",
+          "line_number": 5
+        },
+        {
+          "timestamp": "0:00:35.503",
+          "phrase": "Так, секундочку.",
+          "speaker": "CUSTOMER",
+          "line_number": 6,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 25.276,
+    "longest_search": 25.276,
+    "violations_count": 0,
+    "flag_count": 0,
+    "pass_count": 1
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "PASS",
+    "grade_impact": 10,
+    "flag_for_coaching": false
+  }
+}

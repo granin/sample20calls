@@ -1,0 +1,181 @@
+{
+  "call_id": "call_10",
+  "searches": [
+    {
+      "search_number": 1,
+      "duration_seconds": 26.22,
+      "end_timestamp": "0:00:59.017",
+      "end_phrase": "Пожалуйста, вам необходимы летние шины или зимние?",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 26.2s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 26.2s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 2,
+      "duration_seconds": 29.738,
+      "end_timestamp": "0:05:04.478",
+      "end_phrase": "Спасибо за ожидание. К сожалению, именно наш шиномонтаж можно только по записи по адресу шерстка 3М. А на серфине Дерябина можно именно забрать шины, так как это Адрес наших партнёров. А именно, чтобы для записи наших монтажей только по данному адресу, к сожалению. Могу вам просмотреть свободную дату?",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 29.7s > 10.0s threshold",
+        "gratitude_found": true,
+        "gratitude_phrase": "спасибо за ожидание",
+        "gratitude_timestamp": "0:05:04.478",
+        "time_after_search": 0.0,
+        "location": "same_utterance",
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    },
+    {
+      "search_number": 3,
+      "duration_seconds": 17.985,
+      "end_timestamp": "0:06:53.311",
+      "end_phrase": "Ближайшая свободная запись на 24 октября. Есть время на 17 часов.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 18.0s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 18.0s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 4,
+      "duration_seconds": 22.142,
+      "end_timestamp": "0:07:58.482",
+      "end_phrase": "Я могу вам подсказать? У нас указаны, к сожалению, другие адреса. Именно партнер сказал, что на монтаже в городе Екатеринбург. Но, к сожалению, на монтировке Немодеряевна данный адрес отсутствует.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 22.1s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 22.1s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 5,
+      "duration_seconds": 46.157,
+      "end_timestamp": "0:11:18.805",
+      "end_phrase": "Спасибо",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 46.2s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 46.2s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 6,
+      "duration_seconds": 11.09,
+      "end_timestamp": "0:11:56.515",
+      "end_phrase": "912-615-69-64, верно?",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 11.1s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 11.1s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 7,
+      "duration_seconds": 22.52,
+      "end_timestamp": "0:14:02.748",
+      "end_phrase": "За ожидание. В заказе у вас в данный момент шины Yokohama Ice World IG 55 215 60 на 16. В количестве 4 штук и та же общая сумма у вас будет 38680 рублей. И подскажите, самого вас у нас У вас самолёт будет, верно?",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 22.5s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 22.5s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 8,
+      "duration_seconds": 51.122,
+      "end_timestamp": "0:15:39.872",
+      "end_phrase": "Готово.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 51.1s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 51.1s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 9,
+      "duration_seconds": 13.12,
+      "end_timestamp": "0:17:33.084",
+      "end_phrase": "Спасибо",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 13.1s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 13.1s requires gratitude, but none found after answer delivery."
+      }
+    }
+  ],
+  "summary": {
+    "total_searches": 9,
+    "searches_requiring_gratitude": 9,
+    "searches_with_gratitude": 1,
+    "violations": 8,
+    "violation_search_numbers": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "final_9_3_assessment": {
+    "criterion": "9.3 - No Thank You for Waiting",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "violations_found": 8,
+    "note": "8 search(es) without required gratitude"
+  }
+}

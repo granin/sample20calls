@@ -1,0 +1,234 @@
+{
+  "call_id": "call_09",
+  "total_searches": 8,
+  "searches": [
+    {
+      "search_number": 1,
+      "start_timestamp": "0:01:12.164",
+      "start_line_number": 16,
+      "start_phrase": "Я вас понимаю, минуту, пожалуйста. Комплект колес вас интересует, верно? Четыре колеса?",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:01:28.096",
+      "end_line_number": 19,
+      "end_phrase": "Спасибо за ожидание. Вы скажите, пожалуйста, вас интересует определенный бренд или бренд не важен?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 15.931,
+      "duration_formatted": "15.9s",
+      "check_ins": [
+        {
+          "timestamp": "0:01:15.664",
+          "phrase": "Да, да, да, конечно.",
+          "speaker": "CUSTOMER",
+          "line_number": 17,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 2,
+      "start_timestamp": "0:02:46.120",
+      "start_line_number": 29,
+      "start_phrase": "Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:03:47.062",
+      "end_line_number": 31,
+      "end_phrase": "Спасибо за ожидание. Да, предусмотрено наличным при получении, также картой при получении в наших складах и партнерских пунктах выдачи заказов предусмотрено наличные в офисе, безналичная оплата только для юридических лиц, к сожалению, либо онлайн оплата сетическим лицам.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 60.942,
+      "duration_formatted": "1m 0.9s",
+      "check_ins": [
+        {
+          "timestamp": "0:02:58.781",
+          "phrase": "У меня просто карта, видите, расчётного счёта. Я с неё хочу рассчитаться.",
+          "speaker": "CUSTOMER",
+          "line_number": 30,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "VIOLATION",
+        "threshold_applied": "45s",
+        "flag_window": false,
+        "grade_impact": 9,
+        "exceeds_threshold_by": 15.942,
+        "coaching_note": "Exceeds 45s threshold by 15.9s (Grade 9)"
+      }
+    },
+    {
+      "search_number": 3,
+      "start_timestamp": "0:04:26.678",
+      "start_line_number": 36,
+      "start_phrase": "Также предусмотрена доставка. Минуту, пожалуйста. По городу будет бесплатно послезавтра. Самолёт из Пунктоводычи будет также бесплатно завтра.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:05:00.900",
+      "end_line_number": 42,
+      "end_phrase": "Чё, сам подскажу. Да, к сожалению, данные шины именно Китай. Мне Китай предложить?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 34.222,
+      "duration_formatted": "34.2s",
+      "check_ins": [
+        {
+          "timestamp": "0:04:37.898",
+          "phrase": "Вот мне надо завтра. Я завтра поеду через Екатеринбург.",
+          "speaker": "CUSTOMER",
+          "line_number": 37,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:04:48.159",
+          "phrase": "Так, а давайте ещё какие-нибудь покрышки-то посмотрим.",
+          "speaker": "CUSTOMER",
+          "line_number": 39,
+          "note": "Customer spoke during search (potential impatience)"
+        },
+        {
+          "timestamp": "0:04:54.440",
+          "phrase": "Ну, чё ещё там есть-то? Это китайская, да, как я понял?",
+          "speaker": "CUSTOMER",
+          "line_number": 41,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 4,
+      "start_timestamp": "0:06:03.193",
+      "start_line_number": 50,
+      "start_phrase": "Хорошо. Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:06:15.038",
+      "end_line_number": 51,
+      "end_phrase": "даже могу вам предложить шины Triangle Group, также 225.45 на 18, плюс сумма будет 8540 рублей. У них есть защита от проколов, также средний и старый шин за счет новых есть скидка 10% при оплате картой на сайте.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 11.845,
+      "duration_formatted": "11.8s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 5,
+      "start_timestamp": "0:10:15.163",
+      "start_line_number": 73,
+      "start_phrase": "Хорошо, минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:10:22.943",
+      "end_line_number": 74,
+      "end_phrase": "Подскажите, пожалуйста, оформляете заказ как физическое или как юридическое лицо?",
+      "end_speaker": "AGENT",
+      "duration_seconds": 7.78,
+      "duration_formatted": "7.8s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 6,
+      "start_timestamp": "0:11:35.930",
+      "start_line_number": 88,
+      "start_phrase": "Хорошо, минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:11:51.670",
+      "end_line_number": 89,
+      "end_phrase": "Расскажите, пожалуйста, с какого адреса вас самому удобнее самого самогон-подковица? Город Екатеринбург, улица Шевская, 3М, дроп-2. Также улица Серахима-Деряби, 30А. Также улица Щербакова, 2Д, дроп-1.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 15.74,
+      "duration_formatted": "15.7s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 7,
+      "start_timestamp": "0:12:22.510",
+      "start_line_number": 93,
+      "start_phrase": "Хорошо, указывай данный адрес, минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:12:54.284",
+      "end_line_number": 94,
+      "end_phrase": "Также в заказе у вас шины фортуны Плара Айс 225.45 на 18 в количестве четырёх штук. Общая сумма у вас будет 28 440 рублей. Также Самолылыс указал на адрес улица Шевка, 3 Н, дробь 2.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 31.774,
+      "duration_formatted": "31.8s",
+      "check_ins": [],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    },
+    {
+      "search_number": 8,
+      "start_timestamp": "0:14:06.527",
+      "start_line_number": 106,
+      "start_phrase": "Хорошо, я вас поняла. Минуту, пожалуйста.",
+      "start_speaker": "AGENT",
+      "end_timestamp": "0:14:24.076",
+      "end_line_number": 108,
+      "end_phrase": "Ваш заказ оформлен. Номер вашего заказа 96-63-54. Также вам придёт смс с номером вашего заказа.",
+      "end_speaker": "AGENT",
+      "duration_seconds": 17.549,
+      "duration_formatted": "17.5s",
+      "check_ins": [
+        {
+          "timestamp": "0:14:20.296",
+          "phrase": "Спасибо за ожидание.",
+          "speaker": "CUSTOMER",
+          "line_number": 107,
+          "note": "Customer spoke during search (potential impatience)"
+        }
+      ],
+      "assessment": {
+        "status": "PASS",
+        "threshold_applied": "40s",
+        "flag_window": false,
+        "grade_impact": null,
+        "coaching_note": "Search within acceptable duration"
+      }
+    }
+  ],
+  "summary": {
+    "total_duration_all_searches": 195.783,
+    "longest_search": 60.942,
+    "violations_count": 1,
+    "flag_count": 0,
+    "pass_count": 7
+  },
+  "final_9_1_assessment": {
+    "criterion": "9.1 - Long Information Search",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "flag_for_coaching": true
+  }
+}

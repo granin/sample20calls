@@ -1,0 +1,89 @@
+{
+  "call_id": "call_04",
+  "searches": [
+    {
+      "search_number": 1,
+      "duration_seconds": 24.623,
+      "end_timestamp": "0:01:01.383",
+      "end_phrase": "Спасибо за ожидание. Сейчас я информацию передам менеджеру. Завтра он вам перезвонит по времени. Сориентируйтесь, когда вам удобно будет принять звонок.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 24.6s > 10.0s threshold",
+        "gratitude_found": true,
+        "gratitude_phrase": "спасибо за ожидание",
+        "gratitude_timestamp": "0:01:01.383",
+        "time_after_search": 0.0,
+        "location": "same_utterance",
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    },
+    {
+      "search_number": 2,
+      "duration_seconds": 35.338,
+      "end_timestamp": "0:02:17.837",
+      "end_phrase": "За ожидание. Сейчас я информацию передала, но менеджеры завтра с вами свяжутся по возврату денежных средств.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 35.3s > 10.0s threshold",
+        "gratitude_found": false,
+        "gratitude_phrase": null,
+        "gratitude_timestamp": null,
+        "time_after_search": null,
+        "location": null,
+        "assessment": "VIOLATION",
+        "violation_note": "Search duration 35.3s requires gratitude, but none found after answer delivery."
+      }
+    },
+    {
+      "search_number": 3,
+      "duration_seconds": 23.833,
+      "end_timestamp": "0:03:43.653",
+      "end_phrase": "Спасибо за ожидание. По времени сориентируете, когда вам перезвонить?",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 23.8s > 10.0s threshold",
+        "gratitude_found": true,
+        "gratitude_phrase": "спасибо за ожидание",
+        "gratitude_timestamp": "0:03:43.653",
+        "time_after_search": 0.0,
+        "location": "same_utterance",
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    },
+    {
+      "search_number": 4,
+      "duration_seconds": 36.922,
+      "end_timestamp": "0:07:43.632",
+      "end_phrase": "Спасибо за ожидание. Сейчас я информацию передала менеджеру по возврату и также оформила бронь. И ожидайте, пожалуйста, завтра менеджер с утра с вами свяжется.",
+      "gratitude_check": {
+        "required": true,
+        "rationale": "Search duration 36.9s > 10.0s threshold",
+        "gratitude_found": true,
+        "gratitude_phrase": "спасибо за ожидание",
+        "gratitude_timestamp": "0:07:43.632",
+        "time_after_search": 0.0,
+        "location": "same_utterance",
+        "assessment": "PASS",
+        "violation_note": null
+      }
+    }
+  ],
+  "summary": {
+    "total_searches": 4,
+    "searches_requiring_gratitude": 4,
+    "searches_with_gratitude": 3,
+    "violations": 1,
+    "violation_search_numbers": [
+      2
+    ]
+  },
+  "final_9_3_assessment": {
+    "criterion": "9.3 - No Thank You for Waiting",
+    "status": "VIOLATION",
+    "grade_impact": 9,
+    "violations_found": 1,
+    "note": "1 search(es) without required gratitude"
+  }
+}
